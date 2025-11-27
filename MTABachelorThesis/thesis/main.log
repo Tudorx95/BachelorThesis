@@ -1,0 +1,1188 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  27 NOV 2025 22:46
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-10-24>
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@chapter=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/subfiles/subfiles.s
+ty
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+)) (./main.sty
+Package: main 
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/biblatex/biblatex.s
+ty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/pdftexcmds/pdftex
+cmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/infwarerr/infware
+rr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.s
+ty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.s
+ty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count284
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/kvoptions/kvoptions
+.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys
+.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count285
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count286
+\c@listtotal=\count287
+\c@listcount=\count288
+\c@liststart=\count289
+\c@liststop=\count290
+\c@citecount=\count291
+\c@citetotal=\count292
+\c@multicitecount=\count293
+\c@multicitetotal=\count294
+\c@instcount=\count295
+\c@maxnames=\count296
+\c@minnames=\count297
+\c@maxitems=\count298
+\c@minitems=\count299
+\c@citecounter=\count300
+\c@maxcitecounter=\count301
+\c@savedcitecounter=\count302
+\c@uniquelist=\count303
+\c@uniquename=\count304
+\c@refsection=\count305
+\c@refsegment=\count306
+\c@maxextratitle=\count307
+\c@maxextratitleyear=\count308
+\c@maxextraname=\count309
+\c@maxextradate=\count310
+\c@maxextraalpha=\count311
+\c@abbrvpenalty=\count312
+\c@highnamepenalty=\count313
+\c@lownamepenalty=\count314
+\c@maxparens=\count315
+\c@parenlevel=\count316
+\blx@tempcnta=\count317
+\blx@tempcntb=\count318
+\blx@tempcntc=\count319
+\c@blx@maxsection=\count320
+\blx@maxsegment@0=\count321
+\blx@notetype=\count322
+\blx@parenlevel@text=\count323
+\blx@parenlevel@foot=\count324
+\blx@sectionciteorder@0=\count325
+\blx@sectionciteorderinternal@0=\count326
+\blx@entrysetcounter=\count327
+\blx@biblioinstance=\count328
+\labelnumberwidth=\skip51
+\labelalphawidth=\skip52
+\biblabelsep=\skip53
+\bibitemsep=\skip54
+\bibnamesep=\skip55
+\bibinitsep=\skip56
+\bibparsep=\skip57
+\bibhang=\skip58
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language90
+\c@mincomprange=\count329
+\c@maxcomprange=\count330
+\c@mincompwidth=\count331
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count332
+\c@savedafterword=\count333
+\c@annotator=\count334
+\c@savedannotator=\count335
+\c@author=\count336
+\c@savedauthor=\count337
+\c@bookauthor=\count338
+\c@savedbookauthor=\count339
+\c@commentator=\count340
+\c@savedcommentator=\count341
+\c@editor=\count342
+\c@savededitor=\count343
+\c@editora=\count344
+\c@savededitora=\count345
+\c@editorb=\count346
+\c@savededitorb=\count347
+\c@editorc=\count348
+\c@savededitorc=\count349
+\c@foreword=\count350
+\c@savedforeword=\count351
+\c@holder=\count352
+\c@savedholder=\count353
+\c@introduction=\count354
+\c@savedintroduction=\count355
+\c@namea=\count356
+\c@savednamea=\count357
+\c@nameb=\count358
+\c@savednameb=\count359
+\c@namec=\count360
+\c@savednamec=\count361
+\c@translator=\count362
+\c@savedtranslator=\count363
+\c@shortauthor=\count364
+\c@savedshortauthor=\count365
+\c@shorteditor=\count366
+\c@savedshorteditor=\count367
+\c@labelname=\count368
+\c@savedlabelname=\count369
+\c@institution=\count370
+\c@savedinstitution=\count371
+\c@lista=\count372
+\c@savedlista=\count373
+\c@listb=\count374
+\c@savedlistb=\count375
+\c@listc=\count376
+\c@savedlistc=\count377
+\c@listd=\count378
+\c@savedlistd=\count379
+\c@liste=\count380
+\c@savedliste=\count381
+\c@listf=\count382
+\c@savedlistf=\count383
+\c@location=\count384
+\c@savedlocation=\count385
+\c@organization=\count386
+\c@savedorganization=\count387
+\c@origlocation=\count388
+\c@savedoriglocation=\count389
+\c@origpublisher=\count390
+\c@savedorigpublisher=\count391
+\c@publisher=\count392
+\c@savedpublisher=\count393
+\c@language=\count394
+\c@savedlanguage=\count395
+\c@origlanguage=\count396
+\c@savedoriglanguage=\count397
+\c@pageref=\count398
+\c@savedpageref=\count399
+\shorthandwidth=\skip59
+\shortjournalwidth=\skip60
+\shortserieswidth=\skip61
+\shorttitlewidth=\skip62
+\shortauthorwidth=\skip63
+\shorteditorwidth=\skip64
+\locallabelnumberwidth=\skip65
+\locallabelalphawidth=\skip66
+\localshorthandwidth=\skip67
+\localshortjournalwidth=\skip68
+\localshortserieswidth=\skip69
+\localshorttitlewidth=\skip70
+\localshortauthorwidth=\skip71
+\localshorteditorwidth=\skip72
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/biblatex/blx-compat
+.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/biblatex/biblatex.d
+ef
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count400
+\c@textcitetotal=\count401
+\c@textcitemaxnames=\count402
+\c@biburlbigbreakpenalty=\count403
+\c@biburlbreakpenalty=\count404
+\c@biburlnumpenalty=\count405
+\c@biburlucpenalty=\count406
+\c@biburllcpenalty=\count407
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count408
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/biblatex/bbx/numeri
+c.bbx
+File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/biblatex/bbx/standa
+rd.bbx
+File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count409
+\c@bbx:relatedtotal=\count410
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/biblatex/cbx/numeri
+c.cbx
+File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/biblatex/biblatex.c
+fg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-10-24 L3 programming layer (loader) 
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/l3backend/l3backend
+-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count411
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2025-10-24 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/biblatex/blx-case-e
+xpl3.sty
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/l3packages/xparse/x
+parse.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+))
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/11/09 v25.15 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count412
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2050.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2052.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2054.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2055.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2056.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2058.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2083.
+\U@D=\dimen149
+\l@unhyphenated=\language91
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/babel/txtbabel.de
+f)
+\bbl@readstream=\read3
+\bbl@dirlevel=\count413
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/babel/locale/ro/b
+abel-romanian.tex)
+Package babel Info: Importing font and identification data for romanian
+(babel)             from babel-ro.ini. Reported on input line 4298.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/babel-romanian/ro
+manian.ldf
+Language: romanian 2021/04/04 v1.2m Romanian support from the babel system
+))
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/caption/caption3.st
+y
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen150
+\captionmargin=\dimen151
+\caption@leftmargin=\dimen152
+\caption@rightmargin=\dimen153
+\caption@width=\dimen154
+\caption@indent=\dimen155
+\caption@parindent=\dimen156
+\caption@hangindent=\dimen157
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count414
+\c@continuedfloat=\count415
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/datetime/datetime.s
+ty
+Package: datetime 2015/03/20 v2.60 Date Time Package
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.s
+ty
+Package: fmtcount 2025/08/23 v3.11 Displaying the values of LaTeX counters (NT,
+VB,NE)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.t
+ex
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.
+tex
+\XKV@toks=\toks20
+\XKV@tempa@toks=\toks21
+\XKV@tempb@toks=\toks22
+)
+\XKV@depth=\count416
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.s
+ty
+Package: fcprefix 2012/09/28
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/fmtcount/fcnumparse
+r.sty
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count417
+))
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen158
+)
+\c@padzeroesN=\count418
+\fc@tmpcatcode=\count419
+\@DT@modctr=\count420
+\@ordinalctr=\count421
+\@orgargctr=\count422
+\@strctr=\count423
+\@tmpstrctr=\count424
+\@DT@loopN=\count425
+\@DT@X=\count426
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/datetime/datetime-d
+efaults.sty
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count427
+\@month=\count428
+\@year=\count429
+\c@HOUR=\count430
+\c@HOURXII=\count431
+\c@MINUTE=\count432
+\c@TOHOUR=\count433
+\c@TOMINUTE=\count434
+\c@SECOND=\count435
+\currenthour=\count436
+\currentminute=\count437
+\currentsecond=\count438
+Package datetime Info: No datetime.cfg file found, using default settings on in
+put line 308.
+\@dtctr=\count439
+\dayofyear=\count440
+\dayofweek=\count441
+LaTeX Info: Redefining \today on input line 736.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/datetime/dt-romania
+n.def
+File: dt-romanian.def 2013/09/10
+LaTeX Info: Redefining \dateromanian on input line 64.
+)
+\dt@a=\toks24
+\dt@b=\toks25
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.s
+ty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip73
+\f@nch@offset@elh=\skip74
+\f@nch@offset@erh=\skip75
+\f@nch@offset@olh=\skip76
+\f@nch@offset@orh=\skip77
+\f@nch@offset@elf=\skip78
+\f@nch@offset@erf=\skip79
+\f@nch@offset@olf=\skip80
+\f@nch@offset@orf=\skip81
+\f@nch@height=\skip82
+\f@nch@footalignment=\skip83
+\f@nch@widthL=\skip84
+\f@nch@widthC=\skip85
+\f@nch@widthR=\skip86
+\@temptokenb=\toks26
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/graphics/graphics.s
+ty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/graphics-cfg/graphi
+cs.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/graphics-def/pdftex
+.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/graphics/graphicx.s
+ty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/hyperref/hyperref.s
+ty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/kvdefinekeys/kvde
+finekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/pdfescape/pdfesca
+pe.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/hyperref/nameref.st
+y
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/refcount/refcount.s
+ty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/gettitlestring/ge
+ttitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count442
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/stringenc/stringe
+nc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen161
+\Hy@linkcounter=\count443
+\Hy@pagecounter=\count444
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/intcalc/intcalc.s
+ty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count445
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count446
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen162
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/bigintcalc/bigint
+calc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count447
+\Field@Width=\dimen163
+\Fld@charsize=\dimen164
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count448
+\c@Item=\count449
+\c@Hfootnote=\count450
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/hyperref/hpdftex.de
+f
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count451
+\c@bookmark@seq@number=\count452
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/rerunfilecheck/reru
+nfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/generic/uniquecounter/uni
+quecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip87
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/lastpage/lastpage.s
+ty
+Package: lastpage 2025/08/14 v2.1h lastpage: 2.09 or 2e? (HMM)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/lastpage/lastpage2e
+.sty
+Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (H
+MM)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/lastpage/lastpagemo
+dern.sty
+Package: lastpagemodern 2025-08-14 v2.1h Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count453
+) 
+))
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/caption/subcaption.
+sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count454
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count455
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/tablefootnote/table
+footnote.sty
+Package: tablefootnote 2014/01/26 v1.1c Table foot notes (HMM)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/letltxmacro/letltxm
+acro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count456
+\calc@Bcount=\count457
+\calc@Adimen=\dimen165
+\calc@Bdimen=\dimen166
+\calc@Askip=\skip88
+\calc@Bskip=\skip89
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count458
+\calc@Cskip=\skip90
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+)))
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip91
+\cftbeforetoctitleskip=\skip92
+\cftaftertoctitleskip=\skip93
+\cftbeforepartskip=\skip94
+\cftpartnumwidth=\skip95
+\cftpartindent=\skip96
+\cftbeforechapskip=\skip97
+\cftchapindent=\skip98
+\cftchapnumwidth=\skip99
+\cftbeforesecskip=\skip100
+\cftsecindent=\skip101
+\cftsecnumwidth=\skip102
+\cftbeforesubsecskip=\skip103
+\cftsubsecindent=\skip104
+\cftsubsecnumwidth=\skip105
+\cftbeforesubsubsecskip=\skip106
+\cftsubsubsecindent=\skip107
+\cftsubsubsecnumwidth=\skip108
+\cftbeforeparaskip=\skip109
+\cftparaindent=\skip110
+\cftparanumwidth=\skip111
+\cftbeforesubparaskip=\skip112
+\cftsubparaindent=\skip113
+\cftsubparanumwidth=\skip114
+\cftbeforeloftitleskip=\skip115
+\cftafterloftitleskip=\skip116
+\cftbeforefigskip=\skip117
+\cftfigindent=\skip118
+\cftfignumwidth=\skip119
+\c@lofdepth=\count459
+\c@lotdepth=\count460
+\cftbeforelottitleskip=\skip120
+\cftafterlottitleskip=\skip121
+\cftbeforetabskip=\skip122
+\cfttabindent=\skip123
+\cfttabnumwidth=\skip124
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/titlesec/titlesec.s
+ty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box53
+\beforetitleunit=\skip125
+\aftertitleunit=\skip126
+\ttl@plus=\dimen167
+\ttl@minus=\dimen168
+\ttl@toksa=\toks27
+\titlewidth=\dimen169
+\titlewidthlast=\dimen170
+\titlewidthfirst=\dimen171
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/graphics-cfg/color.
+cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/graphics/mathcolor.
+ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen172
+\ar@mcellbox=\box54
+\extrarowheight=\dimen173
+\NC@list=\toks28
+\extratabsurround=\skip127
+\backup@length=\skip128
+\ar@cellbox=\box55
+)
+\TX@col@width=\dimen174
+\TX@old@table=\dimen175
+\TX@old@col=\dimen176
+\TX@target=\dimen177
+\TX@delta=\dimen178
+\TX@cols=\count461
+\TX@ftn=\toks29
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count462
+\float@exts=\toks30
+\float@box=\box56
+\@float@everytoks=\toks31
+\@floatcapt=\box57
+)
+(./configuration.tex))
+
+Package biblatex Warning: Load 'inputenc' before biblatex.
+
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count463
+\@quotereset=\count464
+(./main.aux
+
+LaTeX Warning: Label `fig:nume-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:nume-label' multiply defined.
+
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+Package biblatex Info: Trying to load language 'romanian'...
+Package biblatex Info: ... file 'romanian.lbx' found.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/biblatex/lbx/romani
+an.lbx
+File: romanian.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout3 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' not found.
+
+No file main.bbl.
+Package biblatex Info: Reference section=0 on input line 6.
+Package biblatex Info: Reference segment=0 on input line 6.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/context/base/mkii/supp-pd
+f.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count465
+\scratchdimen=\dimen179
+\scratchbox=\box58
+\nofMPsegments=\count466
+\nofMParguments=\count467
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count468
+\MPscratchDim=\dimen180
+\MPnumerator=\count469
+\makeMPintoPDFobject=\count470
+\everyMPtoPDFconversion=\toks33
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstop
+df-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/latexconfig/epstopd
+f-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 6.
+ (./main.out) (./main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+ (./components/frontmatter/all.tex
+(./components/frontmatter/title.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 5.
+<components/frontmatter/../images/ATM.png, id=172, 654.94687pt x 770.88pt>
+File: components/frontmatter/../images/ATM.png Graphic file (type png)
+<use components/frontmatter/../images/ATM.png>
+Package pdftex.def Info: components/frontmatter/../images/ATM.png  used on inpu
+t line 15.
+(pdftex.def)             Requested size: 137.9979pt x 162.4189pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 33.
+ [1
+
+{/media/tudor/380827CD08278948/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex
+.map}{/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super
+/cm-super-t1.enc} <./components/frontmatter/../images/ATM.png>] [2]) (./compone
+nts/frontmatter/acknowledgment.tex
+[3]) (./components/frontmatter/adviser_resume.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <20.74> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 1.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.12 \newpage
+              \ [1
+
+]
+pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.13 \newpage
+              \ [2]
+pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 \newpage
+              \ [3] [4]) (./components/frontmatter/specification.tex [5
+
+]
+[6] [7] [8]) (./components/frontmatter/abstract.tex) [9
+
+] (./main.toc [10
+
+])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+
+[11] (./main.lof)
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+ [12
+
+] (./components/frontmatter/abbreviations.tex [13
+
+]))
+(./components/chapters/all.tex (./components/chapters/components.tex [14]
+Capitolul 1.
+[15
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[][]\T1/cmr/m/n/8 https://www.dnsc.ro/vezi/document/buletin-de-indicatori-stati
+stici-si-tendinte-de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+[][]\T1/cmr/m/n/8 https://artificialintelligenceact.eu/wp-content/uploads/2024/
+11/Future-of-Life-
+ []
+
+[16] [17]
+Capitolul 2.
+[18
+
+] [19]
+<components/chapters/../images/FL_models.png, id=345, 865.2325pt x 331.2375pt>
+File: components/chapters/../images/FL_models.png Graphic file (type png)
+<use components/chapters/../images/FL_models.png>
+Package pdftex.def Info: components/chapters/../images/FL_models.png  used on i
+nput line 154.
+(pdftex.def)             Requested size: 241.49895pt x 92.45271pt.
+ [20 <./components/chapters/../images/FL_models.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+[]|\T1/cmr/bx/n/10 Federated lear-ning
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+\T1/cmr/m/n/10 (cen-tra-li-zed co-or-di-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+[]\T1/cmr/m/n/10 necesit  con-e-xiuni su-pli-men-tare în-tre
+ []
+
+
+Overfull \hbox (15.60367pt too wide) in paragraph at lines 164--211
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 36.98535pt on input line 213.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21{/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/c
+m-super-ts1.enc}]
+<components/chapters/../images/Device_internal_State.png, id=358, 758.835pt x 5
+82.175pt>
+File: components/chapters/../images/Device_internal_State.png Graphic file (typ
+e png)
+<use components/chapters/../images/Device_internal_State.png>
+Package pdftex.def Info: components/chapters/../images/Device_internal_State.pn
+g  used on input line 234.
+(pdftex.def)             Requested size: 241.49895pt x 185.26935pt.
+ [22
+
+
+ <./components/chapters/../images/Device_Internal_State.png>]
+<components/chapters/../images/Federated_Learning_Operations.png, id=366, 1285.
+80376pt x 662.475pt>
+File: components/chapters/../images/Federated_Learning_Operations.png Graphic f
+ile (type png)
+<use components/chapters/../images/Federated_Learning_Operations.png>
+Package pdftex.def Info: components/chapters/../images/Federated_Learning_Opera
+tions.png  used on input line 248.
+(pdftex.def)             Requested size: 241.49895pt x 124.42603pt.
+
+Underfull \vbox (badness 3679) has occurred while \output is active []
+
+ [23 <./components/chapters/../images/Federated_Learning_Operations.png>]
+Overfull \hbox (20.90567pt too wide) in paragraph at lines 290--291
+[]\T1/cmr/bx/n/10 Supraveghere f r  ex-pu-ne-rea da-te-lor sen-si-bile: \T1/cmr
+/m/n/10 Mo-de-lele de recunoa[]tere
+ []
+
+[24] [25]
+Capitolul 3.
+[26
+
+]
+Capitolul 4.
+[27
+
+]
+Capitolul 5.
+(./components/tables/small_table.tex
+Overfull \hbox (25.19998pt too wide) in paragraph at lines 2--11
+[][] 
+ []
+
+) [28
+
+] (./components/tables/large_table.tex
+Overfull \hbox (4.86298pt too wide) in paragraph at lines 3--17
+ [][] 
+ []
+
+) [29
+
+]
+<components/images/architecture.jpg, id=399, 702.625pt x 491.8375pt>
+File: components/images/architecture.jpg Graphic file (type jpg)
+<use components/images/architecture.jpg>
+Package pdftex.def Info: components/images/architecture.jpg  used on input line
+ 355.
+(pdftex.def)             Requested size: 199.16928pt x 139.41714pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 358.
+See the caption package documentation for explanation.
+
+[30
+
+ <./components/images/architecture.jpg>]
+
+LaTeX Warning: Citation 'morphological_operations' on page 31 undefined on inpu
+t line 392.
+
+
+LaTeX Warning: Citation 'cloud_crypto' on page 31 undefined on input line 394.
+
+) (./components/chapters/bibliography.tex [31]
+
+Package biblatex Warning: Type 'book' not found on input line 14.
+
+
+LaTeX Warning: Empty bibliography on input line 14.
+
+
+Package biblatex Warning: Type 'article' not found on input line 20.
+
+
+LaTeX Warning: Empty bibliography on input line 20.
+
+)) [32
+
+] 
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-10-24>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 41297E003C11CE71CA7EC4BE95D2464B;6406
+(rerunfilecheck)             After:  B68D573AD0E6364DDCCBDA4B49B9B4C0;6406.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 21801 strings out of 467538
+ 390398 string characters out of 5412257
+ 1252191 words of memory out of 5000000
+ 50265 multiletter control sequences out of 15000+600000
+ 650208 words of font info for 85 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 87i,17n,93p,1181b,2384s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.11} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.8} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter*.14} has been referenced but does not exist
+, replaced by a fixed one
+
+</media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx7.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmex10.pfb></media/tudor/380827CD08278948/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></media/tudor/380827CD0827894
+8/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></media/tudor/380
+827CD08278948/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></medi
+a/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-
+super/sfbi1000.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type
+1/public/cm-super/sfbx0500.pfb></media/tudor/380827CD08278948/texlive/texmf-dis
+t/fonts/type1/public/cm-super/sfbx0600.pfb></media/tudor/380827CD08278948/texli
+ve/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></media/tudor/380827CD08
+278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></media/tudo
+r/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb>
+</media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/s
+fbx1000.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/publi
+c/cm-super/sfbx1200.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts
+/type1/public/cm-super/sfbx1440.pfb></media/tudor/380827CD08278948/texlive/texm
+f-dist/fonts/type1/public/cm-super/sfbx2074.pfb></media/tudor/380827CD08278948/
+texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></media/tudor/38082
+7CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></media
+/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0700
+.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-su
+per/sfrm0800.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/
+public/cm-super/sfrm0900.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/
+fonts/type1/public/cm-super/sfrm1000.pfb></media/tudor/380827CD08278948/texlive
+/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></media/tudor/380827CD0827
+8948/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (35 pages, 1336700 bytes).
+PDF statistics:
+ 564 PDF objects out of 1000 (max. 8388607)
+ 462 compressed objects within 5 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+

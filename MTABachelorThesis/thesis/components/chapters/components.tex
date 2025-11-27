@@ -1,0 +1,402 @@
+\documentclass[../../main.tex]{subfiles}
+
+
+\begin{document}
+
+\chapter{Introducere}
+
+\section{Context}
+
+Odata cu dezvoltarea sistemelor de calcul moderne si a componentelor Hardware, s-au putut realiza produse software complexe cu capacitati de stocare
+net superioare. Revolutia tehnologica a permis nu doar realizarea unor sarcini simple, precum calcule matematice, sau automatizarea unor dispozitive ( de exemplu aprinderea automata a unui bec printr-un microcontroler),
+ci si posibilitatea gestionarii mai eficiente a informatiilor digitale (de la date bancare la fisiere media).
+
+Aceasta a devenit treptat principala sursa legitima de inregistrare a oricarui tip de date (text, imagini, video, audio).
+Pentru a accesa si actualiza informatia digitala, s-au dezvoltat diferite versiuni de baze de date centralizate si distribuite.
+
+Bazele de date centralizate sunt aplicatii software specializate ce folosesc resursele sistemului (a statiei) pentru a raspunde cat mai rapid interogarilor.
+Statiile trebuie sa detina multa putere de stocare si de procesare in comparatie cu un sistem de calcul normal destinat utilizatorilor casnici.
+In alta ordine de idei, s-au dezvoltat si baze de date distribuite, menite sa reduca din capacitatile tehnice ale serverului si sa stocheze informatia sub
+forma descentralizata. Cautarea resursei in acest context ar presupune interogarea recursiva a fiecarei entitati pana la gasirea sa. Prin acest mod, nu doar
+ca statiile pot avea si capabilitati tehnice mai reduse, dar si pot pastra copii de rezerva (backup) locale pentru fiecare segment de informatie in parte.
+
+Această evoluție naturală spre descentralizare a deschis drumul unor concepte moderne precum învățarea automată federată (federated learning), unde datele nu mai sunt transferate către un server central. În schimb, modelele sunt antrenate local, iar parametrii sunt ulterior agregați global. Astfel, se menține confidențialitatea datelor, fără a compromite performanța modelului.
+
+Evolutia tehnologica continua a dat nastere la o serie de atacuri cibernetice menite sa destabilizeze securitatea aplicatiilor si totodata sustragerea a
+cat mai multe date sau identitati private in contradictie cu normele legale.
+Cele mai populare atacuri raportate la scara globala pentru anul curent 2025 sunt ransomware (conform \footnotemark{}, in SUA s-au raportat cresteri
+de 149\%), furtul de identitate prin exfiltrarea de credentiale, si phishing.
+Dezvoltarea modelelor de inteligență artificială a amplificat aceste riscuri, oferind atacatorilor instrumente automatizate pentru generarea și adaptarea atacurilor.
+
+Pentru a limita utilizarea abuzivă a tehnologiilor bazate pe AI, Uniunea Europeană a adoptat în 2024 un set de reglementări stricte privind integrarea acestor module în aplicațiile software, prin AI Act \footnotemark{}.
+
+Progresul din domeniul machine learning si a Large Language Models a fost posibil ca urmare a unui volum masiv de date disponibile si a nevoii tot mai mari de analiza.
+Acest lucru a determinat aparitia unei noi categorii de specialisti, data scientists, dedicati colectarii si prelucrarii minutioase a datelor pentru antrenarea modelelor.
+
+Totuși, pe măsură ce investițiile în tehnologii AI au crescut, au apărut și actori rău intenționați care încearcă să exploateze vulnerabilitățile din procesul de antrenare.
+Întrucât modelele moderne depind de calitatea datelor folosite, acestea au devenit o țintă principală a atacurilor.
+Atacatorii se regasesc si ei intr-o pozitie constanta de adaptare la noile formalitati de securitate si incearca sa contracareze fiecare element nou.
+Astfel, avand in vedere complexitatea dezvoltarii unui modul de inteligenta artificiala specializat pe diferite domenii, tinta s-a redirectionat spre volumul de date pe care acestea le folosesc si care pot determina starea finala a aplicatiei.
+
+În contextul învățării automate distribuite, literatura de specialitate identifică trei categorii majore de atacuri:
+
+- Atacuri asupra datelor, precum data poisoning, unde setul de antrenare este manipulat pentru a altera comportamentul modelului;
+
+- Atacuri asupra modelului, prin modificarea parametrilor sau a gradientului (de exemplu, model poisoning);
+
+- Atacuri asupra canalului de comunicare, care vizează interceptarea sau modificarea mesajelor dintre entitățile participante.
+
+Lucrarea de față se concentrează pe prima categorie, data poisoning, în cadrul unei infrastructuri de invatare federate.
+
+\footnotetext[1]{https://www.dnsc.ro/vezi/document/buletin-de-indicatori-statistici-si-tendinte-de-securitate-cibernetica-h1-2025}
+\footnotetext[2]{ https://artificialintelligenceact.eu/wp-content/uploads/2024/11/Future-of-Life-InstituteAI-Act-overview-30-May-2024.pdf}
+
+\section{Motivatia lucrarii}
+
+Avand in vedere aspectele legate de posibilitatea unei interventii asupra setului de date de antrenare, atac denumit otravire a datelor (data poisoning),
+munca cercetatorilor s-a ingreunat. Preocuparea nu mai este primordial asupra analizei setului de date de antrenare, cat despre mentinerea integritatii si a confidentialitatii lor.
+Pentru a răspunde acestor nevoi, colaborarea dintre cercetători s-a orientat către modele distribuite de lucru, iar învățarea federată (federated learning) a devenit una dintre principalele direcții.
+Aceasta permite colaborarea între participanți fără a partaja direct seturile lor de date, menținând o barieră naturală împotriva accesului neautorizat. Totuși, deși infrastructura este diferită față de abordările centralizate, vulnerabilitățile rămân, iar atacurile asupra datelor utilizate local pot afecta modelul global.
+
+In urma unei analize proprii, am putut observa diferite solutii/frameworks de simulare a procesului de invatare automata federata, dar fara o integrare cu mecanisme moderne de testare pentru atacuri
+precum otravirea datelor (data poisoning) amintite anterior \footnotemark{}. Unele dintre aceste framework-uri sunt poate dificil de gestionat si configurat \footnotemark{}, si nu permit extinderea usoara prin integrare altor componente.
+In acelasi timp, gandindu-ne la multitudinea de atacuri malware si la platformele de detectie a lor, devine clar ca in domeniul inteligentei artificiale lipseste o platforma centralizata, flexibila, dedicata testarii si evaluarii cu diferite tipuri de atacuri asupra modelelor distribuite.
+
+Aceste limitări justifica realizarea prezentei lucrari, care își propune dezvoltarea unei platforme de simulare capabile sa testeze atacuri de tip data poisoning într-o infrastructura de învățare federată.
+
+\footnotetext[3]{ https://ibmfl-api-docs.res.ibm.com/index.html }
+\footnotetext[4]{ https://github.com/IBM/federated-learning-lib/tree/main }
+
+\section{Obiectivele lucrarii}
+
+Plecand de la neajunsurile prezentate, ne propunem in aceasta lucrare sa venim in sprijinul comunitatii de cercetare stiintifica in domeniul securizarii solutiilor cu AI cu o platforma de simulare cu sursa deschisa ("open source"), a acestei clase de atacuri pe mai multe directii.
+Astfel, oferim cercetatorilor posibilitatea analizei algoritmului de antrenare propriu dezvoltat, plecand de la o retea neuronala de baza si un set de date uzual (imagini), si testarea sa prin antrenare in diferite conditii.
+Platforma in sine respecta toate normele unei aplicatii software de productie, in care fiecare actiune are propria sa logica de implementare.
+Serviciile sunt segregate suficient de mult incat sa permita o dezvoltare ulterioara prin integrarea lor cu alte sisteme.
+
+Rezultatele pot fi utile in contextul securizarii procesului de antrenare al algoritmului, dar si pentru analiza factorilor de risc la care e expus in acest mediu.
+
+Cercetatorul este cel care furnizeaza algoritmul python de antrenare a propriei retele neuronale sau algoritm de Machine Learning. El seteaza parametrii simularii atat pentru procesul de antrenare, cat si pentru tipul de atac de otravire a datelor.
+Platforma isi propune sa simuleze acest tip de atac cu ajutorul acestor setari de inceput intr-un mediu de invatare federata, furnizand la final o comparatie intre modelul antrenat folosind datele normale de antrenare si cel antrenat cu datele otravite.
+Aceste rezultate pot fi utile in semnalarea unui posibil risc la nivelul modelului dezvoltat, oferind mai apoi solutii de imbunatatire a implementarii sale.
+
+
+\section{Structura lucrarii}
+
+% Aici completam la final 
+
+
+% Structura pe capitole 
+\chapter{Notiuni Teoretice}
+
+In acest capitol, vor fi prezentate notiunile teoretice specifice intelegerii procesului de dezvoltare a platformei de simulare.
+Vom incepe cu Notiunile introductive despre conceptele de Machine Learning in antiteza cu Deep Learning. In continuare, vom discuta despre invatarea federata si arhitectura unei infrastructuri federate de invatare automata, tipurile
+de atacuri data poisoning implementate in procesul de simulare a atacurilor, precum si alte notiuni specifice implementarii.
+
+    \section{Notiuni introductive}
+
+    Machine Learning si Deep Learning sunt doua ramuri importante ale Inteligentei Artificiale care au rolul dezvoltarii unor modele specifice rezolvarii unor anumite
+    actiuni. Pornind de la antrenarea de retele neuronale, ne orientam atentia spre setul de date de antrenare si spre actorii ce pot interveni in acest proces.
+    Mediul in care testam ofera o perspectiva reala asupra impactului pe care il pot avea aceste atacuri la nivelul unei organizatii sau aplicatii.
+
+    \subsection{Diferenta dintre Machine Learning si Deep Learning}
+
+    Inteligența Artificială (AI) este domeniul vast care înglobează orice tehnică ce permite calculatoarelor să imite comportamentul uman.
+Informatia a evoluat treptat odata cu imbunatatirea capabilitatilor de stocare ale dispozitivelor si aparitia programelor software complexe.
+De la simplul format de text, inregistrari audio, pana la imagini si video in rezolutii 4K, modul de lucru s-a diversificat constant.
+
+La fel au evoluat si cerintele utilizatorilor, care tind sa acceada catre solutii automate care sa le rezolve problemele uzuale,
+precum identificarea de patterns in imagini sau chiar din video, sau generarea de text.
+
+IA vine sa rezolve aceste probleme si sa introduca algoritmi de rezolvare specifici pentru fiecare tip de informatie furnizata.
+
+Machine Learning este o componenta importanta din domeniul IA care se diferentiaza de alte metode de antrenare prin optimizarile pe care le aduce erorilor ce apar din predictia rezultatului corect.
+Modelele de ML clasice se bazeaza pe interventia umana in factorul de decizie (supervised learning), mai precis datele de intrare sunt etichetate pentru a oferi un context de predictie stabil.
+
+Deep Learning este o subcategorie a Machine Learning, care are rolul de a minimiza interventia umana si a automatiza procesul de decizie. Prin aceasta metoda se automatizeaza mare parte din extragerea caracteristicilor pe setul de date, eliminand nevoia de a defini etichete pentru fiecare valoare de intrare (unsupervied learning).
+
+Diferenta dintre aceste doua concepte este in modul in care acesti algoritmi invata si procentul de utilizare a datelor [1].
+Scopul principal al invatarii automate este predictia. Pe baza unui set de date de antrenare si de testare, se determina o anumita categorie de iesire predefinita.
+
+    \subsection{Retea Neuronala}
+
+    Retelele Neuronale sunt un subset al Machine Learning si se identifica drept infrastructura de baza din cadrul algoritmilor de Deep Learning. Denumirea de "neuronal" se refera la structura lor interna, in care fiecare caracteristica (feature) este un neuron ce interactioneaza unii cu altii.
+Ele sunt compuse din 3 straturi/layers: primul strat il reprezinta stratul nodurilor de intrare, al doilea strat este denumit "stratul ascuns" (hidden layer) pt ca incapsuleaza mai multe straturi, iar ultimul strat este cel de iesire in care se face predictia propriu-zisa.
+Straturile ascunse sunt concepute pentru a procesa iterativ datele pornind de la starea lor din nodurile de intrare pana la stratul de iesire.
+
+
+    \section{Invatare automata federata}
+
+    Evolutia hardware in tehnologie a condus la cresterea numarului dispozitivelor mobile (telefoane, tablete), denumite gadgets din faptul ca sunt mici, portabile si moderne.
+Ele au fost mai departe adoptate la scara larga, devenind obiecte indispensabile in era tehnologica ce avea sa vina.
+
+    \subsection{Concept}
+
+    Invatarea automata federata permite lucrul cu modele de ML sau chiar retele neuronale, antrenate distribuit, pe un numar mare de dispozitive in scopul rezolvarii unei probleme de IA. Distribuirea sarcinilor a fost adoptata si in contextul opozitiei lucrului centralizat, pe servere ce detin capabilitati Hardware performante (placi grafice de ultima generatie), dar care genereaza costuri mari si care pot fi predispuse la amenintari de securitate cibernetica, fiind considerate SPOF(Single Point of Failure).    
+
+    \subsection{Arhitectura FL}
+
+
+In literatura, exista mai multe categorii de arhitecturi de invatare automata federata. In aceasta sectiune ne vom concentra pe clasificarea generala a arhitecturii unei aplicatii folosind federated learning, si vom enumera pentru o anumita categorie cum se clasifica dispozitivele utilizate.
+
+Federated Learning, asa cum a mai fost mentionat, este organizat dintr-un server (agregator) si multiple dispozitive client. Modul in care aceste entitati comunica este fundamentul principal in modului de imbunatatire al invatarii.
+
+In modul clasic al federated learning, dispozitivele client transmit actualizari ale modelului de baza la un server central care aplica asupra lor o functie de agregare, reconstruind intreg modelul de baza. Aceasta setare/model, presupune de fapt o delegare a sarcinii de invatare, insa pastreaza entitate centrala necesara imbunatatirii solutiei.
+Acest fapt, nu tine sa evita posibilitatea amenintarilor cibernetice (Single Point of Failure), ci doar sa usureze costurile centralizatorului in a procesa local problema, distribuind sarcinile.
+
+Modelul Fully decentralized (peer-to-peer) learning, ofera o noua abordare si rezolva problema cibernetica amintita. In aceasta setare nu exista agregator, imbunatatirile fiind comunicate intre clienti interconectati. Ideea principala se bazeaza pe inlocuirea comunicarii cu agregatorul cu cea intre dispozitive individuale printr-un protocol prestabilit.
+In functie de numarul de dispozitive, se concepe un graf de conexiuni in care fiecare nod reprezinta un client, iar fiecare muchie un canal de comunicatie. Restrictia principala este ca un dispozitiv sa fie conectat la un numar maxim limitat de dispozitive adiacente, prestabilit, in contradictie cu un graf complet (stea) specific arhitecturii clasice client-server.
+Nodurile isi imbunatatesc propriile variante ale retelei, si isi comunica rezultatele pe care le agrega local, realizand o medie a ponderilor.
+In comparatie cu modelul federated learning clasic, modelul fully decentralized nu specifica de la inceput dispozitivelor un model de baza global de la care sa porneasca in procesul de rezolvare a problemei.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../images/FL_models.png}
+    \caption{Imaginea 2.2.2: Modele Federated Learning}
+    \label{fig:nume-label}
+\end{figure}
+
+Imaginea de mai sus ofera o privire de ansamblu asupra celor doua modele de arhitecturi si caracteristicile acestora.
+
+\begin{landscape}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{ | p{0.20\linewidth} | p{0.38\linewidth} | p{0.38\linewidth} | }
+            \hline
+            \textbf{Model} & \textbf{Avantaje} & \textbf{Dezavantaje} \\
+            \hline
+    
+            \textbf{Federated learning} (centralized coordination)
+            &
+            \begin{itemize}
+                \item mai simplu de configurat (topologie hub-and-spoke)
+                \item pornește de la un model global de bază
+                \item agregarea centralizată reduce sarcina de calcul pe clienți
+                \item necesită mai puține conexiuni (doar client → server)
+                \item gestiunea și monitorizarea sunt mai simple
+            \end{itemize}
+            &
+            \begin{itemize}
+                \item SPOF (Single Point of Failure) – serverul central
+                \item serverul poate deveni țintă pentru atacuri
+                \item nu elimină riscurile cibernetice, doar distribuie munca
+                \item dependența de coordonator pentru progresul antrenării
+                \item necesită infrastructură centralizată permanent disponibilă
+            \end{itemize}
+            \\
+            \hline
+    
+            \textbf{Fully decentralized / peer-to-peer learning}
+            &
+            \begin{itemize}
+                \item previne atacurile specifice unui server central (evită SPOF)
+                \item reziliență crescută – compromiterea unui nod nu destabilizează întregul sistem
+                \item îmbunătățirile se propagă prin graf, fără entitate centrală
+                \item agregare locală (fiecare nod mediază ponderile)
+                \item poate scala natural dacă graful este bine proiectat
+            \end{itemize}
+            &
+            \begin{itemize}
+                \item necesită conexiuni suplimentare între clienți
+                \item topologie complexă, dificil de administrat
+                \item nu există model global inițial furnizat tuturor
+                \item performanța depinde de calitatea grafului de conexiuni
+                \item nodurile malițioase pot influența direct vecinii
+                \item necesită protocoale suplimentare pentru consistența actualizărilor
+            \end{itemize}
+            \\
+            \hline
+    
+        \end{tabular}
+        \caption{Compararea modelelor Federated Learning și Fully Decentralized Learning}
+        \label{tab:fl_vs_p2p}
+    \end{table}
+\end{landscape}
+    
+In tabelul de mai sus, sunt evidentiate avantajele si dezavantajele utilizarii celor doua tipuri de modele federated learning.
+
+In continuarea acestei lucrari, se va discuta preponderent despre modelul clasic federated learning, fiind unul adoptat la scara larga si care ofera performante bune raportat la costurile de productie.
+
+Modelul clasic la randul sau, se catalogheaza in literatura in functie de tipul dispozitivelor care iau parte la procesul de antrenare. Sub acest filtru, exista Cross-Device Federated Learning si Cross-Silo Federated Learning.
+
+Cross-Device Federated Learning sunt dispozitivele client IOT uzuale, individuale, care comunica orchestratorului printr-un protocol prestabilit.
+
+Cross-Silo Federated Learning sunt dispozitive din institutii guvernamentale, companii, sau centre de date distribuite geografic. Institutiile nu doresc sa schimbe informatii intre ele sau cu un furnizor de servicii central, pastrandu-si confidentialitatea, folosind federated learning pt a antrena propriul model pe datele private ale fiecaruia.
+
+    \subsection{Procesul de antrenare FL}
+
+    Primul pas este stabilirea conexiunii dintre dispozitive si un server de agregare ce permite antrenare distribuita a tipului de retea neuronala sau model ML specific problemei.
+Odata stabilit canalul, in faza de configurare initiala, serverul trimite dispozitivelor starea de baza a retelei neuronale, ponderile, in vederea antrenarii individuale.
+Fiecare retea se antreneaza cu datele extrase local (on device) si isi imbunatateste configuratia interna la fiecare epoca pentru o perioada de timp bine determinata.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../images/Device_internal_State.png}
+    \caption{Imagine 2.2.3.1: Arhitectura interna a unui dispozitiv}
+    \label{fig:nume-label}
+\end{figure}
+
+Figura de mai sus descrie operatiile specifice programului Software care se ocupa de antrenarea retelei/modelului. Putem observa cum dispozitivele primesc un plan de antrenare de baza pe care il vor antrena local pe un set de date limitat.
+
+Desi acest pas nu aduce un procent de imbunatatiri foarte mari, in faza urmatoare, dispozitivele vor transmite configuratiile curente ale retelelor lor la orchestrator (server).
+Rutina FL\_Runtime extrage configuratia noua locala si ii comunica serverului pentru o posibila actualizare a sa.
+
+In cele din urma, entitatea centrala combina toate aceste ponderi aplicand o functie de agregare si in cazul imbunatatirii setului de ponderi, modifica configuratia de baza si o retransmite dispozitivelor pereche. Daca ponderile noi nu se imbunatatesc semnificativ fata de configuratia de baza, atunci se patreaza aceasta din urma, iar in caz contrar se actualizeaza cu noile ponderi.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../images/Federated_Learning_Operations.png}
+    \caption{Imagine 2.2.3.2: Procedee in invatare automata federata}
+    \label{fig:nume-label}
+\end{figure}
+
+In figura de mai sus, se pot observa intr-o maniera continua, fluxul de comunicatie dintre dispozitive si serverul agregator, precum si operatiile specifice fiecarei entitati dintr-o runda de mesaje.
+
+Securitatea protocoalelor de agregare, utilizate in comunicatii dintre clienti si orchestrator, este o componenta importanta in procesul federated learning.
+De mentionat este faptul ca, in aceasta topologie, comunicatiile au loc criptat, folosind metode specifice precum criptare homomorfica, sau chiar OTP, insa securitatea datelor de pe dispozitive ramane la latitudinea acestuia.
+
+    \subsection{Exemple in viata reala}
+
+    Federated Learning s-a extins rapid în numeroase domenii datorită capacității sale de a antrena modele performante fără a colecta sau centraliza date sensibile.
+Prin păstrarea informațiilor la nivelul fiecărui dispozitiv sau instituții, FL reduce riscurile asociate scurgerilor de date și permite colaborarea între entități care altfel nu ar putea împărtăși date brute.
+În continuare sunt prezentate câteva exemple reprezentative ale utilizării sale în aplicații din lumea reală.
+
+
+\subsection*{Industrie și IoT}
+\begin{itemize}
+    \item \textbf{Mentenanță predictivă:} Vehiculele moderne, utilajele industriale și echipamentele IoT generează constant date despre starea componentelor. FL permite antrenarea unui model comun care poate prezice momentul oportun pentru realizarea mentenanței fără a colecta date brute de la fiecare dispozitiv.
+    \item \textbf{Dispozitive de monitorizare:} Senzori purtabili și dispozitive smart home pot furniza statistici privind activitatea sau consumul energetic, păstrând datele utilizatorilor la sursă.
+\end{itemize}
+
+\subsection*{Medical}
+\begin{itemize}
+    \item \textbf{Diagnostic, prognoză și imagistică:} FL este folosit în spitale și clinici pentru detectarea celulelor canceroase din imagini RMN, CT sau radiografii, fără transferul imaginilor către un server central.
+    \item \textbf{Confidențialitate menținută la sursă:} Fiecare instituție medicală antrenează local o parte din model, partajând doar actualizările, ceea ce permite colaborarea fără a încălca regulile privind datele pacienților.
+\end{itemize}
+
+\subsection*{Financiar}
+\begin{itemize}
+    \item \textbf{Detectarea fraudelor:} Instituțiile financiare pot îmbunătăți detectarea tranzacțiilor suspecte analizând tipare comune fără a expune date sensibile despre clienți.
+\end{itemize}
+
+\subsection*{Servicii și experiență utilizator}
+\begin{itemize}
+    \item \textbf{Recomandări personalizate:} Platformele de streaming și aplicațiile mobile generează recomandări local, pe dispozitiv, fără a trimite istoricul complet al utilizatorului către server.
+    \item \textbf{Analiză comportamentală:} FL poate analiza activitatea utilizatorilor pentru a sugera rutine sănătoase sau îmbunătățiri ale stilului de viață, păstrând confidențialitatea datelor.
+\end{itemize}
+
+\subsection*{Securitate și privacy}
+\begin{itemize}
+    \item \textbf{Supraveghere fără expunerea datelor sensibile:} Modelele de recunoaștere facială pot fi antrenate fără a transmite imagini reale, doar parametrii aferenți.
+    \item \textbf{Analiză a sentimentelor:} FL poate analiza reacțiile utilizatorilor la evenimente sociale (like-uri, share-uri, comentarii) fără colectarea directă a acestor date de către platformă.
+\end{itemize}
+
+
+    \section{Data Poisoning}
+
+    \section{Alte Notiuni}
+
+\chapter{Proiectare, Implementare si Testare}
+
+    \section{Cerintele Software}
+
+        \subsection{Cerintele functionale}
+        \subsection{Cerintele nefunctionale}
+    
+    \section{Arhitectura platformei}
+
+        \subsection{Containere}
+        \subsection{Server}
+    
+    \section{Testare}
+
+\chapter{Rezultate si Metrici Simulari}
+
+    \section{Evaluare Performante}
+
+        \subsection{Scalabilitatea Simularilor}
+        \subsection{Scalabilitatea platformei}
+
+    \section{Evaluare Rezultate}
+
+        \subsection{Performante Gaussian Noise}
+        \subsection{Performante Label-Flip}
+        \subsection{Performante Backdoor}
+
+\chapter{Concluzii si dezvoltare ulterioara}
+
+    \section{Starea Curenta}
+    \section{Dezvoltare Ulterioara}
+
+
+\section{Tabele}
+
+Tabelele sunt aranjări a informației într-o structură formată din linii și coloane, care permite o mai bună observare a acesteia.
+
+Mai jos apar două exemple. Primul tabel este de dimensiune mică. Al doilea, din cauza dimensiunii mai mari, are o orientare inversată și este plasat singur pe o pagină.
+
+\input{components/tables/small_table}
+
+\newpage
+
+\begin{landscape}
+    \vspace*{\fill}
+    \input{components/tables/large_table}
+    \vspace*{\fill}
+\end{landscape}
+
+\newpage
+
+\section{Imagini}
+
+Imaginile sunt utilizate în cadrul lucrării pentru exemplificarea unor idei în manieră vizuală.
+
+\begin{center}
+    \includegraphics[width=7cm]{components/images/architecture.jpg}
+    \label{fig:architecture}
+    \captionsetup{justification=centering,margin=1cm}
+    \captionof{figure}[Arhitectura unui calculator]{Arhitectura unui calculator\footnotemark}
+\end{center}
+\vspace{0.3cm}
+
+\footnotetext{Arhitectura ilustrată este de fapt cea von Neumann.}
+
+\section{Liste}
+
+Listele sunt simple serii de informații.
+
+\begin{itemize}
+    \item Un item
+    \item Unul dintre itemi
+    \item Încă un item
+\end{itemize}
+
+Acestea pot conțin itemi identificați prin numere dacă indexarea sau sortarea sunt necesare.
+
+\begin{enumerate}
+    \item Primul item
+    \item Al doilea item
+    \item Al treilea item
+\end{enumerate}
+
+\section{Formule Matematice}
+
+\LaTeX{} oferă un mod programatic de a construi formule matematice, după cum este cea de mai jos.
+
+\newpage
+
+$ \sum \mathbf{F} = 0 \Leftrightarrow {\frac {\mathrm{d} \mathbf{v}}{\mathrm{d} t}} = 0 $
+
+\section{Note de Subsol. Citări}
+
+Notele de subsol pot fi utile în cazul explicațiilor suplimentare (cum a fost cea referitoare la imaginea inclusă, la care sintaxa este puțin diferită din cauza plasării notei în cadrul legendei) sau a citărilor\footnote{\fullcite{morphological_operations}} care nu se pretează a fi trecute în bibliografie din cauza utilizării lor punctuale.
+
+Pe de altă parte, sursele bibliografice citate intens \cite{cloud_crypto} sunt marcate corespunzător și notate în bibliografie.
+
+\section{Etichete. Referințe}
+
+În cadrul surselor \LaTeX{} a acestui document, apar \textit{tag}-uri \inlinecode{\textbackslash label} care creează o etichetă utilă referințelor interne. Acestea din urmă indică elemente din cadrul documentului curent (de exemplu, către tabelul \ref{tab:small_table}).
+
+Mai pot apărea referințe externe, către resurse din Internet (de exemplu, către \textit{website}-ul \href{https://www.wikipedia.org/}{Wikipedia}).
+
+\end{document}

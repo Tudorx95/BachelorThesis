@@ -1,0 +1,157 @@
+
+# Objectives
+
+Create a web platform for generating FL networks using a predefined ML model. The network will simulate a specific attack type and report the resistence of the predefined infrastructure. Researchers will have a much easier way to test their model for a specific dataset by providing the model and the dataset and examine its resilience. 
+
+## Main Components
+
+- a web platform
+- a server (ATM) for training the precomputed model
+- multiple client nodes (containers)
+
+## Web Platform Functionalities
+
+-? A selector for ML models and also data link or uploading the datas. Then in this preprocessing phase, the model will be trained remotely and the server will have a base model prepared for FL network. What kind of data the user selects?
+The user will need to clearly define the number of clusters as in supervised learning or may be a model unsupervised?
+A more robust method would be to define a specific type of datas and some predefined MLs.
+The MLs are needed for emphasising the attack range in different scenarios.
+(this is the first preprocessing phase for FL network)
+
+- Clients specification nodes. Determining the type of FL: cross-device or cross-silo. Then define the containers specs for training the local ML.
+What are the type of resources needed for a node? CPU, GPU?
+Can the user platform set those or they are set accordingly?
+
+
+- Next stage will be defining the network settings. (nb of clients, training rounds per client, accuracy level of training, FL structure - insecure, secure:HE, DP concepts as SSS, or others)
+ What is the accuracy necessary for the FL network to optimize the parameters?
+ How to aggregate parameters? (Avg)
+ What is the protocol of transmitting the information?
+
+
+- Select the attack for network resilience. Some kind of predefined attacks supported by platform that will be deployed IN THOSE NB OF ROUNDS defined previously at the last stage. ALSO, adding a quick overview infos of each attack. 
+What would be those attacks? Data poisoning and what?
+How can we measure the attack involvement in the network?
+What are the metadata features in the messages that will be extracted and used for defining a statistics?
+
+- Dashboard with statistics of the accuracy preserved base model after the attack. After some tested FL models, a PIE chart or other type of chart with the next infos:
+What was the impact of the attack to ML base model? (accuracy comparison)
+What differences exists comparing with other attacks on THE SAME FL network?
+Can the user compare 2 tests but on different networks?
+
+The user can select each FL network tested and view its deployment specs and compare it to other tests.
+All statistics could be exported to a new file for better analysis.
+
+
+
+
+### Question related to implementation
+
+- What is the protocol of communication between the server and the user web platform?
+- What are the metadatas used in order to monitor the ML updates? How can I monitor the parameter updates in a SECURE FL (maybe a network that implements HE) ? Is this a compromise to FL security (IOC)?
+
+- How to implement those attacks? Byzantine attack, inferenced attack, poisoning attack ?
+
+- Can my platform perform preprocessing a ML model based on the nb of clusters, datas and other stuff? What is that stuff?
+
+- Where to evaluate the simulated attacks, on ATM Server entirely or clients locally and the rest of infrastructure on ATM Server?
+
+- Indicatori de performanta determinati prin matrice de confuzie (acuratete, precizie, masura F, recall)
+
+- La alegerea modelului de ML sa existe o scurta descriere a caracteristicilor principale, pt ca userul sa aleaga pe cel mai preferabil
+
+
+
+### More important aspects
+
+- the platform will have a obfuscation tool for the ML model the user uploads for intellectual property.
+
+- after determining which type of communication will be performed (reports to ATM Server, or clients and reports to ATM Server), the message integrity 
+and confidentiality may be preserved using Digital Signatures.
+
+- the traffic between web app and ATM Server may be encrypted for better privacy
+
+- A short demo with a template of the actual ML model that need to be uploaded, or the user can choose from existing models.
+Here, exists a useful example of ML template for developing different models used in different scenarios
+A note here: maybe is not a problem for choosing a specific ML model, but in the same domain and perform tests in the same domain 
+with different attack types. For example: user can choose only for different ML models examining RMNs or other medical stuff and 
+thus the FL Platform will be specialized only in that direction.
+Another example: user can choose for various ML models specialized in examining malware. (see paper: Image-Based Malware Detection ...)    
+
+
+- In terms of user posibility to upload its own ML model, a smart contract/specific program may be needed to ensure basic file structure (different approaches may be related for example to packages in use: TensorFlow, PyTorch, PySyft)
+
+
+
+
+### Project Directions and Resume
+
+Title: Simulare de atacuri Data poisoning asupra retelei federate
+
+- a Web platform that will simulate data poisoning attacks on multiple ML models.
+Stages are the same, but consider that the preprocessing stage (stage 1) resumes to send to the server a link where the model can be downloaded, alongside the datasets.
+Also, relating to the clause when users want to upload their own model, the platform will create like a jupyter-notebook experience UI for 4 steps (loading the model, loading the datasets, training the model, evaluating/testing the model). Then this script will be uploaded to the server.
+!!! An important note: the user needs to define its file model in a public location in order to upload it and use it (by transmitting a LINK).
+Also, at this stage of letting the user to instruct its model functions, the dataset need to be also public and transmitting only a LINK to it (datasets for training and test).
+
+- at the client creation stage, the docker container CAN have some hardware usage configs in order to simulate an authentic FL type (cross-device/cross-silo)  
+
+- at the attack stage, following data poisoning principles, the user needs also to add another link for another training datasets in order to stimulate the attack.
+
+
+
+### Build up project
+
+#### Stage 0 - selecting the domain of interests
+What kinds of ML to use? (Image to text; text to text, etc)
+Then the access of all kinds of models via platforms (for example hugging face needs a token to use models). Store that tokens for each specific model.
+Maybe a database with all new models by providing a link to the model and the datas.
+Then how to use that reference and extract the model and use it?
+But how to extract those datas needed for the model (from the model script usually)?
+
+
+
+Goal: a program that know how to prepare a model and its dataset for running stage. 
+
+#### Stage 1 - Creating federated network from docker containers
+Considering it is on a powerfull server, the power is unlimited. But there are 2 types of FL. So the user can select which type of clients to have.
+Need to know if a container can be run by specifying how many processing power to use.
+Create N specific containers for clients and one container for the actual aggregator.
+The clients are not allowed to communicate with one another, but only with the server container. So we may define N private networks in which the server
+to be included? Or we may create a single network and cut off the routing capabilities for each container in part.
+
+Goal: a script for deploying those containers in a single cluster
+
+#### Stage 2 - Learn how to use the model to extract parameters and aggregate them.
+For each model added in the network, we need to know how to extract those parameters and how to update them
+Then create an aggregation procedure in order to simulate server action.
+
+Goal: Modify the script from stage 0 in order to transmit those parameters to the server and wait to receive the server broadcast response after aggregation.
+
+#### Stage 3 - Simulate the network
+Test the network by adding a new model in the equation alongside the datasets and simulate the network for a number of rounds/time.
+
+Goal: Create the web platform to simulate the federated network. Also decide where to host this platform (ATM Server)
+
+#### Stage 4 - after that, examine Data Poisoning attack and try to add the attack section to the web platform.
+Choose some malitious clients that based on the model input will select another set of datasets but in the same domain.
+
+Goals: create a script for choosing malitious members (maybe a prng)
+
+#### Stage 5 - simulate the attack and extract the models performance indicators (using confusion matrix)
+
+Goals: after finishing the simulation save the most important indicators in a formated file. Then use this file and create a script for evaluating the model performance.
+
+#### Stage 6 - transmit the last stage script output metrics to the web platform and create statistics based on it.
+
+Goals: update the web platform and add the final section of the training process where the user can view based on the selected test, the charts.
+Store those files in a database in order to load the charts from the datas.
+
+#### Stage 7 - updates
+
+Goals: update the existing platform to accept user defined attack datasets at the attack stage. 
+
+
+
+
+
+

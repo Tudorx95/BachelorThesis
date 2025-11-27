@@ -1,0 +1,176 @@
+https://www.enhanceit.com/blog/classifying-malware-images-with-convolutional-neural-network-models
+https://www.sciencedirect.com/science/article/abs/pii/S016740482030033X
+https://www.mdpi.com/2073-8994/14/11/2308
+https://www.scaleoutsystems.com/what-is-federated-learning
+https://docs.scaleoutsystems.com/en/stable/quickstart.html#quickstart-label
+https://arxiv.org/pdf/1902.01046
+
+Alte resurse despre framework IBM - https://ibmfl-api-docs.res.ibm.com/index.html - https://ibmfl.res.ibm.com/tutorials - https://github.com/IBM/federated-learning-lib/tree/main
+
+Site pt articole cu implementari
+https://paperswithcode.com/paper/saving-77-of-the-parameters-in-large-language?gad_source=1&gad_campaignid=17364435985&gclid=EAIaIQobChMIkqS5ieeOjgMVNmSRBR0yZxQ7EAAYASAAEgJTJPD_BwE
+
+Security Site: Asecuritysite.com
+
+Limitations of ML:
+| Centralised Data - abordarile clasice presupun centralizarea tuturor datelor de antrenare pe o masina/server/datacenter |
+| Confidentialitate compromisa - proprietarii datelor trebuie sa isi expuna informatii confidentiale dezvoltatorului si masinii centrale ale detinatorului |
+| Lipsa date sensibile (scarcity) - din cauza constrangerilor de confidentialitate, proprietarii nu sunt mereu dispusi sa isi partajeze datele lor sensibile, ci doar pe cele utile |
+| Cost computational - costul de antrenare folosind un alg de ML pe un set de milioane de date stocate pe un cluster central sau pe un cluster cu mai multe noduri |
+
+FL - Cross-silo
+
+- Cross-device
+
+Cross Device FL - Serverul central incearca sa coordoneze raspunsurile clientilor pt a antrena modelul. Mai intai un data scientist creeaza un base model ce va fi folosit de clienti in procesul de invatare. Clientii descarca modelul de baza de pe server si il imbunatatesc prin antrenarea sa cu date proprii.Dupa care trimit WEIGHTS(costurile independente) modelul antrenat pana la un anumit prag de acceptare la serverul coordonator. Serverul are un agregator ce realizeaza un rezumat al Weights modelului concentrandu-se pe agregarea actualizarilor. Doar aceste actualizari agregate ale modelului de baza sunt trimise data scientist printr-un protocol criptat pt a realiza un update la modelul de antrenare de baza. In urma evaluarii data scientist-ului, acesta decide daca va schimba parametrii modelului de baza cu cei actualizati sau nu. In momentul in care modelul de baza se considera destul de accurate atunci se va furniza clientilor care il vor folosi pentru inferenta (deductie) pe datele respective.
+
+Cross-silo FL - in acest tip de retea, clientii sunt de fapt institutii guvernamentale sau companii. Institutiile nu doresc sa schimbe informatii intre ele sau cu un furnizor de servicii central, pastrandu-si confidentialitatea. Asa ca folosesc FL pt a antrena propriul model pe datele private ale fiecaruia.
+
+FL USECASES:
+
+- Predictia mentenantei - poate prezice din timp cand masina trebuie trimisa la service, pe baza datelor de la alte masini de pe sosea.
+- Dispozitive de monitorizare - Furnizeaza statistici pe baza activitatii tale
+- Diagnosticarea si Prognoza unei boli - poate detecta celule canceroase de la raze X sau examinari CT. Poate prezice dezvoltarea bolii inclusiv daca
+  semnele si simptomele bolii se vor imbunatatii sau nu.
+- Detectia fraudelor cu credit card - ajuta entitatile financiare sa descopere posibilele fraude examinand istoricul tranzactiilor clientilor
+
+- Consultanta mintala - pt a ajuta persoanele ce sufera de traume, depresie, sau cei cu un stil de viata nesanatos, analizandu-le obiceiurile si modul de trai.
+- Recomandari personalizate - imbunatateste experienta userilor prin intelegerea nevoilor clientilor la un anumit nivel si potrivit serviciilor de recomandare
+- Supraveghere si protectie a datelor personale - sisteme de recunoastere faciala fara a divulga fetele oamenilor sau caracteristici identificabile.
+- Analiza sentimentelor pe Social Media - analizeaza sentimentele populatiei despre o problema sensibila prin analiza likes,shares,tweets, etc.
+
+Federated Analysis (https://research.google/blog/federated-analytics-collaborative-data-science-without-data-collection/)
+
+"FA - the practice of applying data science methods to the analysis of raw data that is stored locally on users’ devices"
+"Unlike federated learning, however, federated analytics aims to support basic data science needs."
+
+Flow creare retea FEDERATA:
+
+- Crearea cate unui server DUET (framework al Pysyft) pt a partaja setul de date
+- Inregistrarea Scientist la servere
+- Antrenarea unui model de ML cu datele de pe servere
+- Salvarea parametrilor modelelor noi antrenate (se pot vedea comparatiile prin afisarea parametrilor base_model, remote_model1, remote_model2). Dupa se salveaza acesti parametrii in variabile separate
+- Rezultatul de la fiecare model de ML va fi agregat (printr-o metoda precum calcul de medie)
+- Combinam actualizarile(parametrii) intr-un model nou
+- Testare model nou cu parametrii actualizati
+- Comparatii intre predictiile modelului nou si cele ale modelului de baza
+- Comparatie intre FL base model si Centralized data base model
+
+Explicatie MAX_POOLING: https://deeplizard.com/learn/video/ZjM_XQa5s6s
+
+Kernel: Este fereastra (ex. 2x2) care se deplasează peste harta de caracteristici și selectează valoarea maximă din acea regiune.
+Stride: Este pasul cu care fereastra se deplasează. De exemplu, un stride de 2 înseamnă că fereastra se mută cu 2 pixeli la fiecare pas.
+
+Cum se aleg dimensiunea kernelului și stride-ului?
+
+- obiectivele rețelei, dimensiunea datelor de intrare, și arhitectura generală.
+- Un kernel mai mic păstrează mai multe detalii spațiale, reducând dimensiunea hărții de caracteristici treptat
+- Un kernel mare reduce mai rapid dimensiunea spațială (ex. de la 24x24 la 5x5 cu stride=4), ceea ce scade costul computațional, dar pierde mai multe detalii spațiale.
+- Un stride mic reduce dimensiunile treptat, păstrând mai multe informații spațiale. Suprapunerea ferestrelor (dacă stride < kernel) poate fi benefică
+- Un stride mare reduce rapid dimensiunile, dar poate sări peste informații importante, mai ales dacă trăsăturile sunt distribuite uniform în imagine.
+
+Tutorial NN: https://www.youtube.com/watch?v=gZmobeGL0Yg&list=PLZbbT5o_s2xq7LwI2y8_QtvuXZedL6tQU
+
+Duet Examples in Pysyft Repo: https://github.com/OpenMined/PySyft/tree/dev/packages/syft
+Open Minded BLOG: https://openmined.org/blog/tag/federated-learning/
+
+Difference between FL and split learning (SL):
+
+Federated learning and split learning share the same goal, which is to avoid sending raw user data to untrusted third parties.
+However, the method in which they approach this goal is different: federated learning does so by sending only the gradient updates to the server, whereas split learning achieves this by sending the intermediate activations from the split layer, which is an abstracted representation of the input.
+
+Asemanari FL si SL:
+
+- ambele au componente descentralizate
+- ambele reduc costul de comunicare
+
+Diferente FL si SL:
+
+- FL: partajeaza gradienti (parametrii NN)
+- SL: partajeaza activarile intermediare (nu partajeaza gradientii sau imaginea bruta, ci doar intermediate activation din split layer)
+
+- FL: deploymentul intregului model se realizeaza per device
+- SL: modelul e impartit, o parte din layere sunt per device si celelalte pe server
+
+Horizontal and Vertical Distributed Data:
+
+Horizontal Distributed Data: datele necesare rezolvarii unei probleme se afla intr-o locatie (fie la data owner, fie la data Scientist)
+
+Vertically Distributed Data: datele necesare rezolvarii unei probleme se afla in locatii diferite (data owner1, data owner2, ...)
+
+Vertically Distributed Learning: toate datele necesare procesului de antrenare sunt in multiple locatii. Data Ownerii pot fi grupati in layere diferite.
+
+Multi Split Learning (Multi-lingual SplitNN) - multiple splits of NN to train with different portions of features and then aggregated by another NN
+
+HE Operation:
+
+- key generation
+- encryption + decryption
+- Evaluation
+
+HE ~ H Cryptosystems ~ Schemes
+
+Key generation -> 3 keys = Public + Private + Evaluation(also public) Key
+Criptarea si decriptarea sunt aceleasi operatii ca la PKI, cu exceptia ca cheia Evaluation e folosita pt a putea modifica mesajul transmis in CT (prin
+transformari specifice)
+
+HE protejeaza Data in use decat Data at rest (or in transit)
+
+Noise concept - unele scheme criptografice folosesc si zgomot dupa criptare pt o securitate mai buna. Insa daca zgomotul trece de un threshold atunci
+decriptarea nu se va putea face. Alta problema este cand agregarea criptarii unor mesaje care contin deja zgomot, vor produce un rezultat criptat cu zgomot de o intensitate mai mare.
+Trecerea peste acel prag (threshold) va face imposibila decriptarea corecta si va incalca consistenta noastra a evaluarii homomorfice.
+
+Bootstrapping (noise cleaning operation) - se aplica CT cu zgomot pt a reseta zgomotul la un nivel nominal, pastrand consistenta datelor criptate - necesita o cheie publica de evaluare
+
+Caracteristici HE:
+
+1. Ce fel de schema este HE, simetrica sau asimetrica?
+2. Ce fel de calcule, sau circuite de evaluare suporta?
+3. Cum e gestionat zgomotul in circuite?
+4. Ce putem spune despre securitatea schemei?
+5. Ce eficienta ne asteptam de la implementarile SW sau HW?
+
+6. HE Symmetric = Evaluation + Private Key
+   HE Asymmetric = Public + Evaluation(public) + Private Key
+
+OBS. Spre deosebire de criptografia simetrica si asimetrica clasica unde criptarea era complet diferita, la HE simetric si asimetric, aceste scheme sunt foarte asemanatoare
+
+2. Evaluation Circuits
+
+   - DAG (Directed acyclic Graph of operation)
+   - Simularea circuitelor folosind altele
+
+3. Noise Management Strategies
+   - Circuite partial Homomorfice (limitate la 1 tip de operatie); nu au zgomot; limiteaza circuitele
+   - Circuite limitate in latime (limited depth); impun limitari fie in topologia circuitelor sau necesita sa detine un circuit in prealabil inainte de generarea cheilor
+   - Circuite nelimitate (Fully Homomorphic encryption); nu limiteaza circuitele; nu necesita a stii secretul dinainte; circuitul de evaluare poate fi determinat la momentul rularii si nu exista limita la nr de calcule homomorfice
+
+Scheme de nivel (Leveled Schemes) - grupuri de criptari homomorfice care se bazeaza sau nu pe zgomot (noise).
+Leveled HE prezice foarte bine si stabileste cum nivelul de zgomot este implicat in circuit - au capabilitati bootstrapping ce le fac eligibile pt HE (dar boostrapping este foarte ineficienta)
+
+Partially HE (PHE) - unlimited nb of input CT, dar tot ce pot face este sa le agrege intr-un CT unic. Posibil CT de input poate fi agregat de mai multe ori in rezultat asa ca adunarea poate fi o multi-adunare (combinatie liniara cu coef. intregi).
+
+Somewhat HE (SHE) - ex. BGN - poate realiza un nivel de multiplicare paralela; dupa realizarea inmultirilor, formatul CT se modifica ireversibil; Deci la aceasta schema nu se poate realiza mai mult de un nivel de multiplicare, in schimb se pot realiza nivele de adictie (adunare) nelimitate.
+
+Leveled HE (LHE) - foarte puternice si utile, se pot acomoda la circuite arbitrare; circuitele trebuie cunoscute in avans a.i. sa potrivim parametrii algoritmul de generare de chei pt a crea suficient spatiu in CT pt ca zgomotul sa creasca nestingherit fara a pune in pericol PT interior. La finalul circuitului, CT e full of noise si daca se mai aplica un alt nivel de abstractizare atunci asta va duce la pierderea completa a mesajului initial. Cu alte cuvinte, acest circuit trebuie sa obfuscheze criptarea, pastrand reversibilitatea in decriptare.
+
+Tipuri de HE:
+
+1. Abordarea LHE (Linear HE approach)
+   - 2 layere - linear layer (convolutional/dense) - activation layer - based on a nonliniar functions aproximate ca polinoame; analiza are loc asupra CT - cum se evalueaza aceasta functie de activare homomorfic ??? - abordarea CryptoNets (2016) - inlocuirea functiei cu aproximare de polinoame, apoi descompunerea polinomului in secvente mici de inmultiri si adunari; fiecare operatie se realizeaza la nivelul fiecarei layer activation; in plus o schema de nivel precum BFV sau CKKS e parametrizata pt a ajusta cantitatea de zgomot la intreaga latime a circuitului. - batch inputs sunt folosite pt a imparti latenta la nr. de batches si pt a obtine un throughput mediu cat mai mic posibil
+     Aceasta abordare functioneaza la o retea neuronala cu un nr mic de layere si cand throughput e de preferat in pofida latentei
+     >
+2. Abordarea FHE (Fully HE approach) - structurat la fel ca mai sus - insa aici cu ajutorul unui bootstrapping sistematic, un zgomot mic e mentinut in retea, asa ca retele mai profunde sunt suportate
+
+3. Abordarae FHE Zama (evolutie recenta) - in loc de a inlocui functia de activare cu circuite polinomiale mici, Zamasu sugereaza sa folosim tfh si o tehnica numita programare bootstrapping.
+   Programarea bootstrapping e un proces boostrapping care ia un input suplimentar ca functie tabelara. Functia este aplicata pe PT.
+
+CKKS: https://openmined.org/blog/ckks-explained-part-1-simple-encoding-and-decoding/
+https://www.youtube.com/watch?v=iQlgeL64vfo
+
+FHE Resources - https://eprint.iacr.org/2016/421.pdf - https://openmined.org/blog/what-is-homomorphic-encryption/
+
+Notes for setting up IBM framework:
+
+- create a env with conda
+- pip install --upgrade pip setuptools wheel cython numpy
