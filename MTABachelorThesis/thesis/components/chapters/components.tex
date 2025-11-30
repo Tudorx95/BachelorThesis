@@ -292,9 +292,174 @@ Prin păstrarea informațiilor la nivelul fiecărui dispozitiv sau instituții, 
 \end{itemize}
 
 
-    \section{Data Poisoning}
+\section{Atacuri de tip Data Poisoning}
 
-    \section{Alte Notiuni}
+In acest capitol se va discuta una dintre avantajele pe care le ofera mediul federated learning atacatorilor si ce inseamna acest lucru pentru fluxul configuratiei modelului. Vom incepe cu definirea
+vectorilor de atac si concentrarea pe una dintre categorii, data poisoning. In continuarea lucrarii, vom analiza impactul pe care il are acest tip de atac asupra infrastructurii federate de invatare si riscurile pe care le introduce, precum si cateva propuneri de identificare si constientizare a existentei sale.
+
+    \subsection{Definirea tipurilor de atac}
+
+
+    In literatura de specialitate, atacurile asupra unui model de ML sau asupra unei retele neuronale sunt definite drept atacuri adversariale (adversarial attacks). Aceasta clasa de atacuri are rolul de a produce modificari in comportamentul normal al modelului intr-un mod indizerabil. Conform lucrarii [1], in functie de nivelul de scop al unui atac, putem avea:
+
+    \begin{itemize}
+
+        \item \textbf{Atacuri fără țintă (untargeted attacks)}  
+        Scopul este reducerea acurateții generale a modelului sau chiar destabilizarea completă a acestuia.  
+        Un exemplu pentru clasificarea imaginilor este introducerea unui zgomot care degradează calitatea setului de date.  
+        O altă metodă este modificarea etichetelor din setul de antrenare, de exemplu atribuirea etichetei \textit{leu} unor imagini care în mod normal ar trebui etichetate drept \textit{pisică}.
+    
+        \item \textbf{Atacuri țintite (targeted attacks)}  
+        Denumite și \textit{backdoor attacks}, deoarece urmăresc modificarea comportamentului modelului doar pentru un anumit subset de date, fără a afecta vizibil acuratețea globală.  
+        Continuând exemplul anterior, pentru un anumit tip de imagini ce reprezintă pisici într-o anumită poziție, se poate introduce un artefact vizual menit să păcălească modelul și să clasifice pisica drept \textit{leu}. Astfel apare un backdoor activ doar pentru acele imagini precise.
+    
+    \end{itemize}
+    
+    Plecand de la aceasta categorisire, exista o multime de modalitati prin care un atacator poate submina capacitatea de predictie a modelului. Mediul federated learning introduce prin constructie o serie de intrebari la care trebuie gasit un raspuns pentru a determina prin ce moduri un adversar se poate infiltra si poate profita de anumite drepturi pentru a introduce incertitudine in antrenarea sau reglarea (fine-tuning) a modelelor.
+
+    \subsection{Vectori de atac}
+
+
+    Analiza amenintarilor asupra modelelor de ML, a introdus o serie de posibile vulnerabilitati asupra componentelor ce alcatuiesc fluxul de invatare.
+    Un atacator isi poate alege zona de interes, pe baza posibilitatilor de exploatare a sistemului respectiv.
+
+    Vectorii de atac cunoscuti sunt:
+
+    \begin{itemize}
+        \item \textbf{Data Poisoning}
+        Cand adversarul incearca sa corupa setul de date antrenare cu scopul defectarii modelului inca de la inceput.
+        \item \textbf{Model Update Poisoning}
+        Cand adversarul se foloseste de o vulnerabilitate ce ii permite modificarea configuratiei parametrilor trimisi catre orchestrator.
+        \item \textbf{Evasion attack}
+        Cand adversarul are acces la datele de testare si le poate modifica in momentul inferentei.
+    \end{itemize}
+
+    In functie de gradul de acces la sistemele gazda, modelul poate fi inspectat in diferite moduri:
+
+    \begin{itemize}
+        \item \textbf{Black Box}
+        Adversarul nu are abilitatea sa inspecteze parametrii modelului inainte sau in timpul atacului.
+        \item \textbf{Stale Box}
+        Adversarul poate inspecta doar o versiune incipienta a modelului. Aceasta capabilitate apare si in federated learning cand adversarul are acces la rundele de antrenare ale clientului.
+        \item \textbf{White Box}
+        Adversarul are abilitatea de a inspecta direct parametrii modelului. Acest scenariu se bazeaza pe un grad de acces superior al adversarului asupra sistemului.
+    \end{itemize}
+
+    Pe baza acestor scenarii, atacatorul poate aplica o serie de tehnici pentru modificarea starii modelului. In contextul lucrarii de fata, se va discuta scenariul stale box, adversarul avand
+    posibilitatea doar de a introduce un atac Data Poisoning in rundele de antrenare, datele corupte fiind introduse o singura data in procesul de reglare a modelului (fine-tuning).
+
+    \subsection{Atacul Data poisoning}
+
+    Acest tip de atac presupune coruperea datelor de antrenare sau de testare, prin diferite tehnici specifice, la nivelul dispozitivului clientului.
+In aceasta paradigma, atacul poate fi considerat la fel de bine targeted sau untargeted intrucat depinde de intentia adversarului si de potentialul risc in divulgarea
+punctului de exploatare de care dispune.
+
+
+În practica atacurilor de tip Data Poisoning, adversarul poate manipula atât conținutul datelor, cât și etichetele acestora, efectele fiind de obicei greu de observat la nivel local.
+În mediul federated learning această dificultate este amplificată, deoarece orchestratorul nu are acces direct la datele brute ale clienților. Astfel, orice modificare realizată pe un dispozitiv compromis intră automat în procesul de antrenare, fiind tratată ca o contribuție legitimă.
+În mod particular, chiar și un număr redus de exemple otrăvite poate introduce un comportament persistent în modelul global, mai ales dacă atacul este repetat pe durata mai multor runde
+
+In contextul solutiei propuse, se va discuta despre impactul atacului asupra unui set de imagini si tipurile de metode pentru a le altera, asa cum se poate vedea in tabelul 2.3.3.
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{ | p{0.20\linewidth} | p{0.75\linewidth} | }
+            \hline
+            \textbf{Tip atac} & \textbf{Descriere} \\
+            \hline
+
+            \textbf{Gaussian noise}
+            &
+            Introducerea unui zgomot aleator în imagini sau în vectorii de caracteristici, cu scopul degradării calității datelor și scăderii performanței modelului.
+            \\
+            \hline
+
+            \textbf{Label flip}
+            &
+            Modificarea intenționată a etichetelor din setul de antrenare, astfel încât exemple corecte sunt asociate cu clase greșite, afectând procesul de învățare.
+            \\
+            \hline
+
+            \textbf{Backdoor injection}
+            &
+            Inserarea unui artefact vizual sau a unui tipar specific într-un subset mic de date, astfel încât modelul să învețe un comportament anormal activat doar de acel trigger.
+            \\
+            \hline
+
+        \end{tabular}
+        \caption{Tipuri de atacuri Data Poisoning}
+        \label{tab:data_poisoning_types}
+    \end{table}
+
+    Prin aceste tipuri de atacuri adversariale, impactul asupra modelului are loc pe o perioada determinata de timp, de obicei mai lunga, si produce variatii in
+predictia finala.
+
+    \subsection{Impactul poisoning in Federated Learning}
+
+
+Mediul de invatare federata a introdus o serie de amenintari cibernetice preponderent la nivelul dispozitivelor clientilor, acestea fiind cele mai vulnerabile din punctul de vedere
+al aplicarii unui atac de otravire a datelor. Clientii sunt producatorii unui model calitativ care sa ofere predictii legitime in diferite scenarii.
+
+Cand se discuta despre alterarea etichetelor (Label Flip Attack) atunci la o prima vedere, utilizatorul nu si-ar da seama decat in urma unei inspectii amanuntite.
+Pentru acest tip de atac, exista tehnici de verificare si filtrare ce pot determina daca un tip de informatie este catalogata corect inainte de antrenare.
+
+Efectele unui data poisoning pot persista chiar și după eliminarea datelor corupte, deoarece modelul învață un tipar greșit care nu dispare imediat fără o reantrenare completă.
+Acest lucru este relevant mai ales pentru atacurile backdoor, care rămân inactive până la apariția unui trigger vizual, fără a afecta acuratețea generală.
+Din acest considerent, atacurile tintite (targeted attacks) sunt deosebit de periculoase in contextul unui mediu de invatare federata pentru ca datele corupte se ascund in
+interiorul configuratiilor particulare ale clientilor. Aceste configuratii sunt transmise mai departe la agregator care aplicand functia sa de agregare, amplifica negativ starea modelului.
+
+Având în vedere aceste particularități, devine esențială analizarea metodelor de apărare și a mecanismelor prin care pot fi detectate contribuțiile malițioase.
+Provocarile in acest domeniu conduc la o serie tot mai mare de utilitare sau platforme ce permit detectarea facila a acestor atacuri si imbunatatirea evenimentelor cu un
+potential risc in organizatii.
+
+Mediul federated learning introduce un risc suplimentar: un adversar care controlează un număr mic de clienți poate influența disproporționat modelul global dacă este integrat într-un moment critic al antrenării.
+În absența unor mecanisme robuste de apărare, actualizările malițioase sunt tratate ca fiind legitime, iar agregatorul nu are nicio modalitate directă de a le verifica.
+
+Un alt efect important al acestui tip de atac este degradarea treptată a performanței modelului.
+În scenariile untargeted, scăderea acurateții globale poate trece neobservată în primele runde de antrenare, dar devine evidentă odată ce modelul converge către o reprezentare eronată a datelor.
+În scenariile targeted, atacul poate compromite decizii critice doar într-un subset de cazuri, ceea ce face detectarea mult mai dificilă și impactul mult mai nociv, mai ales în aplicații sensibile cum ar fi securitatea, domeniul medical sau sistemele autonome.
+
+
+
+\section{Alte Notiuni}
+
+In vederea elaborarii solutiei propuse in aceasta lucrare, se vor aminti celelalte concepte care stau la baza implementarii propriu-zise. In acest capitol se vor detalia succint mecanismele ce stau la baza platformei propuse, modul de utilizare si scopul alegerii lor.
+
+    \subsection{Docker}
+
+    Docker reprezintă un set de servicii software de tip platformă ce utilizează virtualizarea la nivel de sistem de operare pentru a crea entități independente, numite containere. Aceste containere sunt create specific pentru a întreprinde anumite acțiuni și oferă un mediu izolat de execuție.
+
+    Un container este o instanta software ce vine impachetata cu programul aplicatiei si toate bibliotecile necesare dezvoltarii ei.
+    O imagine este vizualizata drept un sablon de instructiuni pentru crearea unui container cu un anumit tip de biblioteci necesare dezvoltarii unei aplicatii.
+    De obicei, imaginile sunt construite pe baza unui fisier denumit Dockerfile care propune o serie de comenzi pentru crearea unui mediu personalizat.
+    
+    Toate containerle Docker ruleaza prin intermediul Docker Engine, un serviciu ce ruleaza la nivelul sistemului de operare si ofera suport cross-platform (Linux, Windows, macOS).
+    
+    Containerizarea diferă de virtualizarea tradițională prin faptul că containerele partajează același kernel al sistemului de operare gazdă, în timp ce mașinile virtuale (VM) necesită fiecare un sistem de operare complet. Această abordare face containerele Docker mult mai ușoare (de ordinul MB vs GB) și mai rapide la pornire (secunde vs minute) comparativ cu VM-urile.
+    
+    Arhitectura platformei docker este asemanatoare modelului client-server, fiind compusa din urmatoarele componente:
+    \begin{itemize}
+        \item \textbf{Dockerd}
+        un proces daemon, identificabil drept server, ce gestioneaza tot fluxul de servicii, de la imagini si containere pana la volume si retele.
+    
+        \item \textbf{Aplication Binary Interfaces (API)}
+        o suita de interfete de comunicare si control al serverului
+    
+        \item \textbf{Comanda docker}
+        o interfata in linie de comanda, docker
+    \end{itemize}
+    
+    În contextul platformei dezvoltate, Docker ofera un mediu de dezvoltare automat in care se regaseste gazduita platforma publica de simulare. Toate informatiile despre fiecare simulare sunt stocate la nivelul unei baze de date PostgreSQL, in timp ce aplicatia web este publica printr-un container frontend, iar in spate regasim un container backend pentru transmiterea de comenzi serverului.
+    
+    Comunicatia dintre containere are loc in aceeasi retea locala docker, iar informatiile despre fiecare simulare a clientului persista in acelasi volum partajat.
+    
+    Pe langa Dockerfile, serviciul Docker Engine ofera si posibilitatea crearii unei configuratii prestabilite pentru definirea de topologii de retea de containere prin Docker Compose. Pe baza fisierelor Dockerfile in care sunt definite sabloanele imaginilor si a unui fisier de configurare YAML a topologiei relatiilor dintre containere, serviciul Docker Compose permite implementarea unei infrastructuri intregi prin rularea si stergerea sa dintr-o serie de comenzi.
+    
+    \subsection{Python}
+
+    \subsection{Rest API}
+
+
 
 \chapter{Proiectare, Implementare si Testare}
 

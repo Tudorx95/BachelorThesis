@@ -145,7 +145,8 @@ In functie de numarul de dispozitive, se concepe un graf de conexiuni in care fi
 Nodurile isi imbunatatesc propriile variante ale retelei, si isi comunica rezultatele pe care le agrega local, realizand o medie a ponderilor.
 In comparatie cu modelul federated learning clasic, modelul fully decentralized nu specifica de la inceput dispozitivelor un model de baza global de la care sa porneasca in procesul de rezolvare a problemei.
 
-````txt
+```txt
+
 --------------------------------------------------------------
                          Federated learning           |   Fully decentralized
                                                       |   (peer-to-peer) learning
@@ -160,6 +161,7 @@ Wide-area communication:                             |
    (typically without data) and the spokes           |   connectivity graph.
    connecting to clients.                            |
 --------------------------------------------------------------
+
 ```
 
 Imaginea de mai sus ([1] Imaginea 2.2.2: Modele Federated Learning) ofera o privire de ansamblu asupra celor doua modele de arhitecturi si caracteristicile acestora.
@@ -195,11 +197,10 @@ Cross-Silo Federated Learning sunt dispozitive din institutii guvernamentale, co
 
 Imagini:
 
-[1] Peter Kairouz, H. Brendan McMahan, Brendan Avent, Aurélien Belle. "Advances and Open Problems in Federated Learning".
+[1] Kairouz, P., McMahan, H. B., Avent, B., Bellet, A., Bennis, M., Nitin Bhagoji, A., Bonawitz, K., Charles, Z., Cormode, G., Cummings, R., D’Oliveira, R. G. L., Eichner, H., El Rouayheb, S., Evans, D., Gardner, J., Garrett, Z., Gascón, A., Ghazi, B., Gibbons, P. B., … Zhao, S. (2021). Advances and open problems in federated learning. Foundations and Trends® in Machine Learning, 14(1–2), 1–210. https://doi.org/10.1561/2200000083
 
 Tabel:
-    tabel 2.2.2
-
+tabel 2.2.2
 
 # 2.2.3 Procesul de antrenare FL
 
@@ -229,40 +230,138 @@ Federated Learning s-a extins rapid în numeroase domenii datorită capacități
 Prin păstrarea informațiilor la nivelul fiecărui dispozitiv sau instituții, FL reduce riscurile asociate scurgerilor de date și permite colaborarea între entități care altfel nu ar putea împărtăși date brute.
 În continuare sunt prezentate câteva exemple reprezentative ale utilizării sale în aplicații din lumea reală.
 
--- Industrie și IoT
-    - mentenanță predictivă - Vehiculele moderne, utilajele industriale și echipamentele IoT generează constant date despre starea componentelor. FL permite antrenarea unui model comun care poate prezice momentul oportun pentru realizarea mentenanței, pe baza datelor provenite de la mii de echipamente similare, fără ca producătorul să colecteze în mod centralizat aceste date. Astfel, se reduc costurile de operare și se previn defecțiuni critice.
-    - dispozitive de monitorizare - Senzori purtabili și dispozitive smart home pot colabora pentru a oferi statistici relevante privind activitatea utilizatorilor sau consumul energetic. Toate aceste analize se fac local, iar doar actualizările modelului sunt partajate, protejând comportamentele individuale ale utilizatorilor.
+-- Industrie și IoT - mentenanță predictivă - Vehiculele moderne, utilajele industriale și echipamentele IoT generează constant date despre starea componentelor. FL permite antrenarea unui model comun care poate prezice momentul oportun pentru realizarea mentenanței, pe baza datelor provenite de la mii de echipamente similare, fără ca producătorul să colecteze în mod centralizat aceste date. Astfel, se reduc costurile de operare și se previn defecțiuni critice. - dispozitive de monitorizare - Senzori purtabili și dispozitive smart home pot colabora pentru a oferi statistici relevante privind activitatea utilizatorilor sau consumul energetic. Toate aceste analize se fac local, iar doar actualizările modelului sunt partajate, protejând comportamentele individuale ale utilizatorilor.
 
--- Medical
-    - diagnostic, prognoză, imagistică  - FL este folosit în spitale și clinici pentru antrenarea unor modele de detectare a celulelor canceroase în radiografii, RMN-uri sau CT, fără a transfera imaginile sensibile către un server central. Algoritmii pot învăța din volume mari de date distribuite, menținând conformitatea cu legislația privind protecția datelor.
-    - confidențialitate mentinuta la sursa - Fiecare instituție medicală antrenează local o parte din model, iar numai actualizările sunt partajate. Acest lucru permite colaborarea între centre medicale care altfel nu ar putea împărtăși datele pacienților din motive legale sau etice.
+-- Medical - diagnostic, prognoză, imagistică - FL este folosit în spitale și clinici pentru antrenarea unor modele de detectare a celulelor canceroase în radiografii, RMN-uri sau CT, fără a transfera imaginile sensibile către un server central. Algoritmii pot învăța din volume mari de date distribuite, menținând conformitatea cu legislația privind protecția datelor. - confidențialitate mentinuta la sursa - Fiecare instituție medicală antrenează local o parte din model, iar numai actualizările sunt partajate. Acest lucru permite colaborarea între centre medicale care altfel nu ar putea împărtăși datele pacienților din motive legale sau etice.
 
--- Financiar
-    - detectarea fraudelor - Instituțiile financiare pot îmbunătăți acuratețea modelelor de detectare a tranzacțiilor frauduloase analizând colectiv tipare de comportament, fără a expune detalii personale ale clienților. FL permite identificarea mai rapidă și mai precisă a tentativelor de fraudă, combinând cunoștințele multiplelor entități fără a compromite confidențialitatea.
+-- Financiar - detectarea fraudelor - Instituțiile financiare pot îmbunătăți acuratețea modelelor de detectare a tranzacțiilor frauduloase analizând colectiv tipare de comportament, fără a expune detalii personale ale clienților. FL permite identificarea mai rapidă și mai precisă a tentativelor de fraudă, combinând cunoștințele multiplelor entități fără a compromite confidențialitatea.
 
--- Servicii & experiență utilizator
-    - recomandări personalizate - Platformele de streaming, aplicațiile mobile și serviciile online pot genera recomandări mai precise analizând preferințele utilizatorilor direct pe dispozitivul lor. Utilizatorii beneficiază de o experiență personalizată, fără ca furnizorul să colecteze istoricul complet al activităților.
-    - analiză comportamentală - FL poate analiza tiparele de activitate ale utilizatorilor pentru a sugera rutine sănătoase, programe de exerciții sau îmbunătățiri ale stilului de viață, asigurând în același timp că informațiile personale rămân pe dispozitivul utilizatorului.
+-- Servicii & experiență utilizator - recomandări personalizate - Platformele de streaming, aplicațiile mobile și serviciile online pot genera recomandări mai precise analizând preferințele utilizatorilor direct pe dispozitivul lor. Utilizatorii beneficiază de o experiență personalizată, fără ca furnizorul să colecteze istoricul complet al activităților. - analiză comportamentală - FL poate analiza tiparele de activitate ale utilizatorilor pentru a sugera rutine sănătoase, programe de exerciții sau îmbunătățiri ale stilului de viață, asigurând în același timp că informațiile personale rămân pe dispozitivul utilizatorului.
 
--- Securitate și privacy
-    - supraveghere fără expunerea datelor sensibile - Sistemele de recunoaștere facială pot fi antrenate distribuind doar parametrii modelului, nu imaginile utilizatorilor. În acest fel se îmbunătățește acuratețea fără a crea baze de date centralizate ce ar putea deveni ținte pentru atacuri.
-    - analiza sentimentelor fără colectarea directă a datelor - FL poate evalua tendințe sociale – opinii despre un eveniment, reacții publice, polarizare – analizând interacțiunile utilizatorilor în mod local (like-uri, share-uri, comentarii), fără a transmite date brute către platformă.
+-- Securitate și privacy - supraveghere fără expunerea datelor sensibile - Sistemele de recunoaștere facială pot fi antrenate distribuind doar parametrii modelului, nu imaginile utilizatorilor. În acest fel se îmbunătățește acuratețea fără a crea baze de date centralizate ce ar putea deveni ținte pentru atacuri. - analiza sentimentelor fără colectarea directă a datelor - FL poate evalua tendințe sociale – opinii despre un eveniment, reacții publice, polarizare – analizând interacțiunile utilizatorilor în mod local (like-uri, share-uri, comentarii), fără a transmite date brute către platformă.
 
 # 2.3 Atacuri de tip Data Poisoning
 
-# 2.3.1 Definirea atacurilor de tip data poisoning
+In acest capitol se va discuta una dintre avantajele pe care le ofera mediul federated learning atacatorilor si ce inseamna acest lucru pentru fluxul configuratiei modelului. Vom incepe cu definirea
+vectorilor de atac si concentrarea pe una dintre categorii, data poisoning. In continuarea lucrarii, vom analiza impactul pe care il are acest tip de atac asupra infrastructurii federate de invatare si riscurile pe care le introduce, precum si cateva propuneri de identificare si constientizare a existentei sale.
 
-# 2.3.2 Categorii de atacuri
+# 2.3.1 Definirea tipurilor de atac
 
-# 2.3.3 Impactul poisoning in FL
+In literatura de specialitate, atacurile asupra unui model de ML sau asupra unei retele neuronale sunt definite drept atacuri adversariale (adversarial attacks). Aceasta clasa de atacuri are rolul de a produce modificari in comportamentul normal al modelului intr-un mod indizerabil. Conform lucrarii [1], in functie de nivelul de scop al unui atac, putem avea:
+
+- atacuri fara tinta (untargeted attacks) - in care scopul e reducerea acuratetii globale a modelului sau chiar destabilizarea sa completa.
+  Un exemplu potrivit acestui tip de atac, in clasificarea de imagini de exemplu, ar fi introducerea unui zgomot pentru a reduce calitatea setului de date. O alta metoda ar putea fi modificarea etichetelor setului de date de antrenare, asa incat pentru imagini atribuite etichetei "pisica" sa le atribuim eticheta de "leu".
+- atacuri tintite (targeted attacks) - denumite si atacuri backdoor pentru ca incearca sa modifice comportamentul modelului doar pe un anumit tip de date, fara a introduce o modificare in acuratetea per total.
+  Mai departe pentru a conecta exemplul amintit anterior, pentru un set de imagini ce reprezinta pisici intr-o anumita pozitie, putem introduce un artefact vizual care sa pacaleasca clasificarea pisicii drept leu. Astfel, doar o categorie de imagini bine determinate ofera rezultate opuse si introduce un backdoor.
+
+Plecand de la aceasta categorisire, exista o multime de modalitati prin care un atacator poate submina capacitatea de predictie a modelului. Mediul federated learning introduce prin constructie o serie de intrebari la care trebuie gasit un raspuns pentru a determina prin ce moduri un adversar se poate infiltra si poate profita de anumite drepturi pentru a introduce incertitudine in antrenarea sau reglarea (fine-tuning) a modelelor.
+
+# Bibliografie:
+
+[1] Kairouz, P., McMahan, H. B., Avent, B., Bellet, A., Bennis, M., Nitin Bhagoji, A., Bonawitz, K., Charles, Z., Cormode, G., Cummings, R., D’Oliveira, R. G. L., Eichner, H., El Rouayheb, S., Evans, D., Gardner, J., Garrett, Z., Gascón, A., Ghazi, B., Gibbons, P. B., … Zhao, S. (2021). Advances and open problems in federated learning. Foundations and Trends® in Machine Learning, 14(1–2), 1–210. https://doi.org/10.1561/2200000083
+
+# 2.3.2 Vectori de atac
+
+Analiza amenintarilor asupra modelelor de ML, a introdus o serie de posibile vulnerabilitati asupra componentelor ce alcatuiesc fluxul de invatare.
+Un atacator isi poate alege zona de interes, pe baza posibilitatilor de exploatare a sistemului respectiv.
+
+Vectorii de atac cunoscuti sunt:
+
+- Data Poisoning: cand adversarul incearca sa corupa setul de date antrenare cu scopul defectarii modelului inca de la inceput.
+- Model update poisoning: cand adversarul se foloseste de o vulnerabilitate ce ii permite modificarea configuratiei parametrilor trimisi catre orchestrator
+- Evasion attack: cand adversarul are acces la datele de testare si le poate modifica in momentul inferentei.
+
+In functie de gradul de acces la sistemele gazda, modelul poate fi inspectat in diferite moduri:
+
+- black box: adversarul nu are abilitatea sa inspecteze parametrii modelului inainte sau in timpul atacului.
+- stale box: adversarul poate inspecta doar o versiune incipienta a modelului. Aceasta capabilitate apare si in federated learning cand adversarul are acces la rundele de antrenare ale clientului.
+- white box: adversarul are abilitatea de a inspecta direct parametrii modelului. Acest scenariu se bazeaza pe un grad de acces superior al adversarului asupra sistemului.
+
+Pe baza acestor scenarii, atacatorul poate aplica o serie de tehnici pentru modificarea starii modelului. In contextul lucrarii de fata, se va discuta scenariul stale box, adversarul avand
+posibilitatea doar de a introduce un atac Data Poisoning in rundele de antrenare, datele corupte fiind introduse o singura data in procesul de reglare a modelului (fine-tuning).
+
+# 2.3.3 Atacul Data poisoning
+
+Acest tip de atac presupune coruperea datelor de antrenare sau de testare, prin diferite tehnici specifice, la nivelul dispozitivului clientului.
+In aceasta paradigma, atacul poate fi considerat la fel de bine targeted sau untargeted intrucat depinde de intentia adversarului si de potentialul risc in divulgarea
+punctului de exploatare de care dispune.
+
+În practica atacurilor de tip Data Poisoning, adversarul poate manipula atât conținutul datelor, cât și etichetele acestora, efectele fiind de obicei greu de observat la nivel local.
+În mediul federated learning această dificultate este amplificată, deoarece orchestratorul nu are acces direct la datele brute ale clienților. Astfel, orice modificare realizată pe un dispozitiv compromis intră automat în procesul de antrenare, fiind tratată ca o contribuție legitimă.
+În mod particular, chiar și un număr redus de exemple otrăvite poate introduce un comportament persistent în modelul global, mai ales dacă atacul este repetat pe durata mai multor runde
+
+In contextul solutiei propuse, se va discuta despre impactul atacului asupra unui set de imagini si tipurile de metode pentru a le altera, asa cum se poate vedea in tabelul 2.3.3.
+
+| Tip atac           | Descriere                                                                                                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gaussian noise     | Introducerea unui zgomot aleator în imagini sau în vectorii de caracteristici, cu scopul degradării calității datelor și scăderii performanței modelului.                 |
+| Label flip         | Modificarea intenționată a etichetelor din setul de antrenare, astfel încât exemple corecte sunt asociate cu clase greșite, afectând procesul de învățare.                |
+| Backdoor injection | Inserarea unui artefact vizual sau a unui tipar specific într-un subset mic de date, astfel încât modelul să învețe un comportament anormal activat doar de acel trigger. |
+
+Tabel 2.3.3: Tipuri de atacuri Data Poisoning
+
+Prin aceste tipuri de atacuri adversariale, impactul asupra modelului are loc pe o perioada determinata de timp, de obicei mai lunga, si produce variatii in
+predictia finala.
+
+# 2.3.4 Impactul poisoning in FL
+
+Mediul de invatare federata a introdus o serie de amenintari cibernetice preponderent la nivelul dispozitivelor clientilor, acestea fiind cele mai vulnerabile din punctul de vedere
+al aplicarii unui atac de otravire a datelor. Clientii sunt producatorii unui model calitativ care sa ofere predictii legitime in diferite scenarii.
+
+Cand se discuta despre alterarea etichetelor (Label Flip Attack) atunci la o prima vedere, utilizatorul nu si-ar da seama decat in urma unei inspectii amanuntite.
+Pentru acest tip de atac, exista tehnici de verificare si filtrare ce pot determina daca un tip de informatie este catalogata corect inainte de antrenare.
+
+Efectele unui data poisoning pot persista chiar și după eliminarea datelor corupte, deoarece modelul învață un tipar greșit care nu dispare imediat fără o reantrenare completă.
+Acest lucru este relevant mai ales pentru atacurile backdoor, care rămân inactive până la apariția unui trigger vizual, fără a afecta acuratețea generală.
+Din acest considerent, atacurile tintite (targeted attacks) sunt deosebit de periculoase in contextul unui mediu de invatare federata pentru ca datele corupte se ascund in
+interiorul configuratiilor particulare ale clientilor. Aceste configuratii sunt transmise mai departe la agregator care aplicand functia sa de agregare, amplifica negativ starea modelului.
+
+Având în vedere aceste particularități, devine esențială analizarea metodelor de apărare și a mecanismelor prin care pot fi detectate contribuțiile malițioase.
+Provocarile in acest domeniu conduc la o serie tot mai mare de utilitare sau platforme ce permit detectarea facila a acestor atacuri si imbunatatirea evenimentelor cu un
+potential risc in organizatii.
+
+Mediul federated learning introduce un risc suplimentar: un adversar care controlează un număr mic de clienți poate influența disproporționat modelul global dacă este integrat într-un moment critic al antrenării.
+În absența unor mecanisme robuste de apărare, actualizările malițioase sunt tratate ca fiind legitime, iar agregatorul nu are nicio modalitate directă de a le verifica.
+
+Un alt efect important al acestui tip de atac este degradarea treptată a performanței modelului.
+În scenariile untargeted, scăderea acurateții globale poate trece neobservată în primele runde de antrenare, dar devine evidentă odată ce modelul converge către o reprezentare eronată a datelor.
+În scenariile targeted, atacul poate compromite decizii critice doar într-un subset de cazuri, ceea ce face detectarea mult mai dificilă și impactul mult mai nociv, mai ales în aplicații sensibile cum ar fi securitatea, domeniul medical sau sistemele autonome.
 
 # 2.4 Alte Notiuni
 
+In vederea elaborarii solutiei propuse in aceasta lucrare, se vor aminti celelalte concepte care stau la baza implementarii propriu-zise. In acest capitol se vor detalia succint mecanismele ce stau la baza platformei propuse, modul de utilizare si scopul alegerii lor.
+
 # 2.4.1 Docker
+
+Docker reprezintă un set de servicii software de tip platformă ce utilizează virtualizarea la nivel de sistem de operare pentru a crea entități independente, numite containere. Aceste containere sunt create specific pentru a întreprinde anumite acțiuni și oferă un mediu izolat de execuție.
+
+Un container este o instanta software ce vine impachetata cu programul aplicatiei si toate bibliotecile necesare dezvoltarii ei.
+O imagine este vizualizata drept un sablon de instructiuni pentru crearea unui container cu un anumit tip de biblioteci necesare dezvoltarii unei aplicatii.
+De obicei, imaginile sunt construite pe baza unui fisier denumit Dockerfile care propune o serie de comenzi pentru crearea unui mediu personalizat.
+
+Toate containerle Docker ruleaza prin intermediul Docker Engine, un serviciu ce ruleaza la nivelul sistemului de operare si ofera suport cross-platform (Linux, Windows, macOS).
+
+Containerizarea diferă de virtualizarea tradițională prin faptul că containerele partajează același kernel al sistemului de operare gazdă, în timp ce mașinile virtuale (VM) necesită fiecare un sistem de operare complet. Această abordare face containerele Docker mult mai ușoare (de ordinul MB vs GB) și mai rapide la pornire (secunde vs minute) comparativ cu VM-urile.
+
+Arhitectura platformei docker este asemanatoare modelului client-server, fiind compusa din urmatoarele componente:
+
+- un proces daemon (dockerd), identificabil drept server, ce gestioneaza tot fluxul de servicii, de la imagini si containere pana la volume si retele.
+
+- o suita de interfete (API) de comunicare si control al serverului
+
+- o interfata in linie de comanda, docker
+
+În contextul platformei dezvoltate, Docker ofera un mediu de dezvoltare automat in care se regaseste gazduita platforma publica de simulare. Toate informatiile despre fiecare simulare sunt stocate la nivelul unei baze de date PostgreSQL, in timp ce aplicatia web este publica printr-un container frontend, iar in spate regasim un container backend pentru transmiterea de comenzi serverului.
+
+Comunicatia dintre containere are loc in aceeasi retea locala docker, iar informatiile despre fiecare simulare a clientului persista in acelasi volum partajat.
+
+Pe langa Dockerfile, serviciul Docker Engine ofera si posibilitatea crearii unei configuratii prestabilite pentru definirea de topologii de retea de containere prin Docker Compose. Pe baza fisierelor Dockerfile in care sunt definite sabloanele imaginilor si a unui fisier de configurare YAML a topologiei relatiilor dintre containere, serviciul Docker Compose permite implementarea unei infrastructuri intregi prin rularea si stergerea sa dintr-o serie de comenzi.
 
 # 2.4.2 Scripting (Python/Bash)
 
-## Chapter 3 Proiectare, Implementare si Testare
+# 2.4.3 Rest API
+
+## Chapter 3 Proiectare, Implementare si Testare Platforma
 
 # 3.1 Cerintele Software
 
@@ -301,4 +400,7 @@ Prin păstrarea informațiilor la nivelul fiecărui dispozitiv sau instituții, 
 # 5.1 Starea Curenta
 
 # 5.2 Dezvoltare Ulterioara
-````
+
+```
+
+```

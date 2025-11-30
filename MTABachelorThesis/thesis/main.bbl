@@ -1,0 +1,131 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\preamble{%
+\providecommand{\noopsort}[1]{}%
+}
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global/global}
+    \entry{cloud_crypto}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=24113cd130436543a0b035c0ce61629b}{%
+           family={\noopsort{01}Togan},
+           familyi={0\bibinitperiod},
+           given={Mihai},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Editura Matrix Rom}%
+      }
+      \strng{namehash}{24113cd130436543a0b035c0ce61629b}
+      \strng{fullhash}{24113cd130436543a0b035c0ce61629b}
+      \strng{fullhashraw}{24113cd130436543a0b035c0ce61629b}
+      \strng{bibnamehash}{24113cd130436543a0b035c0ce61629b}
+      \strng{authorbibnamehash}{24113cd130436543a0b035c0ce61629b}
+      \strng{authornamehash}{24113cd130436543a0b035c0ce61629b}
+      \strng{authorfullhash}{24113cd130436543a0b035c0ce61629b}
+      \strng{authorfullhashraw}{24113cd130436543a0b035c0ce61629b}
+      \field{sortinit}{0}
+      \field{sortinithash}{c5602f03f17cc894ea7a6362c3cb0e13}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cryptographic Technologies for Data Protection in Cloud}
+      \field{year}{2017}
+    \endentry
+    \entry{multi_auth}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ebcf55860d0745ce5c05240a65a98b9c}{%
+           family={\noopsort{02}Dumitru},
+           familyi={0\bibinitperiod},
+           given={Ionuț},
+           giveni={I\bibinitperiod}}}%
+        {{hash=9eecf111c2e3fdbe440bdf7085c53747}{%
+           family={Togan},
+           familyi={T\bibinitperiod},
+           given={Mihai},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9992003effe4d18f38a91c9039143d0}
+      \strng{fullhash}{c9992003effe4d18f38a91c9039143d0}
+      \strng{fullhashraw}{c9992003effe4d18f38a91c9039143d0}
+      \strng{bibnamehash}{c9992003effe4d18f38a91c9039143d0}
+      \strng{authorbibnamehash}{c9992003effe4d18f38a91c9039143d0}
+      \strng{authornamehash}{c9992003effe4d18f38a91c9039143d0}
+      \strng{authorfullhash}{c9992003effe4d18f38a91c9039143d0}
+      \strng{authorfullhashraw}{c9992003effe4d18f38a91c9039143d0}
+      \field{sortinit}{0}
+      \field{sortinithash}{c5602f03f17cc894ea7a6362c3cb0e13}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Military Technology}
+      \field{month}{06}
+      \field{title}{Client Module with Multifactor Authentication for Remote Electronic Signature Generation Using Cryptography API: Next Generation}
+      \field{volume}{3}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{5\bibrangedash 10}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.32754/JMT.2020.1.01
+      \endverb
+    \endentry
+    \entry{morphological_operations}{article}{skipbib=true}{}
+      \name{author}{3}{}{%
+        {{hash=f084a89642e3abacb2cd1615a1433697}{%
+           family={\noopsort{03}Lupascu},
+           familyi={0\bibinitperiod},
+           given={Cristian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f3cb774e9544deb5afc600b5a0ffe12e}{%
+           family={Plesca},
+           familyi={P\bibinitperiod},
+           given={Cezar},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9eecf111c2e3fdbe440bdf7085c53747}{%
+           family={Togan},
+           familyi={T\bibinitperiod},
+           given={Mihai},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{928831f5f8247e280ad5d90dd248b78f}
+      \strng{fullhash}{928831f5f8247e280ad5d90dd248b78f}
+      \strng{fullhashraw}{928831f5f8247e280ad5d90dd248b78f}
+      \strng{bibnamehash}{928831f5f8247e280ad5d90dd248b78f}
+      \strng{authorbibnamehash}{928831f5f8247e280ad5d90dd248b78f}
+      \strng{authornamehash}{928831f5f8247e280ad5d90dd248b78f}
+      \strng{authorfullhash}{928831f5f8247e280ad5d90dd248b78f}
+      \strng{authorfullhashraw}{928831f5f8247e280ad5d90dd248b78f}
+      \field{sortinit}{0}
+      \field{sortinithash}{c5602f03f17cc894ea7a6362c3cb0e13}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Privacy Preserving Morphological Operations for Digital Images}
+      \field{year}{2020}
+      \field{pages}{183\bibrangedash 188}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/COMM48946.2020.9141997
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
