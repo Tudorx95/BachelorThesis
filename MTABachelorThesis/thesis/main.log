@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  1 DEC 2025 00:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  3 DEC 2025 21:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -793,7 +793,69 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks32
 \@floatcapt=\box57
 )
-(./configuration.tex))
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip129
+For additional information on amsmath, use the `?' option.
+
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+)
+(/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen187
+) (/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/amsmath/amsopn.st
+y
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count466
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count467
+\leftroot@=\count468
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count469
+\DOTSCASE@=\count470
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box58
+\strutbox@=\box59
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen188
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count471
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count472
+\dotsspace@=\muskip22
+\c@parentequation=\count473
+\dspbrk@lvl=\count474
+\tag@help=\toks33
+\row@=\count475
+\column@=\count476
+\maxfields@=\count477
+\andhelp@=\toks34
+\eqnshift@=\dimen189
+\alignsep@=\dimen190
+\tagshift@=\dimen191
+\tagwidth@=\dimen192
+\totwidth@=\dimen193
+\lineht@=\dimen194
+\@envbody=\toks35
+\multlinegap=\skip130
+\multlinetaggap=\skip131
+\mathdisplay@stack=\toks36
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+) (./configuration.tex))
 
 Package biblatex Warning: Load 'inputenc' before biblatex.
 
@@ -801,9 +863,12 @@ Package biblatex Warning: Load 'inputenc' before biblatex.
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count466
-\@quotereset=\count467
+\@quotelevel=\count478
+\@quotereset=\count479
 (./main.aux
+
+LaTeX Warning: Label `fig:nume-label' multiply defined.
+
 
 LaTeX Warning: Label `fig:nume-label' multiply defined.
 
@@ -891,17 +956,17 @@ Package caption Info: End \AtBeginDocument code.
 (/media/tudor/380827CD08278948/texlive/texmf-dist/tex/context/base/mkii/supp-pd
 f.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count468
-\scratchdimen=\dimen187
-\scratchbox=\box58
-\nofMPsegments=\count469
-\nofMParguments=\count470
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count471
-\MPscratchDim=\dimen188
-\MPnumerator=\count472
-\makeMPintoPDFobject=\count473
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count480
+\scratchdimen=\dimen195
+\scratchbox=\box60
+\nofMPsegments=\count481
+\nofMParguments=\count482
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count483
+\MPscratchDim=\dimen196
+\MPnumerator=\count484
+\makeMPintoPDFobject=\count485
+\everyMPtoPDFconversion=\toks38
 )
 (/media/tudor/380827CD08278948/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstop
 df-base.sty
@@ -921,36 +986,19 @@ Package hyperref Info: Link coloring OFF on input line 8.
 
  (./components/frontmatter/all.tex
 (./components/frontmatter/title.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
-<components/frontmatter/../images/ATM.png, id=200, 654.94687pt x 770.88pt>
+<components/frontmatter/../images/ATM.png, id=209, 654.94687pt x 770.88pt>
 File: components/frontmatter/../images/ATM.png Graphic file (type png)
 <use components/frontmatter/../images/ATM.png>
 Package pdftex.def Info: components/frontmatter/../images/ATM.png  used on inpu
 t line 15.
 (pdftex.def)             Requested size: 182.09486pt x 214.32755pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 33.
  [1
 
 {/media/tudor/380827CD08278948/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex
 .map}{/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super
 /cm-super-t1.enc} <./components/frontmatter/../images/ATM.png>]) (./components/
 frontmatter/acknowledgment.tex [2])
-(./components/frontmatter/adviser_resume.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20.74> on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 1.
- [3
+(./components/frontmatter/adviser_resume.tex [3
 
 ] [4] [5] [6])
 (./components/frontmatter/specification.tex [7
@@ -991,7 +1039,7 @@ Capitolul 2.
 [3
 
 ]
-<components/chapters/../images/FL_models.png, id=371, 865.2325pt x 331.2375pt>
+<components/chapters/../images/FL_models.png, id=383, 865.2325pt x 331.2375pt>
 File: components/chapters/../images/FL_models.png Graphic file (type png)
 <use components/chapters/../images/FL_models.png>
 Package pdftex.def Info: components/chapters/../images/FL_models.png  used on i
@@ -1006,7 +1054,7 @@ Overfull \hbox (9.49333pt too wide) in paragraph at lines 164--211
 
 {/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-s
 uper-ts1.enc}]
-<components/chapters/../images/Device_internal_State.png, id=383, 758.835pt x 5
+<components/chapters/../images/Device_internal_State.png, id=395, 758.835pt x 5
 82.175pt>
 File: components/chapters/../images/Device_internal_State.png Graphic file (typ
 e png)
@@ -1014,7 +1062,7 @@ e png)
 Package pdftex.def Info: components/chapters/../images/Device_internal_State.pn
 g  used on input line 234.
 (pdftex.def)             Requested size: 318.66948pt x 244.48518pt.
-<components/chapters/../images/Federated_Learning_Operations.png, id=384, 1285.
+<components/chapters/../images/Federated_Learning_Operations.png, id=396, 1285.
 80376pt x 662.475pt>
 File: components/chapters/../images/Federated_Learning_Operations.png Graphic f
 ile (type png)
@@ -1039,13 +1087,29 @@ Overfull \hbox (2.43637pt too wide) in paragraph at lines 366--390
  [][] 
  []
 
-[9] [10]
+[9] [10] [11]
+Overfull \hbox (11.34253pt too wide) in paragraph at lines 546--547
+[]\T1/cmr/m/n/10 Colectarea Re-zul-ta-te-lor se re-a-li-zeaz  prin endpoint-uri
+ care in-te-ro-geaz  orches-tra-to-rul pen-tru ob[]inerea
+ []
+
+[12] [13]
 Capitolul 3.
-[11
+[14
 
 ]
+<components/chapters/../images/Changing_environments.png, id=443, 1456.44125pt 
+x 1051.93pt>
+File: components/chapters/../images/Changing_environments.png Graphic file (typ
+e png)
+<use components/chapters/../images/Changing_environments.png>
+Package pdftex.def Info: components/chapters/../images/Changing_environments.pn
+g  used on input line 603.
+(pdftex.def)             Requested size: 318.66948pt x 230.15727pt.
+ [15 <./components/chapters/../images/Changing_environments.png>] [16]
+[17]
 Capitolul 4.
-[12
+[18
 
 ]
 Capitolul 5.
@@ -1054,27 +1118,27 @@ Overfull \hbox (25.19998pt too wide) in paragraph at lines 2--11
 [][] 
  []
 
-) [13
+) [19
 
-] (./components/tables/large_table.tex) [14
+] (./components/tables/large_table.tex) [20
 
 ]
-<components/images/architecture.jpg, id=428, 702.625pt x 491.8375pt>
+<components/images/architecture.jpg, id=478, 702.625pt x 491.8375pt>
 File: components/images/architecture.jpg Graphic file (type jpg)
 <use components/images/architecture.jpg>
 Package pdftex.def Info: components/images/architecture.jpg  used on input line
- 520.
+ 727.
 (pdftex.def)             Requested size: 199.16928pt x 139.41714pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 523.
+(caption)                particular \caption on input line 730.
 See the caption package documentation for explanation.
 
-[15
+[21
 
  <./components/images/architecture.jpg>])
-(./components/chapters/bibliography.tex [16]
+(./components/chapters/bibliography.tex [22]
 
 Package biblatex Warning: Split bibliography detected.
 (biblatex)                Many simple split bibliography setups with
@@ -1093,7 +1157,7 @@ Package biblatex Warning: Split bibliography detected.
 (biblatex)                This warning can be suppressed with
 (biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
 
-)) [17
+)) [23
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -1107,17 +1171,17 @@ L3 programming layer <2025-10-24>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A30AA41BC34BC96473F1AE186CE117A6;7575.
+(rerunfilecheck)             Checksum: 1E508BEC5E73581126BED77630BCAEFC;7916.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22347 strings out of 467538
- 399237 string characters out of 5412257
- 1270923 words of memory out of 5000000
- 50792 multiletter control sequences out of 15000+600000
- 651093 words of font info for 87 fonts, out of 8000000 for 9000
+ 23039 strings out of 467538
+ 408659 string characters out of 5412257
+ 1285856 words of memory out of 5000000
+ 51454 multiletter control sequences out of 15000+600000
+ 652894 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,17n,93p,1181b,2011s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1140,38 +1204,41 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 m/cmbx10.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmbx7.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmex10.pfb></media/tudor/380827CD08278948/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></media/tudor/380827CD0827894
-8/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></media/tudor/380
-827CD08278948/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></medi
-a/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-
-super/sfbi1000.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type
-1/public/cm-super/sfbx0500.pfb></media/tudor/380827CD08278948/texlive/texmf-dis
-t/fonts/type1/public/cm-super/sfbx0600.pfb></media/tudor/380827CD08278948/texli
-ve/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></media/tudor/380827CD08
-278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></media/tudo
-r/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb>
-</media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/s
-fbx1200.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/publi
-c/cm-super/sfbx1440.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts
-/type1/public/cm-super/sfbx2074.pfb></media/tudor/380827CD08278948/texlive/texm
-f-dist/fonts/type1/public/cm-super/sfcc0800.pfb></media/tudor/380827CD08278948/
-texlive/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></media/tudor/38082
-7CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></media
-/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0600
-.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-su
-per/sfrm0700.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/
-public/cm-super/sfrm0800.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/
-fonts/type1/public/cm-super/sfrm0900.pfb></media/tudor/380827CD08278948/texlive
-/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></media/tudor/380827CD0827
-8948/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></media/tudor/
-380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></
-media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sft
-t1000.pfb>
-Output written on main.pdf (33 pages, 1399369 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></media/tudor/380827CD082789
+48/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></media/tudor/38
+0827CD08278948/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></me
+dia/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr7.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></media/tudor/380827CD08278948/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></media/tudor/380827CD08278948/texl
+ive/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></media/tudor/380827CD0
+8278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0500.pfb></media/tud
+or/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0600.pfb
+></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/
+sfbx0700.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/publ
+ic/cm-super/sfbx0900.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/font
+s/type1/public/cm-super/sfbx1000.pfb></media/tudor/380827CD08278948/texlive/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></media/tudor/380827CD08278948
+/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></media/tudor/3808
+27CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></medi
+a/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfcc080
+0.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-s
+uper/sfcc1000.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1
+/public/cm-super/sfrm0500.pfb></media/tudor/380827CD08278948/texlive/texmf-dist
+/fonts/type1/public/cm-super/sfrm0600.pfb></media/tudor/380827CD08278948/texliv
+e/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></media/tudor/380827CD082
+78948/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></media/tudor
+/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><
+/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sf
+rm1000.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public
+/cm-super/sfti1000.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/
+type1/public/cm-super/sftt0800.pfb></media/tudor/380827CD08278948/texlive/texmf
+-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (39 pages, 1528930 bytes).
 PDF statistics:
- 609 PDF objects out of 1000 (max. 8388607)
- 504 compressed objects within 6 object streams
- 108 named destinations out of 1000 (max. 500000)
- 418 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 673 PDF objects out of 1000 (max. 8388607)
+ 554 compressed objects within 6 object streams
+ 121 named destinations out of 1000 (max. 500000)
+ 439 words of extra memory for PDF output out of 10000 (max. 10000000)
 

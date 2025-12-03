@@ -357,13 +357,198 @@ Comunicatia dintre containere are loc in aceeasi retea locala docker, iar inform
 
 Pe langa Dockerfile, serviciul Docker Engine ofera si posibilitatea crearii unei configuratii prestabilite pentru definirea de topologii de retea de containere prin Docker Compose. Pe baza fisierelor Dockerfile in care sunt definite sabloanele imaginilor si a unui fisier de configurare YAML a topologiei relatiilor dintre containere, serviciul Docker Compose permite implementarea unei infrastructuri intregi prin rularea si stergerea sa dintr-o serie de comenzi.
 
-# 2.4.2 Scripting (Python/Bash)
+# 2.4.2 Python
 
-Python este unul dintre limbajele de programare cele mai des utilizate in contextul actual. El se deose 
+Python este unul dintre limbajele de programare cele mai des utilizate in contextul global actual.
+Python este un limbaj interpretat, de nivel inalt, ce vine cu o suita de biblioteci si functii utile in mai toate domeniile.
+
+Intreaga implementarea operatiunilor backend din proiectul propriu-zis a fost redactata folosind limbajul python, fiind nu doar util pentru a programa aplicatii software, dar intalnit in Machine Learning, pentru a antrena retele neuronale si modele de invatare automata.
+
+Python a devenit de facto standardul in domeniul ML si Deep Learning datorita ecosistemului sau bogat de biblioteci specializate. In contextul inteligentei artificiale, cele mai intalnite biblioteci utilizate in platforma lucrarii sunt:
+
+- TensorFlow: reprezintă una dintre cele mai populare biblioteci open-source pentru Machine Learning, dezvoltată de Google Brain Team. TensorFlow oferă o platformă completă pentru construirea și antrenarea modelelor de Deep Learning, cu suport nativ pentru GPU, ceea ce accelerează semnificativ procesul de antrenare. GPU sunt placi grafice dedicate procesarii unui singur set de instructiuni simultan pe multiple seturi de date (SIMD), avand integrate mai multe coruri de procesare decat un procesor normal.
+
+- Pytorch: reprezinta un alt framework major de Deep Learning, dezvoltat de Meta AI Research, cunoscut pentru flexibilitatea sa și abordarea dinamică a grafurilor computaționale
+
+- scikit-learn este biblioteca fundamentală pentru Machine Learning tradițional în Python, oferind implementări eficiente ale algoritmilor clasici precum Random Forest, Support Vector Machines, Logistic Regression și k-Nearest Neighbors. În cadrul platformei, scikit-learn joacă un rol crucial prin calculul metricilor de evaluare prin funcții specializate precum confusion_matrix, classification_report, accuracy_score, f1_score.
+
+- NumPy constituie fundația numerică a întregului ecosistem Python pentru calcul științific. NumPy oferă suport pentru array-uri multidimensionale și o colecție vastă de funcții matematice pentru operații vectorizate.
+
+In implementarea lucrarii, TensorFlow a fost folosit in urmatoarele scopuri:
+
+- Definirea arhitecturilor de rețele neuronale prin API-ul Keras, care oferă o interfață de nivel înalt pentru construirea straturilor (layers) și modelelor
+
+- Antrenarea modelelor pe datele locale ale fiecărui client FL prin utilizarea de optimizatori, precum Adam. Un optimizator este o metoda matematica de reducere a ratei de eroare si de imbunatatire a acuratetii parametrilor modelului de invatare automata.
+
+- Extragerea și setarea ponderilor (weights) modelului pentru procesul de agregare, operatiune esentiala in FL
+
+- Evaluarea performanței modelului prin calcul automat al metricilor precum accuracy, loss, precision și recall. Acuratetea se defineste ca raportul dintre predictiile clasificate corect, fie ele true-positive sau true-negative, si suma tuturor predictiilor pe setul de date.
+
+```latex
+\[
+\text{Accuracy} = \frac{\text{Number of correct predictions}}{\text{Total number of predictions}} = \frac{TP + TN}{TP + TN + FP + FN}
+\]
+```
+
+Recall, sau true positive rate (TPR) este metrica ce determina procentul de date care a fost clasificat corect. Aceasta valoare include la numitor atat numarul de elemente a caror predictie a fost identificata corect drept adevarata si numarul elementelor prezise corect drept incorecte.
+
+```latex
+\[
+\text{TPR} =  = \frac{TP}{TP + FN}
+\]
+```
+
+Precizia exprimă proporția predicțiilor pozitive ale modelului care sunt corecte:
+
+```latex
+\[
+\text{Precision} =  = \frac{TP}{TP + TN}
+\]
+```
+
+Pentru gestionarea și izolarea mediilor de dezvoltare Python, în cadrul lucrării s-a utilizat Anaconda, o distribuție populară care include atât interpretorul Python, cât și un manager de pachete și medii virtuale.
+
+Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesare, asigurând compatibilitatea între diferite versiuni și reducând riscul apariției conflictelor de dependințe. La nivelul lucrarii, au fost create două medii distincte în Anaconda, fiecare configurat cu bibliotecile relevante pentru proiect, TensorFlow si PyTorch, utilizate in procesul de simulare.
+
+Dincolo de capacitățile sale în Machine Learning, Python excelează și în dezvoltarea de aplicații web și servicii backend. În cadrul platformei, Python îndeplinește multiple roluri care vor fi amintite pe tot parcursul capitolului 3 de implementare.
 
 # 2.4.3 Rest API
 
+REST (Representational State Transfer) API reprezintă o arhitectură software pentru comunicarea între componente distribuite prin protocolul HTTP.
+Un API (Application Programming Interface) reprezintă o interfață definita special prin care diferite componente software comunică între ele.
+
+În platforma dezvoltată, REST API asigură comunicația între frontend (React), backend (FastAPI) și orchestrator (Flask), implementând un sistem complet de management al simulărilor federate.
+
+Platforma utilizează două servere REST API distincte, fiecare cu responsabilități specifice:
+
+Backend API (FastAPI) rulează în containerul Docker local și servește ca intermediar între interfața utilizator și serverul de simulare. FastAPI este un framework Python modern, de înaltă performanță, bazat pe Pydantic pentru validarea automată a datelor și pe specificația OpenAPI pentru documentare automată. Alegerea FastAPI față de Flask pentru backend este justificată de performanța superioară în scenarii cu cereri concurente, suportul nativ pentru operații asincrone.
+
+Orchestrator API (Flask) rulează pe serverul ATM și gestionează execuția efectivă a simulărilor. Flask este un framework web minimalist, ideal pentru servicii interne care nu necesită complexitatea FastAPI. Orchestratorul primește comenzi de la backend, alocă resurse GPU, lansează procese de simulare, și returnează rezultatele.
+
+Un aspect fundamental al arhitecturii este comunicarea asincronă între componente. Simulările FL pot dura de la minute la ore, făcând imposibilă așteptarea sincronă a rezultatelor. Platforma implementează pattern-ul Job Queue cu următoarele caracteristici:
+
+- Inițierea simulării se realizează prin cererea POST către backend la endpoint-ul dedicat, stochează configurația în baza de date PostgreSQL, și transmite cererea către orchestrator.
+
+- Monitorizarea progresului se realizează prin două mecanisme complementare: WebSocket pentru actualizări în timp real și polling HTTP pentru backwards compatibility.
+
+Backend-ul expune multiple categorii de endpoint-uri, fiecare responsabil de o funcționalitate specifică:
+
+- Autentificare și Autorizare se realizează prin endpoint-uri dedicate pentru înregistrare utilizatori, autentificare cu username și parolă, și generare JWT (JSON Web Token) pentru sesiuni. Token-ul JWT este inclus în header-ul Authorization pentru toate cererile ulterioare, sub forma Bearer token. Backend-ul validează token-ul pentru fiecare cerere protejată, verificând semnătura digitală, expirarea, și existența utilizatorului în baza de date.
+
+- Management Proiecte și Fișiere permite utilizatorilor să organizeze simulările în proiecte ierarhice. Fiecare proiect poate conține multiple fișiere reprezentând template-uri Python pentru modele diferite.
+
+- Execuția Simulărilor este orchestrată prin endpoint-ul principal care primește codul template Python și configurația simulării. Backend-ul efectuează validări de securitate asupra codului încărcat pentru a preveni atacurile de tip code injection, verifică existența funcțiilor obligatorii în template și transmite cererea către orchestrator împreună cu token-ul de autentificare.
+
+- Colectarea Rezultatelor se realizează prin endpoint-uri care interogează orchestratorul pentru obținerea rezultatelor finale. După ce orchestratorul semnalează completarea simulării, backend-ul solicită fișierele JSON cu metrici, fișierul text cu rezumatul, și informații despre atacul aplicat.
+
+- WebSocket pentru Monitorizare Real-Time implementează un endpoint special care acceptă conexiuni WebSocket. După stabilirea conexiunii, backend-ul intră într-un loop asincron în care interoghează orchestratorul la fiecare 2 secunde pentru status-ul actualizat al simulării. Informațiile sunt trimise imediat către frontend prin WebSocket, oferind o experiență interactivă similară unui terminal live.
+
 ## Chapter 3 Proiectare, Implementare si Testare Platforma
+
+Lucrarea se concentreaza pe dezvoltarea unei platforme de simulare a atacurilor de tip Data Poisoning intr-un mediu de invatare automata federata asupra unei retele neuronale dezvoltate de utilizator.
+Scopul ei vine chiar din problema identificarii acestui tip de atac si imbunatatirea procesului de alertare in securitatea cibernetica.
+Platforma sprijina analistii de securitate si cercetatorii de analiza de date in vederea constientizarii unei posibile vulnerabilitati la nivelul unei infrastructuri publice centralizate.
+
+# 3.1 Arhitectura Platformei
+
+In procesul de dezvoltare al platformei, au fost analizate platforme de programare in timp real, precum Google Colab sau Jupyter Notebook, care permit utilizatorilor sa isi incarce si sa execute remote codul de antrenare a retelelor neuronale intr-o infrastructura specializata.
+Inspirandu-se din aceste platforme si observand existenta unor utilitare de analiza a malware-ului si infectiilor, s-a identificat nevoia unui framework care nu doar sa simuleze o retea de invatare automata federata, ci si sa testeze atacuri Data Poisoning oferind cercetatorilor si analistilor de securitate posibilitatea de a evalua vulnerabilitatile propriilor retele neuronale.
+
+Platforma este structurată pe trei niveluri principale:
+
+**Nivelul Client (Frontend)**
+
+- Interfață React pentru autentificare, management proiecte, și vizualizare rezultate
+- Comunicare prin REST API și WebSocket pentru monitoring real-time
+
+**Nivelul Backend (Containerizat Docker)**
+
+- API FastAPI pentru gestionarea cererilor utilizatorilor
+- Baza de date PostgreSQL pentru persistența configurațiilor și rezultatelor
+- Validare securitate cod și transmitere asincronă către orchestrator
+
+**Nivelul Execuție (Server ATM)**
+
+- Orchestrator Flask pentru managementul simulărilor
+- Alocare dinamică GPU prin GPUManager (3 GPU-uri disponibile)
+- Medii Python izolate: fl_tensorflow și fl_pytorch
+
+Fluxul platformei este urmatorul:
+
+- Utilizatorul se autentifica in platforma si isi creeaza un proiect si un fisier de test aferent, in care incarca un sablon specific pentru antrenare.
+  Sablonul este compus dintr-o serie de functii predefinite care vor trebui completate cu secvente de cod specifice crearii retelei neuronale, antrenarii si evaluarii ei. Printre alte functii, trebuie sa amintim si de cele de setare a ponderilor pentru procesul de agregare la nivelul infrastructurii federate, de descarcare de date local de la o sursa specifica si de salvare a configuratiei retelei antrenate.
+
+- Odata ce se initiaza simularea la apasarea butonului Run, sablonul python este transmis asincron de la backend-ul aplicatiei catre un server remote.  
+  Comunicarea asincronă permite utilizatorului să continue lucrul în platformă în timp ce simularea se execută pe server.
+  Serverul remote este denumit Server ATM, fiind localizat in infrastructura Academiei Tehnice Militare "Ferdinand I".
+  Pe serverul remote, cererea este preluata de un proces orchestrator care odata primita, instantiaza un nou proces care executa o serie de actiuni.
+
+  Odata initiata o cerere de simulare, se va crea in directorul utilizatorului logat in platforma, un director specific denumit dupa identificatorul taskului instantiat de utilizator.
+  In acel director, se afla toate tipurile de fisiere care vor fi gestionate pe tot parcursul operatiunile de simulare, de la setul de date de antrenare, pana la fisierele specifice tipului de atac Data Poisoning utilizat si rezultatele simularilor in reteaua federata.
+
+  Prima etapa este cea in care se identifica tipul de biblioteci utilizate pentru procesarea retelei neuronale si se trece in mediul python corespunzator. Platforma suporta antrenarea folosind biblioteci TensorFlow si PyTorch, avand create cate un mediu specific pentru antrenarea tipului de retea respectiv. Scriptul de rulare a retelei neuronale se numeste train_model.py si este un script agnostic, construit pentru a testa functiile din sablon.
+
+  Imaginea de mai sus reprezinta mediile de python disponibile pentru a rula retelele neuronale.
+
+  La fiecare pas, in cazul unei erori generate de orice fel de actiune, procesul ce gestioneaza operatiunile de simulare se opreste si se transmite eroarea ca rezultat procesului orchestrator care semnalizeaza backend-ul aplicatiei.
+
+  Dupa prima antrenare, se salveaza parametrii aferenti matricii de confuzie (acuratete, precizie, scor F1, recall) pentru a compararea rezultatului simularii cu configuratia initiala a retelei si detectarea posibilelor anomalii. Acesta este principalul pas in procesul de analiza a problemei propuse.
+
+  Daca programul este corect structurat, procesul curent incarca functiile scriptului transmis si se foloseste de ele pentru a simula atacul Data Poisoning.
+  Mai intai se apeleaza functia de descarcare locala a datelor de antrenare si testare. Aceste date vor fi folosite pentru a simula procesul de otravire pe baza configuratiei simularii setate de utilizator. Datele pot fi descarcate din orice sursa publica, permitand o flexibilitate in tipul de platforma si de date pentru testare.
+
+  Argumentele cu ajutorul carora se ruleaza scriptul de otravire a setului de date sunt:
+
+  - **poison_operation**: tipul atacului (noise, label_flip, backdoor)
+  - **poison_intensity**: intensitatea atacului (ex: 0.1 pentru zgomot Gaussian)
+  - **poison_percentage**: procentajul datelor afectate (ex: 0.2 pentru 20%)
+
+  Amintim ca mediile de python includ si biblioteci de seturi de date specifice precum tensorflowDatasets in care se regasesc seturi de date predefinite in cazul in care utilizatorul doreste sa foloseasca un set de date predefinit la nivel de biblioteci.
+
+  Procesul de otravire (poisoning) presupune rularea unui script care pe baza parametrilor simularii, aplica o serie de operatii asupra seturilor de date. Tipurile de actiuni de otravire au fost definite in capitolul 2 (sectiunea 2.3.3 - Atacul Data poisoning). Utilizatorul poate alege procentajul din etichete care sa fie infectate, iar in cazul zgomotului Gaussian si a backdoor, se va seta si intensitatea pixelilor de alterat.
+
+  In pasii urmatori, se va realiza simularea propriu-zisa cu ajutorul unui script agnostic denumit fl_simulator, care va primi drept argumente urmatoarele:
+
+  - N numarul de clienti/dispozitive aferente retelei federate
+  - M numarul clienti compromisi din totalul de mai sus
+  - R numarul total de runde de antrenare
+  - ROUNDS numarul de runde in care dispozitivele compromise vor antrena cu datele corupte
+  - strategia de propagare a dispozitivelor compromise. Aceasta cuprinde 3 moduri:
+    - first: dispozitivele compromise vor rula primele ROUNDS runde cu datele otravite, iar restul de R-ROUNDS runde vor folosi datele curate
+    - last: dispozitivele compromise vor rula ultimele ROUNDS runde cu datele otravite, iar restul de R-ROUNDS runde vor folosi datele curate
+    - alternate: dispozitivele compromise vor rula cate o runda folosind datele otravite si cate una cu datele curate
+
+  Prima rulare va fi de fapt o reglare fina (fine-tuning) a configuratiei retelei initiale, folosind drept date de antrenare datele curate.
+  Este important de menționat că ambele simulări (clean și poisoned) pornesc de la **aceeași configurație inițială** a modelului. Acest aspect asigură că diferențele observate în rezultate se datorează exclusiv atacului Data Poisoning, nu variațiilor aleatorii în inițializarea ponderilor. Ambele simulări folosesc procesul de agregare FedAvg pentru a combina update-urile de la clienți la fiecare rundă.
+
+  Urmatorul pas este reglarea fina a aceleiasi configuratii initiale, dar folosind datele otravite in procesul de antrenare.
+
+  In urma acestor simulari, se vor salva informatiile cu privire la fiecare configuratie simulata, ce va fi utilizata in procesul de analiza.
+  Analiza rezultatelor presupune diferentele dintre parametrii retelei la finalul simularii cu date curate si cei de la finalul simularii cu date otravite.
+  Analiza rezultatelor constă în compararea următoarelor metrici între simularea clean și simularea poisoned:
+
+  - **Degradarea accuracy-ului**: Δ_acc = (Acc_clean - Acc_poisoned) / Acc_clean × 100%
+  - **Diferențe în matricea de confuzie**: Identificarea claselor afectate de atac
+  - **Convergență**: Numărul de runde necesare pentru stabilizare
+  - **Divergența ponderilor**: Distanța euclidiana între parametrii finali
+
+  Utilizatorul va putea vizualiza fiecare pas de procesare amintit pana acum si rezultatul analizei simularii.
+
+  Pentru a facilita munca analistului, platforma include posibilitatea de export a raportului simularii, dar si compararea de simulari ale aceluiasi proiect.
+
+# 3.2 Implementare Platforma
+
+Arhitectura propusă oferă următoarele beneficii:
+
+**Flexibilitate**: Sistemul de sabloane permite testarea oricărui model TensorFlow sau PyTorch fără modificări la nivel de infrastructură.
+
+**Scalabilitate**: Alocarea dinamică a GPU-urilor permite rularea simultană a 3 simulări, maximizând utilizarea resurselor disponibile.
+
+**Reproducibilitate**: Toate configurațiile și rezultatele sunt stocate în PostgreSQL, permițând replicarea exactă a experimentelor.
+
+**Transparență**: Monitorizarea în timp real prin WebSocket oferă vizibilitate completă asupra procesului de execuție, facilitând debugging-ul în caz de erori.
+
+**Comparabilitate**: Funcționalitatea de comparare simulări permite analiștilor să evalueze impactul diferitelor tipuri de atacuri asupra aceluiași model.
 
 # 3.1 Cerintele Software
 
