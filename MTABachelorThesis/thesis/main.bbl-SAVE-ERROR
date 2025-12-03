@@ -125,6 +125,258 @@
       \verb 10.1109/COMM48946.2020.9141997
       \endverb
     \endentry
+    \entry{dnsc_buletin_2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7e88a41472b55e5d879f144de3b8a8bc}{%
+           family={{Directoratul Național de Securitate Cibernetică (DNSC)}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e88a41472b55e5d879f144de3b8a8bc}
+      \strng{fullhash}{7e88a41472b55e5d879f144de3b8a8bc}
+      \strng{fullhashraw}{7e88a41472b55e5d879f144de3b8a8bc}
+      \strng{bibnamehash}{7e88a41472b55e5d879f144de3b8a8bc}
+      \strng{authorbibnamehash}{7e88a41472b55e5d879f144de3b8a8bc}
+      \strng{authornamehash}{7e88a41472b55e5d879f144de3b8a8bc}
+      \strng{authorfullhash}{7e88a41472b55e5d879f144de3b8a8bc}
+      \strng{authorfullhashraw}{7e88a41472b55e5d879f144de3b8a8bc}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.dnsc.ro/vezi/document/buletin-de-indicatori-statistici-si-tendinte-de-securitate-cibernetica-h1-2025}}
+      \field{note}{Accesat în 2025-11-27}
+      \field{title}{Buletin de Indicatori Statistici și Tendințe de Securitate Cibernetică - H1 2025}
+      \field{year}{2025}
+    \endentry
+    \entry{eu_ai_act_overview_2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=6d41230561cf17e18784a89dfacbd312}{%
+           family={{Future of Life Institute}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d41230561cf17e18784a89dfacbd312}
+      \strng{fullhash}{6d41230561cf17e18784a89dfacbd312}
+      \strng{fullhashraw}{6d41230561cf17e18784a89dfacbd312}
+      \strng{bibnamehash}{6d41230561cf17e18784a89dfacbd312}
+      \strng{authorbibnamehash}{6d41230561cf17e18784a89dfacbd312}
+      \strng{authornamehash}{6d41230561cf17e18784a89dfacbd312}
+      \strng{authorfullhash}{6d41230561cf17e18784a89dfacbd312}
+      \strng{authorfullhashraw}{6d41230561cf17e18784a89dfacbd312}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://artificialintelligenceact.eu/wp-content/uploads/2024/11/Future-of-Life-InstituteAI-Act-overview-30-May-2024.pdf}}
+      \field{month}{5}
+      \field{note}{Accessed: 2025-11-27}
+      \field{title}{AI Act Overview - Future of Life Institute (30 May 2024)}
+      \field{year}{2024}
+    \endentry
+    \entry{ibm_ai_vs_ml_dl}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.ibm.com/think/topics/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks}}
+      \field{note}{Accesat în YYYY‑MM‑DD}
+      \field{title}{AI vs. Machine Learning vs. Deep Learning vs. Neural Networks}
+      \field{year}{2025}
+    \endentry
+    \entry{ibmfl_api}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://ibmfl-api-docs.res.ibm.com/index.html}}
+      \field{note}{Accesat în 2025-11-28}
+      \field{title}{IBM Federated Learning API Documentation}
+      \field{year}{2025}
+    \endentry
+    \entry{ibmfl_github}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/IBM/federated-learning-lib/tree/main}}
+      \field{note}{Accesat în 2025-11-28}
+      \field{title}{IBM Federated Learning Library - GitHub Repository}
+      \field{year}{2025}
+    \endentry
+    \entry{kairouz2021federated}{article}{}{}
+      \name{author}{20}{}{%
+        {{hash=761af8788087acbeff1e33df3d1ff52a}{%
+           family={Kairouz},
+           familyi={K\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=707fa44f08f047ab822f84fe38c69dfb}{%
+           family={McMahan},
+           familyi={M\bibinitperiod},
+           given={H.\bibnamedelimi Brendan},
+           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2ae42f2e55aab6a6ff109e8a22824beb}{%
+           family={Avent},
+           familyi={A\bibinitperiod},
+           given={Brendan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=13661eaafb5c293bc8bebb8c2250a7d8}{%
+           family={Bellet},
+           familyi={B\bibinitperiod},
+           given={Aurélien},
+           giveni={A\bibinitperiod}}}%
+        {{hash=eaf666d93aee903b2bbd8a40853a4243}{%
+           family={Bennis},
+           familyi={B\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=19e15437e6824ecd330ce35d0bea8c0c}{%
+           family={Bhagoji},
+           familyi={B\bibinitperiod},
+           given={Arjun\bibnamedelima Nitin},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=b5068fa6c52ad4193971201b160dfa57}{%
+           family={Bonawitz},
+           familyi={B\bibinitperiod},
+           given={Keith},
+           giveni={K\bibinitperiod}}}%
+        {{hash=26124fa6ada1de949494329c3f2c98a9}{%
+           family={Charles},
+           familyi={C\bibinitperiod},
+           given={Zachary},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=22e4fedec69ce5758dc2b71b477dbf20}{%
+           family={Cormode},
+           familyi={C\bibinitperiod},
+           given={Graham},
+           giveni={G\bibinitperiod}}}%
+        {{hash=865e8602616e91ebdf605d8cdce55167}{%
+           family={Cummings},
+           familyi={C\bibinitperiod},
+           given={Rachel},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1291446349103b18f2b6dea4910b49d1}{%
+           family={D’Oliveira},
+           familyi={D\bibinitperiod},
+           given={Rodrigo\bibnamedelimb G.\bibnamedelimi L.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=36abb315b194bee5e9633b2e27f82be0}{%
+           family={Eichner},
+           familyi={E\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f0e68921755ef6e6086b5d936d614031}{%
+           family={El\bibnamedelima Rouayheb},
+           familyi={E\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Sami},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fdf60d29316eacfbd0fdc22e786afd78}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=52f939a6fa08f0beedcbce1fdc2e61ed}{%
+           family={Gardner},
+           familyi={G\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=04e6a64959259f23ec3aeb4ee761cf65}{%
+           family={Garrett},
+           familyi={G\bibinitperiod},
+           given={Zachary},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cac052e5b44a827e0f497baa5cff21d2}{%
+           family={Gascón},
+           familyi={G\bibinitperiod},
+           given={Andrés},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f9a701b37294722d6e1c8df13cbecde5}{%
+           family={Ghazi},
+           familyi={G\bibinitperiod},
+           given={Badr},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8a671c57e715f9770e740f9012f3a177}{%
+           family={Gibbons},
+           familyi={G\bibinitperiod},
+           given={Phillip\bibnamedelima B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=e2b26fa8f1151b09d20d15a2b65fa1c9}{%
+           family={…\bibnamedelima Zhao},
+           familyi={…\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           given={Shuang},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b5d6d122fda9b4124d06103e4b2974cd}
+      \strng{fullhash}{9a9cfa10018c06691b0b0693c690420b}
+      \strng{fullhashraw}{9a9cfa10018c06691b0b0693c690420b}
+      \strng{bibnamehash}{b5d6d122fda9b4124d06103e4b2974cd}
+      \strng{authorbibnamehash}{b5d6d122fda9b4124d06103e4b2974cd}
+      \strng{authornamehash}{b5d6d122fda9b4124d06103e4b2974cd}
+      \strng{authorfullhash}{9a9cfa10018c06691b0b0693c690420b}
+      \strng{authorfullhashraw}{9a9cfa10018c06691b0b0693c690420b}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Foundations and Trends® in Machine Learning}
+      \field{number}{1-2}
+      \field{title}{Advances and Open Problems in Federated Learning}
+      \field{volume}{14}
+      \field{year}{2021}
+      \true{nocite}
+      \field{pages}{1\bibrangedash 210}
+      \range{pages}{210}
+      \verb{doi}
+      \verb 10.1561/2200000083
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1561/2200000083
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1561/2200000083
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -538,17 +538,38 @@ Fluxul platformei este urmatorul:
 
 # 3.2 Implementare Platforma
 
+Platforma este compusa din doua servere, unul dintre ele fiind la distanta si dispunand de 3 placi grafice A40 (GPU) optimizate pentru medii de lucru cu Inteligenta Artificiala si Deep Learning. Placile dispun de 46 GB memorie VRAM (video RAM) GDDR6 pentru a suporta lucrul intensiv cu date.
+A40 este o placa profesionala destinata centrelor de date, furnizand accelerare hardware pentru TensorFlow si PyTorch, precum si pentru operatii matematice complexe necesare in procesele de simulare si invatare federata.
+
+Serverul ce ruleaza functionalitatile backend si de persistenta este la nivelul unui dispozitiv din reteaua proprie locala. Acesta este responsabil pentru gestionarea interactiunii utilizatorilor, stocarea configuratiilor si transmiterea cererilor catre serverul remote. El reprezinta punctul de intrare al platformei pentru toti utilizatorii si mentine logica de securitate, autentificare si gestionare a sesiunilor.
+
+Pentru scalabilitate si flexibilitate, s-au utilizat containere de Docker la nivelul serverului local pentru a stoca urmatoarele elemente:
+
+- containerul cu partea frontend a aplicatiei - are incluse toate dependintele pentru a rula o aplicatie React folosind un server NodeJs. Acesta ofera o interfata moderna, receptiva si permite utilizatorilor sa acceseze toate functiile platformei, precum incarcare sabloane, vizualizare rezultate si comparare simulări.
+- containerul cu baza de date PostgreSQL pentru persistenta - stocheaza toate fisierele cu rezultatele simularilor de la server specific fiecarui utilizator, precum si parolele Hash ale fiecarui utilizator. Structura bazei de date este optimizata pentru volum mare de date si pentru interogari rapide asupra istoricului de simulări.
+- containerul cu partea de backend initiatoare de cereri catre serverul remote - proces care primeste o comanda de la frontend printr-o cerere POST catre endpointul **run**. Odata primita cererea, aceasta este redirectionata catre serverul remote printr-o cerere POST asincrona. Backend-ul implementeaza validari de securitate asupra sabloanelor, logging al fiecarei cereri si mecanisme de throttling pentru a preveni supraîncărcarea serverului remote.
+
+La nivelul serverului remote, avem urmatoarele componente:
+
+- un proces orchestrator ce ruleaza scriptul **orchestrator_gpu.py** ce creeaza un nou proces la fiecare conexiune nou instantiata. Pentru fiecare simulare, se aloca un GPU pentru a putea gestiona un flux mai mare de procesare, dar in acelasi timp pentru a nu diminua timpul de rulare al fiecarei simulari in parte.
+  Orchestratorul gestioneaza coada de task-uri, starea proceselor, precum si comunicarea bidirectionala cu serverul local pentru emiterea logurilor si a rezultatelor.
+  Folosind scriptul **gpu_manager.py** se creeaza structura care va gestiona alocarea actiunile pe GPU. Managerul monitorizeaza în timp real starea GPU-urilor (utilizare, memorie disponibilă, temperatură) și distribuie simularile în mod echilibrat pentru a preveni supraincarcarea unuia dintre dispozitive.
+- proces ce simuleaza atacul. Acest tip de proces identifica tipul de biblioteci de python folosite la nivelul sablonului primit si trece in mediul Anaconda potrivit (TensorFlow sau PyTorch). Mediile Python sunt complet izolate, fiecare avand propriile dependinte si versiuni ale bibliotecilor, pentru a asigura reproducibilitatea rezultatelor. Pentru a realiza otravirea datelor, procesul foloseste un script denumit **poison_data.py**.
+  Simularea propriu-zisa va fi rulata prin intermediul unui script denumit **fd_simulator.py** care se foloseste de sablonul de cod stocat in fisierul **template_code.py**. În timpul executiei, fiecare etapa este jurnalizată, iar eventualele erori sunt capturate și trimise serverului backend pentru a informa utilizatorul în timp real.
+
+Imaginea de mai sus prezinta intregul flux al arhitecturii, precum si detaliile tehnice utilizate.
+
 Arhitectura propusă oferă următoarele beneficii:
 
-**Flexibilitate**: Sistemul de sabloane permite testarea oricărui model TensorFlow sau PyTorch fără modificări la nivel de infrastructură.
+**Flexibilitate**: Sistemul de sabloane permite testarea oricărui model TensorFlow sau PyTorch fără modificări la nivel de infrastructură. Izolarea mediilor Python previne conflictele între diferite modele sau versiuni de biblioteci.
 
-**Scalabilitate**: Alocarea dinamică a GPU-urilor permite rularea simultană a 3 simulări, maximizând utilizarea resurselor disponibile.
+**Scalabilitate**: Alocarea dinamică a GPU-urilor permite rularea simultană a 3 simulări, maximizând utilizarea resurselor disponibile. In plus, structura modulara permite extinderea ulterioara la un numar mai mare de GPU-uri sau chiar la un cluster de servere.
 
-**Reproducibilitate**: Toate configurațiile și rezultatele sunt stocate în PostgreSQL, permițând replicarea exactă a experimentelor.
+**Reproducibilitate**: Toate configurațiile și rezultatele sunt stocate în PostgreSQL, permițând replicarea exactă a experimentelor. Mediile Python imutabile garantează că două rulări identice produc rezultate identice.
 
 **Transparență**: Monitorizarea în timp real prin WebSocket oferă vizibilitate completă asupra procesului de execuție, facilitând debugging-ul în caz de erori.
 
-**Comparabilitate**: Funcționalitatea de comparare simulări permite analiștilor să evalueze impactul diferitelor tipuri de atacuri asupra aceluiași model.
+**Comparabilitate**: Funcționalitatea de comparare simulări permite analiștilor să evalueze impactul diferitelor tipuri de atacuri asupra aceluiași model. Datele sunt agregate într-o structură unificată pentru a facilita vizualizări grafice și analize statistice avansate.
 
 # 3.1 Cerintele Software
 

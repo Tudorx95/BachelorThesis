@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {2.1}Notiuni introductive}{3}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Diferenta dintre Machine Learning si Deep Learning}{3}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Retea Neuronala}{3}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Invatare automata federata}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Invatare automata federata}{4}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Concept}{4}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Arhitectura FL}{4}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Procesul de antrenare FL}{6}{subsection.2.2.3}%
@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {2.3.4}Impactul poisoning in Federated Learning}{9}{subsection.2.3.4}%
 \contentsline {section}{\numberline {2.4}Alte Notiuni}{10}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Docker}{10}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Python}{10}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.2}Python}{11}{subsection.2.4.2}%
 \contentsline {subsubsection}{\numberline {2.4.2.1}Biblioteci Python utilizate}{11}{subsubsection.2.4.2.1}%
 \contentsline {subsubsection}{\numberline {2.4.2.2}Utilizarea TensorFlow in cadrul lucrarii}{11}{subsubsection.2.4.2.2}%
 \contentsline {subsubsection}{\numberline {2.4.2.3}Metrici de Evaluare in Machine Learning}{11}{subsubsection.2.4.2.3}%
@@ -29,29 +29,29 @@
 \contentsline {subsubsection}{\numberline {2.4.3.1}Arhitectura REST in Platforma}{12}{subsubsection.2.4.3.1}%
 \contentsline {chapter}{\numberline {3}Proiectare, Implementare si Testare}{14}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Arhitectura Platformei}{14}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Implementare Platformei}{17}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Cerintele Software}{17}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Cerintele functionale}{17}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Cerintele nefunctionale}{17}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Arhitectura platformei}{17}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Containere}{17}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Server}{17}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Testare}{17}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Rezultate si Metrici Simulari}{18}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Evaluare Performante}{18}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Scalabilitatea Simularilor}{18}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Scalabilitatea platformei}{18}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Evaluare Rezultate}{18}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Performante Gaussian Noise}{18}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Performante Label-Flip}{18}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Performante Backdoor}{18}{subsection.4.2.3}%
-\contentsline {chapter}{\numberline {5}Concluzii si dezvoltare ulterioara}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Starea Curenta}{19}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Dezvoltare Ulterioara}{19}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Tabele}{19}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Imagini}{21}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Liste}{21}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Formule Matematice}{21}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Note de Subsol. Citări}{22}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Etichete. Referințe}{22}{section.5.8}%
-\contentsline {chapter}{Bibliografie}{23}{chapter*.15}%
+\contentsline {section}{\numberline {3.2}Implementare Platformei}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Cerintele Software}{19}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Cerintele functionale}{19}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Cerintele nefunctionale}{19}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Arhitectura platformei}{19}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Containere}{19}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Server}{19}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Testare}{19}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Rezultate si Metrici Simulari}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Evaluare Performante}{20}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Scalabilitatea Simularilor}{20}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Scalabilitatea platformei}{20}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Evaluare Rezultate}{20}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Performante Gaussian Noise}{20}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Performante Label-Flip}{20}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Performante Backdoor}{20}{subsection.4.2.3}%
+\contentsline {chapter}{\numberline {5}Concluzii si dezvoltare ulterioara}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Starea Curenta}{21}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Dezvoltare Ulterioara}{21}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Tabele}{21}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Imagini}{23}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Liste}{23}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Formule Matematice}{23}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Note de Subsol. Citări}{24}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Etichete. Referințe}{24}{section.5.8}%
+\contentsline {chapter}{Bibliografie}{25}{chapter*.16}%

@@ -24,11 +24,11 @@ Această evoluție naturală spre descentralizare a deschis drumul unor concepte
 
 Evolutia tehnologica continua a dat nastere la o serie de atacuri cibernetice menite sa destabilizeze securitatea aplicatiilor si totodata sustragerea a
 cat mai multe date sau identitati private in contradictie cu normele legale.
-Cele mai populare atacuri raportate la scara globala pentru anul curent 2025 sunt ransomware (conform \footnotemark{}, in SUA s-au raportat cresteri
+Cele mai populare atacuri raportate la scara globala pentru anul curent 2025 sunt ransomware (conform \footnote{\fullcite{dnsc_buletin_2025}}, in SUA s-au raportat cresteri
 de 149\%), furtul de identitate prin exfiltrarea de credentiale, si phishing.
 Dezvoltarea modelelor de inteligență artificială a amplificat aceste riscuri, oferind atacatorilor instrumente automatizate pentru generarea și adaptarea atacurilor.
 
-Pentru a limita utilizarea abuzivă a tehnologiilor bazate pe AI, Uniunea Europeană a adoptat în 2024 un set de reglementări stricte privind integrarea acestor module în aplicațiile software, prin AI Act \footnotemark{}.
+Pentru a limita utilizarea abuzivă a tehnologiilor bazate pe AI, Uniunea Europeană a adoptat în 2024 un set de reglementări stricte privind integrarea acestor module în aplicațiile software, prin AI Act \footnote{\fullcite{eu_ai_act_overview_2024}}.
 
 Progresul din domeniul machine learning si a Large Language Models a fost posibil ca urmare a unui volum masiv de date disponibile si a nevoii tot mai mari de analiza.
 Acest lucru a determinat aparitia unei noi categorii de specialisti, data scientists, dedicati colectarii si prelucrarii minutioase a datelor pentru antrenarea modelelor.
@@ -48,9 +48,6 @@ Astfel, avand in vedere complexitatea dezvoltarii unui modul de inteligenta arti
 
 Lucrarea de față se concentrează pe prima categorie, data poisoning, în cadrul unei infrastructuri de invatare federate.
 
-\footnotetext[1]{https://www.dnsc.ro/vezi/document/buletin-de-indicatori-statistici-si-tendinte-de-securitate-cibernetica-h1-2025}
-\footnotetext[2]{ https://artificialintelligenceact.eu/wp-content/uploads/2024/11/Future-of-Life-InstituteAI-Act-overview-30-May-2024.pdf}
-
 \section{Motivatia lucrarii}
 
 Avand in vedere aspectele legate de posibilitatea unei interventii asupra setului de date de antrenare, atac denumit otravire a datelor (data poisoning),
@@ -59,13 +56,10 @@ Pentru a răspunde acestor nevoi, colaborarea dintre cercetători s-a orientat c
 Aceasta permite colaborarea între participanți fără a partaja direct seturile lor de date, menținând o barieră naturală împotriva accesului neautorizat. Totuși, deși infrastructura este diferită față de abordările centralizate, vulnerabilitățile rămân, iar atacurile asupra datelor utilizate local pot afecta modelul global.
 
 In urma unei analize proprii, am putut observa diferite solutii/frameworks de simulare a procesului de invatare automata federata, dar fara o integrare cu mecanisme moderne de testare pentru atacuri
-precum otravirea datelor (data poisoning) amintite anterior \footnotemark{}. Unele dintre aceste framework-uri sunt poate dificil de gestionat si configurat \footnotemark{}, si nu permit extinderea usoara prin integrare altor componente.
+precum otravirea datelor (data poisoning) amintite anterior \footnote{\fullcite{ibmfl_api}}. Unele dintre aceste framework-uri sunt poate dificil de gestionat si configurat \footnote{\fullcite{ibmfl_github}}, si nu permit extinderea usoara prin integrare altor componente.
 In acelasi timp, gandindu-ne la multitudinea de atacuri malware si la platformele de detectie a lor, devine clar ca in domeniul inteligentei artificiale lipseste o platforma centralizata, flexibila, dedicata testarii si evaluarii cu diferite tipuri de atacuri asupra modelelor distribuite.
 
 Aceste limitări justifica realizarea prezentei lucrari, care își propune dezvoltarea unei platforme de simulare capabile sa testeze atacuri de tip data poisoning într-o infrastructura de învățare federată.
-
-\footnotetext[3]{ https://ibmfl-api-docs.res.ibm.com/index.html }
-\footnotetext[4]{ https://github.com/IBM/federated-learning-lib/tree/main }
 
 \section{Obiectivele lucrarii}
 
@@ -115,7 +109,7 @@ Modelele de ML clasice se bazeaza pe interventia umana in factorul de decizie (s
 
 Deep Learning este o subcategorie a Machine Learning, care are rolul de a minimiza interventia umana si a automatiza procesul de decizie. Prin aceasta metoda se automatizeaza mare parte din extragerea caracteristicilor pe setul de date, eliminand nevoia de a defini etichete pentru fiecare valoare de intrare (unsupervied learning).
 
-Diferenta dintre aceste doua concepte este in modul in care acesti algoritmi invata si procentul de utilizare a datelor [1].
+Diferenta dintre aceste doua concepte este in modul in care acesti algoritmi invata si procentul de utilizare a datelor \footnote{\fullcite{ibm_ai_vs_ml_dl}}.
 Scopul principal al invatarii automate este predictia. Pe baza unui set de date de antrenare si de testare, se determina o anumita categorie de iesire predefinita.
 
     \subsection{Retea Neuronala}
@@ -149,12 +143,24 @@ In functie de numarul de dispozitive, se concepe un graf de conexiuni in care fi
 Nodurile isi imbunatatesc propriile variante ale retelei, si isi comunica rezultatele pe care le agrega local, realizand o medie a ponderilor.
 In comparatie cu modelul federated learning clasic, modelul fully decentralized nu specifica de la inceput dispozitivelor un model de baza global de la care sa porneasca in procesul de rezolvare a problemei.
 
-\begin{figure}[h!]
+\begin{table}[h!]
     \centering
-    \includegraphics[width=0.7\textwidth]{../images/FL_models.png}
-    \caption{Imaginea 2.2.2: Modele Federated Learning}
-    \label{fig:nume-label}
-\end{figure}
+    \begin{tabular}{|p{0.25\linewidth}|p{0.35\linewidth}|p{0.35\linewidth}|}
+        \hline
+        \textbf{} & \textbf{Federated Learning} & \textbf{Fully Decentralized (peer-to-peer) Learning} \\
+        \hline
+        \textbf{Orchestrare} & 
+        Un server central de orchestrare organizează antrenarea, dar nu vede niciodată datele brute. & 
+        Nu există orchestrare centralizată. \\
+        \hline
+        \textbf{Comunicare pe arie largă} & 
+        De obicei topologie hub-and-spoke, în care hub-ul reprezintă un furnizor de servicii coordonator (de obicei fără date), iar spoke-urile conectează clienții. & 
+        Topologie peer-to-peer, cu un graf de conectivitate posibil dinamic. \\
+        \hline
+    \end{tabular}
+    \caption{Comparație între modelele Federated Learning \cite{kairouz2021federated}}
+    \label{tab:fl_models_comparison}
+\end{table}
 
 Imaginea de mai sus ofera o privire de ansamblu asupra celor doua modele de arhitecturi si caracteristicile acestora.
 
@@ -177,7 +183,7 @@ Imaginea de mai sus ofera o privire de ansamblu asupra celor doua modele de arhi
             \end{itemize}
             &
             \begin{itemize}
-                \item SPOF (Single Point of Failure) – serverul central
+                \item SPOF (Single Point of Failure) - serverul central
                 \item serverul poate deveni țintă pentru atacuri
                 \item nu elimină riscurile cibernetice, doar distribuie munca
                 \item dependența de coordonator pentru progresul antrenării
@@ -190,7 +196,7 @@ Imaginea de mai sus ofera o privire de ansamblu asupra celor doua modele de arhi
             &
             \begin{itemize}
                 \item previne atacurile specifice unui server central (evită SPOF)
-                \item reziliență crescută – compromiterea unui nod nu destabilizează întregul sistem
+                \item reziliență crescută - compromiterea unui nod nu destabilizează întregul sistem
                 \item îmbunătățirile se propagă prin graf, fără entitate centrală
                 \item agregare locală (fiecare nod mediază ponderile)
                 \item poate scala natural dacă graful este bine proiectat
@@ -232,7 +238,8 @@ Fiecare retea se antreneaza cu datele extrase local (on device) si isi imbunatat
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{../images/Device_internal_State.png}
-    \caption{Imagine 2.2.3.1: Arhitectura interna a unui dispozitiv}
+    \caption{Arhitectura interna a unui dispozitiv   \footnote{\fullcite{bonawitz2019towards}}}
+
     \label{fig:nume-label}
 \end{figure}
 
@@ -246,7 +253,7 @@ In cele din urma, entitatea centrala combina toate aceste ponderi aplicand o fun
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{../images/Federated_Learning_Operations.png}
-    \caption{Imagine 2.2.3.2: Procedee in invatare automata federata}
+    \caption{Procedee in invatare automata federata \footnote{\fullcite{bonawitz2019towards}}}    
     \label{fig:nume-label}
 \end{figure}
 
@@ -299,8 +306,8 @@ vectorilor de atac si concentrarea pe una dintre categorii, data poisoning. In c
 
     \subsection{Definirea tipurilor de atac}
 
-
-    In literatura de specialitate, atacurile asupra unui model de ML sau asupra unei retele neuronale sunt definite drept atacuri adversariale (adversarial attacks). Aceasta clasa de atacuri are rolul de a produce modificari in comportamentul normal al modelului intr-un mod indizerabil. Conform lucrarii [1], in functie de nivelul de scop al unui atac, putem avea:
+    
+    In literatura de specialitate, atacurile asupra unui model de ML sau asupra unei retele neuronale sunt definite drept atacuri adversariale (adversarial attacks). Aceasta clasa de atacuri are rolul de a produce modificari in comportamentul normal al modelului intr-un mod indizerabil. Conform lucrarii \footnote{\fullcite{kairouz2021federated}}, in functie de nivelul de scop al unui atac, putem avea:
 
     \begin{itemize}
 
@@ -601,7 +608,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
         \begin{figure}[h!]
             \centering
             \includegraphics[width=0.7\textwidth]{../images/Changing_environments.png}
-            \caption{Imaginea 3.1: Medii de python platforma}
+            \caption{Medii de python platforma}
             \label{fig:nume-label}
         \end{figure}
 
@@ -667,8 +674,55 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
         \item Pentru a facilita munca analistului, platforma include posibilitatea de export a raportului simularii, dar si compararea de simulari ale aceluiasi proiect.
     \end{itemize}
 
-
     \section{Implementare Platformei}
+
+    Platforma este compusă din două servere, unul dintre ele fiind remote și dispunând de trei plăci grafice NVIDIA A40 (GPU) optimizate pentru medii de lucru cu Inteligență Artificială și Deep Learning. Plăcile dispun de 46 GB memorie VRAM (video RAM) GDDR6 pentru a suporta lucrul intensiv cu date. A40 este o placă profesională destinată centrelor de date, furnizând accelerare hardware pentru TensorFlow și PyTorch, precum și pentru operații matematice complexe necesare în procesele de simulare și învățare federată.
+
+    Serverul care rulează funcționalitățile backend și de persistență se află în rețeaua locală proprie. Acesta este responsabil pentru gestionarea interacțiunii utilizatorilor, stocarea configurațiilor și transmiterea cererilor către serverul remote. El reprezintă punctul de intrare al platformei pentru toți utilizatorii și menține logica de securitate, autentificare și gestionare a sesiunilor.
+    
+    Pentru scalabilitate și flexibilitate, s-au utilizat containere Docker la nivelul serverului local pentru a stoca următoarele componente:
+
+    \begin{itemize}
+        \item \textbf{Containerul frontend} - include toate dependențele necesare pentru rularea unei aplicații React folosind un server NodeJs. Acesta oferă o interfață modernă și receptivă, permițând utilizatorilor accesarea tuturor funcțiilor platformei, precum încărcarea de șabloane, vizualizarea rezultatelor și compararea simulărilor.
+        \item \textbf{Containerul bazei de date PostgreSQL} - stochează toate fișierele cu rezultatele simulărilor executate pe server, specifice fiecărui utilizator, precum și parolele hash ale utilizatorilor. Structura bazei este optimizată pentru volum mare de date și interogări rapide asupra istoricului de simulări.
+        \item \textbf{Containerul backend} - procesul responsabil de primirea cererilor API. Backend-ul recepționează comenzi de la utilizatori sub forma unei cereri POST către endpoint-ul \texttt{/run}. După validare, cererea este retransmisă asincron către serverul remote. Backend-ul implementează validări de securitate asupra șabloanelor, logarea fiecărei cereri și mecanisme de throttling pentru prevenirea supraîncărcării serverului remote.
+    \end{itemize}
+
+    La nivelul serverului remote, platforma include următoarele componente:
+
+    \begin{itemize}
+        \item \textbf{Procesul orchestrator} - rulează scriptul \texttt{orchestrator\_gpu.py}, care creează un proces nou pentru fiecare conexiune inițiată. Pentru fiecare simulare se alocă un GPU, asigurând un flux de procesare ridicat fără a afecta timpul de execuție al simulărilor deja active. Orchestratorul gestionează coada de task-uri, starea proceselor și comunicarea bidirecțională cu serverul local.
+        
+        \item \textbf{Managerul de GPU} - implementat în scriptul \texttt{gpu\_manager.py}, monitorizează în timp real starea GPU-urilor (nivel de utilizare, memorie liberă, temperatură) și distribuie simulările în mod echilibrat pentru a preveni supraîncărcarea unuia dintre dispozitive.
+
+        \item \textbf{Procesul de simulare a atacului} - identifică tipul bibliotecilor Python folosite în șablonul primit și comută automat în mediul Anaconda corespunzător (TensorFlow sau PyTorch). Mediile Python sunt complet izolate, având propriile dependințe pentru a asigura reproducibilitatea rezultatelor. Otrăvirea datelor este realizată prin scriptul \texttt{poison\_data.py}. Simularea propriu-zisă rulează prin \texttt{fd\_simulator.py}, care utilizează șablonul de cod stocat în \texttt{template\_code.py}. În timpul execuției, fiecare etapă este jurnalizată, iar eventualele erori sunt transmise backend-ului în timp real.
+    \end{itemize}
+
+    Arhitectura propusă oferă următoarele beneficii:
+    
+    \begin{itemize}
+        \item \textbf{Flexibilitate}: Sistemul de șabloane permite testarea oricărui model TensorFlow sau PyTorch fără modificări ale infrastructurii. Izolarea mediilor Python elimină conflictele dintre versiuni diferite ale bibliotecilor.
+        
+        \item \textbf{Scalabilitate}: Alocarea dinamică a GPU-urilor permite rularea simultană a trei simulări, maximizând utilizarea resurselor disponibile. Structura modulară permite extinderea ulterioară cu mai multe GPU-uri sau chiar cu mai multe servere.
+        
+        \item \textbf{Reproducibilitate}: Toate configurațiile și rezultatele sunt stocate în PostgreSQL, permițând replicarea exactă a experimentelor. Mediile conda imutabile garantează consistența dintre execuții.
+        
+        \item \textbf{Transparență}: Monitorizarea în timp real prin WebSocket oferă vizibilitate completă asupra procesului de execuție, facilitând depanarea eventualelor probleme.
+        
+        \item \textbf{Comparabilitate}: Funcționalitatea de comparare a simulărilor permite evaluarea impactului diferitelor tipuri de atacuri asupra aceluiași model, datele fiind centralizate într-o structură unificată pentru analize statistice avansate.
+    \end{itemize}
+    
+    \begin{landscape}
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=1.5\textwidth]{../images/Arhitectura_Aplicatie.png}
+        \caption{Arhitectura si fluxul platformei}
+        \label{fig:nume-label}
+    \end{figure}
+    \end{landscape}
+
+    Imaginea 3.2 prezinta intregul flux al arhitecturii, precum si detaliile tehnice utilizate.
+
 
     \section{Cerintele Software}
 

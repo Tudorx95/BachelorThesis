@@ -2373,9 +2373,19 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">morphological_operations</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">cloud_crypto</bcf:citekey>
-    <bcf:citekey order="3" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">dnsc_buletin_2025</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">eu_ai_act_overview_2024</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">ibmfl_api</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">ibmfl_github</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">ibm_ai_vs_ml_dl</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">bonawitz2019towards</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">bonawitz2019towards</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">morphological_operations</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">cloud_crypto</bcf:citekey>
+    <bcf:citekey order="13" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
