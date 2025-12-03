@@ -359,6 +359,8 @@ Pe langa Dockerfile, serviciul Docker Engine ofera si posibilitatea crearii unei
 
 # 2.4.2 Scripting (Python/Bash)
 
+Python este unul dintre limbajele de programare cele mai des utilizate in contextul actual. El se deose 
+
 # 2.4.3 Rest API
 
 ## Chapter 3 Proiectare, Implementare si Testare Platforma
