@@ -729,10 +729,6 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
         \subsection{Cerintele functionale}
         \subsection{Cerintele nefunctionale}
     
-    \section{Arhitectura platformei}
-
-        \subsection{Containere}
-        \subsection{Server}
     
     \section{Testare}
 
@@ -751,8 +747,25 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
 
 \chapter{Concluzii si dezvoltare ulterioara}
 
+    Platforma prezenta acestei lucrari este o provocare in domeniul securitatii algoritmilor de invatare automata prin crearea unui mediu izolat specific pentru
+    testarea atacului de otravire a datelor. Aceasta a fost construita pentru a ajuta atat inginerii de securitate cibernetica, precum si inginerii de date care 
+    lucreaza cu retele neuronale deja antrenate, sa realizeze o baterie de teste cuprinzatoare inainte de a introduce in productie, intr-un mediu federat, 
+    in vederea imbunatatirii rezilientei retelei la acest tip de atac.
+
     \section{Starea Curenta}
+
+    Proiectul prezentat in starea curenta, este format din doua parti. Prima parte, cea in care se construieste mediul de containere Docker si a doua, in care se 
+    construieste orchestratorul si se implementeaza etapele din jurul lui, prezentate in Figura 3.2. 
+    In implementarea actuala, platforma dispune de o interfata moderna, in care utilizatorul se inregistreaza si isi poate crea mai multe proiecte si teste (simulari)
+    cu diferite moduri de configurare. La finalizarea fiecarei simulari, rezultatul este vizibil si poate fi salvat local sau poate fi comparat cu alte simulari. 
+    Platforma suporta antrenarea de retele neuronale folosind biblioteca tensorflow si permite realizarea tuturor etapelor prezentate in capitolul 3.
+
     \section{Dezvoltare Ulterioara}
+
+    In procesul ulterior de dezvoltare, se vor integra si bibliotecile de pytorch pentru o gama completa de biblioteci de antrenare si se va oferi posibilitatea 
+    utilizatorului sa isi aleaga tipul preferat. Pe langa acest aspect, se va lua in considerare si ajustarea tipului de atac Gaussian Noise folosind un tip de noise 
+    compus din ponderile primite de la dispozitivele asociate. 
+
 
 
 \section{Tabele}

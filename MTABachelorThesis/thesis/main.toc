@@ -33,10 +33,7 @@
 \contentsline {section}{\numberline {3.3}Cerintele Software}{19}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Cerintele functionale}{19}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Cerintele nefunctionale}{19}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Arhitectura platformei}{19}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Containere}{19}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Server}{19}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Testare}{19}{section.3.5}%
+\contentsline {section}{\numberline {3.4}Testare}{19}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Rezultate si Metrici Simulari}{20}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Evaluare Performante}{20}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Scalabilitatea Simularilor}{20}{subsection.4.1.1}%
