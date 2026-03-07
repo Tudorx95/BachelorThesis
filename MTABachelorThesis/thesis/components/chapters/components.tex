@@ -18,7 +18,7 @@ Bazele de date centralizate sunt aplicatii software specializate ce folosesc res
 Statiile trebuie sa detina multa putere de stocare si de procesare in comparatie cu un sistem de calcul normal destinat utilizatorilor casnici.
 In alta ordine de idei, s-au dezvoltat si baze de date distribuite, menite sa reduca din capacitatile tehnice ale serverului si sa stocheze informatia sub
 forma descentralizata. Cautarea resursei in acest context ar presupune interogarea recursiva a fiecarei entitati pana la gasirea sa. Prin acest mod, nu doar
-ca statiile pot avea si capabilitati tehnice mai reduse, dar si pot pastra copii de rezerva (backup) locale pentru fiecare segment de informatie in parte.
+ca statiile pot avea si capabilitati tehnice mai reduse, dar s  i pot pastra copii de rezerva (backup) locale pentru fiecare segment de informatie in parte.
 
 Această evoluție naturală spre descentralizare a deschis drumul unor concepte moderne precum învățarea automată federată (federated learning), unde datele nu mai sunt transferate către un server central. În schimb, modelele sunt antrenate local, iar parametrii sunt ulterior agregați global. Astfel, se menține confidențialitatea datelor, fără a compromite performanța modelului.
 
@@ -616,21 +616,30 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
     
         \item La fiecare pas, in cazul unei erori generate de orice fel de actiune, procesul ce gestioneaza operatiunile de simulare se opreste si se transmite eroarea ca rezultat procesului orchestrator care semnalizeaza backend-ul aplicatiei.
     
-        \item Dupa prima antrenare, se salveaza parametrii aferenti matricii de confuzie (acuratete, precizie, scor F1, recall) pentru a compararea rezultatului simularii cu configuratia initiala a retelei si detectarea posibilelor anomalii. Acesta este principalul pas in procesul de analiza a problemei propuse.
+        \item Dupa prima antrenare, se salveaza parametrii aferenti matricii de confuzie (acuratete, precizie, scor F1, recall) pentru a compara rezultatul simularii cu configuratia initiala a retelei si detectarea posibilelor anomalii. Acesta este principalul pas in procesul de analiza a problemei propuse.
     
         \item Daca programul este corect structurat, procesul curent incarca functiile scriptului transmis si se foloseste de ele pentru a simula atacul Data Poisoning.
         Mai intai se apeleaza functia de descarcare locala a datelor de antrenare si testare. Aceste date vor fi folosite pentru a simula procesul de otravire pe baza configuratiei simularii setate de utilizator. Datele pot fi descarcate din orice sursa publica, permitand o flexibilitate in tipul de platforma si de date pentru testare.
     
         \item Argumentele cu ajutorul carora se ruleaza scriptul de otravire a setului de date sunt:
         \begin{itemize}
-            \item \textbf{poison\_operation}: tipul atacului (noise, label\_flip, backdoor)
-            \item \textbf{poison\_intensity}: intensitatea atacului (ex: 0.1 pentru zgomot Gaussian)
-            \item \textbf{poison\_percentage}: procentajul datelor afectate (ex: 0.2 pentru 20\%)
+            \item \textbf{poison\_operation}: tipul atacului de otrăvire a datelor. Platforma suportă 7 tipuri de atacuri:
+            \begin{itemize}
+                \item \textit{Label Flip} --- inversarea etichetelor unui procent de imagini către o clasă țintă
+                \item \textit{Backdoor BadNets} --- inserarea unui trigger vizual mic (cruce, pătrat) pe imagini
+                \item \textit{Backdoor Blended} --- combinarea imaginii originale cu un pattern cheie folosind un raport configurabil
+                \item \textit{Backdoor Sinusoidal} --- adăugarea unui semnal sinusoidal cu frecvență și amplitudine configurabile
+                \item \textit{Backdoor Trojan} --- inserarea unui watermark în imagini
+                \item \textit{Backdoor Semantic} --- modificarea caracteristicilor naturale ale imaginii (luminozitate, tonalitate RGB)
+                \item \textit{Edge-Case Backdoor} --- aplicarea de transformări asupra imaginilor (rotație, reducere culori, solarizare)
+            \end{itemize}
+            \item \textbf{poison\_intensity}: intensitatea atacului (ex: 0.1 pentru zgomot Gaussian, dimensiune trigger pentru backdoor)
+            \item \textbf{poison\_percentage}: procentajul de date afectate per client (ex: 0.2 pentru 20\% date compromise la nivelul unui client malitios)
         \end{itemize}
     
         \item Amintim ca mediile de python includ si biblioteci de seturi de date specifice precum tensorflowDatasets in care se regasesc seturi de date predefinite in cazul in care utilizatorul doreste sa foloseasca un set de date predefinit la nivel de biblioteci.
     
-        \item Procesul de otravire (poisoning) presupune rularea unui script care pe baza parametrilor simularii, aplica o serie de operatii asupra seturilor de date. Tipurile de actiuni de otravire au fost definite in capitolul 2 (sectiunea 2.3.3 - Atacul Data poisoning). Utilizatorul poate alege procentajul din etichete care sa fie infectate, iar in cazul zgomotului Gaussian si a backdoor, se va seta si intensitatea pixelilor de alterat.
+        \item Procesul de otravire (poisoning) presupune rularea unui script care pe baza parametrilor simularii, aplica o serie de operatii asupra seturilor de date. Tipurile de actiuni de otravire au fost definite in capitolul 2 (sectiunea 2.3.3 - Atacul Data poisoning). Utilizatorul poate alege procentajul din etichete care sa fie infectate, iar in cazul atacurilor backdoor, se vor seta parametrii specifici fiecărui tip de trigger.
     
         \item In pasii urmatori, se va realiza simularea propriu-zisa cu ajutorul unui script agnostic denumit fl\_simulator, care va primi drept argumente urmatoarele:
     
@@ -641,37 +650,48 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
             \item ROUNDS numarul de runde in care dispozitivele compromise vor antrena cu datele corupte
             \item strategia de propagare a dispozitivelor compromise:
             \begin{itemize}
-                \item \textit{first}: dispozitivele compromise vor rula primele ROUNDS runde cu datele otravite, iar restul de R-ROUNDS runde vor folosi datele curate
-                \item \textit{last}: dispozitivele compromise vor rula ultimele ROUNDS runde cu datele otravite, iar restul de R-ROUNDS runde vor folosi datele curate
-                \item \textit{alternate}: dispozitivele compromise vor rula cate o runda folosind datele otravite si cate una cu datele curate
+                \item \textit{first}: dispozitivele compromise vor rula primele ROUNDS runde cu datele otravite, iar restul de R-ROUNDS runde vor folosi datele originale
+                \item \textit{last}: dispozitivele compromise vor rula ultimele ROUNDS runde cu datele otravite, iar restul de R-ROUNDS runde vor folosi datele originale
+                \item \textit{alternate}: dispozitivele compromise vor rula cate o runda folosind datele otravite si cate una cu datele originale
+            \end{itemize}
+            \item metoda de agregare robustă, selectată de utilizator:
+            \begin{itemize}
+                \item \textit{FedAvg} --- media ponderată a actualizărilor clienților, proporțională cu dimensiunea setului de date
+                \item \textit{Krum} --- selectează actualizarea clientului cu distanța totală minimă față de celelalte, izolând contribuțiile malițioase
+                \item \textit{Trimmed Mean} --- elimină primele și ultimele 20\% valori extreme ale ponderilor, apoi calculează media restului
+                \item \textit{Median} --- înlocuiește media cu mediana per parametru, fiind rezistentă la aproximativ 20\% clienți malițioși
+                \item \textit{Trimmed Mean + Krum} --- abordare hibridă care combină filtrarea Trimmed Mean cu selecția Krum
+                \item \textit{Random} --- selectează aleator ponderile unui client, utilizat ca bază de comparație
             \end{itemize}
         \end{itemize}
     
-        \item Prima rulare va fi de fapt o reglare fina (fine-tuning) a configuratiei retelei initiale, folosind drept date de antrenare datele curate.
-        Este important de menționat că ambele simulări (clean și poisoned) pornesc de la \textbf{aceeași configurație inițială} a modelului. Acest aspect asigură că diferențele observate în rezultate se datorează exclusiv atacului Data Poisoning, nu variațiilor aleatorii în inițializarea ponderilor. Ambele simulări folosesc procesul de agregare FedAvg pentru a combina update-urile de la clienți la fiecare rundă.
+        \item Simularea propriu-zisă execută \textbf{patru scenarii distincte}, fiecare pornind de la aceeași configurație inițială a modelului pentru a asigura comparabilitatea rezultatelor:
+
+        \begin{enumerate}
+            \item \textbf{Simulare cu date curate (Clean)} --- toate dispozitivele folosesc date nemodificate, iar agregarea se face cu FedAvg. Acest scenariu stabilește performanța de referință (baseline) în condiții ideale, fără atac.
+            \item \textbf{Simulare cu date curate și apărare (Clean + Defense)} --- datele rămân nemodificate, dar se aplică metoda de agregare robustă selectată de utilizator. Acest scenariu măsoară costul computațional (overhead-ul) introdus de mecanismul de apărare în absența unui atac.
+            \item \textbf{Simulare cu date otrăvite (Poisoned)} --- M din N clienți folosesc date otrăvite, iar agregarea folosește FedAvg fără apărare. Acest scenariu cuantifică impactul atacului data poisoning asupra modelului global.
+            \item \textbf{Simulare cu date otrăvite și apărare (Poisoned + Defense)} --- același scenariu de atac, dar cu agregarea robustă activată. Comparând rezultatele cu scenariul anterior, se evaluează eficacitatea strategiei de apărare selectate.
+        \end{enumerate}
     
-        \item Urmatorul pas este reglarea fina a aceleiasi configuratii initiale, dar folosind datele otravite in procesul de antrenare.
-    
-        \item In urma acestor simulari, se vor salva informatiile cu privire la fiecare configuratie simulata, ce va fi utilizata in procesul de analiza.
+        \item In urma celor patru simulari, se vor salva informatiile cu privire la fiecare configuratie simulata, ce va fi utilizata in procesul de analiza.
         
-        Analiza rezultatelor presupune compararea următoarelor metrici între simularea cu date curate și simularea cu date otravite:
+        Analiza rezultatelor presupune compararea următoarelor metrici între cele patru scenarii:
         \begin{itemize}
-            \item \textbf{Degradarea accuracy-ului}: 
+            \item \textbf{Acuratețea} --- valorile de acuratețe pentru fiecare scenariu (Inițial, Clean, Clean+Defense, Poisoned, Poisoned+Defense)
+            \item \textbf{Degradarea acurateții} --- diferențele între scenarii pentru cuantificarea impactului atacului și a eficacității apărării:
             \begin{itemize}
                 \item Degradare absolută: $\Delta_{acc}^{abs} = Acc_{clean} - Acc_{poisoned}$
                 \item Degradare procentuală: $\Delta_{acc}^{\%} = \frac{Acc_{clean} - Acc_{poisoned}}{Acc_{clean}} \times 100\%$
             \end{itemize}
-            
-            \item \textbf{Metrici de clasificare}: Precision, recall și F1-score pentru evaluarea impactului atacului
-            
-            \item \textbf{Convergență}: Deviația standard și tendința accuracy-ului în ultimele 5 runde
-            
-            \item \textbf{Divergența ponderilor}: Distanța euclidiana medie între actualizările clienților la fiecare rundă
+            \item \textbf{Metrici de clasificare}: Precision, recall și F1-score (medie ponderată) pentru fiecare scenariu
         \end{itemize}
+
+        Rezultatele sunt salvate în trei fișiere: \texttt{analysis.json} (metrici structurate), \texttt{summary.txt} (rezumat text asupra simularilor) și \texttt{attack\_info.json} (detalii atac).
     
         \item Utilizatorul va putea vizualiza fiecare pas de procesare amintit pana acum si rezultatul analizei simularii.
     
-        \item Pentru a facilita munca analistului, platforma include posibilitatea de export a raportului simularii, dar si compararea de simulari ale aceluiasi proiect.
+        \item Pentru a facilita munca analistului, platforma include posibilitatea de export a raportului simularii în format PDF și CSV, dar si compararea de simulari ale aceluiasi proiect.
     \end{itemize}
 
     \section{Implementare Platformei}
@@ -683,19 +703,21 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
     Pentru scalabilitate și flexibilitate, s-au utilizat containere Docker la nivelul serverului local pentru a stoca următoarele componente:
 
     \begin{itemize}
-        \item \textbf{Containerul frontend} - include toate dependențele necesare pentru rularea unei aplicații React folosind un server NodeJs. Acesta oferă o interfață modernă și receptivă, permițând utilizatorilor accesarea tuturor funcțiilor platformei, precum încărcarea de șabloane, vizualizarea rezultatelor și compararea simulărilor.
-        \item \textbf{Containerul bazei de date PostgreSQL} - stochează toate fișierele cu rezultatele simulărilor executate pe server, specifice fiecărui utilizator, precum și parolele hash ale utilizatorilor. Structura bazei este optimizată pentru volum mare de date și interogări rapide asupra istoricului de simulări.
-        \item \textbf{Containerul backend} - procesul responsabil de primirea cererilor API. Backend-ul recepționează comenzi de la utilizatori sub forma unei cereri POST către endpoint-ul \texttt{/run}. După validare, cererea este retransmisă asincron către serverul remote. Backend-ul implementează validări de securitate asupra șabloanelor, logarea fiecărei cereri și mecanisme de throttling pentru prevenirea supraîncărcării serverului remote.
+        \item \textbf{Containerul frontend} - include toate dependințele necesare pentru rularea unei aplicații React folosind un server NodeJs. Acesta oferă o interfață modernă și receptivă, permițând utilizatorilor accesarea tuturor funcțiilor platformei, precum încărcarea de șabloane, vizualizarea rezultatelor și compararea simulărilor.
+        \item \textbf{Containerul bazei de date PostgreSQL} - stochează toate fișierele cu rezultatele simulărilor executate pe server, specifice fiecărui utilizator, precum și parolele hash ale utilizatorilor. Structura bazei de date este optimizată pentru volum mare de date și interogări rapide asupra istoricului de simulări.
+        \item \textbf{Containerul backend} - procesul responsabil de primirea cererilor API. Backend-ul recepționează comenzi de la utilizatori sub forma unei cereri POST către endpoint-ul \texttt{/run}. După validare, cererea este retransmisă asincron către serverul remote. Backend-ul implementează validări de securitate asupra șabloanelor, logarea fiecărei cereri și mecanisme de prevenire a supraîncărcării serverului remote.
     \end{itemize}
 
     La nivelul serverului remote, platforma include următoarele componente:
 
     \begin{itemize}
-        \item \textbf{Procesul orchestrator} - rulează scriptul \texttt{orchestrator\_gpu.py}, care creează un proces nou pentru fiecare conexiune inițiată. Pentru fiecare simulare se alocă un GPU, asigurând un flux de procesare ridicat fără a afecta timpul de execuție al simulărilor deja active. Orchestratorul gestionează coada de task-uri, starea proceselor și comunicarea bidirecțională cu serverul local.
+        \item \textbf{Procesul orchestrator} - rulează scriptul \texttt{orchestrator\_gpu.py}, care creează un proces nou pentru fiecare conexiune inițiată. Pentru fiecare simulare se alocă un GPU, asigurând un flux de procesare ridicat fără a afecta timpul de execuție al simulărilor deja active. Orchestratorul gestionează coada de task-uri, starea proceselor și comunicarea bidirecțională cu serverul local. Pipeline-ul de simulare parcurge 14 etape secvențiale, de la verificarea structurii șablonului, alocarea resurselor și descărcarea datelor, până la execuția celor patru scenarii de simulare și generarea rezultatelor finale.
         
-        \item \textbf{Managerul de GPU} - implementat în scriptul \texttt{gpu\_manager.py}, monitorizează în timp real starea GPU-urilor (nivel de utilizare, memorie liberă, temperatură) și distribuie simulările în mod echilibrat pentru a preveni supraîncărcarea unuia dintre dispozitive.
+        \item \textbf{Managerul de GPU} - implementat în scriptul \texttt{gpu\_manager.py}, monitorizează în timp real starea GPU-urilor (nivel de utilizare, memorie liberă, temperatură) și distribuie simulările în mod echilibrat pentru a preveni supraîncărcarea unuia dintre dispozitive. Fiecare simulare solicită un GPU dedicat cu un timeout de 10 minute; dacă niciunul nu este disponibil în acest interval, simularea trece automat pe CPU. GPU-ul este \textbf{garantat eliberat} la finalizarea, anularea sau eșecul simulării.
 
-        \item \textbf{Procesul de simulare a atacului} - identifică tipul bibliotecilor Python folosite în șablonul primit și comută automat în mediul Anaconda corespunzător (TensorFlow sau PyTorch). Mediile Python sunt complet izolate, având propriile dependințe pentru a asigura reproducibilitatea rezultatelor. Otrăvirea datelor este realizată prin scriptul \texttt{poison\_data.py}. Simularea propriu-zisă rulează prin \texttt{fd\_simulator.py}, care utilizează șablonul de cod stocat în \texttt{template\_code.py}. În timpul execuției, fiecare etapă este jurnalizată, iar eventualele erori sunt transmise backend-ului în timp real.
+        \item \textbf{Procesul de simulare a atacului} - identifică tipul bibliotecilor Python folosite în șablonul primit și comută automat în mediul Anaconda corespunzător (TensorFlow sau PyTorch). Mediile Python sunt complet izolate, având propriile dependințe pentru a asigura reproducibilitatea rezultatelor. Otrăvirea datelor este realizată prin scriptul \texttt{poison\_data.py}, care suportă 7 tipuri de atacuri cu parametri configurabili per atac. Simularea propriu-zisă rulează prin \texttt{fd\_simulator.py}, care utilizează șablonul de cod stocat în \texttt{template\_code.py}. În timpul execuției, fiecare etapă este jurnalizată, iar eventualele erori sunt transmise backend-ului în timp real.
+
+        \item \textbf{Fluxul de anulare} - la fiecare etapă din pipeline, orchestratorul verifică dacă utilizatorul a solicitat anularea. În caz afirmativ: arborele de procese este terminat (\texttt{kill\_process\_tree()}), GPU-ul alocat este eliberat, directorul de lucru al simulării este șters, iar statusul este marcat ca \textit{anulat}.
     \end{itemize}
 
     Arhitectura propusă oferă următoarele beneficii:
@@ -726,11 +748,338 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
 
     \section{Cerintele Software}
 
+    Cerințele software ale platformei au fost documentate conform standardului IEEE 830-1998 pentru Specificații ale Cerințelor Software (SRS). Fiecare cerință este identificată printr-un cod unic: CF-XX pentru cerințe funcționale, CNF-XX pentru cerințe nefuncționale și CS-XX pentru cerințe de securitate. Cerințele sunt clasificate după gradul de obligativitate: \textbf{OBLIGATORIU} (Faza 1), \textbf{RECOMANDAT} (Faza 2) și \textbf{OPȚIONAL} (Faza 3).
+
         \subsection{Cerintele functionale}
+
+        Cerințele funcționale definesc comportamentul specific al platformei și sunt organizate pe module de funcționalitate. În continuare sunt prezentate principalele categorii.
+
+        \subsubsection{Gestionarea și Autentificarea Utilizatorilor (CF-01 -- CF-15)}
+
+        Platforma implementează un sistem complet de management al utilizatorilor:
+        \begin{itemize}
+            \item Proces de înregistrare cu colectare de informații pe două niveluri: date obligatorii (nume, prenume, email, parolă) și date opționale (organizație, domeniu cercetare)
+            \item Autentificare bazată pe email și parolă, cu parole stocate în format hash folosind algoritmul bcrypt
+            \item Generare și gestionare de token-uri JWT (JSON Web Tokens) pentru sesiuni, cu expirare după 24 de ore de inactivitate
+            \item Autorizare bazată pe roluri (RBAC) cu două roluri: utilizator standard și administrator
+            \item Validare formatul email-ului și complexitatea parolei la înregistrare (minimum 8 caractere, litere mari/mici, cifre)
+            \item Funcționalitate de logout care invalidează token-ul JWT al utilizatorului
+            \item Interfață în care utilizatorul își alege parametrii de simulare ai atacului și ai infrastructurii federate
+        \end{itemize}
+
+        \subsubsection{Parametrii de Simulare și Vectori de Atac (CF-16 -- CF-25)}
+
+        Sistemul permite configurarea completă a mediului de simulare:
+        \begin{itemize}
+            \item Numărul total de dispozitive/clienți participanți (range: 2--100)
+            \item Numărul de dispozitive compromise (range: 1 până la 50\% din total)
+            \item Numărul total de runde de antrenare (range: 1--500) și numărul de runde corupte per dispozitiv
+            \item Strategia de distribuire a dispozitivelor corupte (primele, ultimele, distribuție uniformă)
+            \item Suport pentru 7 tipuri de atacuri: Label Flip, Backdoor BadNets, Backdoor Blended, Backdoor Sinusoidal, Backdoor Trojan, Backdoor Semantic și Edge-Case Backdoor
+            \item Configurarea intensității atacului specific fiecărui tip (deviație standard, procentaj etichete, dimensiune trigger)
+            \item Selecția funcției de agregare: FedAvg, Krum, Trimmed Mean, Median, Trimmed Mean + Krum, Random
+            \item Validarea valorilor parametrilor introduși cu mesaje de eroare pentru valori invalide
+        \end{itemize}
+
+        \subsubsection{Interfețe de Comunicare (CF-26 -- CF-29)}
+
+        \begin{itemize}
+            \item Rețea de containere Docker interconectate pentru comunicarea frontend-backend
+            \item REST API pentru comunicarea dintre serverul central și serverul de simulare
+            \item Monitorizarea procesului de simulare prin mesaje de logging folosind WebSockets
+            \item Mecanism de load-balancing prin crearea de task-uri asincrone pentru simulări multiple
+        \end{itemize}
+
+        \subsubsection{Integrarea Tehnologiilor (CF-30 -- CF-33)}
+
+        \begin{itemize}
+            \item Editor de text performant (Monaco Editor) pentru editarea scripturilor Python
+            \item Biblioteci de vizualizare a informației (Bar Chart) pentru analiza rezultatelor
+            \item Suport pentru simularea cu modele TensorFlow și PyTorch
+            \item Suport pentru încărcare de modele preantrenate din repository-uri publice (HuggingFace)
+        \end{itemize}
+
+        \subsubsection{Interpretarea Rezultatelor (CF-34 -- CF-38)}
+
+        \begin{itemize}
+            \item Afișarea rezultatelor simulării cu metrici detaliate (acuratețe, precizie, recall, F1-score) per scenariu
+            \item Compararea side-by-side a două simulări, inclusiv configurația FL, parametrii atacului și toate metricile
+            \item Vizualizare grafică interactivă cu bar charts grupate pentru mai multe simulări
+            \item Export rezultate individuale în format PDF (configurație, metrici, matrice de confuzie, rezumat)
+            \item Export multiplu în format CSV cu toate metricile per scenariu în format tabular
+        \end{itemize}
+
+        \subsubsection{Gestionarea Proiectelor și Fișierelor (CF-39 -- CF-48)}
+
+        \begin{itemize}
+            \item Creare și organizare ierarhică a proiectelor de simulare
+            \item Creare, ștergere, redenumire și reatribuire a fișierelor de simulare între proiecte
+            \item Stocare proiecte și fișiere în baza de date PostgreSQL cu izolarea datelor per utilizator
+            \item Reordonare fișiere prin drag-and-drop
+        \end{itemize}
+
+        \subsubsection{Executarea și Monitorizarea Simulărilor (CF-49 -- CF-56)}
+
+        \begin{itemize}
+            \item Transmiterea scriptului de simulare și parametrilor către server prin REST API
+            \item Execuție pe server dedicat cu resurse GPU alocate dinamic
+            \item Afișarea progresului în timp real (rundă curentă, GPU alocat, status) prin WebSocket
+            \item Anulare simulări în curs de execuție cu eliberarea automată a resurselor
+            \item Gestionarea erorilor cu mesaje descriptive transmise utilizatorului
+            \item Stocare rezultate finalizate în baza de date pentru consultare ulterioară
+        \end{itemize}
+
+        \subsubsection{Gestionarea Modelelor (CF-57 -- CF-62)}
+
+        \begin{itemize}
+            \item Furnizare șablon de cod Python predefinit la crearea unui fișier de simulare, cu funcții necesare antrenării
+            \item Încărcare modele preantrenate din HuggingFace cu descărcare automată în timpul simulării
+            \item Editare și personalizare a funcțiilor din șablon pentru adaptarea la specificul modelului
+            \item Validare sintaxa codului Python înainte de lansarea simulării și semnalarea erorilor
+            \item Documentație inline și comentarii explicative în șablon pentru ghidarea utilizatorului
+        \end{itemize}
+
+        \subsubsection{Procesarea și Orchestrarea pe Server (CF-63 -- CF-72)}
+
+        \begin{itemize}
+            \item Recepționare asincronă a cererilor de simulare prin REST API
+            \item Creare proces dedicat pentru fiecare cerere cu toate informațiile necesare
+            \item Descărcare model/rețea preantrenată din repository-ul specificat
+            \item Încărcare model în memoria GPU alocat specific task-ului
+            \item Descărcare set de date și aplicare atac data poisoning conform parametrilor
+            \item Execuție antrenare în patru scenarii distincte: Clean, Clean+Defense, Poisoned, Poisoned+Defense
+            \item Returnare rezultate antrenare cu metrici complete și monitorizare continuă a proceselor
+        \end{itemize}
+
         \subsection{Cerintele nefunctionale}
-    
+
+        Cerințele nefuncționale definesc atributele calității și performanței pe care sistemul trebuie să le satisfacă.
+
+        \subsubsection{Cerințe de Performanță (CNF-01 -- CNF-17)}
+
+        \begin{itemize}
+            \item Interfața web va răspunde la acțiunile utilizatorului în maximum 2 secunde pentru operații standard
+            \item API-ul backend va procesa cererile de autentificare în maximum 1 secundă
+            \item Încărcarea dashboard-ului principal va fi completă în maximum 3 secunde
+            \item Actualizările în timp real prin WebSocket vor avea o latență de maximum 500ms
+            \item Sistemul va suporta minimum 50 de utilizatori concurenți fără degradare semnificativă
+            \item Serverul de simulări va putea procesa cel puțin 5 simulări simultane pe un singur GPU
+            \item API-ul va gestiona minimum 100 de cereri pe secundă în condiții normale
+            \item Fiecare simulare va fi limitată la maximum 10 GB memorie GPU
+            \item Containerizarea cu Docker va permite deploy-uri reproductibile în diferite medii
+        \end{itemize}
+
+        \subsubsection{Cerințe de Securitate (CS-01 -- CS-17)}
+
+        \begin{itemize}
+            \item Autentificare bazată pe JWT cu expirare configurabilă, semnate cu algoritm HS256
+            \item Parole stocate în format hash folosind algoritmul bcrypt
+            \item Control de acces bazat pe roluri (RBAC) cu roluri user și admin
+            \item Comunicații criptate folosind TLS 1.2 sau superior
+            \item Izolarea datelor între utilizatori (multi-tenancy)
+            \item Respectarea principiilor GDPR privind colectarea și procesarea datelor personale
+            \item Scripturile de simulare încărcate vor fi executate în medii izolate (sandbox)
+            \item Înregistrarea tuturor încercărilor de autentificare și acțiunilor administrative în jurnal de audit
+        \end{itemize}
+
+        \subsubsection{Fiabilitate și Disponibilitate (CNF-18 -- CNF-32)}
+
+        \begin{itemize}
+            \item Disponibilitate țintă de 99\% în orele de lucru (8:00--22:00)
+            \item Implementare graceful degradation --- eșecul unei componente nu va afecta întregul sistem
+            \item Conexiunile WebSocket vor avea mecanism de reconectare automată
+            \item Backup-uri ale bazei de date efectuate zilnic
+            \item Erorile vor fi afișate utilizatorilor în mesaje clare, iar detaliile tehnice vor fi înregistrate în log-uri
+            \item Simulările eșuate vor genera notificări cu detalii despre cauza erorii
+        \end{itemize}
+
+        \subsubsection{Accesibilitate (CNF-33 -- CNF-41)}
+
+        \begin{itemize}
+            \item Interfață intuitivă ce permite utilizatorilor noi să lanseze o simulare în maximum 10 minute
+            \item Feedback vizual clar pentru toate acțiunile, cu etichete descriptive pentru formulare și butoane
+            \item Interfață responsive funcțională pe rezoluții de minimum 1366x768
+            \item Opțiune de temă clară și întunecată (light/dark mode) cu preferință persistentă
+            \item Navigare consistentă pe toate paginile aplicației
+        \end{itemize}
+
+        \subsubsection{Mentenabilitate și Portabilitate (CNF-42 -- CNF-51)}
+
+        \begin{itemize}
+            \item Cod sursă versionat folosind Git, cu convenții de stil consistente (ESLint pentru JavaScript, PEP8 pentru Python)
+            \item Arhitectură modulară ce permite actualizarea individuală a componentelor
+            \item Aplicația rulează în containere Docker pentru portabilitate maximă (exceptând serverul de simulare)
+            \item Configurații specifice mediului gestionate prin variabile de mediu
+            \item Sistem instalabil pe Linux, Windows și macOS (prin Docker)
+            \item Interfață web compatibilă cu Chrome 90+, Firefox 88+, Edge 90+ și Safari 14+
+            \item Suport pentru modele TensorFlow 2.x și PyTorch 2.x
+        \end{itemize}
+
     
     \section{Testare}
+
+    Testarea platformei de simulare a atacurilor Data Poisoning acoperă multiple niveluri, de la validarea componentelor individuale până la testarea integrată a întregului flux de simulare. Dată fiind natura distribuită a arhitecturii (frontend containerizat, backend containerizat, orchestrator pe server remote cu GPU), strategia de testare se concentrează pe verificarea corectitudinii fiecărei etape din pipeline-ul de simulare, a comunicării între componente și a rezilienței sistemului la erori.
+
+        \subsection{Testarea de Validare a Șabloanelor}
+
+        Primul nivel de testare are loc înainte de consumarea oricăror resurse computaționale. Modulul \texttt{verify\_template.py} realizează o \textbf{analiză statică} a scriptului de antrenare furnizat de utilizator, verificând:
+
+        \begin{itemize}
+            \item Existența tuturor funcțiilor obligatorii în șablon (funcția de descărcare date \texttt{download\_data()}, funcția de creare model, funcțiile de setare și extragere a ponderilor)
+            \item Conformitatea cu contractul de interfață așteptat de platforma de simulare
+            \item Absența constructelor de cod potențial periculoase sau a importurilor nepermise
+        \end{itemize}
+
+        Această validare previne erorile tardive în pipeline, economisind timp și resurse GPU. În cazul în care verificarea eșuează, utilizatorul primește un mesaj descriptiv cu funcțiile lipsă sau structurile incorecte.
+
+        \subsection{Testarea Pipeline-ului de Simulare}
+
+        Pipeline-ul de simulare parcurge 14 etape secvențiale, fiecare cu mecanism propriu de tratare a erorilor. Testarea funcțională verifică:
+
+        \begin{itemize}
+            \item \textbf{Verificarea corectitudinii modelului (Etapa 4)} --- după încărcarea șablonului, se execută o sesiune de antrenare de validare pe GPU-ul alocat. Acuratețea inițială este înregistrată în fișierul \texttt{init-verification.json}, servind drept referință pentru evaluări ulterioare
+            \item \textbf{Descărcarea și partiționarea datelor (Etapa 6)} --- se verifică descărcarea corectă a setului de date prin funcția \texttt{download\_data()} și partiționarea în N split-uri IID egale (câte unul per client federat), cu setul de test partajat între toți clienții
+            \item \textbf{Procesul de otrăvire a datelor (Etapa 9)} --- se validează crearea corectă a copiei otrăvite pentru fiecare din cele 7 tipuri de atacuri suportate, verificând aplicarea parametrilor configurați (intensitate, procentaj, tip trigger)
+            \item \textbf{Simulările federate (Etapele 10--13)} --- se testează execuția corectă a celor patru scenarii (Clean, Clean+Defense, Poisoned, Poisoned+Defense), verificând că toate pornesc de la aceeași configurație inițială a modelului
+            \item \textbf{Generarea rezultatelor (Etapa 14)} --- se verifică crearea fișierelor \texttt{analysis.json}, \texttt{summary.txt} și \texttt{attack\_info.json} cu metrici complete și corecte
+        \end{itemize}
+
+        La fiecare etapă, în cazul unei erori, pipeline-ul se oprește, generează un raport de eroare și transmite informația înapoi către utilizator prin WebSocket.
+
+        \subsection{Testarea de Integrare}
+
+        Testarea de integrare verifică fluxul complet de date între cele trei componente ale arhitecturii:
+
+        \begin{itemize}
+            \item \textbf{Frontend → Backend}: Trimiterea cererii POST cu șablonul Python și configurația simulării de la interfața React către API-ul FastAPI. Se verifică validarea de securitate a codului, stocarea configurației în PostgreSQL și retransmiterea asincronă către orchestrator
+            \item \textbf{Backend → Orchestrator}: Comunicarea REST API între backend-ul containerizat și orchestratorul Flask de pe serverul ATM. Se testează autentificarea cu credențiale, transmiterea parametrilor și primirea status-urilor de progres
+            \item \textbf{Orchestrator → Backend → Frontend}: Transmiterea rezultatelor finale de la orchestrator prin polling HTTP, colectarea fișierelor JSON cu metrici și afișarea lor în interfața utilizatorului
+        \end{itemize}
+
+        \subsection{Testarea Comunicării WebSocket}
+
+        Comunicarea în timp real este testată prin:
+
+        \begin{itemize}
+            \item Verificarea stabilirii conexiunii WebSocket între frontend și backend
+            \item Testarea loop-ului asincron de polling (la fiecare 2 secunde) al stării simulării de la orchestrator
+            \item Validarea transmiterii corecte a actualizărilor de progres (etapă curentă, status GPU, metrici intermediare
+            \item Testarea mecanismului de reconectare automată în cazul întreruperii conexiunii
+        \end{itemize}
+
+        \subsection{Testarea Managementului GPU}
+
+        Componenta \texttt{GPUManager} este testată pentru:
+
+        \begin{itemize}
+            \item Interogarea corectă a stării GPU-urilor disponibile prin \texttt{nvidia-smi}
+            \item Alocarea thread-safe a GPU-urilor din coada de resurse disponibile
+            \item Respectarea timeout-ului de 10 minute și fallback-ul pe CPU
+            \item Eliberarea garantată a GPU-ului (\texttt{finally} block) la finalizarea, anularea sau eșecul simulării
+            \item Distribuirea echilibrată a simulărilor pe cele 3 GPU-uri NVIDIA A40 disponibile
+        \end{itemize}
+
+        \subsection{Testarea Fluxului de Anulare}
+
+        Mecanismul de anulare a simulărilor este testat prin:
+
+        \begin{itemize}
+            \item Verificarea interogării stării de anulare la fiecare etapă din pipeline
+            \item Testarea terminării corecte a arborelui de procese (\texttt{kill\_process\_tree()})
+            \item Validarea eliberării GPU-ului alocat și ștergerii directorului de lucru
+            \item Confirmarea setării corecte a statusului la \textit{cancelled} și notificarea utilizatorului
+        \end{itemize}
+
+        \subsection{Testarea de Securitate}
+
+        Aspectele de securitate testate includ:
+
+        \begin{itemize}
+            \item Validarea token-urilor JWT: verificarea semnăturii digitale, expirarea și existența utilizatorului în baza de date pentru fiecare cerere protejată
+            \item Validarea codului Python încărcat de utilizatori: detectarea constructelor periculoase și execuția în medii izolate (medii Anaconda separate)
+            \item Izolarea datelor între utilizatori: verificarea că fiecare utilizator accesează exclusiv propriile proiecte, fișiere și rezultate
+            \item Stocarea securizată a credențialelor prin Docker Secrets (parolă bază de date, cheie JWT, parolă orchestrator)
+            \item Configurarea CORS pentru restricționarea accesului API doar la originile autorizate
+        \end{itemize}
+
+    \section{Modele de Analiză}
+
+    În această secțiune sunt prezentate modelele de analiză ale platformei, incluzând diagramele de context, componente, flux, entitate-relație și cazuri de utilizare. Aceste diagrame au fost elaborate în cadrul documentului de Specificații ale Cerințelor Software (SRS) și oferă o perspectivă vizuală asupra arhitecturii și funcționalităților platformei.
+
+        \subsection{Diagrama de Context}
+
+        Diagrama de context prezintă marginile platformei și entitățile externe care interacționează cu sistemul. La Nivelul 0, sunt identificați actorii principali: Cercetătorii (Data Scientists), Instituțiile și Administratorul, fiecare cu roluri specifice în cadrul platformei.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{../images/Diagrama_Context_Anexa_A.png}
+            \caption{Diagrama de Context --- Nivel 0: Marginile Platformei}
+            \label{fig:context_diagram_nivel0}
+        \end{figure}
+
+        La Nivelul 1, diagrama detaliază fluxul de date între sistem și entitățile externe, evidențiind interacțiunile dintre interfețele publice și protejate ale frontend-ului, serverul backend central cu baza de date PostgreSQL și serverul de simulări.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth, height=8cm]{../images/Diagrama_Context_2_Anexa_A.png}
+            \caption{Diagrama de Context --- Nivel 1: Fluxul de date}
+            \label{fig:context_diagram_nivel1}
+        \end{figure}
+
+        \subsection{Diagrama de Componente}
+
+        Diagrama de componente prezintă structura internă a platformei, evidențiind cele două servere principale (Server Central și Server de Simulări Remote) împreună cu componentele software asociate: React Frontend, PostgreSQL, Fast API pe serverul central, respectiv GPU Manager și Python Orchestrator pe serverul de simulări. De asemenea, sunt ilustrate fluxurile de date de la configurarea simulării până la generarea rezultatelor finale.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\textwidth]{../images/Diagrama_Componente.png}
+            \caption{Diagrama de Componente a Platformei}
+            \label{fig:component_diagram}
+        \end{figure}
+
+        \subsection{Diagramele de Flux}
+
+        Diagramele de flux prezintă procesele principale ale platformei din perspectiva utilizatorului și a simulării.
+
+        Diagrama fluxului utilizatorului ilustrează parcursul complet al unui utilizator în platformă, de la înregistrare și autentificare, prin integrarea multi-nivel (organizație, mediu de cercetare), până la accesul la dashboard și funcționalitățile principale: vizualizarea rezultatelor, crearea de simulări, compararea rezultatelor și gestionarea profilului.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{../images/Diagrama_Flux_Utilizator.png}
+            \caption{Diagrama Flux Utilizator}
+            \label{fig:flow_diagram_utilizator}
+        \end{figure}
+
+        Diagrama fluxului de simulare detaliază etapele pipeline-ului de simulare, de la alocarea GPU și verificarea template-ului, prin descărcarea rețelei și a setului de date, aplicarea atacului de otrăvire, până la execuția celor trei scenarii de simulare federată (date curate, date otrăvite, date otrăvite cu funcție de agregare) și generarea rezultatelor finale.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{../images/Diagrama_Flux_Simulare.png}
+            \caption{Diagrama Fluxului de Simulare}
+            \label{fig:flow_diagram_simulare}
+        \end{figure}
+
+        \subsection{Diagrama Entitate-Relație (ERD)}
+
+        Diagrama ERD prezintă structura bazei de date PostgreSQL a platformei, cu cele patru tabele principale: \texttt{users}, \texttt{projects}, \texttt{files} și \texttt{simulation\_results}. Sunt evidențiate relațiile dintre entități: un utilizator creează mai multe proiecte, un proiect conține mai multe fișiere, iar rezultatele simulărilor sunt asociate cu utilizatorul, proiectul și fișierul corespunzător.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth, height=0.75\textheight, keepaspectratio]{../images/Diagrama_ERD.png}
+            \caption{Diagrama Entitate-Relație (ERD)}
+            \label{fig:entity_relationship_diagram}
+        \end{figure}
+
+        \subsection{Diagrama Cazurilor de Utilizare}
+
+        Diagrama cazurilor de utilizare prezintă funcționalitățile platformei din perspectiva celor doi actori principali: Administratorul și Utilizatorul Normal. Administratorul dispune de capabilități de gestionare a conturilor, vizualizare alerte și jurnale de audit, iar utilizatorul normal accesează funcționalitățile de simulare, configurare, monitorizare și analiză a rezultatelor.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{../images/Diagrama_Cazuri_Utilizare_V2.png}
+            \caption{Diagrama Cazurilor de Utilizare}
+            \label{fig:use_case_diagram}
+        \end{figure}
 
 \chapter{Rezultate si Metrici Simulari}
 
@@ -766,76 +1115,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
     utilizatorului sa isi aleaga tipul preferat. Pe langa acest aspect, se va lua in considerare si ajustarea tipului de atac Gaussian Noise folosind un tip de noise 
     compus din ponderile primite de la dispozitivele asociate. 
 
+    O privire de ansamblu asupra problemelor deschise, limitărilor cunoscute și riscurilor tehnice identificate pentru platforma de simulare este documentată în Anexa B --- Lista Problemelor din cadrul documentului de Specificații ale Cerințelor Software (SRS). Printre aspectele semnalate se numără: dimensiunea maximă acceptată pentru fișierele de model, limita de 100 de clienți federați impusă de constrângerile de memorie GPU, suportul exclusiv pentru seturi de date de tip imagine, dependența de disponibilitatea serviciilor externe (HuggingFace Hub) și riscul pierderii conexiunii WebSocket în timpul simulărilor de lungă durată. Aceste aspecte vor fi adresate prioritar în iterațiile viitoare ale platformei.
 
-
-\section{Tabele}
-
-Tabelele sunt aranjări a informației într-o structură formată din linii și coloane, care permite o mai bună observare a acesteia.
-
-Mai jos apar două exemple. Primul tabel este de dimensiune mică. Al doilea, din cauza dimensiunii mai mari, are o orientare inversată și este plasat singur pe o pagină.
-
-\input{components/tables/small_table}
-
-\newpage
-
-\begin{landscape}
-    \vspace*{\fill}
-    \input{components/tables/large_table}
-    \vspace*{\fill}
-\end{landscape}
-
-\newpage
-
-\section{Imagini}
-
-Imaginile sunt utilizate în cadrul lucrării pentru exemplificarea unor idei în manieră vizuală.
-
-\begin{center}
-    \includegraphics[width=7cm]{components/images/architecture.jpg}
-    \label{fig:architecture}
-    \captionsetup{justification=centering,margin=1cm}
-    \captionof{figure}[Arhitectura unui calculator]{Arhitectura unui calculator\footnotemark}
-\end{center}
-\vspace{0.3cm}
-
-\footnotetext{Arhitectura ilustrată este de fapt cea von Neumann.}
-
-\section{Liste}
-
-Listele sunt simple serii de informații.
-
-\begin{itemize}
-    \item Un item
-    \item Unul dintre itemi
-    \item Încă un item
-\end{itemize}
-
-Acestea pot conțin itemi identificați prin numere dacă indexarea sau sortarea sunt necesare.
-
-\begin{enumerate}
-    \item Primul item
-    \item Al doilea item
-    \item Al treilea item
-\end{enumerate}
-
-\section{Formule Matematice}
-
-\LaTeX{} oferă un mod programatic de a construi formule matematice, după cum este cea de mai jos.
-
-\newpage
-
-$ \sum \mathbf{F} = 0 \Leftrightarrow {\frac {\mathrm{d} \mathbf{v}}{\mathrm{d} t}} = 0 $
-
-\section{Note de Subsol. Citări}
-
-Notele de subsol pot fi utile în cazul explicațiilor suplimentare (cum a fost cea referitoare la imaginea inclusă, la care sintaxa este puțin diferită din cauza plasării notei în cadrul legendei) sau a citărilor\footnote{\fullcite{morphological_operations}} care nu se pretează a fi trecute în bibliografie din cauza utilizării lor punctuale.
-
-Pe de altă parte, sursele bibliografice citate intens \cite{cloud_crypto} sunt marcate corespunzător și notate în bibliografie.
-
-\section{Etichete. Referințe}
-
-În cadrul surselor \LaTeX{} a acestui document, apar \textit{tag}-uri \inlinecode{\textbackslash label} care creează o etichetă utilă referințelor interne. Acestea din urmă indică elemente din cadrul documentului curent (de exemplu, către tabelul \ref{tab:small_table}).
-
-Mai pot apărea referințe externe, către resurse din Internet (de exemplu, către \textit{website}-ul \href{https://www.wikipedia.org/}{Wikipedia}).
 
 \end{document}

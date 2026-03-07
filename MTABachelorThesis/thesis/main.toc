@@ -29,26 +29,47 @@
 \contentsline {subsubsection}{\numberline {2.4.3.1}Arhitectura REST in Platforma}{12}{subsubsection.2.4.3.1}%
 \contentsline {chapter}{\numberline {3}Proiectare, Implementare si Testare}{14}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Arhitectura Platformei}{14}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Implementare Platformei}{16}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Cerintele Software}{19}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Cerintele functionale}{19}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Cerintele nefunctionale}{19}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Testare}{19}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Rezultate si Metrici Simulari}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Evaluare Performante}{20}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Scalabilitatea Simularilor}{20}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Scalabilitatea platformei}{20}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Evaluare Rezultate}{20}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Performante Gaussian Noise}{20}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Performante Label-Flip}{20}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Performante Backdoor}{20}{subsection.4.2.3}%
-\contentsline {chapter}{\numberline {5}Concluzii si dezvoltare ulterioara}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Starea Curenta}{21}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Dezvoltare Ulterioara}{21}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Tabele}{21}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Imagini}{23}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Liste}{23}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Formule Matematice}{23}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Note de Subsol. Citări}{24}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Etichete. Referințe}{24}{section.5.8}%
-\contentsline {chapter}{Bibliografie}{25}{chapter*.16}%
+\contentsline {section}{\numberline {3.2}Implementare Platformei}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Cerintele Software}{20}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Cerintele functionale}{20}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}Gestionarea și Autentificarea Utilizatorilor (CF-01 -- CF-15)}{20}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}Parametrii de Simulare și Vectori de Atac (CF-16 -- CF-25)}{20}{subsubsection.3.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.3.1.3}Interfețe de Comunicare (CF-26 -- CF-29)}{20}{subsubsection.3.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.3.1.4}Integrarea Tehnologiilor (CF-30 -- CF-33)}{21}{subsubsection.3.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.3.1.5}Interpretarea Rezultatelor (CF-34 -- CF-38)}{21}{subsubsection.3.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.3.1.6}Gestionarea Proiectelor și Fișierelor (CF-39 -- CF-48)}{21}{subsubsection.3.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.3.1.7}Executarea și Monitorizarea Simulărilor (CF-49 -- CF-56)}{21}{subsubsection.3.3.1.7}%
+\contentsline {subsubsection}{\numberline {3.3.1.8}Gestionarea Modelelor (CF-57 -- CF-62)}{21}{subsubsection.3.3.1.8}%
+\contentsline {subsubsection}{\numberline {3.3.1.9}Procesarea și Orchestrarea pe Server (CF-63 -- CF-72)}{22}{subsubsection.3.3.1.9}%
+\contentsline {subsection}{\numberline {3.3.2}Cerintele nefunctionale}{22}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Cerințe de Performanță (CNF-01 -- CNF-17)}{22}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}Cerințe de Securitate (CS-01 -- CS-17)}{22}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}Fiabilitate și Disponibilitate (CNF-18 -- CNF-32)}{22}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}Accesibilitate (CNF-33 -- CNF-41)}{23}{subsubsection.3.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.3.2.5}Mentenabilitate și Portabilitate (CNF-42 -- CNF-51)}{23}{subsubsection.3.3.2.5}%
+\contentsline {section}{\numberline {3.4}Testare}{23}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Testarea de Validare a Șabloanelor}{23}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Testarea Pipeline-ului de Simulare}{23}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Testarea de Integrare}{24}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Testarea Comunicării WebSocket}{24}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Testarea Managementului GPU}{24}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Testarea Fluxului de Anulare}{24}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}Testarea de Securitate}{25}{subsection.3.4.7}%
+\contentsline {section}{\numberline {3.5}Modele de Analiză}{25}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Diagrama de Context}{25}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Diagrama de Componente}{26}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Diagramele de Flux}{26}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Diagrama Entitate-Relație (ERD)}{28}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Diagrama Cazurilor de Utilizare}{29}{subsection.3.5.5}%
+\contentsline {chapter}{\numberline {4}Rezultate si Metrici Simulari}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Evaluare Performante}{31}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Scalabilitatea Simularilor}{31}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Scalabilitatea platformei}{31}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Evaluare Rezultate}{31}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Performante Gaussian Noise}{31}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Performante Label-Flip}{31}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Performante Backdoor}{31}{subsection.4.2.3}%
+\contentsline {chapter}{\numberline {5}Concluzii si dezvoltare ulterioara}{32}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Starea Curenta}{32}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Dezvoltare Ulterioara}{32}{section.5.2}%
+\contentsline {chapter}{Bibliografie}{33}{chapter*.21}%
