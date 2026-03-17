@@ -125,6 +125,43 @@
       \verb 10.1109/COMM48946.2020.9141997
       \endverb
     \endentry
+    \entry{bonawitz2019towards}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=b5068fa6c52ad4193971201b160dfa57}{%
+           family={Bonawitz},
+           familyi={B\bibinitperiod},
+           given={Keith},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3ac971440ffbdf36c814fe9483719d2c}{%
+           family={Eichner},
+           familyi={E\bibinitperiod},
+           given={Hubert},
+           giveni={H\bibinitperiod}}}%
+        {{hash=aa4375df11f7aa6bc4cb33b7675b9c33}{%
+           family={Grieskamp},
+           familyi={G\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Palo Alto, CA, USA}%
+      }
+      \strng{namehash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{fullhash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{fullhashraw}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{bibnamehash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{authorbibnamehash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{authornamehash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{authorfullhash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{authorfullhashraw}{d14f201781b8eb7b066df615ba7a94d6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2nd SysML Conference}
+      \field{title}{Towards Federated Learning at Scale: System Design}
+      \field{year}{2019}
+    \endentry
     \entry{dnsc_buletin_2025}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=7e88a41472b55e5d879f144de3b8a8bc}{%
@@ -192,7 +229,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.ibm.com/think/topics/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks}}
-      \field{note}{Accesat în YYYY‑MM‑DD}
+      \field{note}{Accesat în 2025-11-28}
       \field{title}{AI vs. Machine Learning vs. Deep Learning vs. Neural Networks}
       \field{year}{2025}
     \endentry
@@ -364,7 +401,6 @@
       \field{title}{Advances and Open Problems in Federated Learning}
       \field{volume}{14}
       \field{year}{2021}
-      \true{nocite}
       \field{pages}{1\bibrangedash 210}
       \range{pages}{210}
       \verb{doi}

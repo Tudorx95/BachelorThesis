@@ -22,146 +22,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{anyt/global//global/global/global}
-    \entry{cloud_crypto}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=24113cd130436543a0b035c0ce61629b}{%
-           family={\noopsort{01}Togan},
-           familyi={0\bibinitperiod},
-           given={Mihai},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Editura Matrix Rom}%
-      }
-      \strng{namehash}{24113cd130436543a0b035c0ce61629b}
-      \strng{fullhash}{24113cd130436543a0b035c0ce61629b}
-      \strng{fullhashraw}{24113cd130436543a0b035c0ce61629b}
-      \strng{bibnamehash}{24113cd130436543a0b035c0ce61629b}
-      \strng{authorbibnamehash}{24113cd130436543a0b035c0ce61629b}
-      \strng{authornamehash}{24113cd130436543a0b035c0ce61629b}
-      \strng{authorfullhash}{24113cd130436543a0b035c0ce61629b}
-      \strng{authorfullhashraw}{24113cd130436543a0b035c0ce61629b}
-      \field{sortinit}{0}
-      \field{sortinithash}{c5602f03f17cc894ea7a6362c3cb0e13}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Cryptographic Technologies for Data Protection in Cloud}
-      \field{year}{2017}
-    \endentry
-    \entry{multi_auth}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=ebcf55860d0745ce5c05240a65a98b9c}{%
-           family={\noopsort{02}Dumitru},
-           familyi={0\bibinitperiod},
-           given={Ionuț},
-           giveni={I\bibinitperiod}}}%
-        {{hash=9eecf111c2e3fdbe440bdf7085c53747}{%
-           family={Togan},
-           familyi={T\bibinitperiod},
-           given={Mihai},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{c9992003effe4d18f38a91c9039143d0}
-      \strng{fullhash}{c9992003effe4d18f38a91c9039143d0}
-      \strng{fullhashraw}{c9992003effe4d18f38a91c9039143d0}
-      \strng{bibnamehash}{c9992003effe4d18f38a91c9039143d0}
-      \strng{authorbibnamehash}{c9992003effe4d18f38a91c9039143d0}
-      \strng{authornamehash}{c9992003effe4d18f38a91c9039143d0}
-      \strng{authorfullhash}{c9992003effe4d18f38a91c9039143d0}
-      \strng{authorfullhashraw}{c9992003effe4d18f38a91c9039143d0}
-      \field{sortinit}{0}
-      \field{sortinithash}{c5602f03f17cc894ea7a6362c3cb0e13}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Military Technology}
-      \field{month}{06}
-      \field{title}{Client Module with Multifactor Authentication for Remote Electronic Signature Generation Using Cryptography API: Next Generation}
-      \field{volume}{3}
-      \field{year}{2020}
-      \true{nocite}
-      \field{pages}{5\bibrangedash 10}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.32754/JMT.2020.1.01
-      \endverb
-    \endentry
-    \entry{morphological_operations}{article}{skipbib=true}{}
-      \name{author}{3}{}{%
-        {{hash=f084a89642e3abacb2cd1615a1433697}{%
-           family={\noopsort{03}Lupascu},
-           familyi={0\bibinitperiod},
-           given={Cristian},
-           giveni={C\bibinitperiod}}}%
-        {{hash=f3cb774e9544deb5afc600b5a0ffe12e}{%
-           family={Plesca},
-           familyi={P\bibinitperiod},
-           given={Cezar},
-           giveni={C\bibinitperiod}}}%
-        {{hash=9eecf111c2e3fdbe440bdf7085c53747}{%
-           family={Togan},
-           familyi={T\bibinitperiod},
-           given={Mihai},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{928831f5f8247e280ad5d90dd248b78f}
-      \strng{fullhash}{928831f5f8247e280ad5d90dd248b78f}
-      \strng{fullhashraw}{928831f5f8247e280ad5d90dd248b78f}
-      \strng{bibnamehash}{928831f5f8247e280ad5d90dd248b78f}
-      \strng{authorbibnamehash}{928831f5f8247e280ad5d90dd248b78f}
-      \strng{authornamehash}{928831f5f8247e280ad5d90dd248b78f}
-      \strng{authorfullhash}{928831f5f8247e280ad5d90dd248b78f}
-      \strng{authorfullhashraw}{928831f5f8247e280ad5d90dd248b78f}
-      \field{sortinit}{0}
-      \field{sortinithash}{c5602f03f17cc894ea7a6362c3cb0e13}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{06}
-      \field{title}{Privacy Preserving Morphological Operations for Digital Images}
-      \field{year}{2020}
-      \field{pages}{183\bibrangedash 188}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/COMM48946.2020.9141997
-      \endverb
-    \endentry
-    \entry{bonawitz2019towards}{inproceedings}{}{}
-      \name{author}{3}{}{%
-        {{hash=b5068fa6c52ad4193971201b160dfa57}{%
-           family={Bonawitz},
-           familyi={B\bibinitperiod},
-           given={Keith},
-           giveni={K\bibinitperiod}}}%
-        {{hash=3ac971440ffbdf36c814fe9483719d2c}{%
-           family={Eichner},
-           familyi={E\bibinitperiod},
-           given={Hubert},
-           giveni={H\bibinitperiod}}}%
-        {{hash=aa4375df11f7aa6bc4cb33b7675b9c33}{%
-           family={Grieskamp},
-           familyi={G\bibinitperiod},
-           given={Wolfgang},
-           giveni={W\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Palo Alto, CA, USA}%
-      }
-      \strng{namehash}{d14f201781b8eb7b066df615ba7a94d6}
-      \strng{fullhash}{d14f201781b8eb7b066df615ba7a94d6}
-      \strng{fullhashraw}{d14f201781b8eb7b066df615ba7a94d6}
-      \strng{bibnamehash}{d14f201781b8eb7b066df615ba7a94d6}
-      \strng{authorbibnamehash}{d14f201781b8eb7b066df615ba7a94d6}
-      \strng{authornamehash}{d14f201781b8eb7b066df615ba7a94d6}
-      \strng{authorfullhash}{d14f201781b8eb7b066df615ba7a94d6}
-      \strng{authorfullhashraw}{d14f201781b8eb7b066df615ba7a94d6}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 2nd SysML Conference}
-      \field{title}{Towards Federated Learning at Scale: System Design}
-      \field{year}{2019}
-    \endentry
+  \datalist[entry]{none/global//global/global/global}
     \entry{dnsc_buletin_2025}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=7e88a41472b55e5d879f144de3b8a8bc}{%
@@ -176,8 +37,8 @@
       \strng{authornamehash}{7e88a41472b55e5d879f144de3b8a8bc}
       \strng{authorfullhash}{7e88a41472b55e5d879f144de3b8a8bc}
       \strng{authorfullhashraw}{7e88a41472b55e5d879f144de3b8a8bc}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.dnsc.ro/vezi/document/buletin-de-indicatori-statistici-si-tendinte-de-securitate-cibernetica-h1-2025}}
@@ -199,8 +60,8 @@
       \strng{authornamehash}{6d41230561cf17e18784a89dfacbd312}
       \strng{authorfullhash}{6d41230561cf17e18784a89dfacbd312}
       \strng{authorfullhashraw}{6d41230561cf17e18784a89dfacbd312}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://artificialintelligenceact.eu/wp-content/uploads/2024/11/Future-of-Life-InstituteAI-Act-overview-30-May-2024.pdf}}
@@ -208,30 +69,6 @@
       \field{note}{Accessed: 2025-11-27}
       \field{title}{AI Act Overview - Future of Life Institute (30 May 2024)}
       \field{year}{2024}
-    \endentry
-    \entry{ibm_ai_vs_ml_dl}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%
-           family={{IBM}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
-      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
-      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
-      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
-      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
-      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
-      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
-      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
-      \field{extraname}{1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.ibm.com/think/topics/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks}}
-      \field{note}{Accesat în 2025-11-28}
-      \field{title}{AI vs. Machine Learning vs. Deep Learning vs. Neural Networks}
-      \field{year}{2025}
     \endentry
     \entry{ibmfl_api}{misc}{}{}
       \name{author}{1}{}{%
@@ -247,9 +84,9 @@
       \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
-      \field{extraname}{2}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://ibmfl-api-docs.res.ibm.com/index.html}}
@@ -271,14 +108,38 @@
       \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
-      \field{extraname}{3}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/IBM/federated-learning-lib/tree/main}}
       \field{note}{Accesat în 2025-11-28}
       \field{title}{IBM Federated Learning Library - GitHub Repository}
+      \field{year}{2025}
+    \endentry
+    \entry{ibm_ai_vs_ml_dl}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={{IBM}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{extraname}{3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.ibm.com/think/topics/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks}}
+      \field{note}{Accesat în 2025-11-28}
+      \field{title}{AI vs. Machine Learning vs. Deep Learning vs. Neural Networks}
       \field{year}{2025}
     \endentry
     \entry{kairouz2021federated}{article}{}{}
@@ -392,8 +253,8 @@
       \strng{authornamehash}{b5d6d122fda9b4124d06103e4b2974cd}
       \strng{authorfullhash}{9a9cfa10018c06691b0b0693c690420b}
       \strng{authorfullhashraw}{9a9cfa10018c06691b0b0693c690420b}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Foundations and Trends® in Machine Learning}
@@ -411,6 +272,81 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1561/2200000083
+      \endverb
+    \endentry
+    \entry{bonawitz2019towards}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=b5068fa6c52ad4193971201b160dfa57}{%
+           family={Bonawitz},
+           familyi={B\bibinitperiod},
+           given={Keith},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3ac971440ffbdf36c814fe9483719d2c}{%
+           family={Eichner},
+           familyi={E\bibinitperiod},
+           given={Hubert},
+           giveni={H\bibinitperiod}}}%
+        {{hash=aa4375df11f7aa6bc4cb33b7675b9c33}{%
+           family={Grieskamp},
+           familyi={G\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Palo Alto, CA, USA}%
+      }
+      \strng{namehash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{fullhash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{fullhashraw}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{bibnamehash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{authorbibnamehash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{authornamehash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{authorfullhash}{d14f201781b8eb7b066df615ba7a94d6}
+      \strng{authorfullhashraw}{d14f201781b8eb7b066df615ba7a94d6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2nd SysML Conference}
+      \field{title}{Towards Federated Learning at Scale: System Design}
+      \field{year}{2019}
+    \endentry
+    \entry{fung2020mitigating}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=0092daaacb4a462bde46c0bd7b5e7400}{%
+           family={Fung},
+           familyi={F\bibinitperiod},
+           given={Clement},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1f39ac93b91422ada03386a68027d37f}{%
+           family={Yoon},
+           familyi={Y\bibinitperiod},
+           given={Chris\bibnamedelimb J.\bibnamedelimi M.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=375bad94e8582a40ada8808f51fa124c}{%
+           family={Beschastnikh},
+           familyi={B\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{21ef9cfdc03170b13aca731baa59bb71}
+      \strng{fullhash}{21ef9cfdc03170b13aca731baa59bb71}
+      \strng{fullhashraw}{21ef9cfdc03170b13aca731baa59bb71}
+      \strng{bibnamehash}{21ef9cfdc03170b13aca731baa59bb71}
+      \strng{authorbibnamehash}{21ef9cfdc03170b13aca731baa59bb71}
+      \strng{authornamehash}{21ef9cfdc03170b13aca731baa59bb71}
+      \strng{authorfullhash}{21ef9cfdc03170b13aca731baa59bb71}
+      \strng{authorfullhashraw}{21ef9cfdc03170b13aca731baa59bb71}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Mitigating Sybils in Federated Learning Poisoning}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 1808.04866
       \endverb
     \endentry
   \enddatalist

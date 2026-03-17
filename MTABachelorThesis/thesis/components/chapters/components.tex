@@ -24,11 +24,11 @@ Această evoluție naturală spre descentralizare a deschis drumul unor concepte
 
 Evolutia tehnologica continua a dat nastere la o serie de atacuri cibernetice menite sa destabilizeze securitatea aplicatiilor si totodata sustragerea a
 cat mai multe date sau identitati private in contradictie cu normele legale.
-Cele mai populare atacuri raportate la scara globala pentru anul curent 2025 sunt ransomware (conform \footnote{\fullcite{dnsc_buletin_2025}}, in SUA s-au raportat cresteri
+Cele mai populare atacuri raportate la scara globala pentru anul curent 2025 sunt ransomware (conform \cite{dnsc_buletin_2025}, in SUA s-au raportat cresteri
 de 149\%), furtul de identitate prin exfiltrarea de credentiale, si phishing.
 Dezvoltarea modelelor de inteligență artificială a amplificat aceste riscuri, oferind atacatorilor instrumente automatizate pentru generarea și adaptarea atacurilor.
 
-Pentru a limita utilizarea abuzivă a tehnologiilor bazate pe AI, Uniunea Europeană a adoptat în 2024 un set de reglementări stricte privind integrarea acestor module în aplicațiile software, prin AI Act \footnote{\fullcite{eu_ai_act_overview_2024}}.
+Pentru a limita utilizarea abuzivă a tehnologiilor bazate pe AI, Uniunea Europeană a adoptat în 2024 un set de reglementări stricte privind integrarea acestor module în aplicațiile software, prin AI Act \cite{eu_ai_act_overview_2024}.
 
 Progresul din domeniul machine learning si a Large Language Models a fost posibil ca urmare a unui volum masiv de date disponibile si a nevoii tot mai mari de analiza.
 Acest lucru a determinat aparitia unei noi categorii de specialisti, data scientists, dedicati colectarii si prelucrarii minutioase a datelor pentru antrenarea modelelor.
@@ -56,7 +56,7 @@ Pentru a răspunde acestor nevoi, colaborarea dintre cercetători s-a orientat c
 Aceasta permite colaborarea între participanți fără a partaja direct seturile lor de date, menținând o barieră naturală împotriva accesului neautorizat. Totuși, deși infrastructura este diferită față de abordările centralizate, vulnerabilitățile rămân, iar atacurile asupra datelor utilizate local pot afecta modelul global.
 
 In urma unei analize proprii, am putut observa diferite solutii/frameworks de simulare a procesului de invatare automata federata, dar fara o integrare cu mecanisme moderne de testare pentru atacuri
-precum otravirea datelor (data poisoning) amintite anterior \footnote{\fullcite{ibmfl_api}}. Unele dintre aceste framework-uri sunt poate dificil de gestionat si configurat \footnote{\fullcite{ibmfl_github}}, si nu permit extinderea usoara prin integrare altor componente.
+precum otravirea datelor (data poisoning) amintite anterior \cite{ibmfl_api}. Unele dintre aceste framework-uri sunt poate dificil de gestionat si configurat \cite{ibmfl_github}, si nu permit extinderea usoara prin integrare altor componente.
 In acelasi timp, gandindu-ne la multitudinea de atacuri malware si la platformele de detectie a lor, devine clar ca in domeniul inteligentei artificiale lipseste o platforma centralizata, flexibila, dedicata testarii si evaluarii cu diferite tipuri de atacuri asupra modelelor distribuite.
 
 Aceste limitări justifica realizarea prezentei lucrari, care își propune dezvoltarea unei platforme de simulare capabile sa testeze atacuri de tip data poisoning într-o infrastructura de învățare federată.
@@ -109,7 +109,7 @@ Modelele de ML clasice se bazeaza pe interventia umana in factorul de decizie (s
 
 Deep Learning este o subcategorie a Machine Learning, care are rolul de a minimiza interventia umana si a automatiza procesul de decizie. Prin aceasta metoda se automatizeaza mare parte din extragerea caracteristicilor pe setul de date, eliminand nevoia de a defini etichete pentru fiecare valoare de intrare (unsupervied learning).
 
-Diferenta dintre aceste doua concepte este in modul in care acesti algoritmi invata si procentul de utilizare a datelor \footnote{\fullcite{ibm_ai_vs_ml_dl}}.
+Diferenta dintre aceste doua concepte este in modul in care acesti algoritmi invata si procentul de utilizare a datelor \cite{ibm_ai_vs_ml_dl}.
 Scopul principal al invatarii automate este predictia. Pe baza unui set de date de antrenare si de testare, se determina o anumita categorie de iesire predefinita.
 
     \subsection{Retea Neuronala}
@@ -238,7 +238,7 @@ Fiecare retea se antreneaza cu datele extrase local (on device) si isi imbunatat
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{../images/Device_internal_State.png}
-    \caption{Arhitectura interna a unui dispozitiv   \footnote{\fullcite{bonawitz2019towards}}}
+    \caption{Arhitectura interna a unui dispozitiv   \cite{bonawitz2019towards}}
 
     \label{fig:nume-label}
 \end{figure}
@@ -253,7 +253,7 @@ In cele din urma, entitatea centrala combina toate aceste ponderi aplicand o fun
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{../images/Federated_Learning_Operations.png}
-    \caption{Procedee in invatare automata federata \footnote{\fullcite{bonawitz2019towards}}}    
+    \caption{Procedee in invatare automata federata \cite{bonawitz2019towards}}    
     \label{fig:nume-label}
 \end{figure}
 
@@ -307,7 +307,7 @@ vectorilor de atac si concentrarea pe una dintre categorii, data poisoning. In c
     \subsection{Definirea tipurilor de atac}
 
     
-    In literatura de specialitate, atacurile asupra unui model de ML sau asupra unei retele neuronale sunt definite drept atacuri adversariale (adversarial attacks). Aceasta clasa de atacuri are rolul de a produce modificari in comportamentul normal al modelului intr-un mod indizerabil. Conform lucrarii \footnote{\fullcite{kairouz2021federated}}, in functie de nivelul de scop al unui atac, putem avea:
+    In literatura de specialitate, atacurile asupra unui model de ML sau asupra unei retele neuronale sunt definite drept atacuri adversariale (adversarial attacks). Aceasta clasa de atacuri are rolul de a produce modificari in comportamentul normal al modelului intr-un mod indizerabil. Conform lucrarii \cite{kairouz2021federated}, in functie de nivelul de scop al unui atac, putem avea:
 
     \begin{itemize}
 
@@ -563,7 +563,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
 
     \section{Arhitectura Platformei}
 
-    In procesul de dezvoltare al platformei, au fost analizate platforme de programare in timp real, precum Google Colab sau Jupyter Notebook, care permit utilizatorilor sa isi incarce si sa execute remote codul de antrenare a retelelor neuronale intr-o infrastructura specializata.
+    In procesul de dezvoltare al platformei, au fost analizate platforme de programare in timp real, precum Google Colab sau Jupyter Notebook, ce permit utilizatorilor sa isi incarce si sa execute remote codul de antrenare al retelelor neuronale intr-o infrastructura specializata.
     Inspirandu-se din aceste platforme si observand existenta unor utilitare de analiza a malware-ului si infectiilor, s-a identificat nevoia unui framework care nu doar sa simuleze o retea de invatare automata federata, ci si sa testeze atacuri Data Poisoning oferind cercetatorilor si analistilor de securitate posibilitatea de a evalua vulnerabilitatile propriilor retele neuronale.
     
     Platforma este structurată pe trei niveluri principale:
@@ -572,7 +572,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
 
     \begin{itemize}
         \item Interfață React pentru autentificare, management proiecte, și vizualizare rezultate
-        \item Comunicare prin REST API și WebSocket pentru monitoring real-time
+        \item Comunicare prin REST API și WebSocket pentru monitorizare in timp-real. 
     \end{itemize}
 
     \textbf{Nivelul Backend (Containerizat Docker)}
@@ -614,7 +614,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
 
         \item Imaginea de mai sus reprezinta mediile de python disponibile pentru a rula retelele neuronale.
     
-        \item La fiecare pas, in cazul unei erori generate de orice fel de actiune, procesul ce gestioneaza operatiunile de simulare se opreste si se transmite eroarea ca rezultat procesului orchestrator care semnalizeaza backend-ul aplicatiei.
+        \item La fiecare pas, in cazul unei erori generate de orice fel de actiune, procesul ce gestioneaza operatiunile de simulare se opreste si transmite eroarea ca rezultat procesului orchestrator care semnalizeaza backend-ul aplicatiei.
     
         \item Dupa prima antrenare, se salveaza parametrii aferenti matricii de confuzie (acuratete, precizie, scor F1, recall) pentru a compara rezultatul simularii cu configuratia initiala a retelei si detectarea posibilelor anomalii. Acesta este principalul pas in procesul de analiza a problemei propuse.
     
@@ -633,11 +633,11 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
                 \item \textit{Backdoor Semantic} --- modificarea caracteristicilor naturale ale imaginii (luminozitate, tonalitate RGB)
                 \item \textit{Edge-Case Backdoor} --- aplicarea de transformări asupra imaginilor (rotație, reducere culori, solarizare)
             \end{itemize}
-            \item \textbf{poison\_intensity}: intensitatea atacului (ex: 0.1 pentru zgomot Gaussian, dimensiune trigger pentru backdoor)
+            \item \textbf{poison\_intensity}: intensitatea atacului folosit doar in cazul atacurilor backdoor (ex: 0.1 pentru zgomot Gaussian, dimensiune trigger pentru backdoor)
             \item \textbf{poison\_percentage}: procentajul de date afectate per client (ex: 0.2 pentru 20\% date compromise la nivelul unui client malitios)
         \end{itemize}
     
-        \item Amintim ca mediile de python includ si biblioteci de seturi de date specifice precum tensorflowDatasets in care se regasesc seturi de date predefinite in cazul in care utilizatorul doreste sa foloseasca un set de date predefinit la nivel de biblioteci.
+        \item Amintim ca mediile de python includ si biblioteci de seturi de date specifice precum TensorFlow Datasets in care se regasesc seturi de date predefinite in cazul in care utilizatorul doreste sa foloseasca un set de date predefinit la nivel de biblioteci.
     
         \item Procesul de otravire (poisoning) presupune rularea unui script care pe baza parametrilor simularii, aplica o serie de operatii asupra seturilor de date. Tipurile de actiuni de otravire au fost definite in capitolul 2 (sectiunea 2.3.3 - Atacul Data poisoning). Utilizatorul poate alege procentajul din etichete care sa fie infectate, iar in cazul atacurilor backdoor, se vor seta parametrii specifici fiecărui tip de trigger.
     
@@ -661,6 +661,8 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
                 \item \textit{Trimmed Mean} --- elimină primele și ultimele 20\% valori extreme ale ponderilor, apoi calculează media restului
                 \item \textit{Median} --- înlocuiește media cu mediana per parametru, fiind rezistentă la aproximativ 20\% clienți malițioși
                 \item \textit{Trimmed Mean + Krum} --- abordare hibridă care combină filtrarea Trimmed Mean cu selecția Krum
+                \item \textit{FoolsGold} \cite{fung2020mitigating} --- calculează similaritatea cosinus între actualizările clienților de-a lungul procesului de antrenare și penalizează (reduce ponderile de agregare) pentru contribuțiile cu o similaritate ridicată, reușind să neutralizeze eficient atacurile coordonate (de tip sybil)
+                \item \textit{Norm Clipping} --- limitează magnitudinea (norma L2) a vectorului de actualizare trimis de un client la un prag maxim prestabilit, oprind astfel actualizările malițioase cu valori extreme din a domina procesul de agregare
                 \item \textit{Random} --- selectează aleator ponderile unui client, utilizat ca bază de comparație
             \end{itemize}
         \end{itemize}
@@ -670,7 +672,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
         \begin{enumerate}
             \item \textbf{Simulare cu date curate (Clean)} --- toate dispozitivele folosesc date nemodificate, iar agregarea se face cu FedAvg. Acest scenariu stabilește performanța de referință (baseline) în condiții ideale, fără atac.
             \item \textbf{Simulare cu date curate și apărare (Clean + Defense)} --- datele rămân nemodificate, dar se aplică metoda de agregare robustă selectată de utilizator. Acest scenariu măsoară costul computațional (overhead-ul) introdus de mecanismul de apărare în absența unui atac.
-            \item \textbf{Simulare cu date otrăvite (Poisoned)} --- M din N clienți folosesc date otrăvite, iar agregarea folosește FedAvg fără apărare. Acest scenariu cuantifică impactul atacului data poisoning asupra modelului global.
+            \item \textbf{Simulare cu date otrăvite (Poisoned)} --- M din N clienți folosesc date otrăvite, iar agregarea folosește FedAvg (fără apărare). Acest scenariu cuantifică impactul atacului data poisoning asupra modelului global.
             \item \textbf{Simulare cu date otrăvite și apărare (Poisoned + Defense)} --- același scenariu de atac, dar cu agregarea robustă activată. Comparând rezultatele cu scenariul anterior, se evaluează eficacitatea strategiei de apărare selectate.
         \end{enumerate}
     
@@ -682,12 +684,12 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
             \item \textbf{Degradarea acurateții} --- diferențele între scenarii pentru cuantificarea impactului atacului și a eficacității apărării:
             \begin{itemize}
                 \item Degradare absolută: $\Delta_{acc}^{abs} = Acc_{clean} - Acc_{poisoned}$
-                \item Degradare procentuală: $\Delta_{acc}^{\%} = \frac{Acc_{clean} - Acc_{poisoned}}{Acc_{clean}} \times 100\%$
+                \item Variații față de modelul inițial: diferența dintre modelul final din fiecare scenariu și acuratețea pre-antrenată de referință (ex. $Acc_{clean} - Acc_{init}$, $Acc_{poisoned} - Acc_{init}$)
             \end{itemize}
             \item \textbf{Metrici de clasificare}: Precision, recall și F1-score (medie ponderată) pentru fiecare scenariu
         \end{itemize}
 
-        Rezultatele sunt salvate în trei fișiere: \texttt{analysis.json} (metrici structurate), \texttt{summary.txt} (rezumat text asupra simularilor) și \texttt{attack\_info.json} (detalii atac).
+        Rezultatele sunt salvate în trei fișiere: \texttt{analysis.json} (metrici structurate), \texttt{summary.txt} (rezumat text asupra simularilor) și \texttt{attack\_info.json} (detalii despre atac).
     
         \item Utilizatorul va putea vizualiza fiecare pas de procesare amintit pana acum si rezultatul analizei simularii.
     
@@ -720,6 +722,27 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
         \item \textbf{Fluxul de anulare} - la fiecare etapă din pipeline, orchestratorul verifică dacă utilizatorul a solicitat anularea. În caz afirmativ: arborele de procese este terminat (\texttt{kill\_process\_tree()}), GPU-ul alocat este eliberat, directorul de lucru al simulării este șters, iar statusul este marcat ca \textit{anulat}.
     \end{itemize}
 
+    \subsubsection*{Etapele procesului de simulare}
+
+    Atunci când un utilizator inițiază o simulare de învățare federată, orchestratorul de pe serverul GPU declanșează un pipeline secvențial compus din 14 etape distincte:
+
+    \begin{enumerate}
+        \item \textbf{Pornirea task-ului de simulare (Start Simulation Task)}: Orchestratorul creează o nouă intrare pentru task și începe execuția asincronă a pipeline-ului.
+        \item \textbf{Verificarea structurii șablonului (Verify Template Structure)}: Înainte de a consuma resurse computaționale (cum ar fi GPU), se efectuează o analiză statică suplimentară a scriptului Python de antrenare furnizat de utilizator, folosind modulul intern \texttt{verify\_template.py}.
+        \item \textbf{Crearea directorului de lucru (Create User Workspace)}: Este creat un director izolat pe disc, specific task-ului curent, pe baza ID-ului utilizatorului și a identificatorului unic al simulării.
+        \item \textbf{Verificarea corectitudinii modelului (Verify Model Correctness)}: Utilizând codul șablon primit, orchestratorul instanțiază modelul definit de utilizator și rulează o scurtă încercare de antrenare pentru a valida funcționalitatea acestuia local, înainte de modelul federativ.
+        \item \textbf{Descărcarea modelului din repozitoriu (Download Model)}: Se apelează logica de definire a modelului din șablon; dacă modelul este pre-antrenat și găzduit extern (ex. HuggingFace), acesta este descărcat și salvat de pe server în formatul specific framework-ului detectat.
+        \item \textbf{Descărcarea setului de date (Download Dataset)}: Orchestratorul apelează funcția de descărcare și pregătire a datelor (testare și antrenare) propusă în codul utilizatorului.
+        \item \textbf{Alocarea unității de procesare grafică (Allocate GPU)}: Managerul de GPU caută o placă video NVIDIA disponibilă în sistem, procesând elementele dintr-o coadă de așteptare. Dacă timpul alocat expiră, se utilizează unitatea CPU.
+        \item \textbf{Activarea mediului Python (Activate Python Environment)}: Prin analiza importurilor din șablon, orchestratorul detectează tipul aplicatiei (TensorFlow sau PyTorch) și activează mediul \textit{Conda} preconfigurat corespunzător.
+        \item \textbf{Alterarea datelor de antrenare (Poison Dataset)}: Folosind scriptul \texttt{poison\_data.py}, orchestratorul creează o copie malformată a datelor destinate antrenării, aplicând exact tipul de atac, procentajul și intensitatea alese din interfață.
+        \item \textbf{Simularea în mediul curat (Clean Simulation)}: Modelul global intră în faza de simulare federată (folosind \texttt{fd\_simulator.py}). Procesul asincron este inițiat exclusiv pe setul de date nealterate (curat), partajat pe N clienți legitimi, folosind algoritmul standard de agregare, \textit{FedAvg}. Această etapă înregistrează performanța normală (de referință).
+        \item \textbf{Simularea curată cu mecanism de apărare (Clean + Defense)}: Continuându-se procesele pentru testare, \textit{FedAvg} este înlocuit acum cu tehnica robustă de agregare aleasă de utilizator (ex. FoolsGold, Norm Clipping), tot pe setul curat de date.
+        \item \textbf{Simularea cu atac fără apărare (Poisoned Simulation)}: Este integrat setul alterat (din etapa 9). M dispozitive capătă rol de clienți malițioși și raportează parametrii compromiși către orchestrator, agregarea făcându-se prin \textit{FedAvg}. Aceasta va măsura impactul loviturii asupra performanței totale.
+        \item \textbf{Simularea sub atac și cu protecție activă (Poisoned + Defense)}: Aceeași simulare cu M clienți atacatori este reluată folosind de data aceasta metoda de agregare robustă ce trebuie să filtreze ponderile malițioase.
+        \item \textbf{Generarea rezultatelor finale (Generate Final Results)}: Orchestratorul cumulează rezultatele din toate simulările (scenariul normal, overheadul apărării, capacitatea de distrugere a atacului și reușita apărării) și generează rapoarte structurate, oferite utilizatorului direct pe ecran.
+    \end{enumerate}
+
     Arhitectura propusă oferă următoarele beneficii:
     
     \begin{itemize}
@@ -732,16 +755,18 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
         \item \textbf{Transparență}: Monitorizarea în timp real prin WebSocket oferă vizibilitate completă asupra procesului de execuție, facilitând depanarea eventualelor probleme.
         
         \item \textbf{Comparabilitate}: Funcționalitatea de comparare a simulărilor permite evaluarea impactului diferitelor tipuri de atacuri asupra aceluiași model, datele fiind centralizate într-o structură unificată pentru analize statistice avansate.
+        
+        \item \textbf{Securitate}: Prevenirea execuției de cod malițios se realizează printr-un proces strict de analiză statică a codului, încă din etapa pre-orchestrării. Atunci când utilizatorul încarcă șablonul Python, se rulează utilitarul avansat de analiză de securitate \texttt{semgrep} alături de scriptul personalizat \texttt{verify\_template.py}. Aceste elemente identifică vulnerabilitățile codului propriu-zis de manipulare și transfer, descoperă injecțiile (\textit{code injection}) și validează prezența obligatorie a structurilor critice, blocând execuțiile periculoase chiar de la nivelul backend-ului.
     \end{itemize}
     
-    \begin{landscape}
+    
     \begin{figure}[h!]
         \centering
-        \includegraphics[width=1.5\textwidth]{../images/Arhitectura_Aplicatie.png}
+        \includegraphics[width=1\textwidth, height=0.85\textheight, keepaspectratio]{../images/Arhitectura_Aplicatie.png}
         \caption{Arhitectura si fluxul platformei}
         \label{fig:nume-label}
     \end{figure}
-    \end{landscape}
+    
 
     Imaginea 3.2 prezinta intregul flux al arhitecturii, precum si detaliile tehnice utilizate.
 
@@ -1081,18 +1106,59 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
             \label{fig:use_case_diagram}
         \end{figure}
 
-\chapter{Rezultate si Metrici Simulari}
+\chapter{Rezultate și Metrici Simulări}
 
-    \section{Evaluare Performante}
+    Acest capitol prezintă validarea experimentală a platformei. Sunt ilustrate două studii de caz principale care demonstrează modul în care sistemul poate fi utilizat pentru evaluarea mecanismelor de apărare împotriva atacurilor de tip Data Poisoning într-un mediu de învățare federată.
 
-        \subsection{Scalabilitatea Simularilor}
-        \subsection{Scalabilitatea platformei}
+    \section{Studiu de Caz 1: Creșterea intensității otrăvirii datelor}
 
-    \section{Evaluare Rezultate}
+        Scopul primului experiment este de a evalua modul în care performanța modelului global se degradează pe măsură ce proporția datelor compromise din rețea crește.
 
-        \subsection{Performante Gaussian Noise}
-        \subsection{Performante Label-Flip}
-        \subsection{Performante Backdoor}
+        \subsection{Detalii practice}
+        Pentru mediul de antrenare a fost utilizat setul de date CIFAR-10, cuprinzând 60.000 de imagini distribuite în 10 clase. Antrenarea a fost realizată folosind framework-ul PyTorch pe o arhitectură ResNet18 pre-antrenată. Setul de date a fost eșantionat Non-IID (date distribuite neidentic și independent) în mod egal pe toți clienții, fiecare având 80\% imagini dintr-o clasă dominantă și 20\% din restul claselor. Fiecare rundă de antrenare locală a utilizat optimizatorul Adam cu o rată de învățare mică (0.001) și funcția de pierdere de tip Categorical Cross-Entropy.
+
+        Simularea a fost executată în șapte instanțe distincte, incrementând progresiv proporția datelor compromise din setul total: 1\%, 5\%, 10\%, 15\% și până la 55\%. Pentru nodurile compromise, a fost aplicată tehnica de otrăvire „Label-Flipping” (inversarea etichetelor). Pentru a apăra rețeaua împotriva acestui atac, orchestratorul a folosit metoda robustă de agregare \textit{FoolsGold}, care analizează similaritatea cosinusului actualizărilor pentru a penaliza contribuitorii malițioși. Întregul mediu a fost accelerat de unități GPU pentru a gestiona eficient cerințele riguroase de calcul.
+
+        \subsection{Rezultate experimentale}
+        Efectuarea tuturor etapelor de simulare pentru un număr fix de 10 clienți ($N=10$), fiecare mediu federat rulând pentru 5 runde a câte 3 epoci pe rundă, a durat aproximativ două ore, un timp puternic influențat de distribuția Non-IID a datelor.
+
+        Etapa curată (Clean) și etapa exclusiv atacată (Poisoned) au utilizat algoritmul standard de agregare FedAvg, în timp ce instanțele rulate cu apărare au implementat metoda FoolsGold. Așa cum a fost demonstrat și în literatura de specialitate, cu cât au fost prezenți mai puțini clienți infectați, cu atât eficacitatea protecției calculate prin similitudini a scăzut ușor, lucru confirmat în intervalul de 1\%--15\% date alterate, unde doar un singur client era țintit de sistem pentru infecție. Pe de altă parte, medierea standard prin FedAvg s-a dovedit masiv instabilă sub un atac cu distribuție mare a impactului (în special la 40\% și 50\% date otrăvite). Metoda de apărare FoolsGold a reușit cu succes să atenueze efectele atacului de tip label-flipping în intervalul dominant de 20\%--55\% date compromise din populație, demonstrând că modelul poate fi protejat în mod fiabil prin setarea unei metode de agregare defensive corecte alături de parametrii corespunzători.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{../images/Rezultate_Experimentale_Case1.png}
+            \caption{Rezultate Experimentale - Cazul 1}
+            \label{fig:rezultate_experimentale_cazul_1}
+        \end{figure}
+
+    \section{Studiu de Caz 2: Cea mai bună protecție pentru un atac specific}
+
+        În acest studiu de caz se consideră un scenariu în care un cercetător dorește identificarea celui mai eficient mecanism de apărare pentru un atac fix de otrăvire a datelor. Obiectivul este de a compara mai multe strategii de protecție (agregare) în aceleași condiții experimentale. Spre deosebire de testul anterior, arhitectura modelului, tipul atacului și intensitatea rămân complet constante.
+
+        \subsection{Detalii practice}
+        Același model ResNet18 antrenat pe CIFAR-10 a fost folosit ca referință. Rețeaua federată a constat dintr-un total de 10 clienți interconectați ($N=10$). Pentru a simula o prezență malițioasă extrem de dăunătoare și coordonată, 3 dintre acești clienți ($M=3$, reprezentând 30\% din rețea) au fost setați să acționeze sistematic împotriva orchestratorului. Antrenamentul s-a desfășurat pe durata a 5 runde globale, iar atacul de tip Label-Flipping a vizat 100\% din datele de antrenament locale ale nodurilor aservite atacatorului.
+
+        În aceste condiții dure și fixe, au fost realizate mai multe simulări, singura variabilă modificată fiind metoda de apărare de la nivelul serverului central. Mai exact, a fost analizată performanța a patru mecanisme principale: FoolsGold, Trimmed Mean, Krum și Norm Clipping.
+
+        \subsection{Rezultate experimentale}
+        Evaluările au evidențiat diferențe majore în eficacitatea metodelor de apărare împotriva acestui grad ridicat de compromitere (30\% din dispozitive):
+
+        Acuratețea modelului pre-antrenat inițial (descărcat înainte de propagare) a fost calculată la aproximativ 0.7334, iar performanța curată de referință a modelului antrenat federat (fără atac, folosind exclusiv agragarea FedAvg normală) a atins rapid pragul de 0.8556. Analizând comportamentul sub tensiunea atacului de label-flipping, s-au obținut următoarele diferențe notabile:
+
+        \begin{itemize}
+            \item \textbf{FedAvg (fără protecție)} a servit drept variantă de subsol (baseline sub atac) și a generat o acuratețe finală de doar 0.5546. Aceasta reprezintă o scădere fatală de $-0.1788$ chiar și față de modelul inițial descărcat de pe internet și o scădere de $-0.3010$ față de media curată optimă, confirmând vulnerabilitatea critică a medierii ponderate clasice în fața unui atac coordonat din partea a o treime din rețea.
+            \item \textbf{FoolsGold} s-a dovedit a fi clar cea mai eficientă metodă defensivă pe acest tip de configuratie, atingând o acuratețe de 0.8464 în ciuda celor 3 agenți atacatori activi --- o scădere microscopică de numai $-0.0092$ față de situația curată fără niciun atac. Analizând actualizările prin similaritate cosinus, orchestratorul a putut depista că toți clienții atacatori furnizează un set comun de caracteristici greșite și le-a redus drastic sau chiar suprimat aportul spre modelul global.
+            \item \textbf{Norm Clipping} a obținut al doilea cel mai bun rezultat, cu o acuratețe finală menținută la nivelul de 0.7468 (reprezentând o creștere reziduală de $+0.0134$ comparativ cu modelul pre-antrenat inițial). Limitând magnitudinea permisă pentru norma vectorilor trimiși de clienți, mecanismul a oprit creșterea forțată a ponderilor infectate dinspre atacatori fără a fi nevoit să își reducă rețeaua total acceptată de conexiuni.
+            \item \textbf{Trimmed Mean} a restrâns o acuratețe moderată la nivelul de 0.5874. Deși a adus o îmbunătățire utilă față de absența totală a apărării, eliminarea parametrilor statistici de la extemele superioare și inferioare nu a asigurat o barieră completă, efortul coordonat creand un grad mare de raportări eronate.
+            \item \textbf{Krum} a eșuat și a oferit paradoxal cea mai slabă protecție din cadrul bateriei de teste, obținând o acuratețe de doar 0.5132 (situată chiar sub rezistența FedAvg simplu). Concepția logicii acestui algoritm alege un singur vector din rândul update-urilor clienților preluându-l pe cel ce are cea mai mică distanță euclidiană față de ceilalți. Cei 3 clienți malițioși cu pachete foarte similare, dar profund eronate s-au susținut teoretic reciproc și au ridicat exponențial riscul algoritmului de a califica doar o „încercare de atac” drept candidat valid de încredere, corupând în final total mediul.
+        \end{itemize}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{../images/Rezultate_Experimentale_Case2.png}
+            \caption{Rezultate Experimentale - Cazul 2}
+            \label{fig:rezultate_experimentale_cazul_2}
+        \end{figure}
 
 \chapter{Concluzii si dezvoltare ulterioara}
 
