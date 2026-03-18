@@ -1,6 +1,6 @@
-\documentclass[twoside]{report}
+\documentclass[12pt, oneside]{report}
 % setare margini doc
-\usepackage[a4paper, left=3cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
 
 \usepackage{subfiles} 
 \usepackage{main}
@@ -9,5 +9,11 @@
 
 \subfile{components/frontmatter/all}{}
 \subfile{components/chapters/all} 
+
+% Blank page at the end
+\clearpage
+\thispagestyle{empty}
+\mbox{}
+\clearpage
 
 \end{document}
