@@ -5,16 +5,16 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Arhitectura interna a unui dispozitiv \blx@tocontentsinit {0}\cite {bonawitz2019towards}}}{8}{figure.caption.10}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Procedee in invatare automata federata \blx@tocontentsinit {0}\cite {bonawitz2019towards}}}{9}{figure.caption.11}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Medii de python platforma}}{18}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Arhitectura si fluxul platformei}}{25}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de Context --- Nivel 0: Marginile Platformei}}{32}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de Context --- Nivel 1: Fluxul de date}}{33}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de Componente a Platformei}}{34}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama Flux Utilizator}}{35}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagrama Fluxului de Simulare}}{36}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagrama Entitate-Relație (ERD)}}{37}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Diagrama Cazurilor de Utilizare}}{38}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Medii de python platforma}}{21}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Arhitectura si fluxul platformei}}{28}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de Context --- Nivel 0: Marginile Platformei}}{35}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de Context --- Nivel 1: Fluxul de date}}{36}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de Componente a Platformei}}{37}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama Flux Utilizator}}{38}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagrama Fluxului de Simulare}}{39}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagrama Entitate-Relație (ERD)}}{40}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Diagrama Cazurilor de Utilizare}}{41}{figure.caption.21}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Rezultate Experimentale - Cazul 1}}{40}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Rezultate Experimentale - Cazul 2}}{42}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Rezultate Experimentale - Cazul 1}}{43}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rezultate Experimentale - Cazul 2}}{45}{figure.caption.23}%
 \addvspace {10\p@ }

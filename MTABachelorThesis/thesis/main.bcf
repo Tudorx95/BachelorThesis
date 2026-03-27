@@ -2385,8 +2385,33 @@
     <bcf:citekey order="12" intorder="1">bonawitz2019towards</bcf:citekey>
     <bcf:citekey order="13" intorder="1">bonawitz2019towards</bcf:citekey>
     <bcf:citekey order="14" intorder="1">kairouz2021federated</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">fung2020mitigating</bcf:citekey>
-    <bcf:citekey order="16" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">lamport1982byzantine</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">blanchard2017byzantine</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">chen2018draco</bcf:citekey>
+    <bcf:citekey order="18" intorder="3">yin2019byzantine</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">blanchard2017byzantine</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">yin2019byzantine</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">yin2019byzantine</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">fung2020mitigating</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">blanchard2017byzantine</bcf:citekey>
+    <bcf:citekey order="25" intorder="2">yin2019byzantine</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">fang2019local</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">chen2018draco</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">kairouz2021federated</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">fung2020mitigating</bcf:citekey>
+    <bcf:citekey order="38" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

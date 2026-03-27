@@ -311,6 +311,166 @@
       \field{title}{Towards Federated Learning at Scale: System Design}
       \field{year}{2019}
     \endentry
+    \entry{lamport1982byzantine}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5d77435450d10a850a5b58577b9a456b}{%
+           family={Lamport},
+           familyi={L\bibinitperiod},
+           given={Leslie},
+           giveni={L\bibinitperiod}}}%
+        {{hash=88bd932c15c4ae7b0f7652a409325659}{%
+           family={Shostak},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=87523aad6a4881d07c4c00ef21114da5}{%
+           family={Pease},
+           familyi={P\bibinitperiod},
+           given={Marshall},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{413430fb3846d7facccddaff1effdd66}
+      \strng{fullhash}{413430fb3846d7facccddaff1effdd66}
+      \strng{fullhashraw}{413430fb3846d7facccddaff1effdd66}
+      \strng{bibnamehash}{413430fb3846d7facccddaff1effdd66}
+      \strng{authorbibnamehash}{413430fb3846d7facccddaff1effdd66}
+      \strng{authornamehash}{413430fb3846d7facccddaff1effdd66}
+      \strng{authorfullhash}{413430fb3846d7facccddaff1effdd66}
+      \strng{authorfullhashraw}{413430fb3846d7facccddaff1effdd66}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Programming Languages and Systems (TOPLAS)}
+      \field{number}{3}
+      \field{title}{The Byzantine Generals Problem}
+      \field{volume}{4}
+      \field{year}{1982}
+      \field{pages}{382\bibrangedash 401}
+      \range{pages}{20}
+    \endentry
+    \entry{blanchard2017byzantine}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=36899e47fdb4788c971961ce7b4386c6}{%
+           family={Blanchard},
+           familyi={B\bibinitperiod},
+           given={Peva},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b2464215140903747374e995a0f73fc2}{%
+           family={El\bibnamedelima Mhamdi},
+           familyi={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={El\bibnamedelima Mahdi},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=6d84b5e8da24c645eb6bc438af7621c4}{%
+           family={Guerraoui},
+           familyi={G\bibinitperiod},
+           given={Rachid},
+           giveni={R\bibinitperiod}}}%
+        {{hash=89acd5b4dcafa2a752da9f1a78df7b1c}{%
+           family={Stainer},
+           familyi={S\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d567587fcc7e9495e93dfe2d968fdb1e}
+      \strng{fullhash}{ccf44a7babe7d4dc893ea94333de69eb}
+      \strng{fullhashraw}{ccf44a7babe7d4dc893ea94333de69eb}
+      \strng{bibnamehash}{d567587fcc7e9495e93dfe2d968fdb1e}
+      \strng{authorbibnamehash}{d567587fcc7e9495e93dfe2d968fdb1e}
+      \strng{authornamehash}{d567587fcc7e9495e93dfe2d968fdb1e}
+      \strng{authorfullhash}{ccf44a7babe7d4dc893ea94333de69eb}
+      \strng{authorfullhashraw}{ccf44a7babe7d4dc893ea94333de69eb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems (NeurIPS)}
+      \field{title}{Machine Learning with Adversaries: {Byzantine} Tolerant Gradient Descent}
+      \field{year}{2017}
+      \field{pages}{118\bibrangedash 128}
+      \range{pages}{11}
+    \endentry
+    \entry{chen2018draco}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=4722d1c517fb1393cd8f82862ffc9746}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Lingjiao},
+           giveni={L\bibinitperiod}}}%
+        {{hash=0b620b05ea1f5b470cdf9c505a1f191f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hongyi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0d315629e49676495013f7e9bb100b8f}{%
+           family={Charles},
+           familyi={C\bibinitperiod},
+           given={Zachary\bibnamedelima B.},
+           giveni={Z\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=3b679b15d259103da2a2ab2d959074e4}{%
+           family={Papailiopoulos},
+           familyi={P\bibinitperiod},
+           given={Dimitris\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2a2f8e38b957734c44c48a88fe983d6}
+      \strng{fullhash}{293c902efaaf7a4b9d894ed59cf624d2}
+      \strng{fullhashraw}{293c902efaaf7a4b9d894ed59cf624d2}
+      \strng{bibnamehash}{f2a2f8e38b957734c44c48a88fe983d6}
+      \strng{authorbibnamehash}{f2a2f8e38b957734c44c48a88fe983d6}
+      \strng{authornamehash}{f2a2f8e38b957734c44c48a88fe983d6}
+      \strng{authorfullhash}{293c902efaaf7a4b9d894ed59cf624d2}
+      \strng{authorfullhashraw}{293c902efaaf7a4b9d894ed59cf624d2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 35th International Conference on Machine Learning (ICML)}
+      \field{title}{{DRACO}: {Byzantine}-Resilient Distributed Training via Redundant Gradients}
+      \field{year}{2018}
+    \endentry
+    \entry{yin2019byzantine}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=b0665dd4f7088b8cf770f35510046c02}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Dong},
+           giveni={D\bibinitperiod}}}%
+        {{hash=dea59012989c996b08a63f2ecbb689e2}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yudong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e43e237d2215477ff03f2ac2e0208822}{%
+           family={Ramchandran},
+           familyi={R\bibinitperiod},
+           given={Kannan},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b8fd5618f4e1de62f22a3b78fbc3d5c5}{%
+           family={Bartlett},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0dae4406a209f4dd502083846896e0c}
+      \strng{fullhash}{3efa65ca72450575341e6e2a714802d6}
+      \strng{fullhashraw}{3efa65ca72450575341e6e2a714802d6}
+      \strng{bibnamehash}{e0dae4406a209f4dd502083846896e0c}
+      \strng{authorbibnamehash}{e0dae4406a209f4dd502083846896e0c}
+      \strng{authornamehash}{e0dae4406a209f4dd502083846896e0c}
+      \strng{authorfullhash}{3efa65ca72450575341e6e2a714802d6}
+      \strng{authorfullhashraw}{3efa65ca72450575341e6e2a714802d6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 36th International Conference on Machine Learning (ICML)}
+      \field{title}{Byzantine-Robust Distributed Learning: Towards Optimal Statistical Rates}
+      \field{year}{2019}
+    \endentry
     \entry{fung2020mitigating}{misc}{}{}
       \name{author}{3}{}{%
         {{hash=0092daaacb4a462bde46c0bd7b5e7400}{%
@@ -337,8 +497,8 @@
       \strng{authornamehash}{21ef9cfdc03170b13aca731baa59bb71}
       \strng{authorfullhash}{21ef9cfdc03170b13aca731baa59bb71}
       \strng{authorfullhashraw}{21ef9cfdc03170b13aca731baa59bb71}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
@@ -348,6 +508,45 @@
       \verb{eprint}
       \verb 1808.04866
       \endverb
+    \endentry
+    \entry{fang2019local}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=9f18b210a484da2f729642270974f3ed}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Minghong},
+           giveni={M\bibinitperiod}}}%
+        {{hash=102316f80f018290ac377a747f91f87c}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Xiaoyu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=4e022238f2a1572c28e53943374d5647}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Jinyuan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=28dc0c4e9a2e0516d57e20459a0811e9}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Neil\bibnamedelima Zhenqiang},
+           giveni={N\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{6df4129b7067f86f83b2bec38cabd559}
+      \strng{fullhash}{b2ac3e40b6575bee8c40f984fb66b15b}
+      \strng{fullhashraw}{b2ac3e40b6575bee8c40f984fb66b15b}
+      \strng{bibnamehash}{6df4129b7067f86f83b2bec38cabd559}
+      \strng{authorbibnamehash}{6df4129b7067f86f83b2bec38cabd559}
+      \strng{authornamehash}{6df4129b7067f86f83b2bec38cabd559}
+      \strng{authorfullhash}{b2ac3e40b6575bee8c40f984fb66b15b}
+      \strng{authorfullhashraw}{b2ac3e40b6575bee8c40f984fb66b15b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1911.11815}
+      \field{title}{Local Model Poisoning Attacks to {Byzantine}-Robust Federated Learning}
+      \field{year}{2019}
     \endentry
   \enddatalist
 \endrefsection

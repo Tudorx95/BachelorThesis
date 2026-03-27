@@ -77,7 +77,17 @@ Aceste rezultate pot fi utile in semnalarea unui posibil risc la nivelul modelul
 
 \section{Structura lucrarii}
 
-% Aici completam la final 
+Lucrarea de față este structurată în cinci capitole, după cum urmează:
+
+\textbf{Capitolul 1}, \textit{Introducere}, prezintă contextul actual al evoluției modelelor de inteligență artificială, motivația dezvoltării unei platforme de simulare pentru atacuri în medii federate și definește obiectivele principale ale cercetării.
+
+\textbf{Capitolul 2}, \textit{Noțiuni Teoretice}, introduce conceptele fundamentale de Machine Learning și Deep Learning, detaliază principiile învățării automate federate (Federated Learning) și analizează tipurile de atacuri adversariale, cu accent pe tehnicile de Data Poisoning și particularitățile acestora.
+
+\textbf{Capitolul 3}, \textit{Proiectare, Implementare și Testare}, descrie arhitectura modulară a platformei propuse, fluxul complet al unei simulări de la inițiere până la generarea rezultatelor, cerințele software și tehnologiile utilizate (Docker, Python, FastAPI, React), evidențiind mecanismele de alocare a resurselor GPU și izolare a mediilor de execuție.
+
+\textbf{Capitolul 4}, \textit{Rezultate și Metrici Simulări}, validează viabilitatea platformei prin prezentarea unor studii de caz experimentale. Se analizează comparativ impactul atacurilor asupra modelelor globale și comportamentul diferiților algoritmi de agregare robustă (ex. FoolsGold, Norm Clipping) folosind metrici de evaluare consacrate.
+
+\textbf{Capitolul 5}, \textit{Concluzii și dezvoltare ulterioară}, sintetizează contribuțiile majore ale lucrării și conturează posibile direcții de extindere viitoare, subliniind importanța securizării infrastructurilor distribuite de inteligență artificială.
 
 
 % Structura pe capitole 
@@ -311,17 +321,19 @@ vectorilor de atac si concentrarea pe una dintre categorii, data poisoning. In c
 
     \begin{itemize}
 
-        \item \textbf{Atacuri fără țintă (untargeted attacks)}  
+        \item \textbf{Atacuri nedirectionate (untargeted attacks)}  
         Scopul este reducerea acurateții generale a modelului sau chiar destabilizarea completă a acestuia.  
         Un exemplu pentru clasificarea imaginilor este introducerea unui zgomot care degradează calitatea setului de date.  
         O altă metodă este modificarea etichetelor din setul de antrenare, de exemplu atribuirea etichetei \textit{leu} unor imagini care în mod normal ar trebui etichetate drept \textit{pisică}.
     
-        \item \textbf{Atacuri țintite (targeted attacks)}  
+        \item \textbf{Atacuri directionate (targeted attacks)}  
         Denumite și \textit{backdoor attacks}, deoarece urmăresc modificarea comportamentului modelului doar pentru un anumit subset de date, fără a afecta vizibil acuratețea globală.  
         Continuând exemplul anterior, pentru un anumit tip de imagini ce reprezintă pisici într-o anumită poziție, se poate introduce un artefact vizual menit să păcălească modelul și să clasifice pisica drept \textit{leu}. Astfel apare un backdoor activ doar pentru acele imagini precise.
     
     \end{itemize}
     
+    In contextul unor sisteme distribuite care necesita procesarea modelului de ML de o entitate centrala, atacurile adversariale presupun modificarea comportamentului acestui model intr-un mod indezirabil. Potrivit acestui scop, principala abordare de compromitere a acestui tip de atac este cea nedirectionata. 
+    Aceste atacuri adversariale mai sunt denumite conform cu literatura de specialitate si atacuri \textit{Byzantine} deoarece pot cauza generarea de valori aleatoare nodurilor sistemului distribuit. 
     Plecand de la aceasta categorisire, exista o multime de modalitati prin care un atacator poate submina capacitatea de predictie a modelului. Mediul federated learning introduce prin constructie o serie de intrebari la care trebuie gasit un raspuns pentru a determina prin ce moduri un adversar se poate infiltra si poate profita de anumite drepturi pentru a introduce incertitudine in antrenarea sau reglarea (fine-tuning) a modelelor.
 
     \subsection{Vectori de atac}
@@ -334,11 +346,11 @@ vectorilor de atac si concentrarea pe una dintre categorii, data poisoning. In c
 
     \begin{itemize}
         \item \textbf{Data Poisoning}
-        Cand adversarul incearca sa corupa setul de date antrenare cu scopul defectarii modelului inca de la inceput.
+        Cand adversarul incearca sa corupa setul de date de antrenare cu scopul defectarii modelului inca de la inceput. Modificarile pot fi subtile sau la o scara larga, urmand ca antrenarea sa produca rezultate redundante in viitor. 
         \item \textbf{Model Update Poisoning}
-        Cand adversarul se foloseste de o vulnerabilitate ce ii permite modificarea configuratiei parametrilor trimisi catre orchestrator.
+        Cand adversarul se foloseste de o vulnerabilitate ce ii permite modificarea configuratiei parametrilor trimisi catre orchestrator. Conform cu literatura de specialitate, \textit{Data Poisoning} este considerat a fi o subcategorie de otravire a ponderilor modelului gandindu-ne la impactul pe care antrenarea cu setul de date corupt il are asupra acestuia.
         \item \textbf{Evasion attack}
-        Cand adversarul are acces la datele de testare si le poate modifica in momentul inferentei.
+        Cand adversarul are acces la datele de testare si le poate modifica in momentul inferentei. Aceasta este o varianta facila din punctul de vedere al atacatorilor si greu de depistat de tinta, fiind necesare controale speciale asupra integritatii setului de testare. 
     \end{itemize}
 
     In functie de gradul de acces la sistemele gazda, modelul poate fi inspectat in diferite moduri:
@@ -352,8 +364,16 @@ vectorilor de atac si concentrarea pe una dintre categorii, data poisoning. In c
         Adversarul are abilitatea de a inspecta direct parametrii modelului. Acest scenariu se bazeaza pe un grad de acces superior al adversarului asupra sistemului.
     \end{itemize}
 
+    In functie de rata de participare a adversarului la atac, putem avea urmatoarele scenarii:
+
+    \begin{itemize}
+        \item In mediul de invatare federata \textit{Cross-device}, atacatorii participa la degradarea modelului doar intr-o singura runda de antrenare. In raport cu procesul de reglare al modelului, un scenariu potrivit ar fi atunci cand setul de date original se mentine actualizat periodic, actorul putand actiona o singura data intr-un interval bine stabilit in modificarea acestuia. Impactul in acest sens este aproape nesemnificativ, deoarece fiecare nod client detine o portiune din setul global de date. 
+        \item In mediul de invatare federata \textit{Cross-silo}, atacatorii participa la degradarea modelului pentru un numar de runde de antrenare semnificativ apropiat numarului total de runde. Acest aspect introduce, in functie de gravitatea atacului, o degradare semnificativa si vizibila in timp, cu cat numarul de runde este mai mare. 
+    \end{itemize}
+
     Pe baza acestor scenarii, atacatorul poate aplica o serie de tehnici pentru modificarea starii modelului. In contextul lucrarii de fata, se va discuta scenariul stale box, adversarul avand
     posibilitatea doar de a introduce un atac Data Poisoning in rundele de antrenare, datele corupte fiind introduse o singura data in procesul de reglare a modelului (fine-tuning).
+    
 
     \subsection{Atacul Data poisoning}
 
@@ -373,12 +393,6 @@ In contextul solutiei propuse, se va discuta despre impactul atacului asupra unu
         \begin{tabular}{ | p{0.20\linewidth} | p{0.75\linewidth} | }
             \hline
             \textbf{Tip atac} & \textbf{Descriere} \\
-            \hline
-
-            \textbf{Gaussian noise}
-            &
-            Introducerea unui zgomot aleator în imagini sau în vectorii de caracteristici, cu scopul degradării calității datelor și scăderii performanței modelului.
-            \\
             \hline
 
             \textbf{Label flip}
@@ -412,7 +426,7 @@ Pentru acest tip de atac, exista tehnici de verificare si filtrare ce pot determ
 
 Efectele unui data poisoning pot persista chiar și după eliminarea datelor corupte, deoarece modelul învață un tipar greșit care nu dispare imediat fără o reantrenare completă.
 Acest lucru este relevant mai ales pentru atacurile backdoor, care rămân inactive până la apariția unui trigger vizual, fără a afecta acuratețea generală.
-Din acest considerent, atacurile tintite (targeted attacks) sunt deosebit de periculoase in contextul unui mediu de invatare federata pentru ca datele corupte se ascund in
+Din acest considerent, atacurile directionate (targeted attacks) sunt deosebit de periculoase in contextul unui mediu de invatare federata pentru ca datele corupte se ascund in
 interiorul configuratiilor particulare ale clientilor. Aceste configuratii sunt transmise mai departe la agregator care aplicand functia sa de agregare, amplifica negativ starea modelului.
 
 Având în vedere aceste particularități, devine esențială analizarea metodelor de apărare și a mecanismelor prin care pot fi detectate contribuțiile malițioase.
@@ -425,6 +439,66 @@ Mediul federated learning introduce un risc suplimentar: un adversar care contro
 Un alt efect important al acestui tip de atac este degradarea treptată a performanței modelului.
 În scenariile untargeted, scăderea acurateții globale poate trece neobservată în primele runde de antrenare, dar devine evidentă odată ce modelul converge către o reprezentare eronată a datelor.
 În scenariile targeted, atacul poate compromite decizii critice doar într-un subset de cazuri, ceea ce face detectarea mult mai dificilă și impactul mult mai nociv, mai ales în aplicații sensibile cum ar fi securitatea, domeniul medical sau sistemele autonome.
+
+    \subsection{Mecanisme de protectie rezistente la atacuri \textit{Byzantine}}
+
+    În mediul de învățare federată există o multitudine de abordări pentru contracararea atacurilor adversariale, dezvoltate atât din perspectiva securității sistemelor distribuite, cât și din perspectiva robustetii algoritmilor de Machine Learning. Termenul \textit{Byzantine} provine din problema clasică a generalilor bizantini \cite{lamport1982byzantine}, un model teoretic al sistemelor distribuite în care unele noduri pot produce ieșiri arbitrare, fie din cauza unor defecte, fie din cauza unor acțiuni malițioase. În contextul învățării federate, un client bizantin poate trimite actualizări arbitrare către serverul de agregare, cu scopul de a corupe modelul global \cite{kairouz2021federated}.
+
+    Conform lucrării \cite{kairouz2021federated}, atacurile bizantine reprezintă cazul cel mai defavorabil al atacurilor fără țintă (\textit{untargeted attacks}) asupra unui set de noduri de calcul. Potențialul catastrofal al acestor atacuri a stimulat o linie de cercetare dedicată dezvoltării mecanismelor de agregare rezistente la defecțiuni bizantine \cite{blanchard2017byzantine, chen2018draco, yin2019byzantine}.
+
+    \subsubsection{Agregare robustă bazată pe estimări statistice}
+
+    Una dintre cele mai populare categorii de mecanisme de apărare împotriva atacurilor de tip model update poisoning, în special a celor bizantine, constă în înlocuirea funcției de mediere standard (\textit{FedAvg}) de pe server cu o estimare robustă a mediei \cite{kairouz2021federated}. Principalele abordări includ:
+
+    \begin{itemize}
+        \item \textbf{Krum} \cite{blanchard2017byzantine}: selectează actualizarea clientului care prezintă distanța totală minimă față de celelalte actualizări. Prin eliminarea contribuțiilor care se abat semnificativ de la consens, Krum izolează eficient actualizările potențial malițioase. Algoritmul calculează pentru fiecare actualizare suma distanțelor euclidiene față de cele mai apropiate $n - f - 2$ actualizări (unde $n$ este numărul total de clienți și $f$ numărul maxim de clienți bizantini) și selectează actualizarea cu suma minimă.
+
+        \item \textbf{Mediana coordonatelor (\textit{Coordinate-wise Median})} \cite{yin2019byzantine}: înlocuiește media aritmetică cu mediana, calculată independent pentru fiecare parametru al modelului. Această abordare este rezistentă la aproximativ $20\%$ clienți malițioși, deoarece mediana nu este influențată de valorile extreme.
+
+        \item \textbf{Trimmed Mean} \cite{yin2019byzantine}: elimină un procent predefinit din valorile extreme (cele mai mari și cele mai mici) ale fiecărui parametru, apoi calculează media restului. Această metodă oferă un compromis între robustete și fidelitatea agregării, fiind eficientă împotriva actualizărilor cu magnitudini extreme.
+
+        \item \textbf{FoolsGold} \cite{fung2020mitigating}: calculează similaritatea cosinus între actualizările clienților de-a lungul rundelor de antrenare și penalizează contribuțiile cu similaritate ridicată. Această abordare este concepută special pentru a neutraliza atacurile coordonate de tip \textit{sybil}, detectând clientii care trimit actualizări suspect de similare intre ei.
+
+        \item \textbf{Norm Clipping}: limitează magnitudinea vectorului de actualizare trimis de fiecare client la un prag maxim prestabilit. Această tehnică previne dominarea procesului de agregare de actualizări cu valori extreme, fiind totodată compatibilă cu mecanismele de confidențialitate diferențială \cite{kairouz2021federated}.
+    \end{itemize}
+
+    Studii anterioare au arătat că acești agregatori robuști sunt demonstrabil eficienți pentru învățarea distribuită tolerantă la defecțiuni bizantine \cite{blanchard2017byzantine, yin2019byzantine}, sub anumite ipoteze, chiar și în medii federate \cite{kairouz2021federated}. Cu toate acestea, Fang et al. \cite{fang2019local} au demonstrat recent că mai multe mecanisme de apărare rezistente la atacuri bizantine au oferit o protecție limitată în contextul real al învățării federate. Garanțiile teoretice ale acestor mecanisme se aplică numai sub ipoteze asupra problemei de învățare care de multe ori nu sunt respectate în practică.
+
+    \subsubsection{Provocări specifice mediului federat}
+
+    Aplicarea directă a mecanismelor de apărare bazate pe agregare robustă în contextul învățării federate introduce o serie de provocări specifice \cite{kairouz2021federated}:
+
+    \begin{itemize}
+        \item \textbf{Datele non-IID (independente si uniform distribuite)}: în scenariile reale de FL, datele disponibile pe fiecare dispozitiv client nu sunt distribuite independent și identic (non-IID), ceea ce înseamnă că actualizările legitime pot prezenta o variabilitate semnificativă. Acest aspect perturbă ipotezele comune din lucrările privind agregarea rezistentă la atacuri bizantine, unde se presupune de obicei o distribuție IID a datelor.
+
+        \item \textbf{Compatibilitate cu agregarea securizată (\textit{Secure Aggregation})}: protocoalele \textit{SecAgg} asigură confidențialitatea contribuțiilor individuale, dar limitează tipul de operații pe care le poate efectua serverul. Multe metode de agregare robustă existente utilizează operații neliniare pe server, iar compatibilitatea lor cu agregarea securizată nu este încă pe deplin stabilită \cite{kairouz2021federated}. Lucrări recente au identificat modalități de a aproxima funcții de agregare precum mediana geometrică sub \textit{SecAgg}, dar soluțiile generale rămân o provocare deschisă.
+
+        \item \textbf{Redundanța și redistribuirea datelor}: o altă linie de apărare împotriva atacurilor bizantine utilizează redundanța seturilor de date și redistribuirea lor pentru a atenua efectele actualizărilor malițioase \cite{chen2018draco}. Deși aceste mecanisme oferă garanții teoretice riguroase, ele presupun de obicei accesul direct al serverului la date sau posibilitatea de a redistribui global aceste date, condiții care încalcă principiile fundamentale ale FL.
+    \end{itemize}
+
+    \subsubsection{Confidențialitatea diferențială ca mecanism de apărare}
+
+    O abordare complementară agregării robuste este utilizarea confidentialității diferențiale (\textit{differential privacy} -- DP) ca mecanism de apărare \cite{kairouz2021federated}. Aceasta constă în trei pași: (1) aplicarea unei constrângeri asupra normei $\ell_2$ a actualizărilor clienților (\textit{clipping}), (2) agregarea actualizărilor tăiate, și (3) adăugarea de zgomot gaussian asupra agregatului. Prin limitarea contribuției oricărui client individual la modelul global, DP previne supraadaptarea la actualizările unui client compromis.
+
+    Totuși, DP prezintă limitări importante: zgomotul injectat poate degrada performanța modelului antrenat, iar protecția oferită se degradează exponențial odată cu creșterea numărului de exemple compromise \cite{kairouz2021federated}. Mai mult, Wang et al. au demonstrat că atacurile de tip \textit{edge-case backdoor}, generate din mostre cu probabilitate scăzută în distribuția subiacentă, pot ocoli apărările bazate pe DP.
+
+    \subsubsection{Apărarea împotriva atacurilor direcționate}
+
+    Atacurile direcționate (\textit{targeted attacks}) prezintă provocări distincte față de cele ne-direcționate. Conform \cite{kairouz2021federated}, chiar și un singur atac efectuat o singură dată poate fi suficient pentru a introduce un \textit{backdoor} într-un model. Bhagoji et al. au arătat că dacă $10\%$ din dispozitivele participante sunt compromise, un \textit{backdoor} poate fi introdus prin otravirea actualizărilor trimise serverului, chiar și în prezența detectoarelor de anomalii.
+
+    Un aspect deosebit de dificil este faptul că actualizările malițioase ale modelului arată și se comportă în mare parte similar cu modelele antrenate fără atacuri direcționate, evidențiind dificultatea detectării prezenței unui \textit{backdoor}. Cum scopul adversarului este de a afecta rezultatul clasificării doar pentru un subset redus de date, menținând acuratețea globală, mecanismele de apărare concepute pentru atacuri ne-direcționate deseori nu reușesc să contracareze atacurile direcționate \cite{kairouz2021federated}.
+
+    Apărările existente împotriva acestor atacuri necesită fie o examinare atentă a datelor de antrenare, fie acces la un set de validare cu distribuție similară, fie control complet al procesului de antrenare pe server --- condiții care nu sunt îndeplinite în mediul FL. Direcții promițătoare includ utilizarea dovezilor cu zero-knowledge (\textit{zero-knowledge proofs}) pentru a garanta că utilizatorii transmit actualizări cu proprietăți prestabilite, sau soluții bazate pe atestare hardware.
+
+    \subsubsection{Atenuarea atacurilor prin sanitizarea datelor}
+
+    O categorie de apărări concepute specific pentru atacurile de otravire a datelor se bazează pe metode de sanitizare (\textit{data sanitization}), care urmăresc eliminarea datelor contaminate sau anormale \cite{kairouz2021federated}. Lucrări recente au dezvoltat metode îmbunătățite bazate pe statistici robuste, care oferă avantajul de a fi demonstrabil rezistente la un număr redus de valori aberante.
+
+    O clasă conexă de apărări utilizate pentru atacurile \textit{backdoor} sunt cele bazate pe eliminarea selectivă (\textit{pruning}), care încearcă să elimine unitățile de activare inactive pe datele curate. Aceste metode sunt motivate de studii care au arătat că datele contaminate cu scopul introducerii unui \textit{backdoor} activează frecvent anumiți neuroni specifici, denumiți ``neuroni backdoor.''
+
+    Nici sanitizarea datelor, nici eliminarea selectivă nu funcționează direct în mediul FL, deoarece ambele necesită acces la datele clienților sau la date reprezentative similare. Mai mult, studii recente au arătat că multe apărări euristice bazate pe sanitizare rămân vulnerabile la atacuri adaptive de otravire, sugerând că abordările directe de sanitizare pot fi insuficiente \cite{kairouz2021federated}.
+
+    Detectarea prezenței datelor otravite, fără identificarea obligatorie a clientului responsabil, rămâne o provocare în FL, amplificată în cazul atacurilor \textit{backdoor}, unde metrici precum acuratețea globală de antrenare pot să nu fie suficiente pentru a semnala prezența atacului.
 
 
 
