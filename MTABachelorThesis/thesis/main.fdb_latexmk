@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1774634846.36502 "main.bcf" "main.bbl" "main" 1774636063.22268 0
-  "bibliography.bib" 1774634844.69268 4678 d435d90100f1135ef42ca3f39efbd4d8 ""
-  "main.bcf" 1774636062.89901 110636 7ff8c0341c3dadb777fe58faaaa65f7c "pdflatex"
+["biber main"] 1774792882.19945 "main.bcf" "main.bbl" "main" 1774792900.5298 0
+  "bibliography.bib" 1774786347.42809 5339 cad0fdd099e567f15d746154fcb8bc89 ""
+  "main.bcf" 1774792900.31538 110777 29fdc3b4273e778a23294d6a8f2ee38e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1774636056.69019 "main.tex" "main.pdf" "main" 1774636063.22316 0
+["pdflatex"] 1774792894.77178 "main.tex" "main.pdf" "main" 1774792900.53095 0
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -32,6 +32,7 @@
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm" 1136768653 1520 ad7b3c1a480a03b3e41b5fbb13d938f2 ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrb1200.tfm" 1136768653 3584 75fb0087214bf5ec50bae16035183aca ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
+  "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm" 1136768653 1536 487c9b46984a816c7ed238d0674595c7 ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrb1200.tfm" 1136768653 1536 7031cfd404df405e498fef37cb7982a4 ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -45,6 +46,7 @@
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfrb1200.pfb" 1215737283 138529 5f715c462039a171f8ca1ca929657451 ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1215737283 136101 f533469f523533d38317ab5729d00c8a ""
+  "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb" 1215737283 169201 9ebf99020dde51a5086e186761a34e8f ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb" 1215737283 167085 68de377d2744a68a88fa40a1f610615a ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb" 1136849748 33709 b09d2e140b7e807d3a97058263ab6693 ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1136849748 44729 811d6c62865936705a31c797a1d5dada ""
@@ -185,9 +187,9 @@
   "components/chapters/../images/Rezultate_Experimentale_Case2.png" 1773765448.65901 48740 3065bc0c173d8ef7aa45f5c70a942f3d ""
   "components/chapters/all.tex" 1766385861.11719 138 dd31ea95e128e98aa45b832ff049342d ""
   "components/chapters/bibliography.tex" 1773761870.47845 558 ea8683009f59813d4ad5ccf32d78fba3 ""
-  "components/chapters/components.tex" 1774636055.96773 120787 95d0c3ae05674f73402410057f491bea ""
+  "components/chapters/components.tex" 1774792863.11546 171895 d4aee59ad78c3df7b44fbd29d444c9d6 ""
   "components/frontmatter/../images/ATM.png" 1766385861.12132 768031 cd39ff6ac72ff42d8154bf2c34e8d2de ""
-  "components/frontmatter/abbreviations.tex" 1766385861.11804 196 a5d7320f30290910800431808119c835 ""
+  "components/frontmatter/abbreviations.tex" 1774789520.12709 1579 2e0aeb137b0e1766901bd63359b64259 ""
   "components/frontmatter/abstract.tex" 1766385861.11815 1247 6e76d2e4621f831d018490b06f67865e ""
   "components/frontmatter/acknowledgment.tex" 1766385861.11822 204 b9672846f580835956f6226ba8f93d93 ""
   "components/frontmatter/adviser_resume.tex" 1766385861.1183 525 2deb6b3ce86bd241be30aa19bced5685 ""
@@ -196,14 +198,14 @@
   "components/frontmatter/specification.tex" 1766385861.11851 708 7ef5135644649780cc28a99459abe71a ""
   "components/frontmatter/title.tex" 1766385861.1186 1319 73715f66a9431d3637cfdcf974a4b7c6 ""
   "configuration.tex" 1766387165.99109 964 24659ba7c37b1be26614f6e654d4fd52 ""
-  "main.aux" 1774636062.88968 20832 b89c22a0512b36b107ac035ddab70674 "pdflatex"
-  "main.bbl" 1774634847.09783 23532 7a1be54a8172034bc0675f65174590fe "biber main"
-  "main.lof" 1774636062.90067 1769 28348fd77dd5cfe1e35e49db7aba04a8 "pdflatex"
-  "main.out" 1774636062.89482 9947 3e4fcf7579e0a5873516a5647c48a564 "pdflatex"
-  "main.run.xml" 1774636062.90043 2308 a8db41172cc8064155fedbcb3b529184 "pdflatex"
+  "main.aux" 1774792900.30757 25042 6fb901fc8ef01f3706681571f51610ce "pdflatex"
+  "main.bbl" 1774792882.99612 26944 fa4e9dcc7c9792db7bbdc3a6bf64eb7a "biber main"
+  "main.lof" 1774792900.31638 1676 5c2ce2887217b4e894b1dab937aded08 "pdflatex"
+  "main.out" 1774792900.31195 14714 4ea04c3746d9f726612fa51f392b0262 "pdflatex"
+  "main.run.xml" 1774792900.31625 2308 a8db41172cc8064155fedbcb3b529184 "pdflatex"
   "main.sty" 1773833911.8086 3860 dce56a547feae8218613b005657257e5 ""
   "main.tex" 1773833909.8043 367 c0affdd073b1d6dba11c61b912326b05 ""
-  "main.toc" 1774636062.90058 7880 f749da6e357b5086f5abbd245b7d4a11 "pdflatex"
+  "main.toc" 1774792900.31634 10684 145b3c003fab7f126c8852da3c5727c9 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

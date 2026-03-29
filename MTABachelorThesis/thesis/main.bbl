@@ -37,8 +37,8 @@
       \strng{authornamehash}{7e88a41472b55e5d879f144de3b8a8bc}
       \strng{authorfullhash}{7e88a41472b55e5d879f144de3b8a8bc}
       \strng{authorfullhashraw}{7e88a41472b55e5d879f144de3b8a8bc}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.dnsc.ro/vezi/document/buletin-de-indicatori-statistici-si-tendinte-de-securitate-cibernetica-h1-2025}}
@@ -60,8 +60,8 @@
       \strng{authornamehash}{6d41230561cf17e18784a89dfacbd312}
       \strng{authorfullhash}{6d41230561cf17e18784a89dfacbd312}
       \strng{authorfullhashraw}{6d41230561cf17e18784a89dfacbd312}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://artificialintelligenceact.eu/wp-content/uploads/2024/11/Future-of-Life-InstituteAI-Act-overview-30-May-2024.pdf}}
@@ -85,8 +85,8 @@
       \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://ibmfl-api-docs.res.ibm.com/index.html}}
@@ -109,8 +109,8 @@
       \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/IBM/federated-learning-lib/tree/main}}
@@ -133,8 +133,8 @@
       \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authorfullhashraw}{cbf44511d041dc6d1dd73cc0c033122c}
       \field{extraname}{3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.ibm.com/think/topics/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks}}
@@ -253,8 +253,8 @@
       \strng{authornamehash}{b5d6d122fda9b4124d06103e4b2974cd}
       \strng{authorfullhash}{9a9cfa10018c06691b0b0693c690420b}
       \strng{authorfullhashraw}{9a9cfa10018c06691b0b0693c690420b}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Foundations and Trends® in Machine Learning}
@@ -303,8 +303,8 @@
       \strng{authornamehash}{d14f201781b8eb7b066df615ba7a94d6}
       \strng{authorfullhash}{d14f201781b8eb7b066df615ba7a94d6}
       \strng{authorfullhashraw}{d14f201781b8eb7b066df615ba7a94d6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 2nd SysML Conference}
@@ -497,8 +497,8 @@
       \strng{authornamehash}{21ef9cfdc03170b13aca731baa59bb71}
       \strng{authorfullhash}{21ef9cfdc03170b13aca731baa59bb71}
       \strng{authorfullhashraw}{21ef9cfdc03170b13aca731baa59bb71}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
@@ -547,6 +547,86 @@
       \field{journaltitle}{arXiv preprint arXiv:1911.11815}
       \field{title}{Local Model Poisoning Attacks to {Byzantine}-Robust Federated Learning}
       \field{year}{2019}
+    \endentry
+    \entry{sun2019backdoor}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=f348cbc2d6a7883b528c050ace4d5684}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Ziteng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=761af8788087acbeff1e33df3d1ff52a}{%
+           family={Kairouz},
+           familyi={K\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f2bf3c5d64f6e56fe64e06420807322d}{%
+           family={Suresh},
+           familyi={S\bibinitperiod},
+           given={Ananda\bibnamedelima Theertha},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=707fa44f08f047ab822f84fe38c69dfb}{%
+           family={McMahan},
+           familyi={M\bibinitperiod},
+           given={H.\bibnamedelimi Brendan},
+           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{20cd8bdbff329a4877c86d8f64d91ff9}
+      \strng{fullhash}{d1f6df1ec9d5a14d91e3a05f069fddb1}
+      \strng{fullhashraw}{d1f6df1ec9d5a14d91e3a05f069fddb1}
+      \strng{bibnamehash}{20cd8bdbff329a4877c86d8f64d91ff9}
+      \strng{authorbibnamehash}{20cd8bdbff329a4877c86d8f64d91ff9}
+      \strng{authornamehash}{20cd8bdbff329a4877c86d8f64d91ff9}
+      \strng{authorfullhash}{d1f6df1ec9d5a14d91e3a05f069fddb1}
+      \strng{authorfullhashraw}{d1f6df1ec9d5a14d91e3a05f069fddb1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1911.07963}
+      \field{title}{Can You Really Backdoor Federated Learning?}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1911.07963
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1911.07963
+      \endverb
+    \endentry
+    \entry{lepadatu2026dparena}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=518e41bf119acde69c49ff638e08c6d1}{%
+           family={Lepădatu},
+           familyi={L\bibinitperiod},
+           given={Tudor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9dc6cb3ab0b7137aefa766830905d5c4}{%
+           family={Brînzea},
+           familyi={B\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4f683b00f112694263422dd007daf599}{%
+           family={Aciobăniţei},
+           familyi={A\bibinitperiod},
+           given={Iulian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{acfb405be162a4e62e7384bad9f0e868}
+      \strng{fullhash}{acfb405be162a4e62e7384bad9f0e868}
+      \strng{fullhashraw}{acfb405be162a4e62e7384bad9f0e868}
+      \strng{bibnamehash}{acfb405be162a4e62e7384bad9f0e868}
+      \strng{authorbibnamehash}{acfb405be162a4e62e7384bad9f0e868}
+      \strng{authornamehash}{acfb405be162a4e62e7384bad9f0e868}
+      \strng{authorfullhash}{acfb405be162a4e62e7384bad9f0e868}
+      \strng{authorfullhashraw}{acfb405be162a4e62e7384bad9f0e868}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{note}{Software tool article, compiled March 15, 2026}
+      \field{title}{DPArena: A Platform for Reproducible Experiments on Data Poisoning in Federated Learning}
+      \field{year}{2026}
     \endentry
   \enddatalist
 \endrefsection

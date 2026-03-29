@@ -7,36 +7,36 @@
 
 \section{Context}
 
-Odata cu dezvoltarea sistemelor de calcul moderne si a componentelor Hardware, s-au putut realiza produse software complexe cu capacitati de stocare
-net superioare. Revolutia tehnologica a permis nu doar realizarea unor sarcini simple, precum calcule matematice, sau automatizarea unor dispozitive ( de exemplu aprinderea automata a unui bec printr-un microcontroler),
-ci si posibilitatea gestionarii mai eficiente a informatiilor digitale (de la date bancare la fisiere media).
+Odată cu dezvoltarea sistemelor de calcul moderne și a componentelor hardware, s-au putut realiza produse software complexe cu capacități de stocare
+net superioare. Revoluția tehnologică a permis nu doar realizarea unor sarcini simple, precum calcule matematice, sau automatizarea unor dispozitive (de exemplu aprinderea automată a unui bec printr-un microcontroler),
+ci și posibilitatea gestionării mai eficiente a informațiilor digitale (de la date bancare la fișiere media).
 
-Aceasta a devenit treptat principala sursa legitima de inregistrare a oricarui tip de date (text, imagini, video, audio).
-Pentru a accesa si actualiza informatia digitala, s-au dezvoltat diferite versiuni de baze de date centralizate si distribuite.
+Aceasta a devenit treptat principala sursă legitimă de înregistrare a oricărui tip de date (text, imagini, video, audio).
+Pentru a accesa și actualiza informația digitală, s-au dezvoltat diferite versiuni de baze de date centralizate și distribuite.
 
-Bazele de date centralizate sunt aplicatii software specializate ce folosesc resursele sistemului (a statiei) pentru a raspunde cat mai rapid interogarilor.
-Statiile trebuie sa detina multa putere de stocare si de procesare in comparatie cu un sistem de calcul normal destinat utilizatorilor casnici.
-In alta ordine de idei, s-au dezvoltat si baze de date distribuite, menite sa reduca din capacitatile tehnice ale serverului si sa stocheze informatia sub
-forma descentralizata. Cautarea resursei in acest context ar presupune interogarea recursiva a fiecarei entitati pana la gasirea sa. Prin acest mod, nu doar
-ca statiile pot avea si capabilitati tehnice mai reduse, dar s  i pot pastra copii de rezerva (backup) locale pentru fiecare segment de informatie in parte.
+Bazele de date centralizate sunt aplicații software specializate ce folosesc resursele sistemului (a stației) pentru a răspunde cât mai rapid interogărilor.
+Stațiile trebuie să dețină multă putere de stocare și de procesare în comparație cu un sistem de calcul normal destinat utilizatorilor casnici.
+În altă ordine de idei, s-au dezvoltat și baze de date distribuite, menite să reducă din capacitățile tehnice ale serverului și să stocheze informația sub
+forma descentralizată. Căutarea resursei în acest context ar presupune interogarea recursivă a fiecărei entități până la găsirea sa. Prin acest mod, nu doar
+că stațiile pot avea și capabilități tehnice mai reduse, dar și pot păstra copii de rezervă (backup) locale pentru fiecare segment de informație în parte.
 
 Această evoluție naturală spre descentralizare a deschis drumul unor concepte moderne precum învățarea automată federată (federated learning), unde datele nu mai sunt transferate către un server central. În schimb, modelele sunt antrenate local, iar parametrii sunt ulterior agregați global. Astfel, se menține confidențialitatea datelor, fără a compromite performanța modelului.
 
-Evolutia tehnologica continua a dat nastere la o serie de atacuri cibernetice menite sa destabilizeze securitatea aplicatiilor si totodata sustragerea a
-cat mai multe date sau identitati private in contradictie cu normele legale.
-Cele mai populare atacuri raportate la scara globala pentru anul curent 2025 sunt ransomware (conform \cite{dnsc_buletin_2025}, in SUA s-au raportat cresteri
-de 149\%), furtul de identitate prin exfiltrarea de credentiale, si phishing.
+Evoluția tehnologică continuă a dat naștere la o serie de atacuri cibernetice menite să destabilizeze securitatea aplicațiilor și totodată sustragerea a
+cât mai multe date sau identități private în contradicție cu normele legale.
+Cele mai populare atacuri raportate la scară globală pentru anul curent 2025 sunt ransomware (conform \cite{dnsc_buletin_2025}, în SUA s-au raportat creșteri
+de 149\%), furtul de identitate prin exfiltrarea de credențiale, și phishing.
 Dezvoltarea modelelor de inteligență artificială a amplificat aceste riscuri, oferind atacatorilor instrumente automatizate pentru generarea și adaptarea atacurilor.
 
 Pentru a limita utilizarea abuzivă a tehnologiilor bazate pe AI, Uniunea Europeană a adoptat în 2024 un set de reglementări stricte privind integrarea acestor module în aplicațiile software, prin AI Act \cite{eu_ai_act_overview_2024}.
 
-Progresul din domeniul machine learning si a Large Language Models a fost posibil ca urmare a unui volum masiv de date disponibile si a nevoii tot mai mari de analiza.
-Acest lucru a determinat aparitia unei noi categorii de specialisti, data scientists, dedicati colectarii si prelucrarii minutioase a datelor pentru antrenarea modelelor.
+Progresul din domeniul machine learning și a Large Language Models a fost posibil ca urmare a unui volum masiv de date disponibile și a nevoii tot mai mari de analiză.
+Acest lucru a determinat apariția unei noi categorii de specialiști, data scientists, dedicați colectării și prelucrării minuțioase a datelor pentru antrenarea modelelor.
 
 Totuși, pe măsură ce investițiile în tehnologii AI au crescut, au apărut și actori rău intenționați care încearcă să exploateze vulnerabilitățile din procesul de antrenare.
 Întrucât modelele moderne depind de calitatea datelor folosite, acestea au devenit o țintă principală a atacurilor.
-Atacatorii se regasesc si ei intr-o pozitie constanta de adaptare la noile formalitati de securitate si incearca sa contracareze fiecare element nou.
-Astfel, avand in vedere complexitatea dezvoltarii unui modul de inteligenta artificiala specializat pe diferite domenii, tinta s-a redirectionat spre volumul de date pe care acestea le folosesc si care pot determina starea finala a aplicatiei.
+Atacatorii se regăsesc și ei într-o poziție constantă de adaptare la noile formalități de securitate și încearcă să contracareze fiecare element nou.
+Astfel, având în vedere complexitatea dezvoltării unui modul de inteligență artificială specializat pe diferite domenii, ținta s-a redirecționat spre volumul de date pe care acestea le folosesc și care pot determina starea finală a aplicației.
 
 În contextul învățării automate distribuite, literatura de specialitate identifică trei categorii majore de atacuri:
 
@@ -46,36 +46,45 @@ Astfel, avand in vedere complexitatea dezvoltarii unui modul de inteligenta arti
 
 - Atacuri asupra canalului de comunicare, care vizează interceptarea sau modificarea mesajelor dintre entitățile participante.
 
-Lucrarea de față se concentrează pe prima categorie, data poisoning, în cadrul unei infrastructuri de invatare federate.
+Lucrarea de față se concentrează pe prima categorie, data poisoning, în cadrul unei infrastructuri de învățare federată.
 
-\section{Motivatia lucrarii}
+\section{Motivația lucrării}
 
-Avand in vedere aspectele legate de posibilitatea unei interventii asupra setului de date de antrenare, atac denumit otravire a datelor (data poisoning),
-munca cercetatorilor s-a ingreunat. Preocuparea nu mai este primordial asupra analizei setului de date de antrenare, cat despre mentinerea integritatii si a confidentialitatii lor.
+Având în vedere aspectele legate de posibilitatea unei intervenții asupra setului de date de antrenare, atac denumit otrăvire a datelor (data poisoning),
+munca cercetătorilor s-a îngreunat. Preocuparea nu mai este primordial asupra analizei setului de date de antrenare, cât despre menținerea integrității și a confidențialității lor.
 Pentru a răspunde acestor nevoi, colaborarea dintre cercetători s-a orientat către modele distribuite de lucru, iar învățarea federată (federated learning) a devenit una dintre principalele direcții.
 Aceasta permite colaborarea între participanți fără a partaja direct seturile lor de date, menținând o barieră naturală împotriva accesului neautorizat. Totuși, deși infrastructura este diferită față de abordările centralizate, vulnerabilitățile rămân, iar atacurile asupra datelor utilizate local pot afecta modelul global.
 
-In urma unei analize proprii, am putut observa diferite solutii/frameworks de simulare a procesului de invatare automata federata, dar fara o integrare cu mecanisme moderne de testare pentru atacuri
-precum otravirea datelor (data poisoning) amintite anterior \cite{ibmfl_api}. Unele dintre aceste framework-uri sunt poate dificil de gestionat si configurat \cite{ibmfl_github}, si nu permit extinderea usoara prin integrare altor componente.
-In acelasi timp, gandindu-ne la multitudinea de atacuri malware si la platformele de detectie a lor, devine clar ca in domeniul inteligentei artificiale lipseste o platforma centralizata, flexibila, dedicata testarii si evaluarii cu diferite tipuri de atacuri asupra modelelor distribuite.
+În urma unei analize proprii, am putut observa diferite soluții/frameworks de simulare a procesului de învățare automată federată, dar fără o integrare cu mecanisme moderne de testare pentru atacuri
+precum otrăvirea datelor (data poisoning) amintite anterior \cite{ibmfl_api}. Unele dintre aceste framework-uri sunt poate dificil de gestionat și configurat \cite{ibmfl_github}, și nu permit extinderea ușoară prin integrare altor componente.
+În același timp, gândindu-ne la multitudinea de atacuri malware și la platformele de detecție a lor, devine clar că în domeniul inteligenței artificiale lipsește o platformă centralizată, flexibilă, dedicată testării și evaluării cu diferite tipuri de atacuri asupra modelelor distribuite.
 
-Aceste limitări justifica realizarea prezentei lucrari, care își propune dezvoltarea unei platforme de simulare capabile sa testeze atacuri de tip data poisoning într-o infrastructura de învățare federată.
+Aceste limitări justifică realizarea prezentei lucrări, care își propune dezvoltarea unei platforme de simulare capabile să testeze atacuri de tip data poisoning într-o infrastructură de învățare federată.
 
-\section{Obiectivele lucrarii}
+\section{Obiectivele lucrării}
 
-Plecand de la neajunsurile prezentate, ne propunem in aceasta lucrare sa venim in sprijinul comunitatii de cercetare stiintifica in domeniul securizarii solutiilor cu AI cu o platforma de simulare cu sursa deschisa ("open source"), a acestei clase de atacuri pe mai multe directii.
-Astfel, oferim cercetatorilor posibilitatea analizei algoritmului de antrenare propriu dezvoltat, plecand de la o retea neuronala de baza si un set de date uzual (imagini), si testarea sa prin antrenare in diferite conditii.
-Platforma in sine respecta toate normele unei aplicatii software de productie, in care fiecare actiune are propria sa logica de implementare.
-Serviciile sunt segregate suficient de mult incat sa permita o dezvoltare ulterioara prin integrarea lor cu alte sisteme.
+Plecând de la neajunsurile prezentate, ne propunem în această lucrare să venim în sprijinul comunității de cercetare științifică în domeniul securizării soluțiilor cu AI cu o platformă de simulare cu sursă deschisă ("open source"), a acestei clase de atacuri pe mai multe direcții.
+Astfel, oferim cercetătorilor posibilitatea analizei algoritmului de antrenare propriu dezvoltat, plecând de la o rețea neuronală de bază și un set de date uzual (imagini), și testarea sa prin antrenare în diferite condiții.
+Platforma în sine respectă toate normele unei aplicații software de producție, în care fiecare acțiune are propria sa logică de implementare.
+Serviciile sunt segregate suficient de mult încât să permită o dezvoltare ulterioară prin integrarea lor cu alte sisteme.
 
-Rezultatele pot fi utile in contextul securizarii procesului de antrenare al algoritmului, dar si pentru analiza factorilor de risc la care e expus in acest mediu.
+Rezultatele pot fi utile în contextul securizării procesului de antrenare al algoritmului, dar și pentru analiza factorilor de risc la care e expus în acest mediu.
 
-Cercetatorul este cel care furnizeaza algoritmul python de antrenare a propriei retele neuronale sau algoritm de Machine Learning. El seteaza parametrii simularii atat pentru procesul de antrenare, cat si pentru tipul de atac de otravire a datelor.
-Platforma isi propune sa simuleze acest tip de atac cu ajutorul acestor setari de inceput intr-un mediu de invatare federata, furnizand la final o comparatie intre modelul antrenat folosind datele normale de antrenare si cel antrenat cu datele otravite.
-Aceste rezultate pot fi utile in semnalarea unui posibil risc la nivelul modelului dezvoltat, oferind mai apoi solutii de imbunatatire a implementarii sale.
+Cercetătorul este cel care furnizează algoritmul Python de antrenare a propriei rețele neuronale sau algoritm de Machine Learning. El setează parametrii simulării atât pentru procesul de antrenare, cât și pentru tipul de atac de otrăvire a datelor.
+Platforma își propune să simuleze acest tip de atac cu ajutorul acestor setări de început într-un mediu de învățare federată, furnizând la final o comparație între modelul antrenat folosind datele normale de antrenare și cel antrenat cu datele otrăvite.
+Aceste rezultate pot fi utile în semnalarea unui posibil risc la nivelul modelului dezvoltat, oferind mai apoi soluții de îmbunătățire a implementării sale.
+
+Contribuțiile proprii ale lucrării pot fi sintetizate astfel:
+
+\begin{itemize}
+    \item proiectarea și implementarea unei platforme modulare pentru simularea atacurilor de tip data poisoning în medii de învățare federată;
+    \item integrarea unui flux complet de execuție, de la validarea șablonului și alocarea resurselor GPU până la generarea și persistența rezultatelor;
+    \item extinderea platformei cu suport pentru funcții personalizate de agregare și de otrăvire a datelor, validate sintactic, structural și din perspectiva securității;
+    \item realizarea unor experimente comparative care evidențiază comportamentul mai multor mecanisme de apărare în scenarii Non-IID și sub atacuri de tip label-flipping.
+\end{itemize}
 
 
-\section{Structura lucrarii}
+\section{Structura lucrării}
 
 Lucrarea de față este structurată în cinci capitole, după cum urmează:
 
@@ -91,67 +100,67 @@ Lucrarea de față este structurată în cinci capitole, după cum urmează:
 
 
 % Structura pe capitole 
-\chapter{Notiuni Teoretice}
+\chapter{Noțiuni Teoretice}
 
-In acest capitol, vor fi prezentate notiunile teoretice specifice intelegerii procesului de dezvoltare a platformei de simulare.
-Vom incepe cu Notiunile introductive despre conceptele de Machine Learning in antiteza cu Deep Learning. In continuare, vom discuta despre invatarea federata si arhitectura unei infrastructuri federate de invatare automata, tipurile
-de atacuri data poisoning implementate in procesul de simulare a atacurilor, precum si alte notiuni specifice implementarii.
+În acest capitol, vor fi prezentate noțiunile teoretice specifice înțelegerii procesului de dezvoltare a platformei de simulare.
+Vom începe cu noțiunile introductive despre conceptele de Machine Learning în antiteză cu Deep Learning. În continuare, vom discuta despre învățarea federată și arhitectura unei infrastructuri federate de învățare automată, tipurile
+de atacuri data poisoning implementate în procesul de simulare a atacurilor, precum și alte noțiuni specifice implementării.
 
-    \section{Notiuni introductive}
+    \section{Noțiuni introductive}
 
-    Machine Learning si Deep Learning sunt doua ramuri importante ale Inteligentei Artificiale care au rolul dezvoltarii unor modele specifice rezolvarii unor anumite
-    actiuni. Pornind de la antrenarea de retele neuronale, ne orientam atentia spre setul de date de antrenare si spre actorii ce pot interveni in acest proces.
-    Mediul in care testam ofera o perspectiva reala asupra impactului pe care il pot avea aceste atacuri la nivelul unei organizatii sau aplicatii.
+    Machine Learning și Deep Learning sunt două ramuri importante ale Inteligenței Artificiale care au rolul dezvoltării unor modele specifice rezolvării unor anumite
+    acțiuni. Pornind de la antrenarea de rețele neuronale, ne orientăm atenția spre setul de date de antrenare și spre actorii ce pot interveni în acest proces.
+    Mediul în care testăm oferă o perspectivă reală asupra impactului pe care îl pot avea aceste atacuri la nivelul unei organizații sau aplicații.
 
-    \subsection{Diferenta dintre Machine Learning si Deep Learning}
+    \subsection{Diferența dintre Machine Learning și Deep Learning}
 
     Inteligența Artificială (AI) este domeniul vast care înglobează orice tehnică ce permite calculatoarelor să imite comportamentul uman.
-Informatia a evoluat treptat odata cu imbunatatirea capabilitatilor de stocare ale dispozitivelor si aparitia programelor software complexe.
-De la simplul format de text, inregistrari audio, pana la imagini si video in rezolutii 4K, modul de lucru s-a diversificat constant.
+Informația a evoluat treptat odată cu îmbunătățirea capabilităților de stocare ale dispozitivelor și apariția programelor software complexe.
+De la simplul format de text, înregistrări audio, până la imagini și video în rezoluții 4K, modul de lucru s-a diversificat constant.
 
-La fel au evoluat si cerintele utilizatorilor, care tind sa acceada catre solutii automate care sa le rezolve problemele uzuale,
-precum identificarea de patterns in imagini sau chiar din video, sau generarea de text.
+La fel au evoluat și cerințele utilizatorilor, care tind să acceadă către soluții automate care să le rezolve problemele uzuale,
+precum identificarea de patterns în imagini sau chiar din video, sau generarea de text.
 
-IA vine sa rezolve aceste probleme si sa introduca algoritmi de rezolvare specifici pentru fiecare tip de informatie furnizata.
+IA vine să rezolve aceste probleme și să introducă algoritmi de rezolvare specifici pentru fiecare tip de informație furnizată.
 
-Machine Learning este o componenta importanta din domeniul IA care se diferentiaza de alte metode de antrenare prin optimizarile pe care le aduce erorilor ce apar din predictia rezultatului corect.
-Modelele de ML clasice se bazeaza pe interventia umana in factorul de decizie (supervised learning), mai precis datele de intrare sunt etichetate pentru a oferi un context de predictie stabil.
+Machine Learning este o componentă importantă din domeniul IA care se diferențiază de alte metode de antrenare prin optimizările pe care le aduce erorilor ce apar din predicția rezultatului corect.
+Modelele de ML clasice se bazează pe intervenția umană în factorul de decizie (supervised learning), mai precis datele de intrare sunt etichetate pentru a oferi un context de predicție stabil.
 
-Deep Learning este o subcategorie a Machine Learning, care are rolul de a minimiza interventia umana si a automatiza procesul de decizie. Prin aceasta metoda se automatizeaza mare parte din extragerea caracteristicilor pe setul de date, eliminand nevoia de a defini etichete pentru fiecare valoare de intrare (unsupervied learning).
+Deep Learning este o subcategorie a Machine Learning, care are rolul de a minimiza intervenția umană și a automatiza procesul de decizie. Prin această metodă se automatizează mare parte din extragerea caracteristicilor pe setul de date, eliminând nevoia de a defini etichete pentru fiecare valoare de intrare (unsupervied learning).
 
-Diferenta dintre aceste doua concepte este in modul in care acesti algoritmi invata si procentul de utilizare a datelor \cite{ibm_ai_vs_ml_dl}.
-Scopul principal al invatarii automate este predictia. Pe baza unui set de date de antrenare si de testare, se determina o anumita categorie de iesire predefinita.
+Diferența dintre aceste două concepte este în modul în care acești algoritmi învață și procentul de utilizare a datelor \cite{ibm_ai_vs_ml_dl}.
+Scopul principal al învățării automate este predicția. Pe baza unui set de date de antrenare și de testare, se determină o anumită categorie de ieșire predefinită.
 
-    \subsection{Retea Neuronala}
+    \subsection{Rețea Neuronală}
 
-    Retelele Neuronale sunt un subset al Machine Learning si se identifica drept infrastructura de baza din cadrul algoritmilor de Deep Learning. Denumirea de "neuronal" se refera la structura lor interna, in care fiecare caracteristica (feature) este un neuron ce interactioneaza unii cu altii.
-Ele sunt compuse din 3 straturi/layers: primul strat il reprezinta stratul nodurilor de intrare, al doilea strat este denumit "stratul ascuns" (hidden layer) pt ca incapsuleaza mai multe straturi, iar ultimul strat este cel de iesire in care se face predictia propriu-zisa.
-Straturile ascunse sunt concepute pentru a procesa iterativ datele pornind de la starea lor din nodurile de intrare pana la stratul de iesire.
+    Rețelele Neuronale sunt un subset al Machine Learning și se identifică drept infrastructură de bază din cadrul algoritmilor de Deep Learning. Denumirea de "neuronal" se referă la structura lor internă, în care fiecare caracteristică (feature) este un neuron ce interacționează unii cu alții.
+Ele sunt compuse din 3 straturi/layers: primul strat îl reprezintă stratul nodurilor de intrare, al doilea strat este denumit "stratul ascuns" (hidden layer) pentru că încapsulează mai multe straturi, iar ultimul strat este cel de ieșire în care se face predicția propriu-zisă.
+Straturile ascunse sunt concepute pentru a procesa iterativ datele pornind de la starea lor din nodurile de intrare până la stratul de ieșire.
 
 
-    \section{Invatare automata federata}
+    \section{Învățare automată federată}
 
-    Evolutia hardware in tehnologie a condus la cresterea numarului dispozitivelor mobile (telefoane, tablete), denumite gadgets din faptul ca sunt mici, portabile si moderne.
-Ele au fost mai departe adoptate la scara larga, devenind obiecte indispensabile in era tehnologica ce avea sa vina.
+    Evoluția hardware în tehnologie a condus la creșterea numărului dispozitivelor mobile (telefoane, tablete), denumite gadgets datorită faptului că sunt mici, portabile și moderne.
+Ele au fost mai departe adoptate la scară largă, devenind obiecte indispensabile în era tehnologică ce avea să vină.
 
     \subsection{Concept}
 
-    Invatarea automata federata permite lucrul cu modele de ML sau chiar retele neuronale, antrenate distribuit, pe un numar mare de dispozitive in scopul rezolvarii unei probleme de IA. Distribuirea sarcinilor a fost adoptata si in contextul opozitiei lucrului centralizat, pe servere ce detin capabilitati Hardware performante (placi grafice de ultima generatie), dar care genereaza costuri mari si care pot fi predispuse la amenintari de securitate cibernetica, fiind considerate SPOF(Single Point of Failure).    
+    Învățarea automată federată permite lucrul cu modele de ML sau chiar rețele neuronale, antrenate distribuit, pe un număr mare de dispozitive în scopul rezolvării unei probleme de IA. Distribuirea sarcinilor a fost adoptată și în contextul opoziției lucrului centralizat, pe servere ce dețin capabilități hardware performante (plăci grafice de ultimă generație), dar care generează costuri mari și care pot fi predispuse la amenințări de securitate cibernetică, fiind considerate SPOF(Single Point of Failure).    
 
     \subsection{Arhitectura FL}
 
 
-In literatura, exista mai multe categorii de arhitecturi de invatare automata federata. In aceasta sectiune ne vom concentra pe clasificarea generala a arhitecturii unei aplicatii folosind federated learning, si vom enumera pentru o anumita categorie cum se clasifica dispozitivele utilizate.
+În literatură, există mai multe categorii de arhitecturi de învățare automată federată. În această secțiune ne vom concentra pe clasificarea generală a arhitecturii unei aplicații folosind federated learning, și vom enumera pentru o anumită categorie cum se clasifică dispozitivele utilizate.
 
-Federated Learning, asa cum a mai fost mentionat, este organizat dintr-un server (agregator) si multiple dispozitive client. Modul in care aceste entitati comunica este fundamentul principal in modului de imbunatatire al invatarii.
+Federated Learning, așa cum a mai fost menționat, este organizat dintr-un server (agregator) și multiple dispozitive client. Modul în care aceste entități comunică este fundamentul principal al procesului de îmbunătățire a învățării.
 
-In modul clasic al federated learning, dispozitivele client transmit actualizari ale modelului de baza la un server central care aplica asupra lor o functie de agregare, reconstruind intreg modelul de baza. Aceasta setare/model, presupune de fapt o delegare a sarcinii de invatare, insa pastreaza entitate centrala necesara imbunatatirii solutiei.
-Acest fapt, nu tine sa evita posibilitatea amenintarilor cibernetice (Single Point of Failure), ci doar sa usureze costurile centralizatorului in a procesa local problema, distribuind sarcinile.
+În modul clasic al federated learning, dispozitivele client transmit actualizări ale modelului de bază la un server central care aplică asupra lor o funcție de agregare, reconstruind întreg modelul de bază. Această setare presupune de fapt o delegare a sarcinii de învățare, însă păstrează entitatea centrală necesară îmbunătățirii soluției.
+Acest fapt nu ține de evitarea posibilității amenințărilor cibernetice (Single Point of Failure), ci doar să ușureze costurile centralizatorului în a procesa local problema, distribuind sarcinile.
 
-Modelul Fully decentralized (peer-to-peer) learning, ofera o noua abordare si rezolva problema cibernetica amintita. In aceasta setare nu exista agregator, imbunatatirile fiind comunicate intre clienti interconectati. Ideea principala se bazeaza pe inlocuirea comunicarii cu agregatorul cu cea intre dispozitive individuale printr-un protocol prestabilit.
-In functie de numarul de dispozitive, se concepe un graf de conexiuni in care fiecare nod reprezinta un client, iar fiecare muchie un canal de comunicatie. Restrictia principala este ca un dispozitiv sa fie conectat la un numar maxim limitat de dispozitive adiacente, prestabilit, in contradictie cu un graf complet (stea) specific arhitecturii clasice client-server.
-Nodurile isi imbunatatesc propriile variante ale retelei, si isi comunica rezultatele pe care le agrega local, realizand o medie a ponderilor.
-In comparatie cu modelul federated learning clasic, modelul fully decentralized nu specifica de la inceput dispozitivelor un model de baza global de la care sa porneasca in procesul de rezolvare a problemei.
+Modelul Fully decentralized (peer-to-peer) learning oferă o nouă abordare și rezolvă problema cibernetică amintită. În această setare nu există agregator, îmbunătățirile fiind comunicate între clienți interconectați. Ideea principală se bazează pe înlocuirea comunicării cu agregatorul cu cea dintre dispozitive individuale printr-un protocol prestabilit.
+În funcție de numărul de dispozitive, se concepe un graf de conexiuni în care fiecare nod reprezintă un client, iar fiecare muchie un canal de comunicație. Restricția principală este ca un dispozitiv să fie conectat la un număr maxim limitat de dispozitive adiacente, prestabilit, în contradicție cu un graf complet (stea) specific arhitecturii clasice client-server.
+Nodurile își îmbunătățesc propriile variante ale rețelei și își comunică rezultatele pe care le agregă local, realizând o medie a ponderilor.
+În comparație cu modelul federated learning clasic, modelul fully decentralized nu specifică de la început dispozitivelor un model de bază global de la care să pornească în procesul de rezolvare a problemei.
 
 \begin{table}[h!]
     \centering
@@ -168,11 +177,11 @@ In comparatie cu modelul federated learning clasic, modelul fully decentralized 
         Topologie peer-to-peer, cu un graf de conectivitate posibil dinamic. \\
         \hline
     \end{tabular}
-    \caption{Comparație între modelele Federated Learning \cite{kairouz2021federated}}
+    \caption{Comparație între modelele Federated Learning}
     \label{tab:fl_models_comparison}
 \end{table}
 
-Imaginea de mai sus ofera o privire de ansamblu asupra celor doua modele de arhitecturi si caracteristicile acestora.
+Imaginea de mai sus oferă o privire de ansamblu asupra celor două modele de arhitecturi și caracteristicile acestora, pe baza clasificării prezentate în literatura de specialitate \cite{kairouz2021federated}.
 
 \begin{landscape}
     \begin{table}[h]
@@ -229,50 +238,50 @@ Imaginea de mai sus ofera o privire de ansamblu asupra celor doua modele de arhi
     \end{table}
 \end{landscape}
     
-In tabelul de mai sus, sunt evidentiate avantajele si dezavantajele utilizarii celor doua tipuri de modele federated learning.
+În tabelul de mai sus, sunt evidențiate avantajele și dezavantajele utilizării celor două tipuri de modele federated learning.
 
-In continuarea acestei lucrari, se va discuta preponderent despre modelul clasic federated learning, fiind unul adoptat la scara larga si care ofera performante bune raportat la costurile de productie.
+În continuarea acestei lucrări, se va discuta preponderent despre modelul clasic federated learning, fiind unul adoptat la scară largă și care oferă performanțe bune raportat la costurile de producție.
 
-Modelul clasic la randul sau, se catalogheaza in literatura in functie de tipul dispozitivelor care iau parte la procesul de antrenare. Sub acest filtru, exista Cross-Device Federated Learning si Cross-Silo Federated Learning.
+Modelul clasic la rândul său, se cataloghează în literatură în funcție de tipul dispozitivelor care iau parte la procesul de antrenare. Sub acest filtru, există Cross-Device Federated Learning și Cross-Silo Federated Learning.
 
-Cross-Device Federated Learning sunt dispozitivele client IOT uzuale, individuale, care comunica orchestratorului printr-un protocol prestabilit.
+Cross-Device Federated Learning sunt dispozitivele client IOT uzuale, individuale, care comunică orchestratorului printr-un protocol prestabilit.
 
-Cross-Silo Federated Learning sunt dispozitive din institutii guvernamentale, companii, sau centre de date distribuite geografic. Institutiile nu doresc sa schimbe informatii intre ele sau cu un furnizor de servicii central, pastrandu-si confidentialitatea, folosind federated learning pt a antrena propriul model pe datele private ale fiecaruia.
+Cross-Silo Federated Learning sunt dispozitive din instituții guvernamentale, companii, sau centre de date distribuite geografic. Instituțiile nu doresc să schimbe informații între ele sau cu un furnizor de servicii central, păstrându-și confidentialitatea, folosind federated learning pentru a antrena propriul model pe datele private ale fiecăruia.
 
     \subsection{Procesul de antrenare FL}
 
-    Primul pas este stabilirea conexiunii dintre dispozitive si un server de agregare ce permite antrenare distribuita a tipului de retea neuronala sau model ML specific problemei.
-Odata stabilit canalul, in faza de configurare initiala, serverul trimite dispozitivelor starea de baza a retelei neuronale, ponderile, in vederea antrenarii individuale.
-Fiecare retea se antreneaza cu datele extrase local (on device) si isi imbunatateste configuratia interna la fiecare epoca pentru o perioada de timp bine determinata.
+    Primul pas este stabilirea conexiunii dintre dispozitive și un server de agregare ce permite antrenarea distribuită a tipului de rețea neuronală sau model ML specific problemei.
+Odată stabilit canalul, în faza de configurare inițială, serverul trimite dispozitivelor starea de bază a rețelei neuronale, ponderile, în vederea antrenării individuale.
+Fiecare rețea se antrenează cu datele extrase local (on device) și își îmbunătățește configurația interna la fiecare epocă pentru o perioadă de timp bine determinată.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{../images/Device_internal_State.png}
-    \caption{Arhitectura interna a unui dispozitiv   \cite{bonawitz2019towards}}
+    \caption{Arhitectura interna a unui dispozitiv}
 
     \label{fig:nume-label}
 \end{figure}
 
-Figura de mai sus descrie operatiile specifice programului Software care se ocupa de antrenarea retelei/modelului. Putem observa cum dispozitivele primesc un plan de antrenare de baza pe care il vor antrena local pe un set de date limitat.
+Figura de mai sus descrie operațiile specifice programului software care se ocupă de antrenarea rețelei/modelului, conform arhitecturii prezentate de Bonawitz et al. \cite{bonawitz2019towards}. Putem observa cum dispozitivele primesc un plan de antrenare de bază pe care il vor antrena local pe un set de date limitat.
 
-Desi acest pas nu aduce un procent de imbunatatiri foarte mari, in faza urmatoare, dispozitivele vor transmite configuratiile curente ale retelelor lor la orchestrator (server).
-Rutina FL\_Runtime extrage configuratia noua locala si ii comunica serverului pentru o posibila actualizare a sa.
+Deși acest pas nu aduce un procent de îmbunătățiri foarte mari, în faza urmatoare, dispozitivele vor transmite configurațiile curente ale rețelelor lor la orchestrator (server).
+Rutina FL\_Runtime extrage noua configurație locală și îi comunică serverului posibilitatea actualizării acesteia.
 
-In cele din urma, entitatea centrala combina toate aceste ponderi aplicand o functie de agregare si in cazul imbunatatirii setului de ponderi, modifica configuratia de baza si o retransmite dispozitivelor pereche. Daca ponderile noi nu se imbunatatesc semnificativ fata de configuratia de baza, atunci se patreaza aceasta din urma, iar in caz contrar se actualizeaza cu noile ponderi.
+În cele din urmă, entitatea centrală combină toate aceste ponderi aplicând o funcție de agregare și în cazul îmbunătățirii setului de ponderi, modifica configurația de bază și o retransmite dispozitivelor pereche. Dacă ponderile noi nu se îmbunătățesc semnificativ fata de configurația de bază, atunci se păstrează aceasta din urma, iar în caz contrar se actualizeaza cu noile ponderi.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{../images/Federated_Learning_Operations.png}
-    \caption{Procedee in invatare automata federata \cite{bonawitz2019towards}}    
+    \caption{Procedee în învățare automată federată}    
     \label{fig:nume-label}
 \end{figure}
 
-In figura de mai sus, se pot observa intr-o maniera continua, fluxul de comunicatie dintre dispozitive si serverul agregator, precum si operatiile specifice fiecarei entitati dintr-o runda de mesaje.
+În figura de mai sus, se pot observa într-o manieră continuă, fluxul de comunicație dintre dispozitive și serverul agregator, precum și operațiile specifice fiecărei entități dintr-o rundă de mesaje, într-o formă inspirată din modelul descris în \cite{bonawitz2019towards}.
 
-Securitatea protocoalelor de agregare, utilizate in comunicatii dintre clienti si orchestrator, este o componenta importanta in procesul federated learning.
-De mentionat este faptul ca, in aceasta topologie, comunicatiile au loc criptat, folosind metode specifice precum criptare homomorfica, sau chiar OTP, insa securitatea datelor de pe dispozitive ramane la latitudinea acestuia.
+Securitatea protocoalelor de agregare, utilizate în comunicații dintre clienți și orchestrator, este o componentă importantă în procesul federated learning.
+De menționat este faptul că, în aceasta topologie, comunicațiile au loc criptat, folosind metode specifice precum criptare homomorfică, sau chiar OTP, însă securitatea datelor de pe dispozitive rămâne la latitudinea acestuia.
 
-    \subsection{Exemple in viata reala}
+    \subsection{Exemple în viața reală}
 
     Federated Learning s-a extins rapid în numeroase domenii datorită capacității sale de a antrena modele performante fără a colecta sau centraliza date sensibile.
 Prin păstrarea informațiilor la nivelul fiecărui dispozitiv sau instituții, FL reduce riscurile asociate scurgerilor de date și permite colaborarea între entități care altfel nu ar putea împărtăși date brute.
@@ -311,74 +320,74 @@ Prin păstrarea informațiilor la nivelul fiecărui dispozitiv sau instituții, 
 
 \section{Atacuri de tip Data Poisoning}
 
-In acest capitol se va discuta una dintre avantajele pe care le ofera mediul federated learning atacatorilor si ce inseamna acest lucru pentru fluxul configuratiei modelului. Vom incepe cu definirea
-vectorilor de atac si concentrarea pe una dintre categorii, data poisoning. In continuarea lucrarii, vom analiza impactul pe care il are acest tip de atac asupra infrastructurii federate de invatare si riscurile pe care le introduce, precum si cateva propuneri de identificare si constientizare a existentei sale.
+În acest capitol se va discuta unul dintre avantajele pe care le oferă mediul federated learning atacatorilor și ce înseamnă acest lucru pentru fluxul configurației modelului. Vom începe cu definirea
+vectorilor de atac și concentrarea pe una dintre categorii, data poisoning. În continuarea lucrării, vom analiza impactul pe care îl are acest tip de atac asupra infrastructurii federate de învățare și riscurile pe care le introduce, precum și câteva propuneri de identificare și conștientizare a existenței sale.
 
     \subsection{Definirea tipurilor de atac}
 
     
-    In literatura de specialitate, atacurile asupra unui model de ML sau asupra unei retele neuronale sunt definite drept atacuri adversariale (adversarial attacks). Aceasta clasa de atacuri are rolul de a produce modificari in comportamentul normal al modelului intr-un mod indizerabil. Conform lucrarii \cite{kairouz2021federated}, in functie de nivelul de scop al unui atac, putem avea:
+    În literatură de specialitate, atacurile asupra unui model de ML sau asupra unei rețele neuronale sunt definite drept atacuri adversariale (adversarial attacks). Această clasă de atacuri are rolul de a produce modificări în comportamentul normal al modelului într-un mod indezirabil. Conform lucrării \cite{kairouz2021federated}, în funcție de nivelul de scop al unui atac, putem avea:
 
     \begin{itemize}
 
         \item \textbf{Atacuri nedirectionate (untargeted attacks)}  
         Scopul este reducerea acurateții generale a modelului sau chiar destabilizarea completă a acestuia.  
         Un exemplu pentru clasificarea imaginilor este introducerea unui zgomot care degradează calitatea setului de date.  
-        O altă metodă este modificarea etichetelor din setul de antrenare, de exemplu atribuirea etichetei \textit{leu} unor imagini care în mod normal ar trebui etichetate drept \textit{pisică}.
+        O altă metodă este modificarea etichetelor din setul de antrenare, de exemplu atribuirea etichetei \textit{leu} unor imagini care în mod normal ar trebui etichetate drept \textit{pîșică}.
     
         \item \textbf{Atacuri directionate (targeted attacks)}  
         Denumite și \textit{backdoor attacks}, deoarece urmăresc modificarea comportamentului modelului doar pentru un anumit subset de date, fără a afecta vizibil acuratețea globală.  
-        Continuând exemplul anterior, pentru un anumit tip de imagini ce reprezintă pisici într-o anumită poziție, se poate introduce un artefact vizual menit să păcălească modelul și să clasifice pisica drept \textit{leu}. Astfel apare un backdoor activ doar pentru acele imagini precise.
+        Continuând exemplul anterior, pentru un anumit tip de imagini ce reprezintă pîșici într-o anumită poziție, se poate introduce un artefact vizual menit să păcălească modelul și să clasifice pîșica drept \textit{leu}. Astfel apare un backdoor activ doar pentru acele imagini precise.
     
     \end{itemize}
     
-    In contextul unor sisteme distribuite care necesita procesarea modelului de ML de o entitate centrala, atacurile adversariale presupun modificarea comportamentului acestui model intr-un mod indezirabil. Potrivit acestui scop, principala abordare de compromitere a acestui tip de atac este cea nedirectionata. 
-    Aceste atacuri adversariale mai sunt denumite conform cu literatura de specialitate si atacuri \textit{Byzantine} deoarece pot cauza generarea de valori aleatoare nodurilor sistemului distribuit. 
-    Plecand de la aceasta categorisire, exista o multime de modalitati prin care un atacator poate submina capacitatea de predictie a modelului. Mediul federated learning introduce prin constructie o serie de intrebari la care trebuie gasit un raspuns pentru a determina prin ce moduri un adversar se poate infiltra si poate profita de anumite drepturi pentru a introduce incertitudine in antrenarea sau reglarea (fine-tuning) a modelelor.
+    În contextul unor sisteme distribuite care necesită procesarea modelului de ML de o entitate centrală, atacurile adversariale presupun modificarea comportamentului acestui model într-un mod indezirabil. Potrivit acestui scop, principala abordare de compromitere a acestui tip de atac este cea nedirecționată. 
+    Aceste atacuri adversariale mai sunt denumite conform cu literatura de specialitate și atacuri \textit{Byzantine} deoarece pot cauza generarea de valori aleatoare nodurilor sistemului distribuit. 
+    Plecând de la aceasta categorîșire, există o mulțime de modalitati prin care un atacator poate submina capacitatea de predicție a modelului. Mediul federated learning introduce prin constructie o serie de intrebari la care trebuie găsit un raspuns pentru a determina prin ce moduri un adversar se poate infiltra și poate profita de anumite drepturi pentru a introduce incertitudine în antrenarea sau reglarea (fine-tuning) a modelelor.
 
     \subsection{Vectori de atac}
 
 
-    Analiza amenintarilor asupra modelelor de ML, a introdus o serie de posibile vulnerabilitati asupra componentelor ce alcatuiesc fluxul de invatare.
-    Un atacator isi poate alege zona de interes, pe baza posibilitatilor de exploatare a sistemului respectiv.
+	    Analiza amenințărilor asupra modelelor de ML a introdus o serie de posibile vulnerabilități asupra componentelor ce alcătuiesc fluxul de învățare.
+	    Un atacator își poate alege zona de interes, pe baza posibilităților de exploatare a sistemului respectiv.
 
-    Vectorii de atac cunoscuti sunt:
+	    Vectorii de atac cunoscuți sunt:
 
     \begin{itemize}
         \item \textbf{Data Poisoning}
-        Cand adversarul incearca sa corupa setul de date de antrenare cu scopul defectarii modelului inca de la inceput. Modificarile pot fi subtile sau la o scara larga, urmand ca antrenarea sa produca rezultate redundante in viitor. 
+	        Când adversarul încearcă să corupă setul de date de antrenare cu scopul defectării modelului încă de la început. Modificările pot fi subtile sau la o scară largă, urmând ca antrenarea să producă rezultate redundante în viitor. 
         \item \textbf{Model Update Poisoning}
-        Cand adversarul se foloseste de o vulnerabilitate ce ii permite modificarea configuratiei parametrilor trimisi catre orchestrator. Conform cu literatura de specialitate, \textit{Data Poisoning} este considerat a fi o subcategorie de otravire a ponderilor modelului gandindu-ne la impactul pe care antrenarea cu setul de date corupt il are asupra acestuia.
+	        Când adversarul se folosește de o vulnerabilitate ce îi permite modificarea configurației parametrilor trimiși către orchestrator. Conform cu literatura de specialitate, \textit{Data Poisoning} este considerat a fi o subcategorie de otrăvire a ponderilor modelului, gândindu-ne la impactul pe care antrenarea cu setul de date corupt îl are asupra acestuia.
         \item \textbf{Evasion attack}
-        Cand adversarul are acces la datele de testare si le poate modifica in momentul inferentei. Aceasta este o varianta facila din punctul de vedere al atacatorilor si greu de depistat de tinta, fiind necesare controale speciale asupra integritatii setului de testare. 
+	        Când adversarul are acces la datele de testare și le poate modifica în momentul inferenței. Aceasta este o variantă facilă din punctul de vedere al atacatorilor și greu de depistat de țintă, fiind necesare controale speciale asupra integrității setului de testare. 
     \end{itemize}
 
-    In functie de gradul de acces la sistemele gazda, modelul poate fi inspectat in diferite moduri:
+	    În funcție de gradul de acces la sistemele gazdă, modelul poate fi inspectat în diferite moduri:
 
     \begin{itemize}
         \item \textbf{Black Box}
-        Adversarul nu are abilitatea sa inspecteze parametrii modelului inainte sau in timpul atacului.
+	        Adversarul nu are abilitatea să inspecteze parametrii modelului înainte sau în timpul atacului.
         \item \textbf{Stale Box}
-        Adversarul poate inspecta doar o versiune incipienta a modelului. Aceasta capabilitate apare si in federated learning cand adversarul are acces la rundele de antrenare ale clientului.
+	        Adversarul poate inspecta doar o versiune incipientă a modelului. Această capabilitate apare și în federated learning când adversarul are acces la rundele de antrenare ale clientului.
         \item \textbf{White Box}
-        Adversarul are abilitatea de a inspecta direct parametrii modelului. Acest scenariu se bazeaza pe un grad de acces superior al adversarului asupra sistemului.
+        Adversarul are abilitatea de a inspecta direct parametrii modelului. Acest scenariu se bazează pe un grad de acces superior al adversarului asupra sistemului.
     \end{itemize}
 
-    In functie de rata de participare a adversarului la atac, putem avea urmatoarele scenarii:
+    În funcție de rata de participare a adversarului la atac, putem avea următoarele scenarii:
 
     \begin{itemize}
-        \item In mediul de invatare federata \textit{Cross-device}, atacatorii participa la degradarea modelului doar intr-o singura runda de antrenare. In raport cu procesul de reglare al modelului, un scenariu potrivit ar fi atunci cand setul de date original se mentine actualizat periodic, actorul putand actiona o singura data intr-un interval bine stabilit in modificarea acestuia. Impactul in acest sens este aproape nesemnificativ, deoarece fiecare nod client detine o portiune din setul global de date. 
-        \item In mediul de invatare federata \textit{Cross-silo}, atacatorii participa la degradarea modelului pentru un numar de runde de antrenare semnificativ apropiat numarului total de runde. Acest aspect introduce, in functie de gravitatea atacului, o degradare semnificativa si vizibila in timp, cu cat numarul de runde este mai mare. 
+        \item În mediul de învățare federată \textit{Cross-device}, atacatorii participa la degradarea modelului doar într-o singura rundă de antrenare. În raport cu procesul de reglare al modelului, un scenariu potrivit ar fi atunci cand setul de date original se mentine actualizat periodic, actorul putand actiona o singura data într-un interval bine stabilit în modificarea acestuia. Impactul în acest sens este aproape nesemnificativ, deoarece fiecare nod client detine o portiune din setul global de date. 
+        \item În mediul de învățare federată \textit{Cross-silo}, atacatorii participa la degradarea modelului pentru un numar de runde de antrenare semnificativ apropiat numărului total de runde. Acest aspect introduce, în funcție de gravitatea atacului, o degradare semnificativa și vizibila în timp, cu cât numărul de runde este mai mare. 
     \end{itemize}
 
-    Pe baza acestor scenarii, atacatorul poate aplica o serie de tehnici pentru modificarea starii modelului. In contextul lucrarii de fata, se va discuta scenariul stale box, adversarul avand
-    posibilitatea doar de a introduce un atac Data Poisoning in rundele de antrenare, datele corupte fiind introduse o singura data in procesul de reglare a modelului (fine-tuning).
+    Pe baza acestor scenarii, atacatorul poate aplică o serie de tehnici pentru modificarea stării modelului. În contextul lucrării de față, se va discuta scenariul stale box, adversarul având
+    posibilitatea doar de a introduce un atac Data Poisoning în rundele de antrenare, datele corupte fiind introduse o singura data în procesul de reglare a modelului (fine-tuning).
     
 
     \subsection{Atacul Data poisoning}
 
     Acest tip de atac presupune coruperea datelor de antrenare sau de testare, prin diferite tehnici specifice, la nivelul dispozitivului clientului.
-In aceasta paradigma, atacul poate fi considerat la fel de bine targeted sau untargeted intrucat depinde de intentia adversarului si de potentialul risc in divulgarea
+În aceasta paradigma, atacul poate fi considerat la fel de bine targeted sau untargeted întrucât depinde de intentia adversarului și de potentialul risc în divulgarea
 punctului de exploatare de care dispune.
 
 
@@ -386,7 +395,7 @@ punctului de exploatare de care dispune.
 În mediul federated learning această dificultate este amplificată, deoarece orchestratorul nu are acces direct la datele brute ale clienților. Astfel, orice modificare realizată pe un dispozitiv compromis intră automat în procesul de antrenare, fiind tratată ca o contribuție legitimă.
 În mod particular, chiar și un număr redus de exemple otrăvite poate introduce un comportament persistent în modelul global, mai ales dacă atacul este repetat pe durata mai multor runde
 
-In contextul solutiei propuse, se va discuta despre impactul atacului asupra unui set de imagini si tipurile de metode pentru a le altera, asa cum se poate vedea in tabelul 2.3.3.
+În contextul solutiei propuse, se va discuta despre impactul atacului asupra unui set de imagini și tipurile de metode pentru a le altera, asa cum se poate vedea în tabelul 2.3.3.
 
     \begin{table}[h]
         \centering
@@ -412,26 +421,40 @@ In contextul solutiei propuse, se va discuta despre impactul atacului asupra unu
         \label{tab:data_poisoning_types}
     \end{table}
 
-    Prin aceste tipuri de atacuri adversariale, impactul asupra modelului are loc pe o perioada determinata de timp, de obicei mai lunga, si produce variatii in
-predictia finala.
+    Prin aceste tipuri de atacuri adversariale, impactul asupra modelului are loc pe o perioada determinata de timp, de obicei mai lunga, și produce variatii în
+predicția finala.
 
-    \subsection{Impactul poisoning in Federated Learning}
+    \subsection{Diferența dintre data poisoning, model poisoning și atacurile backdoor}
+
+    În literatura de specialitate, noțiunile de \textit{data poisoning}, \textit{model poisoning} și \textit{backdoor attacks} sunt strâns legate, dar nu sunt echivalente. Diferențierea lor este importantă deoarece ele descriu fie niveluri diferite de atac, fie obiective diferite urmărite de adversar.
+
+    \textbf{Data poisoning} reprezintă compromiterea setului de date utilizat la antrenare. Atacatorul modifică imaginile, etichetele sau ambele, astfel încât modelul să învețe din date eronate și să își degradeze performanța sau să dezvolte comportamente malițioase. În acest caz, sursa problemei este chiar informația de intrare folosită la reglarea modelului local.
+
+    \textbf{Model poisoning} apare atunci când atacatorul nu mai alterează direct datele, ci manipulează actualizările trimise către serverul de agregare. Acesta poate modifica gradientul, ponderile sau întregul update local, încercând să influențeze direct modelul global. În mediile federate, acest tip de atac este deosebit de periculos deoarece serverul nu are, în mod normal, vizibilitate asupra întregului proces local de antrenare și vede doar rezultatul final transmis de client.
+
+    \textbf{Atacurile backdoor} nu descriu neapărat locul unde are loc compromiterea, ci efectul urmărit. Un backdoor este un comportament malițios ascuns, activat de obicei de un trigger specific, în timp ce modelul păstrează o performanță aparent normală pe date curate. Un astfel de atac poate fi implementat atât prin data poisoning, cât și prin model poisoning. Din acest motiv, backdoor-ul trebuie înțeles drept o formă de atac țintit (\textit{targeted attack}), iar nu drept o categorie exclusiv separată la nivel de mecanism.
+
+    Relația dintre aceste concepte poate fi rezumată astfel: data poisoning și model poisoning indică \textit{mecanismul prin care adversarul intervine}, iar backdoor attack indică \textit{comportamentul malițios pe care adversarul dorește să îl obțină}. De exemplu, un atac de tip label flip folosit pentru a scădea acuratețea generală este un data poisoning nedirectionat (untargeted), în timp ce inserarea unui trigger vizual pentru a forța clasificarea într-o anumită clasă este un backdoor care poate fi obținut prin data poisoning.
+
+    În cadrul prezentei lucrări, accentul este pus pe simularea atacurilor de tip data poisoning, însă efectele observate în experimente pot aparține atât scenariilor nedirectionate (untargeted), cât și celor de tip backdoor. Din acest motiv, analiza mecanismelor de apărare trebuie să urmărească nu doar scăderea acurateții globale, ci și posibilitatea apariției unor comportamente ascunse activate condiționat.
+
+    \subsection{Impactul poisoning în Federated Learning}
 
 
-Mediul de invatare federata a introdus o serie de amenintari cibernetice preponderent la nivelul dispozitivelor clientilor, acestea fiind cele mai vulnerabile din punctul de vedere
-al aplicarii unui atac de otravire a datelor. Clientii sunt producatorii unui model calitativ care sa ofere predictii legitime in diferite scenarii.
+Mediul de învățare federată a introdus o serie de amenințări cibernetice preponderent la nivelul dispozitivelor clienților, acestea fiind cele mai vulnerabile din punctul de vedere
+al aplicării unui atac de otrăvire a datelor. Clienții sunt producătorii unui model calitativ care să ofere predicții legitime în diferite scenarii.
 
-Cand se discuta despre alterarea etichetelor (Label Flip Attack) atunci la o prima vedere, utilizatorul nu si-ar da seama decat in urma unei inspectii amanuntite.
-Pentru acest tip de atac, exista tehnici de verificare si filtrare ce pot determina daca un tip de informatie este catalogata corect inainte de antrenare.
+Cand se discuta despre alterarea etichetelor (Label Flip Attack) atunci la o prima vedere, utilizatorul nu și-ar da seama decât în urma unei inspectii amanuntite.
+Pentru acest tip de atac, există tehnici de verificare și filtrare ce pot determina dacă un tip de informație este catalogată corect înainte de antrenare.
 
 Efectele unui data poisoning pot persista chiar și după eliminarea datelor corupte, deoarece modelul învață un tipar greșit care nu dispare imediat fără o reantrenare completă.
 Acest lucru este relevant mai ales pentru atacurile backdoor, care rămân inactive până la apariția unui trigger vizual, fără a afecta acuratețea generală.
-Din acest considerent, atacurile directionate (targeted attacks) sunt deosebit de periculoase in contextul unui mediu de invatare federata pentru ca datele corupte se ascund in
-interiorul configuratiilor particulare ale clientilor. Aceste configuratii sunt transmise mai departe la agregator care aplicand functia sa de agregare, amplifica negativ starea modelului.
+Din acest considerent, atacurile directionate (targeted attacks) sunt deosebit de periculoase în contextul unui mediu de învățare federată pentru ca datele corupte se ascund în
+interiorul configurațiilor particulare ale clienților. Aceste configurații sunt transmise mai departe la agregator, care, aplicând funcția sa de agregare, amplifică negativ starea modelului.
 
 Având în vedere aceste particularități, devine esențială analizarea metodelor de apărare și a mecanismelor prin care pot fi detectate contribuțiile malițioase.
-Provocarile in acest domeniu conduc la o serie tot mai mare de utilitare sau platforme ce permit detectarea facila a acestor atacuri si imbunatatirea evenimentelor cu un
-potential risc in organizatii.
+Provocarile în acest domeniu conduc la o serie tot mai mare de utilitare sau platforme ce permit detectarea facila a acestor atacuri și îmbunătățirea evenimentelor cu un
+potential risc în organizații.
 
 Mediul federated learning introduce un risc suplimentar: un adversar care controlează un număr mic de clienți poate influența disproporționat modelul global dacă este integrat într-un moment critic al antrenării.
 În absența unor mecanisme robuste de apărare, actualizările malițioase sunt tratate ca fiind legitime, iar agregatorul nu are nicio modalitate directă de a le verifica.
@@ -440,7 +463,7 @@ Un alt efect important al acestui tip de atac este degradarea treptată a perfor
 În scenariile untargeted, scăderea acurateții globale poate trece neobservată în primele runde de antrenare, dar devine evidentă odată ce modelul converge către o reprezentare eronată a datelor.
 În scenariile targeted, atacul poate compromite decizii critice doar într-un subset de cazuri, ceea ce face detectarea mult mai dificilă și impactul mult mai nociv, mai ales în aplicații sensibile cum ar fi securitatea, domeniul medical sau sistemele autonome.
 
-    \subsection{Mecanisme de protectie rezistente la atacuri \textit{Byzantine}}
+    \subsection{Mecanisme de protecție rezistente la atacuri \textit{Byzantine}}
 
     În mediul de învățare federată există o multitudine de abordări pentru contracararea atacurilor adversariale, dezvoltate atât din perspectiva securității sistemelor distribuite, cât și din perspectiva robustetii algoritmilor de Machine Learning. Termenul \textit{Byzantine} provine din problema clasică a generalilor bizantini \cite{lamport1982byzantine}, un model teoretic al sistemelor distribuite în care unele noduri pot produce ieșiri arbitrare, fie din cauza unor defecte, fie din cauza unor acțiuni malițioase. În contextul învățării federate, un client bizantin poate trimite actualizări arbitrare către serverul de agregare, cu scopul de a corupe modelul global \cite{kairouz2021federated}.
 
@@ -457,19 +480,19 @@ Un alt efect important al acestui tip de atac este degradarea treptată a perfor
 
         \item \textbf{Trimmed Mean} \cite{yin2019byzantine}: elimină un procent predefinit din valorile extreme (cele mai mari și cele mai mici) ale fiecărui parametru, apoi calculează media restului. Această metodă oferă un compromis între robustete și fidelitatea agregării, fiind eficientă împotriva actualizărilor cu magnitudini extreme.
 
-        \item \textbf{FoolsGold} \cite{fung2020mitigating}: calculează similaritatea cosinus între actualizările clienților de-a lungul rundelor de antrenare și penalizează contribuțiile cu similaritate ridicată. Această abordare este concepută special pentru a neutraliza atacurile coordonate de tip \textit{sybil}, detectând clientii care trimit actualizări suspect de similare intre ei.
+        \item \textbf{FoolsGold} \cite{fung2020mitigating}: calculează similaritatea cosinus între actualizările clienților de-a lungul rundelor de antrenare și penalizează contribuțiile cu similaritate ridicată. Această abordare este concepută special pentru a neutraliza atacurile coordonate de tip \textit{sybil}, detectând clienții care trimit actualizări suspect de similare între ei.
 
         \item \textbf{Norm Clipping}: limitează magnitudinea vectorului de actualizare trimis de fiecare client la un prag maxim prestabilit. Această tehnică previne dominarea procesului de agregare de actualizări cu valori extreme, fiind totodată compatibilă cu mecanismele de confidențialitate diferențială \cite{kairouz2021federated}.
     \end{itemize}
 
-    Studii anterioare au arătat că acești agregatori robuști sunt demonstrabil eficienți pentru învățarea distribuită tolerantă la defecțiuni bizantine \cite{blanchard2017byzantine, yin2019byzantine}, sub anumite ipoteze, chiar și în medii federate \cite{kairouz2021federated}. Cu toate acestea, Fang et al. \cite{fang2019local} au demonstrat recent că mai multe mecanisme de apărare rezistente la atacuri bizantine au oferit o protecție limitată în contextul real al învățării federate. Garanțiile teoretice ale acestor mecanisme se aplică numai sub ipoteze asupra problemei de învățare care de multe ori nu sunt respectate în practică.
+    Studii anterioare au arătat că acești agregatori robuști sunt demonstrabil eficienți pentru învățarea distribuită tolerantă la defecțiuni bizantine \cite{blanchard2017byzantine, yin2019byzantine}, sub anumite ipoteze, chiar și în medii federate \cite{kairouz2021federated}. Cu toate acestea, Fang et al. \cite{fang2019local} au demonstrat recent că mai multe mecanisme de apărare rezistente la atacuri bizantine au oferit o protecție limitată în contextul real al învățării federate. Garanțiile teoretice ale acestor mecanisme se aplică numai sub ipoteze asupra problemei de învățare care de multe ori nu sunt respectăte în practică.
 
     \subsubsection{Provocări specifice mediului federat}
 
     Aplicarea directă a mecanismelor de apărare bazate pe agregare robustă în contextul învățării federate introduce o serie de provocări specifice \cite{kairouz2021federated}:
 
     \begin{itemize}
-        \item \textbf{Datele non-IID (independente si uniform distribuite)}: în scenariile reale de FL, datele disponibile pe fiecare dispozitiv client nu sunt distribuite independent și identic (non-IID), ceea ce înseamnă că actualizările legitime pot prezenta o variabilitate semnificativă. Acest aspect perturbă ipotezele comune din lucrările privind agregarea rezistentă la atacuri bizantine, unde se presupune de obicei o distribuție IID a datelor.
+        \item \textbf{Datele non-IID (independente și uniform distribuite)}: în scenariile reale de FL, datele disponibile pe fiecare dispozitiv client nu sunt distribuite independent și identic (non-IID), ceea ce înseamnă că actualizările legitime pot prezenta o variabilitate semnificativă. Acest aspect perturbă ipotezele comune din lucrările privind agregarea rezistentă la atacuri bizantine, unde se presupune de obicei o distribuție IID a datelor.
 
         \item \textbf{Compatibilitate cu agregarea securizată (\textit{Secure Aggregation})}: protocoalele \textit{SecAgg} asigură confidențialitatea contribuțiilor individuale, dar limitează tipul de operații pe care le poate efectua serverul. Multe metode de agregare robustă existente utilizează operații neliniare pe server, iar compatibilitatea lor cu agregarea securizată nu este încă pe deplin stabilită \cite{kairouz2021federated}. Lucrări recente au identificat modalități de a aproxima funcții de agregare precum mediana geometrică sub \textit{SecAgg}, dar soluțiile generale rămân o provocare deschisă.
 
@@ -478,13 +501,13 @@ Un alt efect important al acestui tip de atac este degradarea treptată a perfor
 
     \subsubsection{Confidențialitatea diferențială ca mecanism de apărare}
 
-    O abordare complementară agregării robuste este utilizarea confidentialității diferențiale (\textit{differential privacy} -- DP) ca mecanism de apărare \cite{kairouz2021federated}. Aceasta constă în trei pași: (1) aplicarea unei constrângeri asupra normei $\ell_2$ a actualizărilor clienților (\textit{clipping}), (2) agregarea actualizărilor tăiate, și (3) adăugarea de zgomot gaussian asupra agregatului. Prin limitarea contribuției oricărui client individual la modelul global, DP previne supraadaptarea la actualizările unui client compromis.
+    O abordare complementară agregării robuste este utilizarea confidențialității diferențiale (\textit{differential privacy} -- DP) ca mecanism de apărare \cite{kairouz2021federated}. Aceasta constă în trei pași: (1) aplicarea unei constrângeri asupra normei $\ell_2$ a actualizărilor clienților (\textit{clipping}), (2) agregarea actualizărilor tăiate și (3) adăugarea de zgomot gaussian asupra agregatului. Prin limitarea contribuției oricărui client individual la modelul global, DP previne supraadaptarea la actualizările unui client compromis.
 
     Totuși, DP prezintă limitări importante: zgomotul injectat poate degrada performanța modelului antrenat, iar protecția oferită se degradează exponențial odată cu creșterea numărului de exemple compromise \cite{kairouz2021federated}. Mai mult, Wang et al. au demonstrat că atacurile de tip \textit{edge-case backdoor}, generate din mostre cu probabilitate scăzută în distribuția subiacentă, pot ocoli apărările bazate pe DP.
 
     \subsubsection{Apărarea împotriva atacurilor direcționate}
 
-    Atacurile direcționate (\textit{targeted attacks}) prezintă provocări distincte față de cele ne-direcționate. Conform \cite{kairouz2021federated}, chiar și un singur atac efectuat o singură dată poate fi suficient pentru a introduce un \textit{backdoor} într-un model. Bhagoji et al. au arătat că dacă $10\%$ din dispozitivele participante sunt compromise, un \textit{backdoor} poate fi introdus prin otravirea actualizărilor trimise serverului, chiar și în prezența detectoarelor de anomalii.
+    Atacurile direcționate (\textit{targeted attacks}) prezintă provocări distincte față de cele ne-direcționate. Conform \cite{kairouz2021federated}, chiar și un singur atac efectuat o singură dată poate fi suficient pentru a introduce un \textit{backdoor} într-un model. Bhagoji et al. au arătat că dacă $10\%$ din dispozitivele participante sunt compromise, un \textit{backdoor} poate fi introdus prin otrăvirea actualizărilor trimise serverului, chiar și în prezența detectoarelor de anomalii.
 
     Un aspect deosebit de dificil este faptul că actualizările malițioase ale modelului arată și se comportă în mare parte similar cu modelele antrenate fără atacuri direcționate, evidențiind dificultatea detectării prezenței unui \textit{backdoor}. Cum scopul adversarului este de a afecta rezultatul clasificării doar pentru un subset redus de date, menținând acuratețea globală, mecanismele de apărare concepute pentru atacuri ne-direcționate deseori nu reușesc să contracareze atacurile direcționate \cite{kairouz2021federated}.
 
@@ -492,64 +515,96 @@ Un alt efect important al acestui tip de atac este degradarea treptată a perfor
 
     \subsubsection{Atenuarea atacurilor prin sanitizarea datelor}
 
-    O categorie de apărări concepute specific pentru atacurile de otravire a datelor se bazează pe metode de sanitizare (\textit{data sanitization}), care urmăresc eliminarea datelor contaminate sau anormale \cite{kairouz2021federated}. Lucrări recente au dezvoltat metode îmbunătățite bazate pe statistici robuste, care oferă avantajul de a fi demonstrabil rezistente la un număr redus de valori aberante.
+    O categorie de apărări concepute specific pentru atacurile de otrăvire a datelor se bazează pe metode de sanitizare (\textit{data sanitization}), care urmăresc eliminarea datelor contaminate sau anormale \cite{kairouz2021federated}. Lucrări recente au dezvoltat metode îmbunătățite bazate pe statistici robuste, care oferă avantajul de a fi demonstrabil rezistente la un număr redus de valori aberante.
 
     O clasă conexă de apărări utilizate pentru atacurile \textit{backdoor} sunt cele bazate pe eliminarea selectivă (\textit{pruning}), care încearcă să elimine unitățile de activare inactive pe datele curate. Aceste metode sunt motivate de studii care au arătat că datele contaminate cu scopul introducerii unui \textit{backdoor} activează frecvent anumiți neuroni specifici, denumiți ``neuroni backdoor.''
 
-    Nici sanitizarea datelor, nici eliminarea selectivă nu funcționează direct în mediul FL, deoarece ambele necesită acces la datele clienților sau la date reprezentative similare. Mai mult, studii recente au arătat că multe apărări euristice bazate pe sanitizare rămân vulnerabile la atacuri adaptive de otravire, sugerând că abordările directe de sanitizare pot fi insuficiente \cite{kairouz2021federated}.
+    Nici sanitizarea datelor, nici eliminarea selectivă nu funcționează direct în mediul FL, deoarece ambele necesită acces la datele clienților sau la date reprezentative similare. Mai mult, studii recente au arătat că multe apărări euristice bazate pe sanitizare rămân vulnerabile la atacuri adaptive de otrăvire, sugerând că abordările directe de sanitizare pot fi insuficiente \cite{kairouz2021federated}.
 
-    Detectarea prezenței datelor otravite, fără identificarea obligatorie a clientului responsabil, rămâne o provocare în FL, amplificată în cazul atacurilor \textit{backdoor}, unde metrici precum acuratețea globală de antrenare pot să nu fie suficiente pentru a semnala prezența atacului.
+Detectarea prezenței datelor otravite, fără identificarea obligatorie a clientului responsabil, rămâne o provocare în FL, amplificată în cazul atacurilor \textit{backdoor}, unde metrici precum acuratețea globală de antrenare pot să nu fie suficiente pentru a semnala prezența atacului.
+
+    \subsection{Provocările distribuțiilor Non-IID în Federated Learning}
+
+    O caracteristică fundamentală a mediului de învățare federată este faptul că datele deținute de clienți nu respectă, în general, ipoteza clasică IID (\textit{independent and identically distributed}). În practică, fiecare client colectează date în funcție de propriul context de utilizare, ceea ce înseamnă că distribuția locală a claselor, volumul de mostre și chiar caracteristicile semantice ale datelor pot fi diferite de la un nod la altul.
+
+    Aceste distribuții Non-IID pot apărea sub mai multe forme. Unii clienți pot avea preponderent date dintr-o singură clasă, alții pot avea foarte puține exemple, iar alții pot opera pe un subset de date a cărui distribuție este foarte diferită de media globală. Din punct de vedere al antrenării, această heterogenitate face ca actualizările legitime ale clienților să nu mai fie apropiate între ele în mod natural.
+
+    Principala dificultate introdusă de Non-IID este că serverul de agregare trebuie să combine contribuții care pot părea divergente chiar și atunci când nu există niciun atac. În consecință, separarea comportamentului legitim de cel malițios devine mai dificilă. O metodă de apărare prea agresivă poate respinge actualizări valide doar pentru că provin dintr-un client cu date foarte diferite, iar o metodă prea permisivă poate accepta mai ușor actualizări compromise.
+
+    Din punct de vedere experimental, distribuțiile Non-IID afectează atât viteza de convergență, cât și interpretarea rezultatelor. Modelul global converge mai lent, variațiile dintre runde cresc, iar degradarea produsă de atac poate fi mai greu de delimitat de variația normală a mediului federat. Din acest motiv, experimentele efectuate exclusiv în condiții IID pot supraestima eficiența unor mecanisme de apărare.
+
+    Pentru platforma propusă în această lucrare, integrarea distribuțiilor Non-IID este esențială deoarece oferă un cadru mai apropiat de utilizarea reală a federated learning. Evaluarea unui algoritm de agregare robustă în prezența heterogenității datelor este mai valoroasă decât testarea sa într-un mediu artificial uniform, deoarece reproduce mai fidel dificultățile întâlnite în practică.
+
+    În concluzie, Non-IID nu reprezintă doar o problemă de optimizare, ci și una de securitate experimentală. Orice analiză riguroasă a atacurilor de otrăvire și a mecanismelor de apărare trebuie să țină cont de această caracteristică structurală a mediului federat.
+
+    \subsection{Criterii de evaluare a mecanismelor de apărare}
+
+    Un mecanism de apărare într-un mediu de învățare federată nu trebuie evaluat exclusiv prin acuratețea finală a modelului. O apărare poate părea eficientă într-un singur scenariu, dar poate introduce costuri ridicate, instabilitate sau sensibilitate la variația parametrilor experimentali. Din acest motiv, evaluarea trebuie realizată după mai multe criterii complementare.
+
+    Un prim criteriu este \textbf{eficacitatea defensivă}. Aceasta măsoară în ce măsură mecanismul reduce degradarea performanței sub atac. În scenariile untargeted, acest aspect se observă prin diferența dintre performanța curată și cea obținută sub atac. În scenariile targeted sau de tip backdoor, eficacitatea trebuie corelată și cu blocarea comportamentului malițios specific, nu doar cu menținerea acurateții globale.
+
+    Al doilea criteriu este \textbf{costul introdus în absența atacului}. O metodă robustă poate filtra cu succes contribuțiile suspecte, dar dacă reduce semnificativ performanța modelului chiar și atunci când toți clienții sunt legitimi, utilitatea sa practică scade. Din acest motiv, comparația dintre scenariile Clean și Clean + Defense este esențială pentru a evalua overhead-ul apărării.
+
+    Un al treilea criteriu este \textbf{stabilitatea la variația parametrilor experimentali}. O apărare solidă ar trebui să își păstreze comportamentul și atunci când se modifică procentajul de date compromise, numărul clienților malițioși, distribuția Non-IID sau numărul de runde federate. Metodele care funcționează doar într-o configurație foarte îngustă oferă o valoare practică limitată.
+
+    De asemenea, trebuie analizată și \textbf{complexitatea computațională}. Unele metode robuste implică operații costîșitoare asupra actualizărilor clienților, ceea ce poate afecta scalabilitatea sistemului. Într-o platformă de simulare, costul în timp și resurse trebuie observat împreună cu beneficiul defensiv adus de algoritm.
+
+    Un alt criteriu important este \textbf{compatibilitatea cu infrastructură și cu mecanismele de confidențialitate}. Unele tehnici de agregare robustă presupun acces direct la actualizările individuale și aplicarea de operații neliniare, ceea ce poate intra în conflict cu protocoalele de agregare securizată. Astfel, o metodă foarte eficientă teoretic poate fi dificil de integrat într-un sistem real.
+
+    Nu în ultimul rând, \textbf{interpretabilitatea} reprezintă un criteriu util în analiza experimentală. Este important ca cercetătorul să poată explica de ce un anumit mecanism a funcționat sau a eșuat într-un anumit scenariu. O apărare ușor de interpretat facilitează compararea rezultatelor și construirea unor ipoteze noi de cercetare.
+
+    Prin urmare, o evaluare completă a mecanismelor de apărare trebuie să combine performanța sub atac, costul în absența atacului, stabilitatea, scalabilitatea și compatibilitatea operațională. Aceste criterii justifică modul în care au fost structurate studiile experimentale din capitolele următoare.
 
 
 
-\section{Alte Notiuni}
+\section{Alte Noțiuni}
 
-In vederea elaborarii solutiei propuse in aceasta lucrare, se vor aminti celelalte concepte care stau la baza implementarii propriu-zise. In acest capitol se vor detalia succint mecanismele ce stau la baza platformei propuse, modul de utilizare si scopul alegerii lor.
+În vederea elaborării soluției propuse în această lucrare, se vor aminti celelalte concepte care stau la baza implementării propriu-zise. În acest capitol se vor detalia succint mecanismele ce stau la baza platformei propuse, modul de utilizare și scopul alegerii lor.
 
     \subsection{Docker}
 
     Docker reprezintă un set de servicii software de tip platformă ce utilizează virtualizarea la nivel de sistem de operare pentru a crea entități independente, numite containere. Aceste containere sunt create specific pentru a întreprinde anumite acțiuni și oferă un mediu izolat de execuție.
 
-    Un container este o instanta software ce vine impachetata cu programul aplicatiei si toate bibliotecile necesare dezvoltarii ei.
-    O imagine este vizualizata drept un sablon de instructiuni pentru crearea unui container cu un anumit tip de biblioteci necesare dezvoltarii unei aplicatii.
-    De obicei, imaginile sunt construite pe baza unui fisier denumit Dockerfile care propune o serie de comenzi pentru crearea unui mediu personalizat.
+	    Un container este o instanță software ce vine împachetată cu programul aplicației și toate bibliotecile necesare dezvoltării ei.
+	    O imagine este vizualizată drept un șablon de instrucțiuni pentru crearea unui container cu un anumit tip de biblioteci necesare dezvoltării unei aplicații.
+    De obicei, imaginile sunt construite pe baza unui fișier denumit Dockerfile care propune o serie de comenzi pentru crearea unui mediu personalizat.
     
-    Toate containerle Docker ruleaza prin intermediul Docker Engine, un serviciu ce ruleaza la nivelul sistemului de operare si ofera suport cross-platform (Linux, Windows, macOS).
+	    Toate containerele Docker rulează prin intermediul Docker Engine, un serviciu ce rulează la nivelul sistemului de operare și oferă suport cross-platform (Linux, Windows, macOS).
     
     Containerizarea diferă de virtualizarea tradițională prin faptul că containerele partajează același kernel al sistemului de operare gazdă, în timp ce mașinile virtuale (VM) necesită fiecare un sistem de operare complet. Această abordare face containerele Docker mult mai ușoare (de ordinul MB vs GB) și mai rapide la pornire (secunde vs minute) comparativ cu VM-urile.
     
-    Arhitectura platformei docker este asemanatoare modelului client-server, fiind compusa din urmatoarele componente:
+	    Arhitectura platformei Docker este asemănătoare modelului client-server, fiind compusă din următoarele componente:
     \begin{itemize}
         \item \textbf{Dockerd}
-        un proces daemon, identificabil drept server, ce gestioneaza tot fluxul de servicii, de la imagini si containere pana la volume si retele.
+        un proces daemon, identificabil drept server, ce gestionează tot fluxul de servicii, de la imagini și containere până la volume și rețele.
     
         \item \textbf{Aplication Binary Interfaces (API)}
-        o suita de interfete de comunicare si control al serverului
+	        o suită de interfețe de comunicare și control al serverului
     
         \item \textbf{Comanda docker}
-        o interfata in linie de comanda, docker
+	        o interfață în linie de comandă, `docker`
     \end{itemize}
     
-    În contextul platformei dezvoltate, Docker ofera un mediu de dezvoltare automat in care se regaseste gazduita platforma publica de simulare. Toate informatiile despre fiecare simulare sunt stocate la nivelul unei baze de date PostgreSQL, in timp ce aplicatia web este publica printr-un container frontend, iar in spate regasim un container backend pentru transmiterea de comenzi serverului.
+	    În contextul platformei dezvoltate, Docker oferă un mediu de dezvoltare automat în care se regăsește găzduită platforma publică de simulare. Toate informațiile despre fiecare simulare sunt stocate la nivelul unei baze de date PostgreSQL, în timp ce aplicația web este publică printr-un container frontend, iar în spate regăsim un container backend pentru transmiterea de comenzi serverului.
     
-    Comunicatia dintre containere are loc in aceeasi retea locala docker, iar informatiile despre fiecare simulare a clientului persista in acelasi volum partajat.
+	    Comunicația dintre containere are loc în aceeași rețea locală Docker, iar informațiile despre fiecare simulare a clientului persistă în același volum partajat.
     
-    Pe langa Dockerfile, serviciul Docker Engine ofera si posibilitatea crearii unei configuratii prestabilite pentru definirea de topologii de retea de containere prin Docker Compose. Pe baza fisierelor Dockerfile in care sunt definite sabloanele imaginilor si a unui fisier de configurare YAML a topologiei relatiilor dintre containere, serviciul Docker Compose permite implementarea unei infrastructuri intregi prin rularea si stergerea sa dintr-o serie de comenzi.
+	    Pe lângă Dockerfile, serviciul Docker Engine oferă și posibilitatea creării unei configurații prestabilite pentru definirea de topologii de rețea de containere prin Docker Compose. Pe baza fișierelor Dockerfile în care sunt definite șabloanele imaginilor și a unui fișier de configurare YAML a topologiei relațiilor dintre containere, serviciul Docker Compose permite implementarea unei infrastructuri întregi prin rularea și ștergerea sa dintr-o serie de comenzi.
     
     \subsection{Python}
 
-    Python este unul dintre limbajele de programare cele mai des utilizate in contextul global actual.
-    Python este un limbaj interpretat, de nivel inalt, ce vine cu o suita de biblioteci si functii utile in mai toate domeniile.
+    Python este unul dintre limbajele de programare cele mai des utilizate în contextul global actual.
+	    Python este un limbaj interpretat, de nivel înalt, ce vine cu o suită de biblioteci și funcții utile în mai toate domeniile.
 
-    Intreaga implementarea operatiunilor backend din proiectul propriu-zis a fost redactata folosind limbajul python, fiind nu doar util pentru a programa aplicatii software, dar intalnit in Machine Learning, pentru a antrena retele neuronale si modele de invatare automata.
+	    Întreaga implementare a operațiunilor backend din proiectul propriu-zis a fost redactată folosind limbajul Python, fiind nu doar util pentru a programa aplicații software, dar și întâlnit frecvent în Machine Learning, pentru antrenarea rețelelor neuronale și a modelelor de învățare automată.
 
 
         \subsubsection{Biblioteci Python utilizate}
 
-        Python a devenit de facto standardul in domeniul ML si Deep Learning datorita ecosistemului sau bogat de biblioteci specializate. In contextul inteligentei artificiale, cele mai intalnite biblioteci utilizate in platforma lucrarii sunt:
+	        Python a devenit de facto standardul în domeniul ML și Deep Learning datorită ecosistemului său bogat de biblioteci specializate. În contextul inteligenței artificiale, cele mai întâlnite biblioteci utilizate în platforma lucrării sunt:
 
         \begin{itemize}
-            \item \textbf{TensorFlow}: una dintre cele mai populare biblioteci open-source pentru Machine Learning, dezvoltată de Google Brain Team. TensorFlow oferă o platformă completă pentru construirea și antrenarea modelelor de Deep Learning, cu suport nativ pentru GPU, ceea ce accelerează semnificativ procesul de antrenare. GPU sunt placi grafice dedicate procesarii unui singur set de instructiuni simultan pe multiple seturi de date (SIMD), avand integrate mai multe coruri de procesare decat un procesor normal.
+	            \item \textbf{TensorFlow}: una dintre cele mai populare biblioteci open-source pentru Machine Learning, dezvoltată de Google Brain Team. TensorFlow oferă o platformă completă pentru construirea și antrenarea modelelor de Deep Learning, cu suport nativ pentru GPU, ceea ce accelerează semnificativ procesul de antrenare. GPU-urile sunt plăci grafice dedicate procesării unui singur set de instrucțiuni simultan pe multiple seturi de date (SIMD), având integrate mai multe nuclee de procesare decât un procesor normal.
 
             \item \textbf{PyTorch}: un alt framework major de Deep Learning, dezvoltat de Meta AI Research, cunoscut pentru flexibilitatea sa și abordarea dinamică a grafurilor computaționale
 
@@ -559,18 +614,60 @@ In vederea elaborarii solutiei propuse in aceasta lucrare, se vor aminti celelal
 
         \end{itemize}
 
-        \subsubsection{Utilizarea TensorFlow in cadrul lucrarii}
+        \subsubsection{Versiuni ale bibliotecilor utilizate}
 
-        In implementarea lucrarii, TensorFlow a fost folosit in urmatoarele scopuri:
+        Pentru a asigura reproductibilitatea experimentelor, mediile Python ale platformei au fost configurate cu versiuni explicite ale principalelor biblioteci. Tabelul de mai jos sintetizează versiunile utilizate în backend-ul local, în orchestrator și în cele două medii \textit{Conda} dedicate pentru TensorFlow și PyTorch.
+
+        \begin{table}[h!]
+            \centering
+            \footnotesize
+            \begin{tabular}{|p{0.28\linewidth}|p{0.16\linewidth}|p{0.46\linewidth}|}
+                \hline
+                \textbf{Bibliotecă} & \textbf{Versiune} & \textbf{Rol în platformă} \\
+                \hline
+                TensorFlow (\texttt{tensorflow[and-cuda]}) & 2.15.1 & Antrenarea și evaluarea modelelor din mediul \texttt{fl\_tensorflow}, cu suport pentru accelerare GPU \\
+                \hline
+                PyTorch (\texttt{torch}) & 2.1.0 & Antrenarea modelelor din mediul \texttt{fl\_pytorch} și simularea experimentelor federate pe bază de tensori \\
+                \hline
+	                torchvision & 0.16.0 & Transformări și utilitare pentru seturi de date de imagini utilizate în scenariile de antrenare PyTorch \\
+                \hline
+                torchaudio & 2.1.0 & Pachet auxiliar instalat împreună cu ecosistemul PyTorch pentru compatibilitatea completă a mediului \\
+                \hline
+                scikit-learn & 1.3.2 / 1.3.0 & Calculul metricilor de evaluare și generarea rapoartelor de clasificare în mediile TensorFlow, respectiv PyTorch \\
+                \hline
+                NumPy & 1.26.4 / 1.26.0 & Operații numerice vectorizate asupra ponderilor, seturilor de date și rezultatelor intermediare \\
+                \hline
+                Pillow & 10.4.0 / 10.1.0 & Prelucrarea imaginilor și aplicarea transformărilor specifice atacurilor de tip data poisoning \\
+                \hline
+                FastAPI & >= 0.110.0 & Implementarea backend-ului local și a endpoint-urilor REST pentru gestionarea simulărilor \\
+                \hline
+                Flask & 3.0.0 / 3.0.3 & Implementarea serviciului orchestrator și a endpoint-urilor interne de execuție pe serverul de simulare \\
+                \hline
+                SQLAlchemy & 2.0.25 & Persistența proiectelor, fișierelor și rezultatelor simulărilor în baza de date PostgreSQL \\
+                \hline
+                websockets & 12.0 & Transmiterea actualizărilor în timp real privind starea simulărilor către interfața utilizator \\
+                \hline
+                tensorflow-datasets & 4.9.6 & Descărcarea și utilizarea seturilor de date standard în scenariile bazate pe TensorFlow \\
+                \hline
+            \end{tabular}
+            \caption{Versiuni ale principalelor biblioteci Python utilizate în platformă}
+            \label{tab:python_library_versions}
+        \end{table}
+
+        Prin fixarea explicită a versiunilor s-a urmărit reducerea diferențelor dintre mediile de execuție și prevenirea conflictelor de dependințe care pot afecta rezultatele experimentale sau stabilitatea simulărilor.
+
+	        \subsubsection{Utilizarea TensorFlow în cadrul lucrării}
+
+	        În implementarea lucrării, TensorFlow a fost folosit în următoarele scopuri:
 
 \begin{itemize}
     \item Definirea arhitecturilor de rețele neuronale prin API-ul \textit{Keras}, care oferă o interfață de nivel înalt pentru construirea straturilor (\textit{layers}) și modelelor
-    \item Antrenarea modelelor pe datele locale ale fiecărui client FL prin utilizarea de optimizori, precum \textit{Adam}. Un optimizor este o metoda matematica de reducere a ratei de eroare si de imbunatatire a acuratetii parametrilor modelului de invatare automata.
-    \item Extragerea și setarea ponderilor (\textit{weights}) modelului pentru procesul de agregare, operatiune esentiala in FL
-    \item Evaluarea performanței modelului prin metrici precum \textit{accuracy}, \textit{loss}, \textit{precision} și \textit{recall}.
+	    \item Antrenarea modelelor pe datele locale ale fiecărui client FL prin utilizarea de optimizori, precum \textit{Adam}. Un optimizor este o metodă matematică de reducere a ratei de eroare și de îmbunătățire a acurateții parametrilor modelului de învățare automată.
+	    \item Extragerea și setarea ponderilor (\textit{weights}) modelului pentru procesul de agregare, operațiune esențială în FL
+	    \item Evaluarea performanței modelului prin metrici precum \textit{accuracy}, \textit{loss}, \textit{precision} și \textit{recall}.
 \end{itemize}
 
-        \subsubsection{Metrici de Evaluare in Machine Learning}
+        \subsubsection{Metrici de Evaluare în Machine Learning}
 
         Acuratețea (\textit{accuracy}) este definită ca raportul dintre numărul de predicții corecte (atât \textit{true positives}, cât și \textit{true negatives}) și numărul total de predicții:
 
@@ -579,7 +676,7 @@ In vederea elaborarii solutiei propuse in aceasta lucrare, se vor aminti celelal
 = \frac{TP + TN}{TP + TN + FP + FN}
 \end{equation}
 
-        Recall, sau true positive rate (TPR) este metrica ce determina procentul de date care a fost clasificat corect. Aceasta valoare include la numitor atat numarul de elemente a caror predictie a fost identificata corect drept adevarata si numarul elementelor prezise corect drept incorecte.
+	        Recall, sau true positive rate (TPR), este metrica ce determină procentul de date care a fost clasificat corect. Această valoare include la numitor atât numărul de elemente a căror predicție a fost identificată corect drept adevărată, cât și numărul elementelor prezise corect drept incorecte.
 
 \begin{equation}
 \text{TPR} = \frac{TP}{TP + FN}
@@ -591,7 +688,7 @@ In vederea elaborarii solutiei propuse in aceasta lucrare, se vor aminti celelal
 \text{Precision} = \frac{TP}{TP + FP}
 \end{equation}
     
-Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesare, asigurând compatibilitatea între diferite versiuni și reducând riscul apariției conflictelor de dependințe. La nivelul lucrarii, au fost create două medii distincte în Anaconda, fiecare configurat cu bibliotecile relevante pentru proiect, TensorFlow si PyTorch, utilizate in procesul de simulare.
+Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesare, asigurând compatibilitatea între diferite versiuni și reducând riscul apariției conflictelor de dependințe. La nivelul lucrării, au fost create două medii distincte în Anaconda, fiecare configurat cu bibliotecile relevante pentru proiect, TensorFlow și PyTorch, utilizate în procesul de simulare.
 
 Dincolo de capacitățile sale în Machine Learning, Python excelează și în dezvoltarea de aplicații web și servicii backend. În cadrul platformei, Python îndeplinește multiple roluri care vor fi amintite pe tot parcursul capitolului 3 de implementare.
 
@@ -599,15 +696,15 @@ Dincolo de capacitățile sale în Machine Learning, Python excelează și în d
     \subsection{Rest API}
 
     REST (Representational State Transfer) API reprezintă o arhitectură software pentru comunicarea între componente distribuite prin protocolul HTTP.
-    Un API (Application Programming Interface) reprezintă o interfață definita special prin care diferite componente software comunică între ele.
+	    Un API (Application Programming Interface) reprezintă o interfață definită special prin care diferite componente software comunică între ele.
 
     În platforma dezvoltată, REST API asigură comunicația între frontend (React), backend (FastAPI) și orchestrator (Flask), implementând un sistem complet de management al simulărilor federate.
 
-    \subsubsection{Arhitectura REST in Platforma}
+	    \subsubsection{Arhitectura REST în platformă}
 
     Platforma utilizează două servere REST API distincte, fiecare cu responsabilități specifice:
 
-    Backend API (FastAPI) rulează în containerul Docker local și servește ca intermediar între interfața utilizator și serverul de simulare. FastAPI este un framework Python modern, de înaltă performanță, bazat pe Pydantic pentru validarea automată a datelor și pe specificația OpenAPI pentru documentare automată. Alegerea FastAPI față de Flask pentru backend este justificată de performanța superioară în scenarii cu cereri concurente, suportul nativ pentru operații asincrone.
+	    Backend API (FastAPI) rulează în containerul Docker local și servește ca intermediar între interfața utilizator și serverul de simulare. FastAPI este un framework Python modern, de înaltă performanță, bazat pe Pydantic pentru validarea automată a datelor și pe specificația OpenAPI pentru documentare automată. Alegerea FastAPI față de Flask pentru backend este justificată de performanța superioară în scenarii cu cereri concurente și de suportul nativ pentru operații asincrone.
 
     Orchestrator API (Flask) rulează pe serverul ATM și gestionează execuția efectivă a simulărilor. Flask este un framework web minimalist, ideal pentru servicii interne care nu necesită complexitatea FastAPI. Orchestratorul primește comenzi de la backend, alocă resurse GPU, lansează procese de simulare, și returnează rezultatele.
 
@@ -621,32 +718,32 @@ Dincolo de capacitățile sale în Machine Learning, Python excelează și în d
     Backend-ul expune multiple categorii de endpoint-uri, fiecare responsabil de o funcționalitate specifică:
 
     \begin{itemize}
-        \item Autentificare și Autorizare se realizează prin endpoint-uri dedicate pentru înregistrare utilizatori, autentificare cu username și parolă, și generare JWT (JSON Web Token) pentru sesiuni. Token-ul JWT este inclus în header-ul Authorization pentru toate cererile ulterioare, sub forma Bearer token. Backend-ul validează token-ul pentru fiecare cerere protejată, verificând semnătura digitală, expirarea, și existența utilizatorului în baza de date.
+	        \item Autentificare și Autorizare se realizează prin endpoint-uri dedicate pentru înregistrare utilizatori, autentificare cu username și parolă și generare JWT (JSON Web Token) pentru sesiuni. Token-ul JWT este inclus în header-ul Authorization pentru toate cererile ulterioare, sub forma Bearer token. Backend-ul validează token-ul pentru fiecare cerere protejată, verificând semnătura digitală, expirarea și existența utilizatorului în baza de date.
         \item Management Proiecte și Fișiere permite utilizatorilor să organizeze simulările în proiecte ierarhice. Fiecare proiect poate conține multiple fișiere reprezentând template-uri Python pentru modele diferite.
-        \item Execuția Simulărilor este orchestrată prin endpoint-ul principal care primește codul template Python și configurația simulării. Backend-ul efectuează validări de securitate asupra codului încărcat pentru a preveni atacurile de tip code injection, verifică existența funcțiilor obligatorii în template și transmite cererea către orchestrator împreună cu token-ul de autentificare.
+	        \item Execuția Simulărilor este orchestrată prin endpoint-ul principal care primește codul template Python și configurația simulării. Backend-ul efectuează validări de securitate asupra codului încărcat pentru a preveni atacurile de tip code injection, verifică existența funcțiilor obligatorii în template și transmite cererea către orchestrator împreună cu token-ul de autentificare.
         \item Colectarea Rezultatelor se realizează prin endpoint-uri care interogează orchestratorul pentru obținerea rezultatelor finale. După ce orchestratorul semnalează completarea simulării, backend-ul solicită fișierele JSON cu metrici, fișierul text cu rezumatul, și informații despre atacul aplicat.
         \item WebSocket pentru Monitorizare Real-Time implementează un endpoint special care acceptă conexiuni WebSocket. După stabilirea conexiunii, backend-ul intră într-un loop asincron în care interoghează orchestratorul la fiecare 2 secunde pentru status-ul actualizat al simulării. Informațiile sunt trimise imediat către frontend prin WebSocket, oferind o experiență interactivă similară unui terminal live.
 
     \end{itemize}
 
-\chapter{Proiectare, Implementare si Testare}
+\chapter{Proiectare, Implementare și Testare}
 
-Lucrarea se concentreaza pe dezvoltarea unei platforme de simulare a atacurilor de tip Data Poisoning intr-un mediu de invatare automata federata.
-Scopul ei vine chiar din problema identificarii acestui tip de atac si imbunatatirea procesului de alertare in securitatea cibernetica. 
-Platforma sprijina analistii de securitate si cercetatorii de analiza de date in vederea constientizarii unei posibile vulnerabilitati la nivelul unei infrastructuri publice centralizate.
+Lucrarea se concentrează pe dezvoltarea unei platforme de simulare a atacurilor de tip Data Poisoning într-un mediu de învățare automată federată.
+Scopul ei vine chiar din problema identificării acestui tip de atac și îmbunătățirea procesului de alertare în securitatea cibernetică. 
+Platforma sprijină analiștii de securitate și cercetătorii de analiză de date în vederea conștientizării unei posibile vulnerabilități la nivelul unei infrastructuri publice centralizate.
 
     \section{Arhitectura Platformei}
 
-    In procesul de dezvoltare al platformei, au fost analizate platforme de programare in timp real, precum Google Colab sau Jupyter Notebook, ce permit utilizatorilor sa isi incarce si sa execute remote codul de antrenare al retelelor neuronale intr-o infrastructura specializata.
-    Inspirandu-se din aceste platforme si observand existenta unor utilitare de analiza a malware-ului si infectiilor, s-a identificat nevoia unui framework care nu doar sa simuleze o retea de invatare automata federata, ci si sa testeze atacuri Data Poisoning oferind cercetatorilor si analistilor de securitate posibilitatea de a evalua vulnerabilitatile propriilor retele neuronale.
+	    În procesul de dezvoltare al platformei, au fost analizate platforme de programare în timp real, precum Google Colab sau Jupyter Notebook, ce permit utilizatorilor să își încarce și să execute remote codul de antrenare al rețelelor neuronale într-o infrastructură specializată.
+	    Inspirându-se din aceste platforme și observând existența unor utilitare de analiză a malware-ului și infecțiilor, s-a identificat nevoia unui framework care nu doar să simuleze o rețea de învățare automată federată, ci și să testeze atacuri Data Poisoning, oferind cercetătorilor și analiștilor de securitate posibilitatea de a evalua vulnerabilitățile propriilor rețele neuronale.
     
     Platforma este structurată pe trei niveluri principale:
 
     \textbf{Nivelul Client (Frontend)}
 
     \begin{itemize}
-        \item Interfață React pentru autentificare, management proiecte, și vizualizare rezultate
-        \item Comunicare prin REST API și WebSocket pentru monitorizare in timp-real. 
+	        \item Interfață React pentru autentificare, management proiecte și vizualizare rezultate
+        \item Comunicare prin REST API și WebSocket pentru monitorizare în timp-real. 
     \end{itemize}
 
     \textbf{Nivelul Backend (Containerizat Docker)}
@@ -663,39 +760,39 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
         \item Medii Python izolate: fl\_tensorflow și fl\_pytorch
     \end{itemize}
 
-    Fluxul platformei este urmatorul:
+    Fluxul platformei este următorul:
 
     \begin{itemize}
-        \item Utilizatorul se autentifica in platforma si isi creeaza un proiect si un fisier de test aferent, in care incarca un sablon specific pentru antrenare.
-        Sablonul este compus dintr-o serie de functii predefinite care vor trebui completate cu secvente de cod specifice crearii retelei neuronale, antrenarii si evaluarii ei. Printre alte functii, trebuie sa amintim si de cele de setare a ponderilor pentru procesul de agregare la nivelul infrastructurii federate, de descarcare de date local de la o sursa specifica si de salvare a configuratiei retelei antrenate.
+	        \item Utilizatorul se autentifică în platformă și își creează un proiect și un fișier de test aferent, în care încarcă un șablon specific pentru antrenare.
+	        Șablonul este compus dintr-o serie de funcții predefinite care vor trebui completate cu secvențe de cod specifice creării rețelei neuronale, antrenării și evaluării ei. Printre alte funcții, trebuie să amintim și de cele de setare a ponderilor pentru procesul de agregare la nivelul infrastructurii federate, de descărcare locală a datelor dintr-o sursă specifică și de salvare a configurației rețelei antrenate.
     
-        \item Odata ce se initiaza simularea la apasarea butonului Run, sablonul python este transmis asincron de la backend-ul aplicatiei catre un server remote.  
+	        \item Odată ce se inițiază simularea la apăsarea butonului Run, șablonul Python este transmis asincron de la backend-ul aplicației către un server remote.  
         Comunicarea asincronă permite utilizatorului să continue lucrul în platformă în timp ce simularea se execută pe server.
-        Serverul remote este denumit Server ATM, fiind localizat in infrastructura Academiei Tehnice Militare "Ferdinand I".
-        Pe serverul remote, cererea este preluata de un proces orchestrator care odata primita, instantiaza un nou proces care executa o serie de actiuni.
+        Serverul remote este denumit Server ATM, fiind localizat în infrastructură Academiei Tehnice Militare "Ferdinand I".
+	        Pe serverul remote, cererea este preluată de un proces orchestrator care, odată primită, instanțiază un nou proces care execută o serie de acțiuni.
     
-        \item Odata initiata o cerere de simulare, se va crea in directorul utilizatorului logat in platforma, un director specific denumit dupa identificatorul taskului instantiat de utilizator.
-        In acel director, se afla toate tipurile de fisiere care vor fi gestionate pe tot parcursul operatiunile de simulare, de la setul de date de antrenare, pana la fisierele specifice tipului de atac Data Poisoning utilizat si rezultatele simularilor in reteaua federata.
+	        \item Odată inițiată o cerere de simulare, se va crea în directorul utilizatorului autentificat în platformă un director specific, denumit după identificatorul taskului instanțiat de utilizator.
+	        În acel director se află toate tipurile de fișiere care vor fi gestionate pe tot parcursul operațiunilor de simulare, de la setul de date de antrenare până la fișierele specifice tipului de atac Data Poisoning utilizat și rezultatele simulărilor în rețeaua federată.
     
-        \item Prima etapa este cea in care se identifica tipul de biblioteci utilizate pentru procesarea retelei neuronale si se trece in mediul python corespunzator. Platforma suporta antrenarea folosind biblioteci TensorFlow si PyTorch, avand create cate un mediu specific pentru antrenarea tipului de retea respectiv. Scriptul de rulare a retelei neuronale se numeste train\_model.py si este un script agnostic, construit pentru a testa functiile din sablon.
+	        \item Prima etapă este cea în care se identifică tipul de biblioteci utilizate pentru procesarea rețelei neuronale și se trece în mediul Python corespunzător. Platforma suportă antrenarea folosind biblioteci TensorFlow și PyTorch, având create câte un mediu specific pentru antrenarea tipului de rețea respectiv. Scriptul de rulare a rețelei neuronale se numește \texttt{train\_model.py} și este un script agnostic, construit pentru a testa funcțiile din șablon.
     
         \begin{figure}[h!]
             \centering
             \includegraphics[width=0.7\textwidth]{../images/Changing_environments.png}
-            \caption{Medii de python platforma}
+	            \caption{Medii Python ale platformei}
             \label{fig:nume-label}
         \end{figure}
 
-        \item Imaginea de mai sus reprezinta mediile de python disponibile pentru a rula retelele neuronale.
+        \item Imaginea de mai sus reprezintă mediile Python disponibile pentru rularea rețelelor neuronale.
     
-        \item La fiecare pas, in cazul unei erori generate de orice fel de actiune, procesul ce gestioneaza operatiunile de simulare se opreste si transmite eroarea ca rezultat procesului orchestrator care semnalizeaza backend-ul aplicatiei.
+	        \item La fiecare pas, în cazul unei erori generate de orice fel de acțiune, procesul ce gestionează operațiunile de simulare se oprește și transmite eroarea ca rezultat procesului orchestrator, care notifică backend-ul aplicației.
     
-        \item Dupa prima antrenare, se salveaza parametrii aferenti matricii de confuzie (acuratete, precizie, scor F1, recall) pentru a compara rezultatul simularii cu configuratia initiala a retelei si detectarea posibilelor anomalii. Acesta este principalul pas in procesul de analiza a problemei propuse.
+        \item După prima antrenare, se salvează parametrii aferenți matricii de confuzie (acuratețe, precizie, scor F1, recall) pentru a compara rezultatul simulării cu configurația inițială a rețelei și detectarea posibilelor anomalii. Acesta este principalul pas în procesul de analiză a problemei propuse.
     
-        \item Daca programul este corect structurat, procesul curent incarca functiile scriptului transmis si se foloseste de ele pentru a simula atacul Data Poisoning.
-        Mai intai se apeleaza functia de descarcare locala a datelor de antrenare si testare. Aceste date vor fi folosite pentru a simula procesul de otravire pe baza configuratiei simularii setate de utilizator. Datele pot fi descarcate din orice sursa publica, permitand o flexibilitate in tipul de platforma si de date pentru testare.
+        \item Dacă programul este corect structurat, procesul curent încarcă funcțiile scriptului transmis și se folosește de ele pentru a simula atacul Data Poisoning.
+	        Mai întâi se apelează funcția de descărcare locală a datelor de antrenare și testare. Aceste date vor fi folosite pentru a simula procesul de otrăvire pe baza configurației simulării setate de utilizator. Datele pot fi descărcate din orice sursă publică, permițând flexibilitate în alegerea tipului de platformă și a datelor pentru testare.
     
-        \item Argumentele cu ajutorul carora se ruleaza scriptul de otravire a setului de date sunt:
+	        \item Argumentele cu ajutorul cărora se rulează scriptul de otrăvire a setului de date sunt:
         \begin{itemize}
             \item \textbf{poison\_operation}: tipul atacului de otrăvire a datelor. Platforma suportă 7 tipuri de atacuri:
             \begin{itemize}
@@ -707,26 +804,26 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
                 \item \textit{Backdoor Semantic} --- modificarea caracteristicilor naturale ale imaginii (luminozitate, tonalitate RGB)
                 \item \textit{Edge-Case Backdoor} --- aplicarea de transformări asupra imaginilor (rotație, reducere culori, solarizare)
             \end{itemize}
-            \item \textbf{poison\_intensity}: intensitatea atacului folosit doar in cazul atacurilor backdoor (ex: 0.1 pentru zgomot Gaussian, dimensiune trigger pentru backdoor)
-            \item \textbf{poison\_percentage}: procentajul de date afectate per client (ex: 0.2 pentru 20\% date compromise la nivelul unui client malitios)
+            \item \textbf{poison\_intensity}: intensitatea atacului folosit doar în cazul atacurilor backdoor (ex: 0.1 pentru zgomot Gaussian, dimensiune trigger pentru backdoor)
+	            \item \textbf{poison\_percentage}: procentajul de date afectate per client (ex: 0.2 pentru 20\% date compromise la nivelul unui client malițios)
         \end{itemize}
     
-        \item Amintim ca mediile de python includ si biblioteci de seturi de date specifice precum TensorFlow Datasets in care se regasesc seturi de date predefinite in cazul in care utilizatorul doreste sa foloseasca un set de date predefinit la nivel de biblioteci.
+	        \item Amintim că mediile Python includ și biblioteci de seturi de date specifice, precum TensorFlow Datasets, în care se regăsesc seturi de date predefinite, în cazul în care utilizatorul dorește să folosească un astfel de set de date la nivel de biblioteci.
     
-        \item Procesul de otravire (poisoning) presupune rularea unui script care pe baza parametrilor simularii, aplica o serie de operatii asupra seturilor de date. Tipurile de actiuni de otravire au fost definite in capitolul 2 (sectiunea 2.3.3 - Atacul Data poisoning). Utilizatorul poate alege procentajul din etichete care sa fie infectate, iar in cazul atacurilor backdoor, se vor seta parametrii specifici fiecărui tip de trigger.
+        \item Procesul de otrăvire (poisoning) presupune rularea unui script care pe baza parametrilor simulării, aplică o serie de operații asupra seturilor de date. Tipurile de acțiuni de otrăvire au fost definite în capitolul 2 (secțiunea 2.3.3 - Atacul Data poisoning). Utilizatorul poate alege procentajul din etichete care să fie infectate, iar în cazul atacurilor backdoor, se vor seta parametrii specifici fiecărui tip de trigger.
     
-        \item In pasii urmatori, se va realiza simularea propriu-zisa cu ajutorul unui script agnostic denumit fl\_simulator, care va primi drept argumente urmatoarele:
+        \item În pașii următori, se va realiza simularea propriu-zisă cu ajutorul unui script agnostic denumit fl\_simulator, care va primi drept argumente următoarele:
     
         \begin{itemize}
-            \item N numarul de clienti/dispozitive aferente retelei federate
-            \item M numarul clienti compromisi din totalul de mai sus
-            \item R numarul total de runde de antrenare
-            \item ROUNDS numarul de runde in care dispozitivele compromise vor antrena cu datele corupte
+            \item N numărul de clienți/dispozitive aferente rețelei federate
+	            \item M numărul de clienți compromiși din totalul de mai sus
+            \item R numărul total de runde de antrenare
+            \item ROUNDS numărul de runde în care dispozitivele compromise vor antrena cu datele corupte
             \item strategia de propagare a dispozitivelor compromise:
             \begin{itemize}
-                \item \textit{first}: dispozitivele compromise vor rula primele ROUNDS runde cu datele otravite, iar restul de R-ROUNDS runde vor folosi datele originale
-                \item \textit{last}: dispozitivele compromise vor rula ultimele ROUNDS runde cu datele otravite, iar restul de R-ROUNDS runde vor folosi datele originale
-                \item \textit{alternate}: dispozitivele compromise vor rula cate o runda folosind datele otravite si cate una cu datele originale
+                \item \textit{first}: dispozitivele compromise vor rula primele ROUNDS runde cu datele otrăvite, iar restul de R-ROUNDS runde vor folosi datele originale
+                \item \textit{last}: dispozitivele compromise vor rula ultimele ROUNDS runde cu datele otrăvite, iar restul de R-ROUNDS runde vor folosi datele originale
+	                \item \textit{alternate}: dispozitivele compromise vor rula câte o rundă folosind datele otrăvite și câte una cu datele originale
             \end{itemize}
             \item metoda de agregare robustă, selectată de utilizator:
             \begin{itemize}
@@ -750,7 +847,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
             \item \textbf{Simulare cu date otrăvite și apărare (Poisoned + Defense)} --- același scenariu de atac, dar cu agregarea robustă activată. Comparând rezultatele cu scenariul anterior, se evaluează eficacitatea strategiei de apărare selectate.
         \end{enumerate}
     
-        \item In urma celor patru simulari, se vor salva informatiile cu privire la fiecare configuratie simulata, ce va fi utilizata in procesul de analiza.
+        \item În urma celor patru simulări, se vor salva informațiile cu privire la fiecare configurație simulată, ce va fi utilizată în procesul de analiză.
         
         Analiza rezultatelor presupune compararea următoarelor metrici între cele patru scenarii:
         \begin{itemize}
@@ -760,21 +857,21 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
                 \item Degradare absolută: $\Delta_{acc}^{abs} = Acc_{clean} - Acc_{poisoned}$
                 \item Variații față de modelul inițial: diferența dintre modelul final din fiecare scenariu și acuratețea pre-antrenată de referință (ex. $Acc_{clean} - Acc_{init}$, $Acc_{poisoned} - Acc_{init}$)
             \end{itemize}
-            \item \textbf{Metrici de clasificare}: Precision, recall și F1-score (medie ponderată) pentru fiecare scenariu
+	            \item \textbf{Metrici de clasificare}: Precision, recall și F1-score (medie ponderată) pentru fiecare scenariu
         \end{itemize}
 
-        Rezultatele sunt salvate în trei fișiere: \texttt{analysis.json} (metrici structurate), \texttt{summary.txt} (rezumat text asupra simularilor) și \texttt{attack\_info.json} (detalii despre atac).
+        Rezultatele sunt salvate în trei fișiere: \texttt{analysis.json} (metrici structurate), \texttt{summary.txt} (rezumat text asupra simulărilor) și \texttt{attack\_info.json} (detalii despre atac).
     
-        \item Utilizatorul va putea vizualiza fiecare pas de procesare amintit pana acum si rezultatul analizei simularii.
+        \item Utilizatorul va putea vizualiza fiecare pas de procesare amintit până acum și rezultatul analizei simulării.
     
-        \item Pentru a facilita munca analistului, platforma include posibilitatea de export a raportului simularii în format PDF și CSV, dar si compararea de simulari ale aceluiasi proiect.
+        \item Pentru a facilita munca analistului, platforma include posibilitatea de export a raportului simulării în format PDF și CSV, dar și compararea de simulări ale aceluiași proiect.
     \end{itemize}
 
     \section{Implementare Platformei}
 
-    Platforma este compusă din două servere, unul dintre ele fiind remote și dispunând de trei plăci grafice NVIDIA A40 (GPU) optimizate pentru medii de lucru cu Inteligență Artificială și Deep Learning. Plăcile dispun de 46 GB memorie VRAM (video RAM) GDDR6 pentru a suporta lucrul intensiv cu date. A40 este o placă profesională destinată centrelor de date, furnizând accelerare hardware pentru TensorFlow și PyTorch, precum și pentru operații matematice complexe necesare în procesele de simulare și învățare federată.
+	    Platforma este compusă din două servere, unul dintre ele fiind remote și dispunând de trei plăci grafice NVIDIA A40 (GPU) optimizate pentru medii de lucru cu Inteligență Artificială și Deep Learning. Plăcile dispun de 46 GB memorie VRAM (video RAM) GDDR6 pentru a suporta lucrul intensiv cu date. A40 este o placă profesională destinată centrelor de date, furnizând accelerare hardware pentru TensorFlow și PyTorch, precum și pentru operații matematice complexe necesare în procesele de simulare și învățare federată.
 
-    Serverul care rulează funcționalitățile backend și de persistență se află în rețeaua locală proprie. Acesta este responsabil pentru gestionarea interacțiunii utilizatorilor, stocarea configurațiilor și transmiterea cererilor către serverul remote. El reprezintă punctul de intrare al platformei pentru toți utilizatorii și menține logica de securitate, autentificare și gestionare a sesiunilor.
+	    Serverul care rulează funcționalitățile backend și de persistență se află în rețeaua locală proprie. Acesta este responsabil pentru gestionarea interacțiunii utilizatorilor, stocarea configurațiilor și transmiterea cererilor către serverul remote. El reprezintă punctul de intrare al platformei pentru toți utilizatorii și menține logica de securitate, autentificare și gestionare a sesiunilor.
     
     Pentru scalabilitate și flexibilitate, s-au utilizat containere Docker la nivelul serverului local pentru a stoca următoarele componente:
 
@@ -808,12 +905,12 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
         \item \textbf{Descărcarea modelului din repozitoriu (Download Model)}: Se apelează logica de definire a modelului din șablon; dacă modelul este pre-antrenat și găzduit extern (ex. HuggingFace), acesta este descărcat și salvat de pe server în formatul specific framework-ului detectat.
         \item \textbf{Descărcarea setului de date (Download Dataset)}: Orchestratorul apelează funcția de descărcare și pregătire a datelor (testare și antrenare) propusă în codul utilizatorului.
         \item \textbf{Alocarea unității de procesare grafică (Allocate GPU)}: Managerul de GPU caută o placă video NVIDIA disponibilă în sistem, procesând elementele dintr-o coadă de așteptare. Dacă timpul alocat expiră, se utilizează unitatea CPU.
-        \item \textbf{Activarea mediului Python (Activate Python Environment)}: Prin analiza importurilor din șablon, orchestratorul detectează tipul aplicatiei (TensorFlow sau PyTorch) și activează mediul \textit{Conda} preconfigurat corespunzător.
+        \item \textbf{Activarea mediului Python (Activate Python Environment)}: Prin analiza importurilor din șablon, orchestratorul detectează tipul aplicației (TensorFlow sau PyTorch) și activează mediul \textit{Conda} preconfigurat corespunzător.
         \item \textbf{Alterarea datelor de antrenare (Poison Dataset)}: Folosind scriptul \texttt{poison\_data.py}, orchestratorul creează o copie malformată a datelor destinate antrenării, aplicând exact tipul de atac, procentajul și intensitatea alese din interfață.
         \item \textbf{Simularea în mediul curat (Clean Simulation)}: Modelul global intră în faza de simulare federată (folosind \texttt{fd\_simulator.py}). Procesul asincron este inițiat exclusiv pe setul de date nealterate (curat), partajat pe N clienți legitimi, folosind algoritmul standard de agregare, \textit{FedAvg}. Această etapă înregistrează performanța normală (de referință).
         \item \textbf{Simularea curată cu mecanism de apărare (Clean + Defense)}: Continuându-se procesele pentru testare, \textit{FedAvg} este înlocuit acum cu tehnica robustă de agregare aleasă de utilizator (ex. FoolsGold, Norm Clipping), tot pe setul curat de date.
         \item \textbf{Simularea cu atac fără apărare (Poisoned Simulation)}: Este integrat setul alterat (din etapa 9). M dispozitive capătă rol de clienți malițioși și raportează parametrii compromiși către orchestrator, agregarea făcându-se prin \textit{FedAvg}. Aceasta va măsura impactul loviturii asupra performanței totale.
-        \item \textbf{Simularea sub atac și cu protecție activă (Poisoned + Defense)}: Aceeași simulare cu M clienți atacatori este reluată folosind de data aceasta metoda de agregare robustă ce trebuie să filtreze ponderile malițioase.
+        \item \textbf{Simularea sub atac și cu protecție activă (Poisoned + Defense)}: Aceeași simulare cu M clienți atacatori este reluată folosind de data această metodă de agregare robustă ce trebuie să filtreze ponderile malițioase.
         \item \textbf{Generarea rezultatelor finale (Generate Final Results)}: Orchestratorul cumulează rezultatele din toate simulările (scenariul normal, overheadul apărării, capacitatea de distrugere a atacului și reușita apărării) și generează rapoarte structurate, oferite utilizatorului direct pe ecran.
     \end{enumerate}
 
@@ -837,13 +934,115 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
     \begin{figure}[h!]
         \centering
         \includegraphics[width=1\textwidth, height=0.85\textheight, keepaspectratio]{../images/Arhitectura_Aplicatie.png}
-        \caption{Arhitectura si fluxul platformei}
+        \caption{Arhitectura și fluxul platformei}
         \label{fig:nume-label}
     \end{figure}
     
 
-    Imaginea 3.2 prezinta intregul flux al arhitecturii, precum si detaliile tehnice utilizate.
+	    Imaginea 3.2 prezintă întregul flux al arhitecturii, precum și detaliile tehnice utilizate.
 
+    \subsection{Scenariul complet de utilizare al platformei}
+
+    Din perspectiva utilizatorului final, platforma urmează un scenariu de utilizare liniar, construit astfel încât să reducă efortul de configurare și să permită repetarea ușoară a experimentelor. În primul rând, utilizatorul se autentifică în aplicație și își creează un proiect nou, care devine spațiul logic în care vor fi organizate șabloanele de antrenare și rezultatele asociate.
+
+    În etapa următoare, utilizatorul încarcă sau editează un șablon Python ce descrie modelul, funcțiile de prelucrare a datelor și logica de antrenare locală. Platforma validează structura minimă a acestui șablon și verifică existența funcțiilor obligatorii, astfel încât erorile de bază să fie detectate înaintea consumării resurselor de calcul.
+
+    După definirea șablonului, utilizatorul configurează parametrii simulării: numărul de clienți federați, numărul de runde, numărul de epoci locale, tipul atacului, intensitatea otrăvirii, procentajul de date compromise și mecanismul de agregare utilizat. Dacă este necesar, acesta poate selecta și funcții personalizate de agregare sau de poisoning, deja salvate anterior în platformă.
+
+    Odată lansată simularea, cererea este transmisă backend-ului, apoi orchestratorului de pe serverul de simulare. În acest punct, platforma alocă resursele disponibile, pregătește directorul de lucru, descarcă datele și modelul necesar, aplică atacul configurat și execută succesiv scenariile curate și atacate. Utilizatorul poate urmări progresul în interfață prin mesaje de stare și poate anula simularea dacă observă o configurație incorectă sau dacă dorește eliberarea resurselor.
+
+    La final, rezultatele sunt prezentate într-o formă comparativă, care evidențiază diferențele dintre scenariile \textit{Clean}, \textit{Clean + Defense}, \textit{Poisoned} și \textit{Poisoned + Defense}. Utilizatorul poate analiza metricile obținute, poate compara două simulări diferite și poate relua ulterior experimentul pornind de la aceeași configurație. În acest fel, platforma nu funcționează doar ca un executant de scripturi, ci ca un mediu complet de lucru pentru experimente reproductibile în domeniul securității învățării federate.
+
+    \subsection{Structura directoarelor și a fișierelor importante}
+
+    Din punct de vedere software, platforma este organizată modular, astfel încât fiecare componentă majoră să poată fi întreținută și extinsă independent. La nivelul serverului local există directoare dedicate frontend-ului, backend-ului, bazei de date și fișierelor de orchestrare Docker, iar pe serverul de simulare se găsesc scripturile care coordonează antrenarea, alocarea resurselor și procesarea atacurilor.
+
+    Componenta frontend include fișierele interfeței React, componentele vizuale, editorul de cod și logica de configurare a proiectelor și simulărilor. Backend-ul local conține endpoint-urile FastAPI, modelele de date, logica de autentificare, persistența configurațiilor și comunicația cu orchestratorul remote. Această separare clară permite tratarea distinctă a preocupărilor de interfață, logică de business și execuție experimentală.
+
+    La nivelul serverului de simulare, câteva fișiere au rol central în fluxul de lucru:
+
+    \begin{itemize}
+        \item \texttt{orchestrator\_gpu.py} coordonează întregul pipeline de simulare;
+        \item \texttt{gpu\_manager.py} gestionează distribuirea resurselor GPU;
+        \item \texttt{verify\_template.py} validează șablonul încărcat;
+        \item \texttt{train\_model.py} verifică antrenabilitatea modelului;
+        \item \texttt{poison\_data.py} aplică atacul de otrăvire;
+        \item \texttt{fd\_simulator.py} execută rundele federate și produce rezultatele finale.
+    \end{itemize}
+
+    Pe lângă aceste fișiere principale, fiecare simulare dispune de un director de lucru propriu, creat dinamic pentru utilizatorul și task-ul curent. În acest director sunt stocate temporar șablonul Python executat, datele curate și otrăvite, modelele intermediare și rapoartele rezultate. Organizarea per-task simplifică izolarea execuțiilor, depanarea și refacerea experimentală a unui scenariu anterior.
+
+    O asemenea structură a directoarelor nu este importantă doar din punct de vedere practic, ci și metodologic. Ea face posibilă trasabilitatea completă a fiecărei rulări și permite extinderea platformei prin adăugarea de noi module, fără a afecta componentele deja stabile.
+
+    \subsection{Analiza statică de securitate cu Semgrep}
+
+    Deoarece platforma permite utilizatorilor să încarce cod Python arbitrar care va fi executat pe serverul de simulare, securitatea codului primit este critică. Pipeline-ul de analiză statică utilizează utilitarul \textit{Semgrep} (dezvoltat inițial sub marca \textit{OpenGrep}), un instrument de analiză statică, open-source, bazat pe potrivire de tipare (\textit{pattern matching}) care detectează vulnerabilități de securitate, defecte de cod și anti-șabloane fără a executa codul efectiv.
+
+    Procesul de scanare funcționează astfel:
+
+    \begin{enumerate}
+        \item Codul primit de la utilizator este scris într-un fișier temporar cu extensia \texttt{.py};
+        \item Se execută comanda \texttt{semgrep scan -{}-config auto -{}-json}, care aplică automat setul complet de reguli comunitare și profesionale;
+        \item Rezultatul în format JSON este analizat, iar vulnerabilitățile cu severitate ridicată (\texttt{HIGH}) sunt extrase;
+        \item Dacă se detectează cel puțin o vulnerabilitate critică, încărcarea funcției este respinsă, iar utilizatorului i se prezintă detalii despre regulile încălcate (identificatorul regulii, linia de cod afectată și descrierea vulnerabilității);
+        \item Fișierul temporar este șters imediat după finalizarea scanării.
+    \end{enumerate}
+
+    Pe lângă regulile standard, scanarea exclude explicit reguli specifice ecosistemului \textit{Machine Learning} care generează fals pozitive în contextul simulărilor FL --- de exemplu, utilizarea legitimă a funcțiilor \texttt{torch.save/load} sau a modulului \texttt{pickle}, necesare pentru serializarea și deserializarea modelelor PyTorch și TensorFlow.
+
+    În situații excepționale (timeout, absența utilitar \textit{Semgrep} pe server), sistemul adoptă o politică permisivă (\textit{fail-open}) și permite continuarea simulării, în loc să blocheze utilizatorul. Această decizie reflectă natura experimentală a platformei, fiind dublată de izolarea proceselor în medii sandbox.
+
+    \subsection{Funcții personalizate de agregare și otrăvire}
+
+    Pe lângă algoritmii de agregare robusti și metodele de atac predefinite, platforma oferă utilizatorilor posibilitatea de a defini funcții personalizate, atât pentru procesul de agregare a ponderilor, cât și pentru cel de otrăvire a datelor. Această funcționalitate extinde semnificativ capacitatea de experimentare, permițând cercetătorilor și studenților să testeze ipoteze proprii fără a modifica codul sursă al simulatorului.
+
+    \subsubsection{Funcții personalizate de agregare}
+
+    Utilizatorul poate defini o funcție de agregare proprie prin intermediul unui editor de cod integrat accesibil din interfața web. Codul trebuie să conțină obligatoriu o funcție cu semnătura \texttt{custom\_aggregate}, care primește drept parametri listele de ponderi ale clienților, dimensiunile seturilor de date respective, ponderile curente ale modelului global și numărul de clienți malițioși, iar în urma apelului returnează lista de ponderi agregate cu aceeași structură ca intrarea.
+    De menționat aici că platforma nu oferă posibilitatea de a verifica rezultatul de ieșire al funcției, ci doar dacă aceasta respectă semnătura și dacă nu conține vulnerabilități de securitate. Astfel, utilizatorul este responsabil pentru corectitudinea implementării funcției sale.
+    La încărcarea codului, platforma execută un pipeline de validare în trei etape:
+
+    \begin{enumerate}
+        \item \textbf{Validare sintactică}: codul este analizat prin modulul Python \texttt{ast.parse()} pentru a verifica corectitudinea sintaxei;
+        \item \textbf{Verificare structurală}: se parcurge arborele sintactic abstract (AST) pentru a confirma existența funcției \texttt{custom\_aggregate};
+        \item \textbf{Analiză statică de securitate}: codul este scanat cu utilitarul \textit{Semgrep} (OpenGrep) pentru identificarea vulnerabilităților de severitate ridicate.
+    \end{enumerate}
+
+    Dacă toate verificările sunt trecute cu succes, funcția este transmisă serverului orchestrator și salvată ca modul Python independent în directorul utilizatorului. În timpul simulării, funcția este încărcată dinamic și apelată de procesul de agregare în locul algoritmului standard. În situația în care execuția funcției personalizate eșuează, sistemul revine automat la algoritmul \textit{FedAvg}, asigurând continuitatea simulării. Funcția apare în interfață sub forma \texttt{@nume\_functie}, ca o convenție față de algoritmii predefiniți.
+
+    \subsubsection{Funcții personalizate de otrăvire a datelor}
+
+    Similar funcțiilor de agregare, utilizatorul poate defini o funcție proprie de otrăvire a datelor, cu semnătura \texttt{custom\_poison}. Aceasta primește imaginea originală, lista claselor disponibile, clasa curentă a imaginii, clasa țintă, precum și parametrii de intensitate și procentaj configurați din interfață. Funcția returnează un tuplu format din imaginea modificată și noua clasă atribuită.
+
+    Procesul de validare este identic cu cel al funcțiilor de agregare (validare sintactică, verificare structurală a funcției \texttt{custom\_poison} și analiza de securitate \textit{Semgrep}). La execuția simulării, dacă operația de otrăvire selectată începe cu prefixul \texttt{@}, scriptul \texttt{poison\_data.py} încarcă dinamic modulul Python corespunzător și aplică funcția personalizată asupra fiecărei imagini din subsetul selectat pentru otrăvire. Dacă funcția generează o eroare la execuție, simularea este întreruptă automat, deoarece datele compromise inconsistente ar invalida rezultatele experimentului.
+
+    \subsubsection{Avantaje și limitări ale extensibilității prin funcții custom}
+
+    Introducerea funcțiilor personalizate reprezintă unul dintre avantajele importante ale platformei, deoarece transformă simulatorul dintr-un instrument cu opțiuni fixe într-un cadru extensibil de cercetare. Utilizatorul poate defini rapid o nouă funcție de agregare sau o nouă metodă de otrăvire fără a modifica nucleul aplicației și fără a reconstrui infrastructură completă. Această flexibilitate reduce timpul necesar prototipării unei idei și facilitează compararea ei cu mecanismele deja integrate.
+
+    Un alt avantaj constă în reproductibilitatea controlată. Odată salvate pe server, funcțiile personalizate pot fi reutilizate în mai multe simulări, ceea ce permite repetarea experimentelor în condiții similare și compararea rezultatelor pe seturi diferite de parametri. Din această perspectivă, funcțiile custom contribuie direct la valoarea platformei ca instrument de cercetare.
+
+    Totuși, extensibilitatea prin funcții custom introduce și limitări. În primul rând, validarea automată poate confirma sintaxa, semnătura și absența unor vulnerabilități evidente, dar nu poate garanta corectitudinea științifică a algoritmului implementat. O funcție poate fi formal validă și totuși să producă rezultate greșite sau instabile.
+
+    În al doilea rând, aceste funcții pot avea un cost computațional imprevizibil. O metodă de agregare foarte complexă sau o tehnică de poisoning costîșitoare poate influența timpul total de execuție și poate face mai dificilă compararea directă cu metodele predefinite. De aceea, flexibilitatea oferită de platformă trebuie însoțită de o disciplină experimentală atentă.
+
+    În al treilea rând, funcțiile custom sunt constrânse de contractul de interfață definit de platformă. Această restricție este necesară pentru siguranță și compatibilitate, însă înseamnă și că nu orice algoritm din literatura de specialitate poate fi integrat direct fără adaptări suplimentare.
+
+    Prin urmare, extensibilitatea prin funcții personalizate oferă un echilibru între libertatea de experimentare și controlul infrastructurăl. Ea extinde capacitatea platformei de a testa ipoteze noi, dar nu elimină responsabilitatea cercetătorului de a valida metodologic rezultatele obținute.
+
+    \subsection{Persistența datelor și structura rezultatelor generate}
+
+    Pentru a permite reluarea analizelor și compararea simulărilor în timp, platforma implementează un mecanism de persistență împărțit între baza de date PostgreSQL și sistemul de fișiere al serverului de simulare. În baza de date sunt stocate informațiile descriptive despre utilizatori, proiecte, șabloane, parametrii experimentali și starea simulărilor, în timp ce pe disc sunt păstrate artefactele efective rezultate din execuție.
+
+    Această separare are un rol funcțional clar. Metadatele din baza de date pot fi interogate rapid pentru listarea simulărilor, filtrarea lor după parametri și compararea mai multor rulări. În schimb, fișierele generate în timpul simulării, cum ar fi modelele, datele intermediare și rapoartele, sunt păstrate separat pentru a nu încărca inutil baza de date cu conținut voluminos.
+
+    Fiecare task de simulare primește un director de lucru propriu, în care se salvează șablonul Python executat, versiunea descărcată sau generată a modelului, datele curate și otrăvite, precum și fișierele intermediare produse în timpul antrenării. Această organizare permite reconstituirea ulterioară a unei rulări și simplifică procesul de audit și depanare.
+
+    Rezultatele finale sunt structurate în jurul unor fișiere standardizate. Fișierul \texttt{analysis.json} conține metricile numerice într-un format ușor de prelucrat automat, \texttt{summary.txt} oferă un rezumat textual al simulării, iar \texttt{attack\_info.json} reține informațiile despre configurația atacului folosit. Împreună, aceste fișiere descriu atât performanța modelului în cele patru scenarii de rulare, cât și contextul experimental care a produs rezultatele.
+
+    Pe lângă fișierele finale, sistemul poate genera și fișiere intermediare de verificare și loguri de progres. Deși ele nu sunt destinate neapărat analizei finale de către utilizator, aceste artefacte au valoare în depanare, în verificarea consistenței fluxului de simulare și în justificărea unor diferențe între două rulări aparent similare.
+
+    Prin combinarea persistenței relaționale cu stocarea artefactelor pe disc, platforma oferă atât trasabilitate administrativă, cât și trasabilitate tehnică. Această abordare este importantă într-un context experimental, deoarece permite nu doar vizualizarea rapidă a rezultatelor, ci și reconstrucția completă a condițiilor în care acestea au fost obținute.
 
     \section{Cerintele Software}
 
@@ -874,10 +1073,25 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
             \item Numărul de dispozitive compromise (range: 1 până la 50\% din total)
             \item Numărul total de runde de antrenare (range: 1--500) și numărul de runde corupte per dispozitiv
             \item Strategia de distribuire a dispozitivelor corupte (primele, ultimele, distribuție uniformă)
-            \item Suport pentru 7 tipuri de atacuri: Label Flip, Backdoor BadNets, Backdoor Blended, Backdoor Sinusoidal, Backdoor Trojan, Backdoor Semantic și Edge-Case Backdoor
+            \item Suport pentru 7 tipuri de atacuri predefinite (Label Flip, Backdoor BadNets, Backdoor Blended, Backdoor Sinusoidal, Backdoor Trojan, Backdoor Semantic și Edge-Case Backdoor), precum și posibilitatea definirii de funcții personalizate de otrăvire
             \item Configurarea intensității atacului specific fiecărui tip (deviație standard, procentaj etichete, dimensiune trigger)
-            \item Selecția funcției de agregare: FedAvg, Krum, Trimmed Mean, Median, Trimmed Mean + Krum, Random
+            \item Selecția funcției de agregare din algoritmii integrați (FedAvg, Krum, Trimmed Mean, Median, FoolsGold, Norm Clipping, Random) sau din funcții de agregare personalizate definite de utilizator
             \item Validarea valorilor parametrilor introduși cu mesaje de eroare pentru valori invalide
+        \end{itemize}
+
+        \subsubsection{Funcții Personalizate și Securitate Cod (CF-73 -- CF-82)}
+
+        \begin{itemize}
+            \item Definirea de funcții personalizate de agregare prin editor de cod Python integrat (Monaco Editor)
+            \item Definirea de funcții personalizate de otrăvire a datelor prin editor de cod Python dedicat
+            \item Validare sintactică automată a codului Python folosind modulul \texttt{ast.parse()}
+            \item Verificare structurală a prezenței funcțiilor obligatorii (\texttt{custom\_aggregate} sau \texttt{custom\_poison})
+            \item Analiza statică de securitate a codului cu utilitarul Semgrep (OpenGrep) pentru detecția vulnerabilităților de tip RCE (Remote Code Execution)
+            \item Respingerea automată a codului care conține vulnerabilități de severitate ridicată, cu prezentarea detaliată a regulilor încălcate
+            \item Persistarea funcțiilor personalizate pe serverul orchestrator și listarea lor la reconectare
+            \item Suport pentru ștergerea funcțiilor personalizate cu actualizare în timp real a listelor din interfață
+            \item Încărcare dinamică a modulelor Python în timpul simulării prin \texttt{importlib}
+            \item Mecanism de fallback automat la FedAvg în cazul eșecului funcțiilor de agregare personalizate
         \end{itemize}
 
         \subsubsection{Interfețe de Comunicare (CF-26 -- CF-29)}
@@ -950,7 +1164,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
             \item Returnare rezultate antrenare cu metrici complete și monitorizare continuă a proceselor
         \end{itemize}
 
-        \subsection{Cerintele nefunctionale}
+        \subsection{Cerințele nefuncționale}
 
         Cerințele nefuncționale definesc atributele calității și performanței pe care sistemul trebuie să le satisfacă.
 
@@ -961,7 +1175,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
             \item API-ul backend va procesa cererile de autentificare în maximum 1 secundă
             \item Încărcarea dashboard-ului principal va fi completă în maximum 3 secunde
             \item Actualizările în timp real prin WebSocket vor avea o latență de maximum 500ms
-            \item Sistemul va suporta minimum 50 de utilizatori concurenți fără degradare semnificativă
+            \item Sistemul va suportă minimum 50 de utilizatori concurenți fără degradare semnificativă
             \item Serverul de simulări va putea procesa cel puțin 5 simulări simultane pe un singur GPU
             \item API-ul va gestiona minimum 100 de cereri pe secundă în condiții normale
             \item Fiecare simulare va fi limitată la maximum 10 GB memorie GPU
@@ -978,7 +1192,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
             \item Izolarea datelor între utilizatori (multi-tenancy)
             \item Respectarea principiilor GDPR privind colectarea și procesarea datelor personale
             \item Scripturile de simulare încărcate vor fi executate în medii izolate (sandbox)
-            \item Înregistrarea tuturor încercărilor de autentificare și acțiunilor administrative în jurnal de audit
+            \item Înregistrarea tuturor încercărilor de autentificare și a acțiunilor administrative în jurnalul de audit
         \end{itemize}
 
         \subsubsection{Fiabilitate și Disponibilitate (CNF-18 -- CNF-32)}
@@ -1025,11 +1239,59 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
 
         \begin{itemize}
             \item Existența tuturor funcțiilor obligatorii în șablon (funcția de descărcare date \texttt{download\_data()}, funcția de creare model, funcțiile de setare și extragere a ponderilor)
-            \item Conformitatea cu contractul de interfață așteptat de platforma de simulare
-            \item Absența constructelor de cod potențial periculoase sau a importurilor nepermise
+            \item Conformitatea cu șablonul de interfață așteptat de platforma de simulare
+            \item Absența construcțiilor de cod potențial periculoase sau a importurilor nepermise
         \end{itemize}
 
-        Această validare previne erorile tardive în pipeline, economisind timp și resurse GPU. În cazul în care verificarea eșuează, utilizatorul primește un mesaj descriptiv cu funcțiile lipsă sau structurile incorecte.
+        Această validare previne erorile tardive în pipeline, economîșind timp și resurse GPU. În cazul în care verificarea eșuează, utilizatorul primește un mesaj descriptiv cu funcțiile lipsă sau structurile incorecte.
+
+        \subsection{Testarea creării de funcții personalizate}
+
+        Un element important al platformei îl reprezintă posibilitatea extinderii sale prin definirea de funcții personalizate, fără modificarea codului sursă al orchestratorului. Din acest motiv, procesul de testare nu s-a limitat doar la verificarea execuției funcțiilor, ci a urmărit întregul lor ciclu de viață: redactare în editorul web, validare sintactică și structurală, analiză de securitate, persistare pe server și utilizare efectivă într-o simulare. Această categorie de teste confirmă că platforma poate fi extinsă controlat, păstrând în același timp siguranța infrastructurii și coerența rezultatelor experimentale.
+
+        \subsubsection{Testarea funcțiilor personalizate de agregare}
+
+        Pentru funcțiile de agregare personalizate, testarea a urmărit atât corectitudinea procesului de încărcare, cât și integrarea lor în scenariile federate. Au fost verificate următoarele aspecte:
+
+        \begin{itemize}
+            \item validarea sintactică a codului Python introdus în editor, pentru a respinge imediat funcțiile care conțin erori de scriere sau structură
+            \item verificarea existenței funcției obligatorii \texttt{custom\_aggregate} în arborele sintactic abstract al codului transmis
+            \item rularea analizei de securitate cu \textit{Semgrep}, pentru a bloca încărcarea funcțiilor care includ tipare periculoase
+            \item salvarea corectă a funcției pe serverul orchestrator și listarea ei ulterioară în interfață sub forma \texttt{@nume\_functie}
+            \item încărcarea dinamică a modulului în timpul simulării și apelarea lui în locul algoritmului standard de agregare
+            \item verificarea mecanismului de fallback la \textit{FedAvg} în cazul în care funcția personalizată produce o eroare la execuție
+        \end{itemize}
+
+        Prin aceste teste s-a demonstrat că funcțiile de agregare definite de utilizator pot fi utilizate ca mecanisme experimentale de apărare sau ca variante proprii de combinare a ponderilor, fără a compromite continuitatea simulării.
+
+        \subsubsection{Testarea funcțiilor personalizate de otrăvire a datelor}
+
+        În mod similar, funcțiile personalizate de poisoning au fost testate pentru a confirma că pot modifica seturile de date într-o manieră controlată și reproductibilă. Testarea a inclus următoarele verificări:
+
+        \begin{itemize}
+            \item validarea sintactică a codului și confirmarea existenței funcției obligatorii \texttt{custom\_poison}
+            \item verificarea semnăturii funcției și a compatibilității parametrilor primiți cu fluxul intern al scriptului \texttt{poison\_data.py}
+            \item analiza statică de securitate a codului înainte de salvare, pentru a preveni încărcarea de funcții malițioase
+            \item aplicarea funcției asupra subsetului de imagini selectat pentru otrăvire și verificarea returnării corecte a perechii imagine modificată -- etichetă nouă
+            \item testarea întreruperii controlate a simulării atunci când funcția personalizată produce rezultate invalide sau ridică excepții la execuție
+            \item confirmarea faptului că doar datele marcate pentru compromitere sunt alterate, iar restul setului de antrenare rămâne nemodificat
+        \end{itemize}
+
+        Aceste teste validează faptul că platforma poate fi folosită și pentru prototiparea rapidă a unor atacuri noi, definite direct de utilizator, menținând trasabilitatea și consistența datelor rezultate.
+
+        \subsection{Scenarii de test negative}
+
+        Pe lângă scenariile în care platforma funcționează conform fluxului ideal, a fost necesară și testarea explicită a situațiilor de eșec controlat. Aceste scenarii negative confirmă că sistemul nu doar execută corect simulările valide, ci și respinge predictibil intrările sau stările incorecte, fără a compromite resursele și fără a produce rezultate ambigue.
+
+        O primă categorie de astfel de scenarii vizează șabloanele invalide. Au fost considerate cazurile în care utilizatorul încarcă un fișier Python cu erori de sintaxă, cu funcții obligatorii lipsă sau cu semnături incompatibile cu interfața cerută de orchestrator. În toate aceste situații, platforma trebuie să blocheze simularea înainte de consumarea resurselor costîșitoare și să furnizeze un mesaj de eroare suficient de clar pentru corectarea rapidă a problemei.
+
+        O a două categorie privește funcțiile personalizate. Au fost urmărite cazurile în care funcțiile \texttt{custom\_aggregate} sau \texttt{custom\_poison} lipsesc, sunt definite incorect, conțin operații nesigure sau returnează date invalide. Pentru funcțiile de agregare, comportamentul așteptat este revenirea controlată la \textit{FedAvg} atunci când execuția eșuează. Pentru funcțiile de poisoning, sistemul trebuie să întrerupă simularea și să semnaleze explicit cauza, deoarece consistența datelor modificate este critică pentru validitatea rezultatelor.
+
+        Un alt set de scenarii negative privește indisponibilitatea resurselor și a conexiunilor. În absența unui GPU disponibil în intervalul de timeout configurat, sistemul trebuie să continue execuția pe CPU. În cazul întreruperii comunicării dintre backend și orchestrator, statusul simulării trebuie tratat robust, fără pierderea informațiilor deja generate.
+
+        Au fost incluse și situațiile de anulare sau oprire forțată a unei simulări în etape diferite ale pipeline-ului. În aceste cazuri, arborele de procese trebuie închis corect, GPU-ul eliberat, iar directorul de lucru tratat conform politicilor de curățare ale sistemului. Aceste verificări sunt importante deoarece un sistem care gestionează corect doar scenariile ideale devine rapid instabil în utilizarea reală.
+
+        Prin includerea acestor scenarii negative, strategia de testare acoperă nu doar corectitudinea funcțională a platformei, ci și robustețea ei operațională în condiții de eroare.
 
         \subsection{Testarea Pipeline-ului de Simulare}
 
@@ -1038,7 +1300,7 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
         \begin{itemize}
             \item \textbf{Verificarea corectitudinii modelului (Etapa 4)} --- după încărcarea șablonului, se execută o sesiune de antrenare de validare pe GPU-ul alocat. Acuratețea inițială este înregistrată în fișierul \texttt{init-verification.json}, servind drept referință pentru evaluări ulterioare
             \item \textbf{Descărcarea și partiționarea datelor (Etapa 6)} --- se verifică descărcarea corectă a setului de date prin funcția \texttt{download\_data()} și partiționarea în N split-uri IID egale (câte unul per client federat), cu setul de test partajat între toți clienții
-            \item \textbf{Procesul de otrăvire a datelor (Etapa 9)} --- se validează crearea corectă a copiei otrăvite pentru fiecare din cele 7 tipuri de atacuri suportate, verificând aplicarea parametrilor configurați (intensitate, procentaj, tip trigger)
+            \item \textbf{Procesul de otrăvire a datelor (Etapa 9)} --- se validează crearea corectă a copiei otrăvite pentru fiecare din cele 7 tipuri de atacuri suportăte, verificând aplicarea parametrilor configurați (intensitate, procentaj, tip trigger)
             \item \textbf{Simulările federate (Etapele 10--13)} --- se testează execuția corectă a celor patru scenarii (Clean, Clean+Defense, Poisoned, Poisoned+Defense), verificând că toate pornesc de la aceeași configurație inițială a modelului
             \item \textbf{Generarea rezultatelor (Etapa 14)} --- se verifică crearea fișierelor \texttt{analysis.json}, \texttt{summary.txt} și \texttt{attack\_info.json} cu metrici complete și corecte
         \end{itemize}
@@ -1184,6 +1446,14 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
 
     Acest capitol prezintă validarea experimentală a platformei. Sunt ilustrate două studii de caz principale care demonstrează modul în care sistemul poate fi utilizat pentru evaluarea mecanismelor de apărare împotriva atacurilor de tip Data Poisoning într-un mediu de învățare federată.
 
+    \section{Metodologia experimentală}
+
+        Evaluarea platformei a fost realizată printr-o metodologie experimentală orientată spre comparație controlată între scenarii curate și scenarii compromise. În toate experimentele s-a urmărit păstrarea unui număr cât mai redus de variabile modificate simultan, astfel încât efectul atacului sau al mecanismului de apărare să poată fi observat și interpretat mai clar. Din această perspectivă, fiecare studiu de caz a fost construit în jurul unei întrebări experimentale precise: cum se modifică performanța modelului atunci când crește intensitatea otrăvirii și, respectiv, care mecanism de apărare oferă cea mai bună rezistență într-un scenariu de atac fix.
+
+        Configurațiile au fost alese astfel încât să fie suficient de complexe pentru a reproduce dificultăți reale, dar și suficient de stabile pentru a permite comparații repetabile. Alegerea setului de date CIFAR-10 și a arhitecturii ResNet18 oferă un echilibru util între relevanța practică și costul computațional. Numărul de clienți, rundele federate și distribuția Non-IID au fost păstrate în intervale care permit observarea efectelor agregării și ale comportamentului malițios fără a transforma experimentul într-un test exclusiv de scalabilitate hardware.
+
+        În plus, metodologia utilizată valorifică structura nativă a platformei, care execută pentru aceeași configurație mai multe scenarii: \textit{Clean}, \textit{Clean + Defense}, \textit{Poisoned} și \textit{Poisoned + Defense}. Această organizare permite separarea mai clară a trei dimensiuni esențiale: performanța de referință a modelului, costul introdus de apărare în absența atacului și capacitatea apărării de a limita degradarea sub atac. Astfel, capitolul nu urmărește doar obținerea unor valori numerice, ci și justificărea lor într-un cadru experimental coerent.
+
     \section{Studiu de Caz 1: Creșterea intensității otrăvirii datelor}
 
         Scopul primului experiment este de a evalua modul în care performanța modelului global se degradează pe măsură ce proporția datelor compromise din rețea crește.
@@ -1221,10 +1491,10 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
 
         \begin{itemize}
             \item \textbf{FedAvg (fără protecție)} a servit drept variantă de subsol (baseline sub atac) și a generat o acuratețe finală de doar 0.5546. Aceasta reprezintă o scădere fatală de $-0.1788$ chiar și față de modelul inițial descărcat de pe internet și o scădere de $-0.3010$ față de media curată optimă, confirmând vulnerabilitatea critică a medierii ponderate clasice în fața unui atac coordonat din partea a o treime din rețea.
-            \item \textbf{FoolsGold} s-a dovedit a fi clar cea mai eficientă metodă defensivă pe acest tip de configuratie, atingând o acuratețe de 0.8464 în ciuda celor 3 agenți atacatori activi --- o scădere microscopică de numai $-0.0092$ față de situația curată fără niciun atac. Analizând actualizările prin similaritate cosinus, orchestratorul a putut depista că toți clienții atacatori furnizează un set comun de caracteristici greșite și le-a redus drastic sau chiar suprimat aportul spre modelul global.
+            \item \textbf{FoolsGold} s-a dovedit a fi clar cea mai eficientă metodă defensivă pe acest tip de configurație, atingând o acuratețe de 0.8464 în ciuda celor 3 agenți atacatori activi --- o scădere microscopică de numai $-0.0092$ față de situația curată fără niciun atac. Analizând actualizările prin similaritate cosinus, orchestratorul a putut depista că toți clienții atacatori furnizează un set comun de caracteristici greșite și le-a redus drastic sau chiar suprimat aportul spre modelul global.
             \item \textbf{Norm Clipping} a obținut al doilea cel mai bun rezultat, cu o acuratețe finală menținută la nivelul de 0.7468 (reprezentând o creștere reziduală de $+0.0134$ comparativ cu modelul pre-antrenat inițial). Limitând magnitudinea permisă pentru norma vectorilor trimiși de clienți, mecanismul a oprit creșterea forțată a ponderilor infectate dinspre atacatori fără a fi nevoit să își reducă rețeaua total acceptată de conexiuni.
             \item \textbf{Trimmed Mean} a restrâns o acuratețe moderată la nivelul de 0.5874. Deși a adus o îmbunătățire utilă față de absența totală a apărării, eliminarea parametrilor statistici de la extemele superioare și inferioare nu a asigurat o barieră completă, efortul coordonat creand un grad mare de raportări eronate.
-            \item \textbf{Krum} a eșuat și a oferit paradoxal cea mai slabă protecție din cadrul bateriei de teste, obținând o acuratețe de doar 0.5132 (situată chiar sub rezistența FedAvg simplu). Concepția logicii acestui algoritm alege un singur vector din rândul update-urilor clienților preluându-l pe cel ce are cea mai mică distanță euclidiană față de ceilalți. Cei 3 clienți malițioși cu pachete foarte similare, dar profund eronate s-au susținut teoretic reciproc și au ridicat exponențial riscul algoritmului de a califica doar o „încercare de atac” drept candidat valid de încredere, corupând în final total mediul.
+            \item \textbf{Krum} a eșuat și a oferit paradoxal cea mai slabă protecție din cadrul bateriei de teste, obținând o acuratețe de doar 0.5132 (situată chiar sub rezistența FedAvg simplu). Concepția logicii acestui algoritm alege un singur vector din rândul update-urilor clienților preluându-l pe cel ce are cea mai mică distanță euclidiană față de ceilalți. Cei 3 clienți malițioși cu pachete foarte similare, dar profund eronate s-au susținut teoretic reciproc și au ridicat exponențial riscul algoritmului de a califica doar o „încercare de atac” drepentru căndidat valid de încredere, corupând în final total mediul.
         \end{itemize}
 
         \begin{figure}[H]
@@ -1234,28 +1504,76 @@ Platforma sprijina analistii de securitate si cercetatorii de analiza de date in
             \label{fig:rezultate_experimentale_cazul_2}
         \end{figure}
 
-\chapter{Concluzii si dezvoltare ulterioara}
+    \section{Interpretarea rezultatelor}
 
-    Platforma prezenta acestei lucrari este o provocare in domeniul securitatii algoritmilor de invatare automata prin crearea unui mediu izolat specific pentru
-    testarea atacului de otravire a datelor. Aceasta a fost construita pentru a ajuta atat inginerii de securitate cibernetica, precum si inginerii de date care 
-    lucreaza cu retele neuronale deja antrenate, sa realizeze o baterie de teste cuprinzatoare inainte de a introduce in productie, intr-un mediu federat, 
-    in vederea imbunatatirii rezilientei retelei la acest tip de atac.
+        Rezultatele celor două studii de caz indică faptul că eficiența unui mecanism de apărare nu poate fi evaluată izolat de structura atacului și de distribuția datelor între clienți. În primul studiu, pe măsură ce proporția datelor compromise crește, diferența dintre scenariul curat și cel atacat devine din ce în ce mai pronunțată, ceea ce confirmă faptul că intensitatea otrăvirii influențează direct capacitatea modelului global de a învăța reprezentări stabile. Totodată, apărarea bazată pe similaritatea actualizărilor, precum \textit{FoolsGold}, devine mai eficientă atunci când atacatorii produc tipare corelate suficient de puternice pentru a fi identificate.
 
-    \section{Starea Curenta}
+        În al doilea studiu de caz, diferențele dintre mecanismele de apărare arată că nu toate metodele robuste răspund la fel în fața unui atac coordonat. \textit{FoolsGold} se comportă foarte bine deoarece exploatează tocmai redundanța comportamentului malițios dintre clienții atacatori. \textit{Norm Clipping} oferă un compromis rezonabil, reducând amplitudinea influenței malițioase fără a elimina complet efectul atacului. În schimb, metode precum \textit{Trimmed Mean} și mai ales \textit{Krum} devin mai vulnerabile atunci când ipotezele lor de funcționare sunt afectate de prezența simultană a unei distribuții Non-IID și a unor actualizări malițioase coerente între ele.
 
-    Proiectul prezentat in starea curenta, este format din doua parti. Prima parte, cea in care se construieste mediul de containere Docker si a doua, in care se 
-    construieste orchestratorul si se implementeaza etapele din jurul lui, prezentate in Figura 3.2. 
-    In implementarea actuala, platforma dispune de o interfata moderna, in care utilizatorul se inregistreaza si isi poate crea mai multe proiecte si teste (simulari)
-    cu diferite moduri de configurare. La finalizarea fiecarei simulari, rezultatul este vizibil si poate fi salvat local sau poate fi comparat cu alte simulari. 
-    Platforma suporta antrenarea de retele neuronale folosind biblioteca tensorflow si permite realizarea tuturor etapelor prezentate in capitolul 3.
+        Dintr-o perspectivă mai largă, experimentele confirmă că problema nu constă doar în existența atacului, ci și în dificultatea separării actualizărilor legitime, dar heterogene, de cele efectiv compromise. Această observație este importantă pentru proiectul de față, deoarece arată că platforma nu produce doar rapoarte descriptive, ci poate evidenția relații cauzale relevante între parametrii experimentali, alegerea apărării și stabilitatea modelului global.
 
-    \section{Dezvoltare Ulterioara}
+    \section{Discuție comparativă cu literatura de specialitate}
 
-    In procesul ulterior de dezvoltare, se vor integra si bibliotecile de pytorch pentru o gama completa de biblioteci de antrenare si se va oferi posibilitatea 
-    utilizatorului sa isi aleaga tipul preferat. Pe langa acest aspect, se va lua in considerare si ajustarea tipului de atac Gaussian Noise folosind un tip de noise 
-    compus din ponderile primite de la dispozitivele asociate. 
+        Pentru a consolida relevanța experimentală a rezultatelor obținute, acestea pot fi raportate la două lucrări importante din literatura de specialitate: studiul \textit{Can You Really Backdoor Federated Learning?} \cite{sun2019backdoor}, respectiv lucrarea de sinteză \textit{Advances and Open Problems în Federated Learning} \cite{kairouz2021federated}. Prima dintre acestea are un caracter preponderent experimental și analizează eficiența unor atacuri de tip backdoor și a unor apărări precum \textit{Norm Clipping}, în timp ce a două oferă cadrul teoretic larg al învățării federate, discutând limitările mediilor Non-IID, vulnerabilitatea la atacuri bizantine și rolul estimărilor robuste în agregare.
 
-    O privire de ansamblu asupra problemelor deschise, limitărilor cunoscute și riscurilor tehnice identificate pentru platforma de simulare este documentată în Anexa B --- Lista Problemelor din cadrul documentului de Specificații ale Cerințelor Software (SRS). Printre aspectele semnalate se numără: dimensiunea maximă acceptată pentru fișierele de model, limita de 100 de clienți federați impusă de constrângerile de memorie GPU, suportul exclusiv pentru seturi de date de tip imagine, dependența de disponibilitatea serviciilor externe (HuggingFace Hub) și riscul pierderii conexiunii WebSocket în timpul simulărilor de lungă durată. Aceste aspecte vor fi adresate prioritar în iterațiile viitoare ale platformei.
+        Rezultatele din prezenta lucrare sunt compatibile cu observațiile lui Sun et al. \cite{sun2019backdoor} în două direcții. În primul rând, aceștia arată că performanța atacului depinde de fracția de clienți compromiși și de gradul de coordonare dintre ei. Aceeași concluzie se reflectă și în Studiul de Caz 1, unde degradarea modelului devine vizibil mai accentuată pe măsură ce proporția datelor compromise crește, iar apărarea bazată pe similaritatea actualizărilor devine mai eficientă când atacatorii sunt suficient de numeroși pentru a produce tipare corelate. În al doilea rând, studiul lor arată că metode precum \textit{Norm Clipping} pot limita parțial efectele actualizărilor malițioase, fără a elimina însă complet riscul. Această observație este confirmată și în Studiul de Caz 2, unde \textit{Norm Clipping} obține al doilea cel mai bun rezultat, dar rămâne sub performanța metodei \textit{FoolsGold}.
+
+        În raport cu lucrarea lui Kairouz et al. \cite{kairouz2021federated}, experimentele realizate validează în special două dificultăți structurale ale învățării federate. Prima este heterogenitatea datelor între clienți. Survey-ul subliniază că distribuțiile Non-IID afectează convergența și fac mai dificilă separarea variației legitime a actualizărilor de comportamentul malițios. Rezultatele obținute în cadrul platformei, pe distribuții dominate local de clase diferite, confirmă această dificultate prin variațiile mai mari dintre scenariile curate și atacate. A două dificultate ține de alegerea mecanismului de agregare: literatura indică faptul că nu există o metodă universal robustă pentru toate tipurile de atac și toate configurațiile federate. Exact acest aspect este evidențiat și de experimentele proprii, unde \textit{FoolsGold}, \textit{Norm Clipping}, \textit{Trimmed Mean} și \textit{Krum} au comportamente semnificativ diferite sub același atac de tip \textit{Label-Flipping}.
+
+        În plus, paperul propriu pregătit pentru publicăre, \textit{DPArena: A Platform for Reproducible Experiments on Data Poisoning în Federated Learning} \cite{lepadatu2026dparena}, oferă o punte directă între observațiile din literatura anterioară și contribuția practică a acestei lucrări. Dacă studiul lui Sun et al. este centrat pe evaluarea atacurilor și a câtorva apărări într-un cadru experimental specific, iar lucrarea lui Kairouz et al. inventariază provocările deschise ale domeniului, DPArena transformă aceste nevoi într-un instrument software reproductibil. Platforma propusă permite tocmai testarea sistematică a relației dintre intensitatea otrăvirii, distribuția clienților malițioși și eficiența algoritmilor de agregare, reducând dependența de scripturi izolate și facilitând comparații reproductibile între scenarii.
+
+        Prin urmare, comparația cu aceste lucrări întărește validitatea experimentelor realizate: rezultatele nu apar ca observații izolate, ci se înscriu coerent în direcția raportată deja în literatura de specialitate. În același timp, prin automatizarea întregului flux experimental și prin suportul pentru funcții personalizate de agregare și poisoning, platforma dezvoltată extinde abordările anterioare dintr-o perspectivă inginerească, oferind un cadru practic pentru validarea continuă a noilor ipoteze de cercetare.
+
+    \section{Limitări și validitatea rezultatelor}
+
+        Deși rezultatele obținute sunt relevante pentru obiectivul lucrării, ele trebuie interpretate în limitele configurațiilor experimentale utilizate. În primul rând, experimentele au fost realizate pe un set de date de tip imagine și pe o arhitectură de model bine cunoscută, ceea ce înseamnă că concluziile nu pot fi transferate automat către toate tipurile de date sau către toate modelele utilizate în învățarea federată. În mod similar, tipurile de atac analizate sunt reprezentative, dar nu epuizează întregul spațiu al atacurilor de otrăvire posibile.
+
+        Din perspectiva validității interne, rezultatele sunt influențate de parametri precum distribuția Non-IID, numărul de clienți, numărul de runde, procentajul de date compromise și alegerea hiperparametrilor de antrenare. Platforma controlează aceste variabile și le documentează explicit, însă relația dintre ele rămâne una complexă. Prin urmare, rezultatele trebuie înțelese ca valide pentru configurațiile evaluate și ca argumente experimentale puternice, nu ca demonstrații universale pentru orice mediu federat.
+
+        Din perspectiva validității externe, contribuția principală a acestui capitol nu constă în generalizarea absolută a valorilor numerice, ci în identificarea unor tendințe robuste: creșterea intensității otrăvirii degradează performanța modelului, distribuțiile Non-IID complică detecția comportamentului malițios, iar diferitele mecanisme de agregare au comportamente semnificativ diferite în funcție de natura atacului. Aceste concluzii sunt suficient de consistente pentru a susține utilitatea platformei ca instrument de cercetare și analiză comparativă.
+
+    \section{Reproductibilitatea experimentelor}
+
+        Un avantaj important al platformei propuse constă în faptul că experimentele pot fi repetate într-o manieră controlată. Configurația fiecărei simulări este salvată împreună cu parametrii de antrenare, tipul atacului, mecanismul de agregare și artefactele generate în timpul execuției. Această persistență permite reluarea unor scenarii anterioare și compararea lor directă cu alte rulări realizate în condiții apropiate.
+
+        Reproductibilitatea este susținută și de separarea mediilor de execuție. Utilizarea unor medii Python dedicate, cu versiuni explicite de biblioteci, reduce variațiile introduse de dependențe incompatibile sau de actualizări necontrolate. În plus, fișierele standardizate generate la finalul simulării, precum \texttt{analysis.json}, \texttt{summary.txt} și \texttt{attack\_info.json}, oferă un format stabil pentru analiză ulterioară, export și validare comparativă.
+
+        Din acest motiv, valoarea experimentală a platformei nu rezidă doar în rezultatele obținute în cadrul acestei lucrări, ci și în capacitatea ei de a susține experimente viitoare în condiții reproductibile. Acest aspect este deosebit de important într-un domeniu în care multe evaluări depind puternic de detalii de implementare greu de urmărit în absența unui cadru software unificat.
+
+\chapter{Concluzii și dezvoltare ulterioară}
+
+	    Platforma prezentată în această lucrare reprezintă o contribuție în domeniul securității algoritmilor de învățare automată prin crearea unui mediu izolat, specific pentru
+	    testarea atacului de otrăvire a datelor. Aceasta a fost construită pentru a ajuta atât inginerii de securitate cibernetică, cât și inginerii de date care
+	    lucrează cu rețele neuronale deja antrenate să realizeze o baterie de teste cuprinzătoare înainte de a introduce aceste modele în producție, într-un mediu federat,
+	    în vederea îmbunătățirii rezilienței rețelei la acest tip de atac.
+
+    \section{Starea Curentă}
+
+	    Proiectul prezentat în starea curentă este format din două părți. Prima parte este cea în care se construiește mediul de containere Docker, iar a doua este cea în care se
+	    construiește orchestratorul și se implementează etapele din jurul lui, prezentate în Figura 3.2.
+	    În implementarea actuală, platforma dispune de o interfață modernă, în care utilizatorul se înregistrează și își poate crea mai multe proiecte și teste (simulări)
+    cu diferite moduri de configurare. La finalizarea fiecărei simulări, rezultatul este vizibil și poate fi salvat local sau poate fi comparat cu alte simulări. 
+    Platforma suportă antrenarea de rețele neuronale folosind biblioteca TensorFlow și permite realizarea tuturor etapelor prezentate în capitolul 3.
+
+    \section{Dezvoltare Ulterioară}
+
+    \subsection{Limitări actuale}
+
+    În forma sa actuală, platforma prezintă mai multe limitări care trebuie asumate explicit. În primul rând, suportul experimental este orientat în principal către seturi de date de tip imagine și către scenarii de antrenare compatibile cu structura șabloanelor definite în proiect. Din acest motiv, extinderea directă către date textuale, serii temporale sau scenarii multimodale necesită adaptări suplimentare ale infrastructurii.
+
+    În al doilea rând, scalabilitatea este condiționată de resursele hardware disponibile pe serverul de simulare. Numărul de clienți federați, dimensiunea modelelor și durata totală a experimentelor sunt limitate de memoria GPU, de spațiul de stocare și de politica de alocare concurentă a task-urilor. Această constrângere nu afectează validitatea arhitecturii, dar influențează amploarea experimentelor ce pot fi executate într-un interval rezonabil de timp.
+
+    O altă limitare privește dependența de servicii și resurse externe, precum sursele de modele pre-antrenate sau seturi de date descărcate din repozi-toare publice. În cazul indisponibilității acestora, unele scenarii nu mai pot fi reproduse identic. În mod similar, monitorizarea în timp real prin WebSocket și comunicarea dintre backend și orchestrator introduc puncte suplimentare de fragilitate în cazul conexiunilor instabile.
+
+    Nu în ultimul rând, mecanismul de extensibilitate prin funcții personalizate oferă flexibilitate ridicată, dar nu poate garanta automat corectitudinea științifică a algoritmilor definiți de utilizator. Platforma validează sintaxa, structura și anumite constrângeri de securitate, însă calitatea metodologică a funcțiilor integrate rămâne în responsabilitatea cercetătorului.
+
+    \subsection{Direcții de dezvoltare}
+
+    În procesul ulterior de dezvoltare, o direcție importantă este extinderea suportului pentru o varietate mai mare de scenarii experimentale și pentru o integrare mai flexibilă a mediilor de antrenare. De asemenea, se poate rafina implementarea anumitor atacuri, precum \textit{Gaussian Noise}, prin utilizarea unor mecanisme adaptive dependente de distribuția actualizărilor locale sau de caracteristicile reale ale datelor compromise.
+
+    O altă direcție relevantă este creșterea robusteții infrastructurii de execuție. Aceasta include îmbunătățirea toleranței la erori de rețea, consolidarea politicilor de reluare a task-urilor întrerupte și extinderea mecanismelor de audit pentru reproducerea precisă a fiecărei simulări. În paralel, platforma poate evolua prin suport pentru seturi de date suplimentare, modele mai mari și scenarii cu mai mulți clienți federati.
+
+    O privire de ansamblu asupra problemelor deschise, limitărilor cunoscute și riscurilor tehnice identificate pentru platforma de simulare, ne conduc la următoarele neajunsuri: dimensiunea maximă acceptată pentru fișierele de model, limita de 100 de clienți federați impusă de constrângerile de memorie GPU, suportul exclusiv pentru seturi de date de tip imagine, dependența de disponibilitatea serviciilor externe (HuggingFace Hub) și riscul pierderii conexiunii WebSocket în timpul simulărilor de lungă durată. Aceste aspecte vor fi adresate prioritar în iterațiile viitoare ale platformei.
 
 
 \end{document}
