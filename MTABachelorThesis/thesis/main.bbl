@@ -593,41 +593,6 @@
       \verb https://arxiv.org/abs/1911.07963
       \endverb
     \endentry
-    \entry{lepadatu2026dparena}{misc}{}{}
-      \name{author}{3}{}{%
-        {{hash=518e41bf119acde69c49ff638e08c6d1}{%
-           family={Lepădatu},
-           familyi={L\bibinitperiod},
-           given={Tudor},
-           giveni={T\bibinitperiod}}}%
-        {{hash=9dc6cb3ab0b7137aefa766830905d5c4}{%
-           family={Brînzea},
-           familyi={B\bibinitperiod},
-           given={Andrei},
-           giveni={A\bibinitperiod}}}%
-        {{hash=4f683b00f112694263422dd007daf599}{%
-           family={Aciobăniţei},
-           familyi={A\bibinitperiod},
-           given={Iulian},
-           giveni={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{acfb405be162a4e62e7384bad9f0e868}
-      \strng{fullhash}{acfb405be162a4e62e7384bad9f0e868}
-      \strng{fullhashraw}{acfb405be162a4e62e7384bad9f0e868}
-      \strng{bibnamehash}{acfb405be162a4e62e7384bad9f0e868}
-      \strng{authorbibnamehash}{acfb405be162a4e62e7384bad9f0e868}
-      \strng{authornamehash}{acfb405be162a4e62e7384bad9f0e868}
-      \strng{authorfullhash}{acfb405be162a4e62e7384bad9f0e868}
-      \strng{authorfullhashraw}{acfb405be162a4e62e7384bad9f0e868}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{3}
-      \field{note}{Software tool article, compiled March 15, 2026}
-      \field{title}{DPArena: A Platform for Reproducible Experiments on Data Poisoning in Federated Learning}
-      \field{year}{2026}
-    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  13 JUN 2026 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  14 JUN 2026 09:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3454,14 +3454,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [54 <./components/chapters/../images/Diagrama_Componente.png>]
-<components/chapters/../images/Diagrama_Flux_Simulare.png, id=873, 2158.0625pt 
-x 1680.2775pt>
+<components/chapters/../images/Diagrama_Flux_Simulare.png, id=873, 1618.54688pt
+ x 1131.47719pt>
 File: components/chapters/../images/Diagrama_Flux_Simulare.png Graphic file (ty
 pe png)
 <use components/chapters/../images/Diagrama_Flux_Simulare.png>
 Package pdftex.def Info: components/chapters/../images/Diagrama_Flux_Simulare.p
 ng  used on input line 1544.
-(pdftex.def)             Requested size: 409.71692pt x 318.99965pt.
+(pdftex.def)             Requested size: 409.71692pt x 286.40791pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3691,15 +3691,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [62 <./components/chapters/../images/Rezultate_Experimentale_Case1_1.png>]
-<components/chapters/../images/Rezultate_Experimentale_Case2.png, id=921, 505.8
-9pt x 317.988pt>
-File: components/chapters/../images/Rezultate_Experimentale_Case2.png Graphic f
-ile (type png)
-<use components/chapters/../images/Rezultate_Experimentale_Case2.png>
-Package pdftex.def Info: components/chapters/../images/Rezultate_Experimentale_
-Case2.png  used on input line 1760.
-(pdftex.def)             Requested size: 409.71692pt x 257.53975pt.
+Overfull \hbox (16.68561pt too wide) in paragraph at lines 1748--1749
+[]\T1/ptm/m/n/10 Acurate[]ea mo-de-lu-lui pre-antrenat ini[]ial (des-c r-cat în
+a-inte de pro-pa-gare) a fost cal-cu-lat  la 0.7928, iar performan[]a
+ []
 
+<components/chapters/../images/Rezultate_Experimentale_Case2_1.png, id=921, 714
+.7503pt x 422.7795pt>
+File: components/chapters/../images/Rezultate_Experimentale_Case2_1.png Graphic
+ file (type png)
+<use components/chapters/../images/Rezultate_Experimentale_Case2_1.png>
+Package pdftex.def Info: components/chapters/../images/Rezultate_Experimentale_
+Case2_1.png  used on input line 1760.
+(pdftex.def)             Requested size: 409.71692pt x 242.35445pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3715,7 +3719,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[64 <./components/chapters/../images/Rezultate_Experimentale_Case2.png>]
+[64 <./components/chapters/../images/Rezultate_Experimentale_Case2_1.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3724,14 +3728,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [65]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[66]
 Capitolul 5.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3740,7 +3736,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[67
+[66
 
 ]) (./components/chapters/bibliography.tex
 
@@ -3750,7 +3746,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[68]
+[67]
 
 Package biblatex Warning: Type 'book' not found on input line 14.
 
@@ -3797,7 +3793,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[69
+[68
 
 ]))
 
@@ -3807,7 +3803,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[70] [71
+[69] [70
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -3818,22 +3814,30 @@ L3 programming layer <2025-10-24>
  ***********
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B9C7F67A08720965A0E73F7134A6ED76;15467.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24093 strings out of 467538
- 431681 string characters out of 5412257
- 1344411 words of memory out of 5000000
- 52309 multiletter control sequences out of 15000+600000
+ 24088 strings out of 467538
+ 431506 string characters out of 5412257
+ 1344336 words of memory out of 5000000
+ 52306 multiletter control sequences out of 15000+600000
  730559 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,16n,93p,1181b,2401s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,16n,93p,1416b,2401s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmmi10.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fo
@@ -3848,10 +3852,10 @@ fb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/times/utmb
 utmbi8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (90 pages, 4096441 bytes).
+Output written on main.pdf (89 pages, 4093646 bytes).
 PDF statistics:
- 1104 PDF objects out of 1200 (max. 8388607)
- 948 compressed objects within 10 object streams
- 274 named destinations out of 1000 (max. 500000)
+ 1098 PDF objects out of 1200 (max. 8388607)
+ 943 compressed objects within 10 object streams
+ 272 named destinations out of 1000 (max. 500000)
  676 words of extra memory for PDF output out of 10000 (max. 10000000)
 

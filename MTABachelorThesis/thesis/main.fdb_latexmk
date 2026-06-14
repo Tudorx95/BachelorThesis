@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1781363907.84775 "main.bcf" "main.bbl" "main" 1781363926.01497 0
-  "bibliography.bib" 1774786347.42809 5339 cad0fdd099e567f15d746154fcb8bc89 ""
-  "main.bcf" 1781363925.71217 110777 29fdc3b4273e778a23294d6a8f2ee38e "pdflatex"
+["biber main"] 1781417605.11427 "main.bcf" "main.bbl" "main" 1781417709.72729 0
+  "bibliography.bib" 1781364395.27087 4989 cbcc8a22d139cb2eb81f1981d43a73d0 ""
+  "main.bcf" 1781417709.44512 110702 70a1a20bf1e0f929b2172da8990aaada "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1781363920.24465 "main.tex" "main.pdf" "main" 1781363926.01552 0
+["pdflatex"] 1781417704.39926 "main.tex" "main.pdf" "main" 1781417709.72767 0
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -181,15 +181,15 @@
   "components/chapters/../images/Diagrama_Context_2_Anexa_A.png" 1773833010.66524 160985 91456dc4c1b39012e3bedf50f7c574c4 ""
   "components/chapters/../images/Diagrama_Context_Anexa_A.png" 1773833022.58027 81787 9f6a257210975acc74ab071dbd7e8398 ""
   "components/chapters/../images/Diagrama_ERD.png" 1772917742.95765 1690583 2dd1767714390f4efc0f53b597025aa5 ""
-  "components/chapters/../images/Diagrama_Flux_Simulare.png" 1781347738.53526 609781 8075b0316f67c3eae425700658d9e5d8 ""
+  "components/chapters/../images/Diagrama_Flux_Simulare.png" 1781364902.44 452854 08f094d9bd8fd6eb00a0912b3a513d9e ""
   "components/chapters/../images/Diagrama_Flux_Utilizator.png" 1773833036.95718 298373 d58af802eaedb0a16dde9990f70f8a7f ""
   "components/chapters/../images/Federated_Learning_Operations.png" 1773833089.16964 139788 590a0fcc98376db1014239cdbd6bc49b ""
   "components/chapters/../images/Rezultate_Experimentale_Case1_1.png" 1781336928.31748 47708 467218758ba4a3ea07c7d8d6c57b6e05 ""
   "components/chapters/../images/Rezultate_Experimentale_Case1_2.png" 1781339202.51142 51091 8c6c71d876a1f4ac0b1cd064138c5f46 ""
-  "components/chapters/../images/Rezultate_Experimentale_Case2.png" 1773765448.65901 48740 3065bc0c173d8ef7aa45f5c70a942f3d ""
+  "components/chapters/../images/Rezultate_Experimentale_Case2_1.png" 1781415132.79644 48823 d0e006eaa5eb3aedf212601e78ed454e ""
   "components/chapters/all.tex" 1766385861.11719 138 dd31ea95e128e98aa45b832ff049342d ""
   "components/chapters/bibliography.tex" 1773761870.47845 558 ea8683009f59813d4ad5ccf32d78fba3 ""
-  "components/chapters/components.tex" 1781363346.31904 200104 e72b452899fd6c8e3de09a427089f6eb ""
+  "components/chapters/components.tex" 1781416486.14721 200346 b8c51b45c8a684944dcf0eb5a7b8c469 ""
   "components/frontmatter/../images/ATM.png" 1766385861.12132 768031 cd39ff6ac72ff42d8154bf2c34e8d2de ""
   "components/frontmatter/abbreviations.tex" 1779351245.83268 1645 9827502d80eb6e514a99598f648f5f2b ""
   "components/frontmatter/abstract.tex" 1779349096.01492 2565 c745e9c54a6988d2fc90ac7caac6f8e2 ""
@@ -200,14 +200,14 @@
   "components/frontmatter/specification.tex" 1766385861.11851 708 7ef5135644649780cc28a99459abe71a ""
   "components/frontmatter/title.tex" 1766385861.1186 1319 73715f66a9431d3637cfdcf974a4b7c6 ""
   "configuration.tex" 1781339598.68372 895 c3b0bd0db38980c89b1c07ccea14686f ""
-  "main.aux" 1781363925.7052 28232 e1f06dfddb6bbd319619e6188990e79f "pdflatex"
-  "main.bbl" 1781363908.60619 26944 fa4e9dcc7c9792db7bbdc3a6bf64eb7a "biber main"
-  "main.lof" 1781363925.71303 1874 b270bdcb5ff4184a44fd33bb6a1d85a8 "pdflatex"
-  "main.out" 1781363925.70933 15467 b9c7f67a08720965a0e73f7134a6ed76 "pdflatex"
-  "main.run.xml" 1781363925.7129 2308 a8db41172cc8064155fedbcb3b529184 "pdflatex"
-  "main.sty" 1781360509.66079 3883 2f24125338774d73fc13b41b8126a663 ""
-  "main.tex" 1779353508.15849 388 24410f5a5ba6e197c17684da91da07bc ""
-  "main.toc" 1781363925.71298 10726 f9d2066d9edc0d9661bd380fea58d5f5 "pdflatex"
+  "main.aux" 1781417709.43882 28090 0c17401bf2dcef88c7afc2282a567df3 "pdflatex"
+  "main.bbl" 1781417608.22942 25413 a92f691aa144173cc4197d93efa9be07 "biber main"
+  "main.lof" 1781417709.44588 1874 b270bdcb5ff4184a44fd33bb6a1d85a8 "pdflatex"
+  "main.out" 1781417709.4422 15467 b9c7f67a08720965a0e73f7134a6ed76 "pdflatex"
+  "main.run.xml" 1781417709.44578 2308 b590edb229c4c4e4a59d231edfc13fbc "pdflatex"
+  "main.sty" 1781417579.74598 3855 5a430eabf8c6d73b4bb6e4bec4fd9df9 ""
+  "main.tex" 1781417697.61723 388 24410f5a5ba6e197c17684da91da07bc ""
+  "main.toc" 1781417709.44585 10726 2ed94491bb4b0843075d9ed00c3ab53f "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
