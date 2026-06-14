@@ -593,6 +593,304 @@
       \verb https://arxiv.org/abs/1911.07963
       \endverb
     \endentry
+    \entry{beutel2020flower}{article}{}{}
+      \name{author}{11}{}{%
+        {{hash=7bf2d912026dfd8e881264db28949c3b}{%
+           family={Beutel},
+           familyi={B\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=608177426325ccad5b56907cf6b57beb}{%
+           family={Topal},
+           familyi={T\bibinitperiod},
+           given={Taner},
+           giveni={T\bibinitperiod}}}%
+        {{hash=457cd19c088f0576b2d4d9823277fe38}{%
+           family={Mathur},
+           familyi={M\bibinitperiod},
+           given={Akhil},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2f1ad1aba74450f81e00f8a377c6e082}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Xinchi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=bbb5dfb352a9cbbab5255e431223ac2a}{%
+           family={Fernandez-Marques},
+           familyi={F\bibinithyphendelim M\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5646e437c80bcf3ca39765bb227debe8}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=151f127611e72c1a1dab03a78b600bc3}{%
+           family={Sani},
+           familyi={S\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=17740b29bae86dd2a94bba063099115d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Kwing\bibnamedelima Hei},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=349c6249e40230069088b98c40bdf16f}{%
+           family={Parcollet},
+           familyi={P\bibinitperiod},
+           given={Titouan},
+           giveni={T\bibinitperiod}}}%
+        {{hash=72d18c41281c04043037e7613982077c}{%
+           family={Gusmão},
+           familyi={G\bibinitperiod},
+           given={Pedro\bibnamedelimb P.\bibnamedelimi B.},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=0178a10937afeee8b3947b80841a4c65}{%
+           family={Lane},
+           familyi={L\bibinitperiod},
+           given={Nicholas\bibnamedelima D.},
+           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{546a6c2dca09760e80f18747b37e4451}
+      \strng{fullhash}{86a6e5e16dd03c4fe01b8e22f50223a6}
+      \strng{fullhashraw}{86a6e5e16dd03c4fe01b8e22f50223a6}
+      \strng{bibnamehash}{546a6c2dca09760e80f18747b37e4451}
+      \strng{authorbibnamehash}{546a6c2dca09760e80f18747b37e4451}
+      \strng{authornamehash}{546a6c2dca09760e80f18747b37e4451}
+      \strng{authorfullhash}{86a6e5e16dd03c4fe01b8e22f50223a6}
+      \strng{authorfullhashraw}{86a6e5e16dd03c4fe01b8e22f50223a6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2007.14390}
+      \field{title}{Flower: A Friendly Federated Learning Framework}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2007.14390
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2007.14390
+      \endverb
+    \endentry
+    \entry{he2020fedml}{article}{}{}
+      \name{author}{20}{}{%
+        {{hash=55a0d76e9abe7107ceca58cedf027ead}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Chaoyang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a47826b7c67d54fa80bbcb456ef1d37b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Songze},
+           giveni={S\bibinitperiod}}}%
+        {{hash=19b79137a43b13801b468af873c0def0}{%
+           family={So},
+           familyi={S\bibinitperiod},
+           given={Jinhyun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=04749511f171f5225361b97ac5063cfd}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Xiao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=01a32e9e8e0c214c2962c768dcc820dd}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Mi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0b620b05ea1f5b470cdf9c505a1f191f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hongyi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4c2c66443bd221556bb807196cafa5fa}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiaoyang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=ac823ddacc8407a876a2a03f2082310d}{%
+           family={Vepakomma},
+           familyi={V\bibinitperiod},
+           given={Praneeth},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ea1f2bcf60809ab80264614320310cb8}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7d76fe5036f1ab3e1ffa079ee0f16e37}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Hang},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e32958bdb196569ae6abb85426142a56}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Xiang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=8f21903ab0086973f0c4c461db555015}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Junyuan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f1625e69dd01e4d86402e9815bebb102}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod}}}%
+        {{hash=fe645b7ce1ec4b48743cbe538410cc82}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Peilin},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9c3f95b989273c77f0f08b20da1dddd8}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=621013bf54d3546375ad71f17f020b5b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=8843732e3271ea6b1e5a66e24f6c6a43}{%
+           family={Raskar},
+           familyi={R\bibinitperiod},
+           given={Ramesh},
+           giveni={R\bibinitperiod}}}%
+        {{hash=55242d2a60270145342841e4d4238da0}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=a0d10d48172f7b207c6fffcddb1db844}{%
+           family={Annavaram},
+           familyi={A\bibinitperiod},
+           given={Murali},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8be6a2a057ca8838039961c4858156dc}{%
+           family={Avestimehr},
+           familyi={A\bibinitperiod},
+           given={Salman},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f05629413fe59fb8ab94ae4492c6b125}
+      \strng{fullhash}{884825261d115ec9a7fd5d9c54acc7b5}
+      \strng{fullhashraw}{884825261d115ec9a7fd5d9c54acc7b5}
+      \strng{bibnamehash}{f05629413fe59fb8ab94ae4492c6b125}
+      \strng{authorbibnamehash}{f05629413fe59fb8ab94ae4492c6b125}
+      \strng{authornamehash}{f05629413fe59fb8ab94ae4492c6b125}
+      \strng{authorfullhash}{884825261d115ec9a7fd5d9c54acc7b5}
+      \strng{authorfullhashraw}{884825261d115ec9a7fd5d9c54acc7b5}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2007.13518}
+      \field{title}{{FedML}: A Research Library and Benchmark for Federated Machine Learning}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2007.13518
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2007.13518
+      \endverb
+    \endentry
+    \entry{caldas2018leaf}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=1a0483a783f240e5958bcf85104424a8}{%
+           family={Caldas},
+           familyi={C\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=46d7611c32fde474861a160074ba37b9}{%
+           family={Duddu},
+           familyi={D\bibinitperiod},
+           given={Sai\bibnamedelimb Meher\bibnamedelima Karthik},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=8030a65d28dac5ce91944c4118b36989}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=93df928f56f95c1d11ae2b102402cce6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Tian},
+           giveni={T\bibinitperiod}}}%
+        {{hash=56660736d75eaca4a2482417345d1863}{%
+           family={Konečný},
+           familyi={K\bibinitperiod},
+           given={Jakub},
+           giveni={J\bibinitperiod}}}%
+        {{hash=707fa44f08f047ab822f84fe38c69dfb}{%
+           family={McMahan},
+           familyi={M\bibinitperiod},
+           given={H.\bibnamedelimi Brendan},
+           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=98d3c657bc7439fa35514a8b27fb273c}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Virginia},
+           giveni={V\bibinitperiod}}}%
+        {{hash=70e0fe957473b80f1b1b5dcb8e99d31e}{%
+           family={Talwalkar},
+           familyi={T\bibinitperiod},
+           given={Ameet},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{aeef659e4e959ee02c08f5554e787bea}
+      \strng{fullhash}{d6e7cc18c815b51347308cd510f57e2a}
+      \strng{fullhashraw}{d6e7cc18c815b51347308cd510f57e2a}
+      \strng{bibnamehash}{aeef659e4e959ee02c08f5554e787bea}
+      \strng{authorbibnamehash}{aeef659e4e959ee02c08f5554e787bea}
+      \strng{authornamehash}{aeef659e4e959ee02c08f5554e787bea}
+      \strng{authorfullhash}{d6e7cc18c815b51347308cd510f57e2a}
+      \strng{authorfullhashraw}{d6e7cc18c815b51347308cd510f57e2a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1812.01097}
+      \field{title}{{LEAF}: A Benchmark for Federated Settings}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1812.01097
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1812.01097
+      \endverb
+    \endentry
+    \entry{liu2022unifed}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=e7a1c305ae95884ef9f127a3bf3fa85e}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xiaoyuan},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6e4aca8815811b03034709d67432900}
+      \strng{fullhash}{d6e4aca8815811b03034709d67432900}
+      \strng{fullhashraw}{d6e4aca8815811b03034709d67432900}
+      \strng{bibnamehash}{d6e4aca8815811b03034709d67432900}
+      \strng{authorbibnamehash}{d6e4aca8815811b03034709d67432900}
+      \strng{authornamehash}{d6e4aca8815811b03034709d67432900}
+      \strng{authorfullhash}{d6e4aca8815811b03034709d67432900}
+      \strng{authorfullhashraw}{d6e4aca8815811b03034709d67432900}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{NeurIPS 2022 Track on Datasets and Benchmarks}
+      \field{title}{{UniFed}: A Benchmark for Federated Learning Frameworks}
+      \field{year}{2022}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

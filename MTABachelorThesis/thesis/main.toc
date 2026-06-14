@@ -95,11 +95,11 @@
 \contentsline {subsection}{\numberline {4.4.2}Rezultate experimentale}{63}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Interpretarea rezultatelor}{64}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Discuție comparativă cu literatura de specialitate}{64}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Limitări și validitatea rezultatelor}{65}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Reproductibilitatea experimentelor}{65}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Concluzii și dezvoltare ulterioară}{66}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Starea Curentă}{66}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Dezvoltare Ulterioară}{66}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Limitări actuale}{66}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Direcții de dezvoltare}{66}{subsection.5.2.2}%
-\contentsline {chapter}{Bibliografie}{68}{chapter*.36}%
+\contentsline {section}{\numberline {4.7}Comparație cu framework-uri de învățare federată de uz general}{65}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Limitări și validitatea rezultatelor}{66}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Reproductibilitatea experimentelor}{66}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Concluzii și dezvoltare ulterioară}{68}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Starea Curentă}{68}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Dezvoltare Ulterioară}{68}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Limitări actuale}{68}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Direcții de dezvoltare}{68}{subsection.5.2.2}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  14 JUN 2026 09:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  14 JUN 2026 23:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3720,6 +3720,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [64 <./components/chapters/../images/Rezultate_Experimentale_Case2_1.png>]
+Underfull \hbox (badness 2894) in paragraph at lines 1804--1804
+[]|\T1/ptm/m/n/10 Compara[]ie in-te-grat  a
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 1810--1810
+[]|\T1/ptm/m/n/10 Compara[]ie în-tre si-mu-
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3728,7 +3740,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [65]
-Capitolul 5.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3736,9 +3747,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[66
-
-]) (./components/chapters/bibliography.tex
+[66]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3747,45 +3756,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [67]
-
-Package biblatex Warning: Type 'book' not found on input line 14.
-
-
-LaTeX Warning: Empty bibliography on input line 14.
-
-
-Package biblatex Warning: Split bibliography detected.
-(biblatex)                Many simple split bibliography setups with
-(biblatex)                non-overlapping bibliographies benefit from
-(biblatex)                setting 'defernumbers=true'.
-(biblatex)                See the documentation for details.
-(biblatex)                This warning can be suppressed with
-(biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
-
-
-Package biblatex Warning: Split bibliography detected.
-(biblatex)                Many simple split bibliography setups with
-(biblatex)                non-overlapping bibliographies benefit from
-(biblatex)                setting 'defernumbers=true'.
-(biblatex)                See the documentation for details.
-(biblatex)                This warning can be suppressed with
-(biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
-
-
-Package biblatex Warning: Split bibliography detected.
-(biblatex)                Many simple split bibliography setups with
-(biblatex)                non-overlapping bibliographies benefit from
-(biblatex)                setting 'defernumbers=true'.
-(biblatex)                See the documentation for details.
-(biblatex)                This warning can be suppressed with
-(biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
-
-
-Overfull \hbox (0.29517pt too wide) in paragraph at lines 26--26
-\T1/cmtt/m/n/12 document / buletin -[] de -[] indicatori -[] statistici -[] si 
--[] tendinte -[] de -[] securitate -[]
- []
-
+Capitolul 5.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3805,7 +3776,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [69] [70
 
-] 
+]
+Overfull \hbox (0.29517pt too wide) in paragraph at lines 21--21
+\T1/cmtt/m/n/12 document / buletin -[] de -[] indicatori -[] statistici -[] si 
+-[] tendinte -[] de -[] securitate -[]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[71
+
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[72] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -3814,27 +3809,19 @@ L3 programming layer <2025-10-24>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B9C7F67A08720965A0E73F7134A6ED76;15467.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 5D59C8F7EC904DD379D5D34C401145FC;15765.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24088 strings out of 467538
- 431506 string characters out of 5412257
- 1344336 words of memory out of 5000000
- 52306 multiletter control sequences out of 15000+600000
+ 24098 strings out of 467538
+ 431853 string characters out of 5412257
+ 1344576 words of memory out of 5000000
+ 52310 multiletter control sequences out of 15000+600000
  730559 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,16n,93p,1416b,2401s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3852,10 +3839,10 @@ fb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/times/utmb
 utmbi8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (89 pages, 4093646 bytes).
+Output written on main.pdf (91 pages, 4101927 bytes).
 PDF statistics:
- 1098 PDF objects out of 1200 (max. 8388607)
- 943 compressed objects within 10 object streams
- 272 named destinations out of 1000 (max. 500000)
+ 1129 PDF objects out of 1200 (max. 8388607)
+ 972 compressed objects within 10 object streams
+ 280 named destinations out of 1000 (max. 500000)
  676 words of extra memory for PDF output out of 10000 (max. 10000000)
 

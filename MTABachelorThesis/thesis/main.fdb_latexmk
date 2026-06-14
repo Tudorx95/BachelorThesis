@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1781417605.11427 "main.bcf" "main.bbl" "main" 1781417709.72729 0
-  "bibliography.bib" 1781364395.27087 4989 cbcc8a22d139cb2eb81f1981d43a73d0 ""
-  "main.bcf" 1781417709.44512 110702 70a1a20bf1e0f929b2172da8990aaada "pdflatex"
+["biber main"] 1781469470.46107 "main.bcf" "main.bbl" "main" 1781470272.15063 0
+  "bibliography.bib" 1781469412.57602 6649 b42865b3d433888253c197b56e6e42af ""
+  "main.bcf" 1781470271.92356 111329 3ad8745edcc1fd26f32729d74f3c06df "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1781417704.39926 "main.tex" "main.pdf" "main" 1781417709.72767 0
+["pdflatex"] 1781470266.71171 "main.tex" "main.pdf" "main" 1781470272.15115 0
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -187,9 +187,8 @@
   "components/chapters/../images/Rezultate_Experimentale_Case1_1.png" 1781336928.31748 47708 467218758ba4a3ea07c7d8d6c57b6e05 ""
   "components/chapters/../images/Rezultate_Experimentale_Case1_2.png" 1781339202.51142 51091 8c6c71d876a1f4ac0b1cd064138c5f46 ""
   "components/chapters/../images/Rezultate_Experimentale_Case2_1.png" 1781415132.79644 48823 d0e006eaa5eb3aedf212601e78ed454e ""
-  "components/chapters/all.tex" 1766385861.11719 138 dd31ea95e128e98aa45b832ff049342d ""
-  "components/chapters/bibliography.tex" 1773761870.47845 558 ea8683009f59813d4ad5ccf32d78fba3 ""
-  "components/chapters/components.tex" 1781416486.14721 200346 b8c51b45c8a684944dcf0eb5a7b8c469 ""
+  "components/chapters/all.tex" 1781468899.77619 139 f3045007de2d50e95bc9c47b0cfe0cdd ""
+  "components/chapters/components.tex" 1781470259.49204 206243 ac44d352031200a6079aa696c40e4134 ""
   "components/frontmatter/../images/ATM.png" 1766385861.12132 768031 cd39ff6ac72ff42d8154bf2c34e8d2de ""
   "components/frontmatter/abbreviations.tex" 1779351245.83268 1645 9827502d80eb6e514a99598f648f5f2b ""
   "components/frontmatter/abstract.tex" 1779349096.01492 2565 c745e9c54a6988d2fc90ac7caac6f8e2 ""
@@ -200,14 +199,14 @@
   "components/frontmatter/specification.tex" 1766385861.11851 708 7ef5135644649780cc28a99459abe71a ""
   "components/frontmatter/title.tex" 1766385861.1186 1319 73715f66a9431d3637cfdcf974a4b7c6 ""
   "configuration.tex" 1781339598.68372 895 c3b0bd0db38980c89b1c07ccea14686f ""
-  "main.aux" 1781417709.43882 28090 0c17401bf2dcef88c7afc2282a567df3 "pdflatex"
-  "main.bbl" 1781417608.22942 25413 a92f691aa144173cc4197d93efa9be07 "biber main"
-  "main.lof" 1781417709.44588 1874 b270bdcb5ff4184a44fd33bb6a1d85a8 "pdflatex"
-  "main.out" 1781417709.4422 15467 b9c7f67a08720965a0e73f7134a6ed76 "pdflatex"
-  "main.run.xml" 1781417709.44578 2308 b590edb229c4c4e4a59d231edfc13fbc "pdflatex"
+  "main.aux" 1781470271.91719 29206 b1258f442e69b1070733a2c5f767d5e1 "pdflatex"
+  "main.bbl" 1781469471.22686 37305 252155f2a1fafe063bde4d77167e6413 "biber main"
+  "main.lof" 1781470271.92434 1874 b270bdcb5ff4184a44fd33bb6a1d85a8 "pdflatex"
+  "main.out" 1781470271.92098 15765 5d59c8f7ec904dd379d5d34c401145fc "pdflatex"
+  "main.run.xml" 1781470271.92421 2308 a8db41172cc8064155fedbcb3b529184 "pdflatex"
   "main.sty" 1781417579.74598 3855 5a430eabf8c6d73b4bb6e4bec4fd9df9 ""
-  "main.tex" 1781417697.61723 388 24410f5a5ba6e197c17684da91da07bc ""
-  "main.toc" 1781417709.44585 10726 2ed94491bb4b0843075d9ed00c3ab53f "pdflatex"
+  "main.tex" 1781468808.72111 407 c47b744c7a421f39d7aa755b61025fba ""
+  "main.toc" 1781470271.92431 10798 5e62952e913a7eba791efd710b722801 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

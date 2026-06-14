@@ -1780,6 +1780,56 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
 
         Prin urmare, comparația cu aceste lucrări întărește validitatea experimentelor realizate: rezultatele nu apar ca observații izolate, ci se înscriu coerent în direcția raportată deja în literatura de specialitate. În același timp, prin automatizarea întregului flux experimental și prin suportul pentru funcții personalizate de agregare și poisoning, platforma dezvoltată extinde abordările anterioare dintr-o perspectivă inginerească, oferind un cadru practic pentru validarea continuă a noilor ipoteze de cercetare.
 
+    \section{Comparație cu framework-uri de învățare federată de uz general}
+
+        Dincolo de validarea teoretică și experimentală prezentată anterior, este esențial să se analizeze modul în care platforma DPArena se diferențiază de framework-urile de uz general destinate învățării federate. În acest sens, s-a realizat o comparație funcțională cu cele mai relevante platforme din literatura de specialitate: Flower \cite{beutel2020flower}, FedML \cite{he2020fedml}, LEAF \cite{caldas2018leaf} și UniFed \cite{liu2022unifed}.
+
+        Flower \cite{beutel2020flower} este un framework flexibil și extensibil pentru FL, conceput pentru a facilita cercetarea prin intermediul unui API modular. FedML \cite{he2020fedml} oferă o bibliotecă de cercetare cuprinzătoare, cu suport pentru scenarii cross-device și cross-silo, iar componenta sa, FedSec, adaugă funcționalități parțiale pentru studii de securitate. LEAF \cite{caldas2018leaf} este un benchmark standardizat pentru seturi de date federate, iar UniFed \cite{liu2022unifed} furnizează un cadru unificat pentru evaluarea comparativă a framework-urilor FL existente. Toate aceste platforme oferă capabilități de simulare FL generală, însă niciuna nu a fost proiectată cu scopul primar de a evalua sistematic atacurile de otrăvire a datelor și mecanismele de apărare aferente.
+
+        Tabelul \ref{tab:feature_comparison_fl} sintetizează diferențele funcționale dintre aceste platforme pe zece criterii relevante pentru un flux de lucru centrat pe securitate.
+
+        \begin{table}[h!]
+            \centering
+            \footnotesize
+            \begin{tabular}{|p{0.22\linewidth}|p{0.11\linewidth}|p{0.11\linewidth}|p{0.14\linewidth}|p{0.11\linewidth}|p{0.11\linewidth}|}
+                \hline
+                \textbf{Funcționalitate} & \textbf{DPArena} & \textbf{Flower} & \textbf{FedML / FedSec} & \textbf{LEAF} & \textbf{UniFed} \\
+                \hline
+                Simulare FL generală & Da & Da & Da & Da & Da \\
+                \hline
+                Flux de lucru orientat pe securitate & Da & Nu & Parțial & Nu & Nu \\
+                \hline
+                Atacuri de poisoning integrate & Da & Nu & Da & Nu & Nu \\
+                \hline
+                Comparație integrată a apărărilor & Da & Nu & Parțial & Nu & Nu \\
+                \hline
+                Execuție automată clean/ poisoned/ defended & Da & Nu & Nu & Nu & Nu \\
+                \hline
+                Metrici de securitate per rundă & Da & Custom & Parțial & Limitat & Nu \\
+                \hline
+                Comparație între simulări & Da & Custom & Parțial & Nu & Da \\
+                \hline
+                Export PDF/CSV/JSON & Da & Custom & Parțial & Nu & Nu \\
+                \hline
+                Validare statică a codului utilizator & Da & Nu & Nu & Nu & Nu \\
+                \hline
+                Interfață ghidată & Da & Nu & Nu & Nu & Nu \\
+                \hline
+            \end{tabular}
+            \caption{Comparație funcțională între platforme de învățare federată}
+            \label{tab:feature_comparison_fl}
+        \end{table}
+
+        Din analiza tabelului, se pot distinge trei diferențe majore între DPArena și celelalte platforme.
+
+        \textbf{Vizibilitatea atacurilor în cel mai defavorabil scenariu.} Partiționarea implicită Non-IID a FedML utilizează eșantionare Dirichlet cu $\alpha = 0.5$, care distribuie datele fiecărui client pe toate clasele. Sub această distribuție, un atac de tip label-flipping cu 30\% intensitate reduce acuratețea cu doar 0.002, mascând efectiv atacul. DPArena utilizează implicit o partiționare în care 80\% din datele fiecărui client aparțin unei clase dominante, iar același atac produce o scădere de acuratețe de 0.164. Apărările care par adecvate sub Dirichlet $\alpha = 0.5$ sunt vizibil insuficiente sub partiționarea concentrată, adică exact în regimul în care garanțiile de securitate trebuie efectiv să funcționeze.
+
+        \textbf{Automatizarea fluxului de lucru.} O evaluare completă a patru scenarii (clean, clean + defense, poisoned, poisoned + defense) necesită în FedML patru rulări independente cu patru fișiere de configurare separate, fiecare editat manual. În DPArena, aceasta se reduce la un singur apel. Pentru un studiu cu $K$ configurații, diferența se traduce prin $K$ rulări în DPArena față de $K \cdot W$ invocări manuale (unde $W = 4$ scenarii), ceea ce reprezintă o reducere de patru ori a efortului de orchestrare al cercetătorului, independent de timpul efectiv de antrenare pe GPU.
+
+        \textbf{Validarea de securitate a codului utilizator.} DPArena realizează analiză statică a scripturilor de antrenare transmise de utilizator (Semgrep + validare AST) înainte de executarea lor pe serverul GPU. Aceasta blochează la momentul trimiterii tipare nesigure precum apeluri de rețea, navigări prin sistemul de fișiere sau absența funcțiilor obligatorii. Din câte ne este cunoscut, nici Flower \cite{beutel2020flower}, nici FedML \cite{he2020fedml} nu oferă o astfel de validare; ambele tratează codul de antrenare transmis de utilizator ca fiind de încredere, ceea ce este o presupunere acceptabilă pentru utilizarea individuală, dar problematică pentru platformele partajate.
+
+        Această comparație evidențiază faptul că, deși framework-urile de uz general precum Flower și FedML oferă o infrastructură FL flexibilă, evaluarea de securitate deasupra lor necesită o orchestrare personalizată care este rareori partajată și dificil de reprodus. DPArena condensează această orchestrare într-o singură rulare care execută automat cele patru scenarii și raportează metricile per rundă pentru fiecare, adresând astfel o deficiență practică în cercetarea actuală de securitate FL.
+
     \section{Limitări și validitatea rezultatelor}
 
         Deși rezultatele obținute sunt relevante pentru obiectivul lucrării, ele trebuie interpretate în limitele configurațiilor experimentale utilizate. În primul rând, experimentele au fost realizate pe un set de date de tip imagine și pe o arhitectură de model bine cunoscută, ceea ce înseamnă că concluziile nu pot fi transferate automat către toate tipurile de date sau către toate modelele utilizate în învățarea federată. În mod similar, tipurile de atac analizate sunt reprezentative, dar nu epuizează întregul spațiu al atacurilor de otrăvire posibile.

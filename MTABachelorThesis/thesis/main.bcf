@@ -2412,7 +2412,16 @@
     <bcf:citekey order="34" intorder="1">kairouz2021federated</bcf:citekey>
     <bcf:citekey order="35" intorder="1">sun2019backdoor</bcf:citekey>
     <bcf:citekey order="36" intorder="1">kairouz2021federated</bcf:citekey>
-    <bcf:citekey order="37" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">beutel2020flower</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">he2020fedml</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">caldas2018leaf</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">liu2022unifed</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">beutel2020flower</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">he2020fedml</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">caldas2018leaf</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">liu2022unifed</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">beutel2020flower</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">he2020fedml</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
