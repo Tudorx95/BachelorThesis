@@ -559,6 +559,24 @@ Detectarea prezenței datelor otravite, fără identificarea obligatorie a clien
 
     Utilitatea practică a acestei tehnici în contextul platformei propuse este dublă. Pe de o parte, evaluarea modelului global la finalul fiecărei runde se realizează pe un fold care nu a participat la antrenarea din runda respectivă, oferind o estimare mai obiectivă a capacității de generalizare a modelului. Pe de altă parte, rotația foldurilor asigură că efectele unui eventual atac de otrăvire a datelor sunt evaluate în raport cu seturi de validare variate, reducând riscul că un atac specific să fie mascat de un set de validare inadecvat. Astfel, CV contribuie nu doar la corectitudinea evaluării performanței, ci și la robustețea experimentală a întregului proces de simulare.
 
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=1\textwidth, keepaspectratio]{../images/Diagrama_Distribuire_Date.png}
+        \caption{Mecanismul de validare încrucișată cu distribuirea Non-IID a datelor către clienți}
+        \label{fig:diagrama_distribuire_date}
+    \end{figure}
+
+    În figura de mai sus este ilustrat mecanismul de validare încrucișată implementat în platformă, corelat cu etapa de distribuire a datelor. În partea stângă se observă rotația ciclică a foldului de validare pe parcursul rundelor, iar în partea dreaptă este detaliată distribuirea etichetelor setului de date CIFAR-10 către clienți, conform strategiei Non-IID configurate (distribuție Dirichlet). La fiecare rundă, cele $K-1$ folduri de antrenare sunt redistribuite între cei $M$ clienți, fiecare primind un subset diferit de etichete.
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.85\textwidth, keepaspectratio]{../images/Diagrama_Otravire_Date.png}
+        \caption{Procesul de infectare a datelor la nivelul unui client malițios}
+        \label{fig:diagrama_otravire_date}
+    \end{figure}
+
+    Următoarea figură ilustrează modul în care datele unui client malițios sunt alterate prin cele două tipuri de atacuri suportate. În cazul atacului \textit{Label Flip}, un procent configurabil din etichetele fiecărei clase este reatribuit către o singură clasă țintă, dezechilibrând distribuția datelor de antrenare. În cazul atacurilor \textit{Backdoor Injection}, același procent din imaginile fiecărei clase este modificat prin inserarea unui artefact vizual (trigger), păstrând etichetele originale. Ambele atacuri se aplică exclusiv asupra datelor alocate clienților malițioși, fără a afecta datele clienților legitimi.
+
     \subsection{Criterii de evaluare a mecanismelor de apărare}
 
     Un mecanism de apărare într-un mediu de învățare federată nu trebuie evaluat exclusiv prin acuratețea finală a modelului. O apărare poate părea eficientă într-un singur scenariu, dar poate introduce costuri ridicate, instabilitate sau sensibilitate la variația parametrilor experimentali. Din acest motiv, evaluarea trebuie realizată după mai multe criterii complementare.
