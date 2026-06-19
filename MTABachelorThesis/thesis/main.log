@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  19 JUN 2026 22:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  19 JUN 2026 23:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1014,15 +1014,7 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                liuiu2022unifed
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 9.
 Package biblatex Info: Reference segment=0 on input line 9.
 Package caption Info: Begin \AtBeginDocument code.
@@ -3386,13 +3378,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [48]
 <components/chapters/../images/Diagrama_Context_Anexa_A.png, id=857, 785.93625p
-t x 485.56406pt>
+t x 368.1253pt>
 File: components/chapters/../images/Diagrama_Context_Anexa_A.png Graphic file (
 type png)
 <use components/chapters/../images/Diagrama_Context_Anexa_A.png>
 Package pdftex.def Info: components/chapters/../images/Diagrama_Context_Anexa_A
 .png  used on input line 1328.
-(pdftex.def)             Requested size: 409.71692pt x 253.13194pt.
+(pdftex.def)             Requested size: 409.71692pt x 191.90933pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3410,14 +3402,14 @@ File: components/chapters/../images/Diagrama_Context_2_Anexa_A.png Graphic file
 Package pdftex.def Info: components/chapters/../images/Diagrama_Context_2_Anexa
 _A.png  used on input line 1337.
 (pdftex.def)             Requested size: 455.24101pt x 227.62pt.
-<components/chapters/../images/Diagrama_Componente.png, id=864, 889.07156pt x 5
-11.15968pt>
+<components/chapters/../images/Diagrama_Componente.png, id=864, 889.07156pt x 3
+83.93437pt>
 File: components/chapters/../images/Diagrama_Componente.png Graphic file (type 
 png)
 <use components/chapters/../images/Diagrama_Componente.png>
 Package pdftex.def Info: components/chapters/../images/Diagrama_Componente.png 
  used on input line 1348.
-(pdftex.def)             Requested size: 455.24411pt x 261.73312pt.
+(pdftex.def)             Requested size: 455.24411pt x 196.58894pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3428,14 +3420,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [50 <./components/chapters/../images/Diagrama_Context_Anexa_A.png> <./component
 s/chapters/../images/Diagrama_Context_2_Anexa_A.png>]
-<components/chapters/../images/Diagrama_Flux_Utilizator.png, id=871, 1448.41125
-pt x 1513.90594pt>
+<components/chapters/../images/Diagrama_Flux_Utilizator.png, id=871, 1087.81406
+pt x 1510.89468pt>
 File: components/chapters/../images/Diagrama_Flux_Utilizator.png Graphic file (
 type png)
 <use components/chapters/../images/Diagrama_Flux_Utilizator.png>
 Package pdftex.def Info: components/chapters/../images/Diagrama_Flux_Utilizator
 .png  used on input line 1361.
-(pdftex.def)             Requested size: 409.71692pt x 428.23364pt.
+(pdftex.def)             Requested size: 409.71692pt x 569.07399pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3876,10 +3868,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24121 strings out of 467538
- 433009 string characters out of 5412257
+ 24120 strings out of 467538
+ 432999 string characters out of 5412257
  1344959 words of memory out of 5000000
- 52332 multiletter control sequences out of 15000+600000
+ 52331 multiletter control sequences out of 15000+600000
  730559 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,16n,93p,1416b,3148s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3897,7 +3889,7 @@ fb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/times/utmb
 utmbi8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (91 pages, 4909209 bytes).
+Output written on main.pdf (91 pages, 4880828 bytes).
 PDF statistics:
  1151 PDF objects out of 1200 (max. 8388607)
  987 compressed objects within 10 object streams

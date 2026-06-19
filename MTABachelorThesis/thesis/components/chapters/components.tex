@@ -621,7 +621,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
             \item \textbf{CF-06.} Sistemul va stoca parolele exclusiv în format hash, folosind algoritmul bcrypt.
             \item \textbf{CF-07.} Sistemul va genera un token JWT (JSON Web Token) la autentificare pentru gestionarea sesiunii.
             \item \textbf{CF-08.} Sistemul va invalida automat token-ul JWT după 24 de ore de inactivitate.
-            \item \textbf{CF-09.} Sistemul va aplica un mecanism de autorizare bazat pe roluri (RBAC), cu rolurile utilizator standard și administrator.
+            \item \textbf{CF-09.} Sistemul va aplica un mecanism de autorizare pentru a asigura gestionarea accesului utilizatorilor la resursele proprii.
             \item \textbf{CF-10.} Sistemul va permite delogarea utilizatorului, invalidând token-ul JWT asociat sesiunii.
             \item \textbf{CF-11.} Sistemul va oferi o interfață prin care utilizatorul configurează parametrii atacului și ai infrastructurii federate.
         \end{itemize}
@@ -753,13 +753,13 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
         \begin{itemize}
             \item \textbf{CS-01.} Autentificarea se va baza pe token-uri JWT cu expirare configurabilă, semnate cu algoritmul HS256.
             \item \textbf{CS-02.} Parolele vor fi stocate exclusiv în format hash, folosind algoritmul bcrypt.
-            \item \textbf{CS-03.} Accesul va fi controlat printr-un mecanism bazat pe roluri (RBAC), cu rolurile user și admin.
+            \item \textbf{CS-03.} Accesul va fi controlat printr-un mecanism de autorizare ce asigură izolarea resurselor fiecărui utilizator.
             \item \textbf{CS-04.} Comunicațiile vor fi criptate folosind TLS 1.2 sau o versiune superioară.
             \item \textbf{CS-05.} Datele vor fi izolate între utilizatori (multi-tenancy).
             \item \textbf{CS-06.} Sistemul va respecta principiile GDPR privind colectarea și procesarea datelor personale.
             \item \textbf{CS-07.} Scripturile de simulare încărcate vor fi executate în medii izolate (sandbox).
             \item \textbf{CS-08.} Toate încercările de autentificare vor fi înregistrate în jurnalul de audit.
-            \item \textbf{CS-09.} Toate acțiunile administrative vor fi înregistrate în jurnalul de audit.
+            \item \textbf{CS-09.} Toate acțiunile critice vor fi înregistrate în jurnalul de audit.
         \end{itemize}
 
         \subsubsection{Fiabilitate și Disponibilitate (CNF-10 -- CNF-16)}
@@ -976,7 +976,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
         \item \textbf{Generarea datelor otrăvite per-client per-rundă (Generate Poisoned Data Per-Client Per-Round)}: Scriptul \texttt{generate\_poisoned\_per\_client.py} citește mapările curate generate anterior și, pentru fiecare client malițios $m$ și fiecare rundă $r$, selectează un procent \texttt{poison\_percentage} din fișierele alocate clientului la acea rundă. Asupra acestui subset se aplică atacul configurat (prin funcțiile din \texttt{poison\_data.py}), iar imaginile modificate sunt salvate în structura \texttt{clean\_data\_poisoned/R$r$/client\_$m$/}. Clienții onești nu au copii separate ale datelor --- fișierele lor JSON din \texttt{data\_distribution\_poisoned/} referă direct datele curate originale. Această separare garantează că doar clienții malițioși utilizează date alterate, fără a duplica inutil setul de date pentru clienții legitimi.
         \item \textbf{Alocarea unității de procesare grafică (Allocate GPU)}: Managerul de GPU caută o placă video NVIDIA disponibilă în sistem, procesând elementele dintr-o coadă de așteptare. Dacă timpul alocat expiră, se utilizează unitatea CPU.
         \item \textbf{Activarea mediului Python (Activate Python Environment)}: Prin analiza importurilor din șablon, orchestratorul detectează tipul bibliotecilor utilizate la antrenare (TensorFlow sau PyTorch) și activează mediul \textit{Conda} preconfigurat corespunzător.
-        
+
         \item \textbf{Simularea în mediul curat (Clean Simulation)}: Modelul global intră în faza de simulare federată (folosind \texttt{fd\_simulator.py}). Procesul asincron este inițiat exclusiv pe setul de date nealterate (curat), partajat pe $N$ clienți legitimi  conform mapărilor din \texttt{data\_distribution\_clean/}, folosind algoritmul standard de agregare \textit{FedAvg}. La fiecare rundă, modelul global este evaluat pe foldul de validare corespunzător. Această etapă înregistrează performanța normală (de referință).
         \item \textbf{Simularea curată cu mecanism de apărare (Clean + Defense)}: \textit{FedAvg} este înlocuit cu tehnica robustă de agregare aleasă de utilizator (ex. FoolsGold, Norm Clipping), antrenarea având loc pe același set curat de date și aceleași mapări de distribuție. Acest scenariu măsoară overhead-ul introdus de mecanismul de apărare în absența unui atac.
         \item \textbf{Simularea cu atac fără apărare (Poisoned Simulation)}: $M$ dispozitive capătă rol de clienți malițioși, utilizând datele din \texttt{data\_distribution\_poisoned/}, unde fiecare client malițios referă directorul cu date otrăvite specific rundei curente. Agregarea se face prin \textit{FedAvg}, fără apărare. Acest scenariu cuantifică impactul atacului de otrăvire a datelor asupra modelului global.
@@ -1321,7 +1321,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
 
         \subsection{Contextul Sistemului}
 
-        Contextul sistemului prezintă marginile platformei și entitățile externe care interacționează cu acesta. La Nivelul 0, sunt identificați actorii principali: Cercetătorii (Data Scientists), Instituțiile și Administratorul, fiecare cu roluri specifice în cadrul platformei.
+        Contextul sistemului prezintă marginile platformei și entitățile externe care interacționează cu acesta. La Nivelul 0, sunt identificați actorii principali: Cercetătorii (Data Scientists) și Instituțiile, fiecare cu roluri specifice în cadrul platformei.
 
         \begin{figure}[H]
             \centering
