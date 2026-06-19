@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  18 JUN 2026 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  19 JUN 2026 22:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1014,7 +1014,15 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
+ (./main.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                liuiu2022unifed
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 9.
 Package biblatex Info: Reference segment=0 on input line 9.
 Package caption Info: Begin \AtBeginDocument code.
@@ -1093,7 +1101,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
-<components/frontmatter/../images/ATM.png, id=305, 654.94687pt x 770.88pt>
+<components/frontmatter/../images/ATM.png, id=313, 654.94687pt x 770.88pt>
 File: components/frontmatter/../images/ATM.png Graphic file (type png)
 <use components/frontmatter/../images/ATM.png>
 Package pdftex.def Info: components/frontmatter/../images/ATM.png  used on inpu
@@ -1429,7 +1437,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7{/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm
 -super-ts1.enc}]
-<components/chapters/../images/Device_internal_State.png, id=552, 758.835pt x 5
+<components/chapters/../images/Device_internal_State.png, id=567, 758.835pt x 5
 82.175pt>
 File: components/chapters/../images/Device_internal_State.png Graphic file (typ
 e png)
@@ -1446,7 +1454,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8 <./components/chapters/../images/Device_Internal_State.png>]
-<components/chapters/../images/Federated_Learning_Operations.png, id=560, 741.9
+<components/chapters/../images/Federated_Learning_Operations.png, id=576, 741.9
 72pt x 390.258pt>
 File: components/chapters/../images/Federated_Learning_Operations.png Graphic f
 ile (type png)
@@ -1552,7 +1560,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17]
-<components/chapters/../images/Diagrama_Distribuire_Date.png, id=641, 3510.3646
+<components/chapters/../images/Diagrama_Distribuire_Date.png, id=659, 3510.3646
 9pt x 2178.63937pt>
 File: components/chapters/../images/Diagrama_Distribuire_Date.png Graphic file 
 (type png)
@@ -1560,7 +1568,7 @@ File: components/chapters/../images/Diagrama_Distribuire_Date.png Graphic file
 Package pdftex.def Info: components/chapters/../images/Diagrama_Distribuire_Dat
 e.png  used on input line 564.
 (pdftex.def)             Requested size: 455.24411pt x 282.53496pt.
-<components/chapters/../images/Diagrama_Otravire_Date.png, id=642, 1948.27875pt
+<components/chapters/../images/Diagrama_Otravire_Date.png, id=660, 1948.27875pt
  x 1385.92781pt>
 File: components/chapters/../images/Diagrama_Otravire_Date.png Graphic file (ty
 pe png)
@@ -1596,11 +1604,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [20]
-Overfull \hbox (5.4656pt too wide) in paragraph at lines 653--654
-[]\T1/ptm/b/n/12 NumPy\T1/ptm/m/n/12 : con-sti-tuie funda[]ia nu-me-ric  a în-t
-re-gu-lui eco-sis-tem Py-thon pen-tru cal-cul []tiin[]ific.
- []
-
+Capitolul 3.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1608,26 +1612,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 668--668
-[]|\T1/ptm/m/n/10 TensorFlow
+[21
+
+]
+Overfull \hbox (5.69353pt too wide) in paragraph at lines 633--634
+[]\T1/ptm/b/n/12 CF-12. \T1/ptm/m/n/12 Sis-te-mul va per-mite con-fi-gu-ra-rea 
+nu-m -ru-lui to-tal de dispozitive/clien[]i participan[]i,
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 668--669
-[]|\T1/ptm/m/n/10 Antrenarea []i eva-lu-a-rea mo-de-le-lor din me-diul
+Overfull \hbox (8.10756pt too wide) in paragraph at lines 649--650
+[]\T1/ptm/b/n/12 CF-23. \T1/ptm/m/n/12 Sis-te-mul va va-lida auto-mat sin-taxa 
+co-du-lui Py-thon fo-lo-sind mo-du-lul \T1/cmtt/m/n/12 ast.parse()\T1/ptm/m/n/1
+2 . 
  []
 
 
-Overfull \hbox (7.56392pt too wide) in paragraph at lines 697--698
-[]\T1/ptm/m/n/12 Prin fi-xa-rea ex-pli-cit  a ver-siu-ni-lor s-a ur-m -rit re-d
-u-ce-rea diferen[]elor din-tre me-di-ile de execu[]ie
- []
-
-
-Overfull \hbox (11.04648pt too wide) in paragraph at lines 706--707
-[]\T1/ptm/m/n/12 Extragerea []i se-ta-rea pon-de-ri-lor (\T1/ptm/m/it/12 wei-gh
-ts\T1/ptm/m/n/12 ) mo-de-lu-lui pen-tru pro-ce-sul de agre-gare, opera[]iune
+Overfull \hbox (0.7548pt too wide) in paragraph at lines 650--651
+[]\T1/ptm/b/n/12 CF-24. \T1/ptm/m/n/12 Sis-te-mul va ve-ri-fica struc-tu-ral pr
+ezen[]a func[]iilor obli-ga-to-rii (\T1/cmtt/m/n/12 custom_aggregate
  []
 
 
@@ -1639,6 +1642,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [22{/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/c
 m-super-t1.enc}]
+Overfull \hbox (1.664pt too wide) in paragraph at lines 656--657
+[]\T1/ptm/b/n/12 CF-30. \T1/ptm/m/n/12 Sis-te-mul va în-c rca di-na-mic mo-du-l
+ele Py-thon în tim-pul si-mu-l -rii prin \T1/cmtt/m/n/12 importlib\T1/ptm/m/n/1
+2 . 
+ []
+
+
+Overfull \hbox (12.55807pt too wide) in paragraph at lines 682--683
+[]\T1/ptm/b/n/12 CF-41. \T1/ptm/m/n/12 Sis-te-mul va per-mite com-pa-ra-rea sid
+e-by-side a dou  si-mu-l ri, in-clu-zând configura[]ia
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1647,17 +1662,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [23]
-Overfull \hbox (3.76044pt too wide) in paragraph at lines 758--759
-[]\T1/ptm/m/n/12 Backend-ul ex-pune mul-ti-ple ca-te-go-rii de endpoint-uri, fi
--e-care res-pon-sa-bil de o func[]ionalitate
- []
-
-
-Overfull \hbox (11.9082pt too wide) in paragraph at lines 764--765
-\T1/ptm/m/n/12 mu-l -rii, backend-ul so-li-cit  fi[]ierele JSON cu me-trici, fi
-[]ierul text cu re-zu-ma-tul, []i informa[]ii
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1666,7 +1670,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [24]
-Capitolul 3.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1674,18 +1677,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[25
-
-]
-<components/chapters/../images/Changing_environments.png, id=690, 1456.44125pt 
-x 1051.93pt>
-File: components/chapters/../images/Changing_environments.png Graphic file (typ
-e png)
-<use components/chapters/../images/Changing_environments.png>
-Package pdftex.def Info: components/chapters/../images/Changing_environments.pn
-g  used on input line 821.
-(pdftex.def)             Requested size: 318.66948pt x 230.15727pt.
-
+[25]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1693,7 +1685,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26 <./components/chapters/../images/Changing_environments.png>]
+[26]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1702,46 +1694,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [27]
-Overfull \hbox (7.40036pt too wide) in paragraph at lines 879--880
-[]\T1/ptm/m/it/12 Random \T1/ptm/m/n/12 --- se-lec-teaz  alea-tor pon-de-rile u
-nui cli-ent, uti-li-zat ca baz  de compara[]ie 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[28]
-Overfull \hbox (29.05965pt too wide) in paragraph at lines 896--897
-[]\T1/ptm/b/n/12 Acurate[]ea \T1/ptm/m/n/12 --- va-lo-rile de acurate[]e pen-tr
-u fi-e-care sce-na-riu (Ini[]ial, Clean, Clean+Defense,
- []
-
-
-Overfull \hbox (4.68613pt too wide) in paragraph at lines 905--906
-[]\T1/ptm/m/n/12 Rezultatele sunt sal-vate în trei fi[]iere: \T1/cmtt/m/n/12 an
-alysis.json \T1/ptm/m/n/12 (me-trici struc-tu-rate), \T1/cmtt/m/n/12 summary.tx
-t
- []
-
-
-Overfull \hbox (8.04594pt too wide) in paragraph at lines 916--917
+Overfull \hbox (8.04594pt too wide) in paragraph at lines 831--832
 \T1/ptm/m/n/12 prie. Acesta este res-pon-sa-bil pen-tru ges-tio-na-rea interac[
 ]iunii uti-li-za-to-ri-lor, sto-ca-rea configura[]iilor
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[29]
-Overfull \hbox (1.60234pt too wide) in paragraph at lines 923--924
+Overfull \hbox (1.60234pt too wide) in paragraph at lines 838--839
 []\T1/ptm/b/n/12 Containerul ba-c-kend \T1/ptm/m/n/12 - pro-ce-sul res-pon-sa-b
 il de pri-mi-rea ce-re-ri-lor API. Backend-ul recep-
  []
@@ -1753,20 +1712,96 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
+[28]
+<components/chapters/../images/Arhitectura_Aplicatie.png, id=725, 2085.7925pt x
+ 3209.9925pt>
+File: components/chapters/../images/Arhitectura_Aplicatie.png Graphic file (typ
+e png)
+<use components/chapters/../images/Arhitectura_Aplicatie.png>
+Package pdftex.def Info: components/chapters/../images/Arhitectura_Aplicatie.pn
+g  used on input line 855.
+(pdftex.def)             Requested size: 388.15709pt x 597.36592pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[29 <./components/chapters/../images/Arhitectura_Aplicatie.png>]
+Overfull \hbox (10.18121pt too wide) in paragraph at lines 867--868
+[]\T1/ptm/b/n/12 Reproducibilitate\T1/ptm/m/n/12 : Toate configura[]iile []i re
+-zul-ta-tele sunt sto-cate în Pos-tgreSQL, permi[]ând
+ []
+
+<components/chapters/../images/Changing_environments.png, id=731, 1456.44125pt 
+x 1051.93pt>
+File: components/chapters/../images/Changing_environments.png Graphic file (typ
+e png)
+<use components/chapters/../images/Changing_environments.png>
+Package pdftex.def Info: components/chapters/../images/Changing_environments.pn
+g  used on input line 889.
+(pdftex.def)             Requested size: 318.66948pt x 230.15727pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (15.37561pt too wide) in paragraph at lines 894--895
+[]\T1/ptm/m/n/12 Imaginea de mai sus re-pre-zint  me-di-ile Py-thon dis-po-ni-b
+ile pen-tru ru-la-rea mo-de-lu-lui creat/înc r-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
 [30]
-Overfull \hbox (2.13138pt too wide) in paragraph at lines 944--945
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[31 <./components/chapters/../images/Changing_environments.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[32]
+Overfull \hbox (3.20996pt too wide) in paragraph at lines 953--954
+[]\T1/ptm/b/n/12 Acurate[]ea \T1/ptm/m/n/12 --- va-lo-rile de acurate[]e pen-tr
+u fi-e-care sce-na-riu (Ini[]ial, Clean, Clean+Defense,
+ []
+
+
+Overfull \hbox (2.13138pt too wide) in paragraph at lines 970--971
 \T1/ptm/m/n/12 scrip-tu-lui Py-thon de an-tre-nare fur-ni-zat de uti-li-za-tor,
  fo-lo-sind mo-du-lul in-tern \T1/cmtt/m/n/12 verify_tem-
  []
 
 
-Overfull \hbox (8.33362pt too wide) in paragraph at lines 946--947
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[33]
+Overfull \hbox (8.33362pt too wide) in paragraph at lines 972--973
 []\T1/ptm/b/n/12 Verificarea co-rec-ti-tu-di-nii mo-de-lu-lui (Ve-rify Mo-del C
 or-rec-t-ness)\T1/ptm/m/n/12 : Uti-li-zând co-dul []ablon
  []
 
 
-Overfull \hbox (8.34535pt too wide) in paragraph at lines 951--952
+Overfull \hbox (8.34535pt too wide) in paragraph at lines 977--978
 \T1/ptm/m/n/12 plac  vi-deo NVI-DIA dis-po-ni-bil  în sis-tem, pro-cesând ele-m
 en-tele dintr-o coad  de a[]teptare.
  []
@@ -1778,48 +1813,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[31]
-Overfull \hbox (10.18121pt too wide) in paragraph at lines 968--969
-[]\T1/ptm/b/n/12 Reproducibilitate\T1/ptm/m/n/12 : Toate configura[]iile []i re
--zul-ta-tele sunt sto-cate în Pos-tgreSQL, permi[]ând
+[34]
+Overfull \hbox (6.81058pt too wide) in paragraph at lines 989--990
+[]\T1/ptm/m/n/12 i trans-mite eroa-rea ca re-zul-tat pro-ce-su-lui orches-tra-t
+or, care la rân-dul lui no-ti-fic  ime-diat backend-
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+Overfull \hbox (22.19547pt too wide) in paragraph at lines 991--992
+\T1/ptm/m/n/12 tincte din spa[]iul de lu-cru: \T1/cmtt/m/n/12 analysis.json \T1
+/ptm/m/n/12 (me-trici struc-tu-rate ob[]inute din si-mu-l ri), \T1/cmtt/m/n/12 
+summary.txt
+ []
 
-[32]
-<components/chapters/../images/Arhitectura_Aplicatie.png, id=744, 2085.7925pt x
- 3209.9925pt>
-File: components/chapters/../images/Arhitectura_Aplicatie.png Graphic file (typ
-e png)
-<use components/chapters/../images/Arhitectura_Aplicatie.png>
-Package pdftex.def Info: components/chapters/../images/Arhitectura_Aplicatie.pn
-g  used on input line 980.
-(pdftex.def)             Requested size: 388.15709pt x 597.36592pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[33]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[34 <./components/chapters/../images/Arhitectura_Aplicatie.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1844,11 +1850,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [37]
-Overfull \hbox (4.25143pt too wide) in paragraph at lines 1095--1096
-[]\T1/ptm/m/n/12 Rezultatele fi-nale sunt struc-tu-rate în ju-rul unor fi[]iere
- stan-dar-di-zate. Fi[]ierul \T1/cmtt/m/n/12 analysis.json
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1857,11 +1858,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [38]
-Overfull \hbox (5.69353pt too wide) in paragraph at lines 1130--1131
-[]\T1/ptm/b/n/12 CF-12. \T1/ptm/m/n/12 Sis-te-mul va per-mite con-fi-gu-ra-rea 
-nu-m -ru-lui to-tal de dispozitive/clien[]i participan[]i,
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1870,23 +1866,144 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [39]
-Overfull \hbox (8.10756pt too wide) in paragraph at lines 1146--1147
-[]\T1/ptm/b/n/12 CF-23. \T1/ptm/m/n/12 Sis-te-mul va va-lida auto-mat sin-taxa 
-co-du-lui Py-thon fo-lo-sind mo-du-lul \T1/cmtt/m/n/12 ast.parse()\T1/ptm/m/n/1
-2 . 
+Overfull \hbox (4.25143pt too wide) in paragraph at lines 1100--1101
+[]\T1/ptm/m/n/12 Rezultatele fi-nale sunt struc-tu-rate în ju-rul unor fi[]iere
+ stan-dar-di-zate. Fi[]ierul \T1/cmtt/m/n/12 analysis.json
  []
 
 
-Overfull \hbox (0.7548pt too wide) in paragraph at lines 1147--1148
-[]\T1/ptm/b/n/12 CF-24. \T1/ptm/m/n/12 Sis-te-mul va ve-ri-fica struc-tu-ral pr
-ezen[]a func[]iilor obli-ga-to-rii (\T1/cmtt/m/n/12 custom_aggregate
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1118
+[]|\T1/ptm/b/n/10 Rezultat
  []
 
 
-Overfull \hbox (1.664pt too wide) in paragraph at lines 1153--1154
-[]\T1/ptm/b/n/12 CF-30. \T1/ptm/m/n/12 Sis-te-mul va în-c rca di-na-mic mo-du-l
-ele Py-thon în tim-pul si-mu-l -rii prin \T1/cmtt/m/n/12 importlib\T1/ptm/m/n/1
-2 . 
+Underfull \hbox (badness 5036) in paragraph at lines 1119--1119
+[]|\T1/ptm/m/n/10 Încarc  un fi[]ier Py-thon care
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1119--1120
+[]|\T1/ptm/m/n/10 Validarea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1119--1120
+\T1/ptm/m/n/10 re-tur-neaz 
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 1119--1120
+\T1/ptm/m/n/10 suc-ces; si-mu-
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 1119--1120
+\T1/ptm/m/n/10 la-rea poate fi
+ []
+
+
+Underfull \hbox (badness 6910) in paragraph at lines 1121--1121
+[]|\T1/ptm/m/n/10 Func[]ie obli-ga-to-rie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1121
+[]|\T1/ptm/m/n/10 Verific  dac  absen[]a
+ []
+
+
+Underfull \hbox (badness 3930) in paragraph at lines 1121--1121
+\T1/ptm/m/n/10 unei func[]ii obli-ga-to-rii
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
+[]|\T1/ptm/m/n/10 Validarea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
+\T1/ptm/m/n/10 e[]ueaz  cu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
+\T1/ptm/m/n/10 tiv in-di-când
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 1123--1123
+[]|\T1/ptm/m/n/10 Încarc  un fi[]ier Py-thon cu o
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
+[]|\T1/ptm/m/n/10 Validarea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
+\T1/ptm/m/n/10 e[]ueaz  cu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
+\T1/ptm/m/n/10 me-saj de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
+\T1/ptm/m/n/10 eroare de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
+\T1/ptm/m/n/10 sin-tax ; si-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
+\T1/ptm/m/n/10 mu-la-rea nu
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 1125--1125
+\T1/ptm/m/n/10 cu im-por-turi ne-per-mise
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 1125--1125
+[]|\T1/ptm/m/n/10 Încarc  un []ablon care im-port 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
+[]|\T1/ptm/m/n/10 Validarea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
+\T1/ptm/m/n/10 e[]ueaz  cu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
+\T1/ptm/m/n/10 me-saj de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
+\T1/ptm/m/n/10 se-cu-ri-tate;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
+[]\T1/ptm/m/n/10 ablonul este
+ []
+
+
+Overfull \hbox (16.87967pt too wide) in paragraph at lines 1115--1128
+ [][] 
  []
 
 
@@ -1897,9 +2014,203 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [40]
-Overfull \hbox (12.55807pt too wide) in paragraph at lines 1179--1180
-[]\T1/ptm/b/n/12 CF-41. \T1/ptm/m/n/12 Sis-te-mul va per-mite com-pa-ra-rea sid
-e-by-side a dou  si-mu-l ri, in-clu-zând configura[]ia
+Underfull \hbox (badness 10000) in paragraph at lines 1139--1140
+[]|\T1/ptm/b/n/10 Rezultat
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1141--1141
+[]|\T1/ptm/m/n/10 Validare sin-tac-tic 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1141--1142
+[]|\T1/ptm/m/n/10 Platforma
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1141--1142
+\T1/ptm/m/n/10 re-tur-neaz 
+ []
+
+
+Underfull \hbox (badness 7451) in paragraph at lines 1141--1142
+\T1/ptm/m/n/10 tax ; func[]ia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1143
+[]|\T1/ptm/m/n/10 Detectare func[]ie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1143
+[]|\T1/ptm/m/n/10 Verific  dac 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1143
+\T1/ptm/m/n/10 absen[]a func[]iei
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1143
+\T1/cmtt/m/n/10 custom_aggregate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1144
+[]|\T1/ptm/m/n/10 Platforma
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1144
+\T1/ptm/m/n/10 re-tur-neaz 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1144
+\T1/ptm/m/n/10 eroare in-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1144
+\T1/ptm/m/n/10 când func[]ia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1144
+\T1/ptm/m/n/10 obli-ga-to-rie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1145
+[]|\T1/ptm/m/n/10 Analiz  se-cu-ri-tate
+ []
+
+
+Underfull \hbox (badness 3907) in paragraph at lines 1145--1145
+[]|\T1/ptm/m/n/10 Verific  dac  Sem-grep
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
+[]|\T1/ptm/m/n/10 Analiza de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
+\T1/ptm/m/n/10 se-cu-ri-tate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
+\T1/ptm/m/n/10 e[]ueaz ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
+\T1/ptm/m/n/10 per-sis-tat  pe
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 1147--1147
+[]|\T1/ptm/m/n/10 Verific  dac  si-mu-la-rea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
+\T1/ptm/m/n/10 con-ti-nu  cu Fe-dAvg
+ []
+
+
+Underfull \hbox (badness 2285) in paragraph at lines 1147--1147
+\T1/ptm/m/n/10 când func[]ia per-so-na-li-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
+[]|\T1/ptm/m/n/10 Simularea
+ []
+
+
+Underfull \hbox (badness 5637) in paragraph at lines 1147--1148
+\T1/ptm/m/n/10 sind Fe-dAvg;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
+\T1/ptm/m/n/10 se în-re-gis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
+\T1/ptm/m/n/10 treaz  un
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1149
+[]|\T1/ptm/m/n/10 Validare sin-tac-tic 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
+[]|\T1/ptm/m/n/10 Platforma
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
+\T1/ptm/m/n/10 re-tur-neaz 
+ []
+
+
+Underfull \hbox (badness 7451) in paragraph at lines 1149--1150
+\T1/ptm/m/n/10 tax ; func[]ia
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 1151--1151
+[]|\T1/ptm/m/n/10 Izolare date po-i-so-
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 1151--1151
+\T1/ptm/m/n/10 va-lid ; porne[]te o si-mu-lare cu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
+[]|\T1/ptm/m/n/10 Doar ima-gi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
+\T1/ptm/m/n/10 nile alo-cate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
+\T1/ptm/m/n/10 clien[]ilor
+ []
+
+
+Underfull \hbox (badness 3701) in paragraph at lines 1151--1152
+\T1/ptm/m/n/10 mali[]io[]i sunt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
+\T1/ptm/m/n/10 mo-di-fi-cate;
+ []
+
+
+Underfull \hbox (badness 3769) in paragraph at lines 1151--1152
+\T1/ptm/m/n/10 res-tul r mâne
+ []
+
+
+Overfull \hbox (16.87967pt too wide) in paragraph at lines 1137--1154
+ [][] 
  []
 
 
@@ -1910,6 +2221,185 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [41]
+Underfull \hbox (badness 10000) in paragraph at lines 1165--1166
+[]|\T1/ptm/b/n/10 Rezultat
+ []
+
+
+Underfull \hbox (badness 4713) in paragraph at lines 1167--1167
+[]|[]\T1/ptm/m/n/10 ablon cu sem-n -
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 1167--1167
+[]|\T1/ptm/m/n/10 Verific  dac  o func[]ie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
+[]|\T1/ptm/m/n/10 Validarea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
+\T1/ptm/m/n/10 e[]ueaz  cu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
+\T1/ptm/m/n/10 me-saj ce
+ []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 1167--1168
+\T1/ptm/m/n/10 in-dic  in-com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
+\T1/ptm/m/n/10 pa-ti-bi-li-ta-tea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1169
+[]|\T1/ptm/m/n/10 Poisoning re-tur-
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 1169--1169
+[]|\T1/ptm/m/n/10 Verific  dac  si-mu-la-rea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1169
+[]|\T1/ptm/m/n/10 Define[]te o func[]ie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1169
+\T1/cmtt/m/n/10 custom_poison \T1/ptm/m/n/10 care re-tur-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1170
+[]|\T1/ptm/m/n/10 Simularea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1170
+\T1/ptm/m/n/10 se opre[]te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1170
+\T1/ptm/m/n/10 con-tro-lat; se
+ []
+
+
+Underfull \hbox (badness 2393) in paragraph at lines 1169--1170
+\T1/ptm/m/n/10 saj de eroare
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 1171--1171
+[]|\T1/ptm/m/n/10 Fallback CPU f r 
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 1171--1171
+[]|\T1/ptm/m/n/10 Verific  dac  si-mu-la-rea
+ []
+
+
+Underfull \hbox (badness 1248) in paragraph at lines 1171--1171
+\T1/ptm/m/n/10 con-ti-nu  pe CPU când
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
+[]|\T1/ptm/m/n/10 Simularea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
+\T1/ptm/m/n/10 porne[]te pe
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
+\T1/ptm/m/n/10 CPU dup 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
+\T1/ptm/m/n/10 ex-pi-ra-rea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
+\T1/ptm/m/n/10 timeout-ului
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
+\T1/ptm/m/n/10 de a[]teptare
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 1173--1173
+[]|\T1/ptm/m/n/10 Pierdere con-e-xiune
+ []
+
+
+Underfull \hbox (badness 6825) in paragraph at lines 1173--1174
+[]|\T1/ptm/m/n/10 Simularea nu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1174
+\T1/ptm/m/n/10 pierde date
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 1173--1174
+\T1/ptm/m/n/10 deja ge-ne-rate;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1174
+\T1/ptm/m/n/10 sta-tu-sul este
+ []
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 1173--1174
+\T1/ptm/m/n/10 mar-cat co-res-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1175
+[]|\T1/ptm/m/n/10 Verific  dac  opri-rea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1176
+[]|\T1/ptm/m/n/10 Procesele
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1176
+\T1/ptm/m/n/10 se în-chid,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1176
+\T1/ptm/m/n/10 GPU-ul este
+ []
+
+
+Overfull \hbox (16.87967pt too wide) in paragraph at lines 1163--1178
+ [][] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1918,6 +2408,210 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [42]
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1190
+[]|\T1/ptm/b/n/10 Rezultat
+ []
+
+
+Underfull \hbox (badness 6559) in paragraph at lines 1191--1191
+[]|\T1/ptm/m/n/10 Sesiune de ve-ri-fi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+[]|\T1/ptm/m/n/10 Sesiunea de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+\T1/ptm/m/n/10 an-tre-nare de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+\T1/ptm/m/n/10 ve-ri-fi-care se
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+\T1/ptm/m/n/10 fi-na-li-zeaz ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+\T1/ptm/m/n/10 acurate[]ea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+\T1/ptm/m/n/10 ini[]ial  este
+ []
+
+
+Underfull \hbox (badness 6364) in paragraph at lines 1193--1193
+[]|\T1/ptm/m/n/10 Desc rcare set de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1194
+[]|\T1/ptm/m/n/10 Datele sunt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1194
+\T1/ptm/m/n/10 pre-zente în
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1194
+\T1/ptm/m/n/10 di-rec-to-rul
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1194
+\T1/ptm/m/n/10 de lu-cru al
+ []
+
+
+Underfull \hbox (badness 1259) in paragraph at lines 1193--1194
+\T1/ptm/m/n/10 etapa de des-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1195
+[]|\T1/ptm/m/n/10 Porne[]te o si-mu-lare; in-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1195
+\T1/ptm/m/n/10 spec-teaz  fi[]ierele din
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1196
+[]|\T1/ptm/m/n/10 Exist 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1196
+\T1/cmtt/m/n/10 valida-
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 1195--1196
+\T1/ptm/m/n/10 câte un fi[]ier
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1196
+\T1/ptm/m/n/10 de ma-pare
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1196
+\T1/ptm/m/n/10 per cli-ent;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1196
+\T1/ptm/m/n/10 distribu[]ia
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 1195--1196
+\T1/ptm/m/n/10 aco-per  toate
+ []
+
+
+Underfull \hbox (badness 2237) in paragraph at lines 1197--1197
+\T1/ptm/m/n/10 vite sunt cre-ate co-rect
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 1197--1197
+[]|\T1/ptm/m/n/10 Porne[]te si-mu-la-rea cu un atac
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 1197--1197
+\T1/ptm/m/n/10 spe-ci-fic; in-spec-teaz  di-rec-to-rul
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+[]|\T1/ptm/m/n/10 Directorul
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+\T1/ptm/m/n/10 con[]ine sub-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+\T1/ptm/m/n/10 di-rec-toare
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+\T1/ptm/m/n/10 pe runde,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+\T1/ptm/m/n/10 cu ima-gi-nile
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+\T1/ptm/m/n/10 mo-di-fi-cate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1199
+[]|\T1/ptm/m/n/10 Verific  dac  toate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+[]|\T1/ptm/m/n/10 Fi[]ierele de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+\T1/ptm/m/n/10 ana-liz  []i
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+\T1/ptm/m/n/10 su-mar sunt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+\T1/ptm/m/n/10 pre-zente []i
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 1199--1200
+\T1/ptm/m/n/10 con[]in me-trici
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+\T1/ptm/m/n/10 pen-tru toate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+\T1/ptm/m/n/10 cele pa-tru
+ []
+
+
+Overfull \hbox (16.87967pt too wide) in paragraph at lines 1187--1202
+ [][] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1926,6 +2620,189 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [43]
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1214
+[]|\T1/ptm/b/n/10 Rezultat
+ []
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 1215.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1215
+[]|\T1/ptm/m/n/10 Transmitere
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1215
+\T1/ptm/m/n/10 configura[]ie Fron-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+[]|\T1/ptm/m/n/10 Backend-ul
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+\T1/ptm/m/n/10 prime[]te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+\T1/ptm/m/n/10 configura[]ia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+\T1/ptm/m/n/10 sto-cheaz  în
+ []
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 1217.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1217
+[]|\T1/ptm/m/n/10 Transmitere pa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1217
+\T1/ptm/m/n/10 ra-me-tri Ba-c-
+ []
+
+
+Underfull \hbox (badness 2865) in paragraph at lines 1217--1217
+[]|\T1/ptm/m/n/10 Verific  dac  backend-
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 1217--1217
+\T1/ptm/m/n/10 ul trans-mite co-rect pa-
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 1217--1217
+\T1/ptm/m/n/10 ra-me-trii si-mu-l -rii c -tre
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
+[]|\T1/ptm/m/n/10 Orchestratorul
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
+\T1/ptm/m/n/10 prime[]te to[]i
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
+\T1/ptm/m/n/10 pa-ra-me-trii
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
+\T1/ptm/m/n/10 ne-ce-sari []i
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
+\T1/ptm/m/n/10 con-firm 
+ []
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 1219.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1219
+[]|\T1/ptm/m/n/10 Recep[]ie re-zul-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1219
+\T1/ptm/m/n/10 tate Orches-tra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1219
+\T1/ptm/m/n/10 fi-nale ajung []i sunt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
+[]|\T1/ptm/m/n/10 Metricile
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
+\T1/ptm/m/n/10 din fi[]ierele
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
+\T1/ptm/m/n/10 JSON sunt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
+\T1/ptm/m/n/10 afi[]ate co-rect
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
+\T1/ptm/m/n/10 în interfa[]a
+ []
+
+
+Underfull \hbox (badness 5681) in paragraph at lines 1221--1221
+[]|\T1/ptm/m/n/10 Autentificare inter-
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 1221--1221
+\T1/ptm/m/n/10 se au-ten-ti-fic  co-rect la
+ []
+
+
+Underfull \hbox (badness 3302) in paragraph at lines 1221--1221
+[]|\T1/ptm/m/n/10 Inspecteaz  header-ele ce-re-ri-lor
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 1221--1221
+\T1/ptm/m/n/10 cearc  o ce-rere cu creden[]iale
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
+\T1/ptm/m/n/10 sunt ac-cep-
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 1221--1222
+\T1/ptm/m/n/10 tate; cele cu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
+\T1/ptm/m/n/10 creden[]iale
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 1221--1222
+\T1/ptm/m/n/10 in-co-recte sunt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
+\T1/ptm/m/n/10 res-pinse cu
+ []
+
+
+Overfull \hbox (16.87967pt too wide) in paragraph at lines 1211--1224
+ [][] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1934,327 +2811,157 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1309--1310
+Underfull \hbox (badness 10000) in paragraph at lines 1235--1236
 []|\T1/ptm/b/n/10 Rezultat
  []
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 1311--1311
-[]|\T1/ptm/m/n/10 Încarc  un fi[]ier Py-thon care
+Underfull \hbox (badness 6157) in paragraph at lines 1237--1237
+[]|\T1/ptm/m/n/10 Verific  dac  se-siu-nea
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1311--1312
-[]|\T1/ptm/m/n/10 Validarea
+Underfull \hbox (badness 6691) in paragraph at lines 1237--1237
+\T1/ptm/m/n/10 Web-So-c-ket se ini[]iaz 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1311--1312
-\T1/ptm/m/n/10 re-tur-neaz 
+Underfull \hbox (badness 1533) in paragraph at lines 1237--1237
+[]|\T1/ptm/m/n/10 Porne[]te o si-mu-lare []i ob-serv 
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 1311--1312
-\T1/ptm/m/n/10 suc-ces; si-mu-
+Underfull \hbox (badness 10000) in paragraph at lines 1237--1238
+[]|\T1/ptm/m/n/10 Conexiunea
  []
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 1311--1312
-\T1/ptm/m/n/10 la-rea poate fi
+Underfull \hbox (badness 10000) in paragraph at lines 1237--1238
+\T1/ptm/m/n/10 Web-So-c-ket
  []
 
 
-Underfull \hbox (badness 6910) in paragraph at lines 1313--1313
-[]|\T1/ptm/m/n/10 Func[]ie obli-ga-to-rie
+Underfull \hbox (badness 2894) in paragraph at lines 1237--1238
+\T1/ptm/m/n/10 apare ca sta-
  []
 
 
-Underfull \hbox (badness 5359) in paragraph at lines 1313--1313
-\T1/ptm/m/n/10 func[]ii obli-ga-to-rii blo-
+Underfull \hbox (badness 6792) in paragraph at lines 1237--1238
+\T1/ptm/m/n/10 bi-lit  ime-diat
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1313--1314
-[]|\T1/ptm/m/n/10 Validarea
+Underfull \hbox (badness 1789) in paragraph at lines 1237--1238
+\T1/ptm/m/n/10 dup  por-ni-rea
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1313--1314
-\T1/ptm/m/n/10 e[]ueaz  cu
+Underfull \hbox (badness 2762) in paragraph at lines 1239--1239
+\T1/ptm/m/n/10 mu-l -rii se ac-tu-a-li-zeaz 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1313--1314
-\T1/ptm/m/n/10 tiv in-di-când
+Underfull \hbox (badness 2799) in paragraph at lines 1239--1239
+\T1/ptm/m/n/10 interfa[]a afi[]eaz  etapa cu-rent 
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 1315--1315
-[]|\T1/ptm/m/n/10 Încarc  un fi[]ier Py-thon cu o
+Underfull \hbox (badness 2662) in paragraph at lines 1239--1240
+[]|\T1/ptm/m/n/10 Etapa cu-rent 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
-[]|\T1/ptm/m/n/10 Validarea
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
+[]\T1/ptm/m/n/10 i pro-cen-tul
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
-\T1/ptm/m/n/10 e[]ueaz  cu
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
+\T1/ptm/m/n/10 ac-tu-a-li-zeaz 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
-\T1/ptm/m/n/10 me-saj de
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
+\T1/ptm/m/n/10 auto-mat la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
-\T1/ptm/m/n/10 eroare de
+Underfull \hbox (badness 3679) in paragraph at lines 1239--1240
+\T1/ptm/m/n/10 fi-e-care câ-teva
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
-\T1/ptm/m/n/10 sin-tax ; si-
+Underfull \hbox (badness 10000) in paragraph at lines 1241--1241
+[]|\T1/ptm/m/n/10 Reconectare auto-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
-\T1/ptm/m/n/10 mu-la-rea nu
+Underfull \hbox (badness 1496) in paragraph at lines 1241--1241
+\T1/ptm/m/n/10 So-c-ket dup  o în-tre-ru-
  []
 
 
-Underfull \hbox (badness 1082) in paragraph at lines 1317--1317
-[]|\T1/ptm/m/n/10 Încarc  un []ablon care im-port 
+Underfull \hbox (badness 10000) in paragraph at lines 1241--1242
+[]|\T1/ptm/m/n/10 Interfa[]a se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
-[]|\T1/ptm/m/n/10 Validarea
+Underfull \hbox (badness 10000) in paragraph at lines 1241--1242
+\T1/ptm/m/n/10 re-co-nec-teaz 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
-\T1/ptm/m/n/10 e[]ueaz  cu
+Underfull \hbox (badness 3792) in paragraph at lines 1241--1242
+\T1/ptm/m/n/10 recep[]ia ac-tu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
-\T1/ptm/m/n/10 me-saj de
+Underfull \hbox (badness 3792) in paragraph at lines 1241--1242
+\T1/ptm/m/n/10 a-li-z -ri-lor f r 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
-\T1/ptm/m/n/10 se-cu-ri-tate;
+Underfull \hbox (badness 10000) in paragraph at lines 1241--1242
+\T1/ptm/m/n/10 interven[]ie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
-[]\T1/ptm/m/n/10 ablonul este
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+[]|\T1/ptm/m/n/10 Interfa[]a
  []
 
 
-Overfull \hbox (16.87967pt too wide) in paragraph at lines 1307--1320
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+\T1/ptm/m/n/10 afi[]eaz  no-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1331--1332
-[]|\T1/ptm/b/n/10 Rezultat
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+\T1/ptm/m/n/10 ti-fi-ca-rea de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1333--1333
-[]|\T1/ptm/m/n/10 Validare sin-tac-tic 
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+\T1/ptm/m/n/10 fi-na-li-zare
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1333--1334
-[]|\T1/ptm/m/n/10 Platforma
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+[]\T1/ptm/m/n/10 i ac-ti-veaz 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1333--1334
-\T1/ptm/m/n/10 re-tur-neaz 
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+\T1/ptm/m/n/10 bu-to-nul de
  []
 
 
-Underfull \hbox (badness 7451) in paragraph at lines 1333--1334
-\T1/ptm/m/n/10 tax ; func[]ia
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+\T1/ptm/m/n/10 vi-zu-a-li-zare
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1335
-[]|\T1/ptm/m/n/10 Detectare func[]ie
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1335
-[]|\T1/ptm/m/n/10 Verific  c 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1335
-\T1/ptm/m/n/10 absen[]a func[]iei
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1335
-\T1/cmtt/m/n/10 custom_aggregate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1336
-[]|\T1/ptm/m/n/10 Platforma
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1336
-\T1/ptm/m/n/10 re-tur-neaz 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1336
-\T1/ptm/m/n/10 eroare in-di-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1336
-\T1/ptm/m/n/10 când func[]ia
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1336
-\T1/ptm/m/n/10 obli-ga-to-rie
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1337
-[]|\T1/ptm/m/n/10 Analiz  se-cu-ri-tate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1338
-[]|\T1/ptm/m/n/10 Analiza de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1338
-\T1/ptm/m/n/10 se-cu-ri-tate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1338
-\T1/ptm/m/n/10 e[]ueaz ;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1338
-\T1/ptm/m/n/10 per-sis-tat  pe
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1339
-[]|\T1/ptm/m/n/10 Verific  c  si-mu-la-rea
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1339
-\T1/ptm/m/n/10 con-ti-nu  cu Fe-dAvg
- []
-
-
-Underfull \hbox (badness 2285) in paragraph at lines 1339--1339
-\T1/ptm/m/n/10 când func[]ia per-so-na-li-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
-[]|\T1/ptm/m/n/10 Simularea
- []
-
-
-Underfull \hbox (badness 5637) in paragraph at lines 1339--1340
-\T1/ptm/m/n/10 sind Fe-dAvg;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
-\T1/ptm/m/n/10 se în-re-gis-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
-\T1/ptm/m/n/10 treaz  un
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1341--1341
-[]|\T1/ptm/m/n/10 Validare sin-tac-tic 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1341--1342
-[]|\T1/ptm/m/n/10 Platforma
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1341--1342
-\T1/ptm/m/n/10 re-tur-neaz 
- []
-
-
-Underfull \hbox (badness 7451) in paragraph at lines 1341--1342
-\T1/ptm/m/n/10 tax ; func[]ia
- []
-
-
-Underfull \hbox (badness 1571) in paragraph at lines 1343--1343
-[]|\T1/ptm/m/n/10 Izolare date po-i-so-
- []
-
-
-Underfull \hbox (badness 4048) in paragraph at lines 1343--1343
-[]|\T1/ptm/m/n/10 Verific  c  func[]ia de
- []
-
-
-Underfull \hbox (badness 1552) in paragraph at lines 1343--1343
-\T1/ptm/m/n/10 va-lid ; porne[]te o si-mu-lare cu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1344
-[]|\T1/ptm/m/n/10 Doar ima-gi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1344
-\T1/ptm/m/n/10 nile alo-cate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1344
-\T1/ptm/m/n/10 clien[]ilor
- []
-
-
-Underfull \hbox (badness 3701) in paragraph at lines 1343--1344
-\T1/ptm/m/n/10 mali[]io[]i sunt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1344
-\T1/ptm/m/n/10 mo-di-fi-cate;
- []
-
-
-Underfull \hbox (badness 3769) in paragraph at lines 1343--1344
-\T1/ptm/m/n/10 res-tul r mâne
- []
-
-
-Overfull \hbox (16.87967pt too wide) in paragraph at lines 1329--1346
+Overfull \hbox (16.87967pt too wide) in paragraph at lines 1233--1246
  [][] 
  []
 
@@ -2266,182 +2973,137 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1357--1358
+Underfull \hbox (badness 10000) in paragraph at lines 1257--1258
 []|\T1/ptm/b/n/10 Rezultat
  []
 
 
-Underfull \hbox (badness 4713) in paragraph at lines 1359--1359
-[]|[]\T1/ptm/m/n/10 ablon cu sem-n -
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1259
+[]|\T1/ptm/m/n/10 Interogare sta-tus
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 1359--1359
-\T1/ptm/m/n/10 sem-n -tur  gre[]it  este
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1259
+[]|\T1/ptm/m/n/10 Verific  dac  sta-rea
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
-[]|\T1/ptm/m/n/10 Validarea
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1259
+\T1/ptm/m/n/10 GPU-urilor dis-po-ni-bile
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
-\T1/ptm/m/n/10 e[]ueaz  cu
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1260
+\T1/ptm/m/n/10 dis-po-ni-bile
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
-\T1/ptm/m/n/10 me-saj ce
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1260
+\T1/ptm/m/n/10 pre-lu-ate prin
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 1359--1360
-\T1/ptm/m/n/10 in-dic  in-com-
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1260
+\T1/ptm/m/n/10 in-te-ro-ga-rea
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
-\T1/ptm/m/n/10 pa-ti-bi-li-ta-tea
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1261
+[]|\T1/ptm/m/n/10 Alocare ex-clu-siv 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1361
-[]|\T1/ptm/m/n/10 Poisoning re-tur-
+Underfull \hbox (badness 2653) in paragraph at lines 1261--1262
+[]|\T1/ptm/m/n/10 Fiecare si-mu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1361
-[]|\T1/ptm/m/n/10 Define[]te o func[]ie
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1262
+\T1/ptm/m/n/10 lare prime[]te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1361
-\T1/cmtt/m/n/10 custom_poison \T1/ptm/m/n/10 care re-tur-
+Underfull \hbox (badness 2865) in paragraph at lines 1261--1262
+\T1/ptm/m/n/10 un GPU dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1362
-[]|\T1/ptm/m/n/10 Simularea
+Underfull \hbox (badness 1789) in paragraph at lines 1261--1262
+\T1/ptm/m/n/10 alo-care du-pli-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1362
-\T1/ptm/m/n/10 se opre[]te
+Underfull \hbox (badness 10000) in paragraph at lines 1263--1263
+[]|\T1/ptm/m/n/10 Verific  dac  GPU-ul
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1362
-\T1/ptm/m/n/10 con-tro-lat; se
+Underfull \hbox (badness 1895) in paragraph at lines 1263--1263
+\T1/ptm/m/n/10 ri-fic  sta-tu-sul GPU-ului în log
  []
 
 
-Underfull \hbox (badness 2393) in paragraph at lines 1361--1362
-\T1/ptm/m/n/10 saj de eroare
+Underfull \hbox (badness 1789) in paragraph at lines 1263--1264
+[]|\T1/ptm/m/n/10 GPU-ul apare
  []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 1363--1363
-[]|\T1/ptm/m/n/10 Fallback CPU f r 
+Underfull \hbox (badness 10000) in paragraph at lines 1263--1264
+\T1/ptm/m/n/10 dis-po-ni-bil în
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1363
-[]|\T1/ptm/m/n/10 Verific  c  si-mu-la-rea
+Underfull \hbox (badness 4072) in paragraph at lines 1263--1264
+\T1/ptm/m/n/10 coada de re-
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 1363--1363
-\T1/ptm/m/n/10 con-ti-nu  pe CPU când
+Underfull \hbox (badness 6825) in paragraph at lines 1263--1264
+\T1/ptm/m/n/10 surse ime-diat
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1363
-\T1/ptm/m/n/10 niciun GPU nu este
+Underfull \hbox (badness 3769) in paragraph at lines 1263--1264
+\T1/ptm/m/n/10 dup  în-che-ie-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1364
-[]|\T1/ptm/m/n/10 Simularea
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1265
+[]|\T1/ptm/m/n/10 Eliberare GPU la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1364
-\T1/ptm/m/n/10 porne[]te pe
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1265
+[]|\T1/ptm/m/n/10 Verific  dac  GPU-ul
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1364
-\T1/ptm/m/n/10 CPU dup 
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1266
+[]|\T1/ptm/m/n/10 GPU-ul este
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1364
-\T1/ptm/m/n/10 ex-pi-ra-rea
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1266
+\T1/ptm/m/n/10 eli-be-rat in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1364
-\T1/ptm/m/n/10 timeout-ului
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1266
+\T1/ptm/m/n/10 di-fe-rent de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1364
-\T1/ptm/m/n/10 de a[]teptare
+Underfull \hbox (badness 2393) in paragraph at lines 1265--1266
+\T1/ptm/m/n/10 etapa în care
  []
 
 
-Underfull \hbox (badness 4084) in paragraph at lines 1365--1365
-[]|\T1/ptm/m/n/10 Pierdere con-e-xiune
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1266
+\T1/ptm/m/n/10 s-a pro-dus
  []
 
 
-Underfull \hbox (badness 6825) in paragraph at lines 1365--1366
-[]|\T1/ptm/m/n/10 Simularea nu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1366
-\T1/ptm/m/n/10 pierde date
- []
-
-
-Underfull \hbox (badness 1137) in paragraph at lines 1365--1366
-\T1/ptm/m/n/10 deja ge-ne-rate;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1366
-\T1/ptm/m/n/10 sta-tu-sul este
- []
-
-
-Underfull \hbox (badness 3792) in paragraph at lines 1365--1366
-\T1/ptm/m/n/10 mar-cat co-res-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1367
-[]|\T1/ptm/m/n/10 Verific  c  opri-rea
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1368
-[]|\T1/ptm/m/n/10 Procesele
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1368
-\T1/ptm/m/n/10 se în-chid,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1368
-\T1/ptm/m/n/10 GPU-ul este
- []
-
-
-Overfull \hbox (16.87967pt too wide) in paragraph at lines 1355--1370
+Overfull \hbox (16.87967pt too wide) in paragraph at lines 1255--1268
  [][] 
  []
 
@@ -2453,202 +3115,122 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1381--1382
+Underfull \hbox (badness 10000) in paragraph at lines 1279--1280
 []|\T1/ptm/b/n/10 Rezultat
  []
 
 
-Underfull \hbox (badness 6559) in paragraph at lines 1383--1383
-[]|\T1/ptm/m/n/10 Sesiune de ve-ri-fi-
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1281
+[]|\T1/ptm/m/n/10 Anulare în etap 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
-[]|\T1/ptm/m/n/10 Sesiunea de
+Underfull \hbox (badness 6173) in paragraph at lines 1281--1281
+[]|\T1/ptm/m/n/10 Verific  dac  anu-la-rea
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
-\T1/ptm/m/n/10 an-tre-nare de
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1282
+[]|\T1/ptm/m/n/10 Simularea se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
-\T1/ptm/m/n/10 ve-ri-fi-care se
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1282
+\T1/ptm/m/n/10 opre[]te; nu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
-\T1/ptm/m/n/10 fi-na-li-zeaz ;
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1282
+\T1/ptm/m/n/10 se con-sum 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
-\T1/ptm/m/n/10 acurate[]ea
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1282
+\T1/ptm/m/n/10 re-surse GPU
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
-\T1/ptm/m/n/10 ini[]ial  este
+Underfull \hbox (badness 10000) in paragraph at lines 1283--1283
+[]|\T1/ptm/m/n/10 Anulare în etap 
  []
 
 
-Underfull \hbox (badness 6364) in paragraph at lines 1385--1385
-[]|\T1/ptm/m/n/10 Desc rcare set de
+Underfull \hbox (badness 6173) in paragraph at lines 1283--1283
+[]|\T1/ptm/m/n/10 Verific  dac  anu-la-rea
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1385--1386
-[]|\T1/ptm/m/n/10 Datele sunt
+Underfull \hbox (badness 10000) in paragraph at lines 1283--1283
+\T1/ptm/m/n/10 avan-sate ale pipeline-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1385--1386
-\T1/ptm/m/n/10 pre-zente în
+Underfull \hbox (badness 10000) in paragraph at lines 1283--1284
+[]|\T1/ptm/m/n/10 Simularea se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1385--1386
-\T1/ptm/m/n/10 di-rec-to-rul
+Underfull \hbox (badness 5133) in paragraph at lines 1283--1284
+\T1/ptm/m/n/10 opre[]te; pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1385--1386
-\T1/ptm/m/n/10 de lu-cru al
+Underfull \hbox (badness 10000) in paragraph at lines 1283--1284
+\T1/ptm/m/n/10 ce-sele co-pil
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 1385--1386
-\T1/ptm/m/n/10 etapa de des-
+Underfull \hbox (badness 10000) in paragraph at lines 1283--1284
+\T1/ptm/m/n/10 sunt ter-mi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1387--1387
-[]|\T1/ptm/m/n/10 Porne[]te o si-mu-lare; in-
+Underfull \hbox (badness 2020) in paragraph at lines 1283--1284
+\T1/ptm/m/n/10 nate; GPU-ul
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1387--1387
-\T1/ptm/m/n/10 spec-teaz  fi[]ierele din
+Underfull \hbox (badness 1189) in paragraph at lines 1285--1285
+[]|\T1/ptm/m/n/10 Verific  dac  di-rec-to-rul
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1387--1388
-[]|\T1/ptm/m/n/10 Exist 
+Underfull \hbox (badness 6859) in paragraph at lines 1285--1286
+[]|\T1/ptm/m/n/10 Directorul de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1387--1388
-\T1/cmtt/m/n/10 valida-
+Underfull \hbox (badness 1043) in paragraph at lines 1285--1286
+\T1/ptm/m/n/10 mai exist  pe
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 1387--1388
-\T1/ptm/m/n/10 câte un fi[]ier
+Underfull \hbox (badness 1242) in paragraph at lines 1287--1287
+[]|\T1/ptm/m/n/10 Status ac-tu-a-li-zat la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1387--1388
-\T1/ptm/m/n/10 de ma-pare
+Underfull \hbox (badness 7064) in paragraph at lines 1287--1287
+\T1/ptm/m/n/10 mu-l -rii re-flect  co-rect
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1387--1388
-\T1/ptm/m/n/10 per cli-ent;
+Underfull \hbox (badness 10000) in paragraph at lines 1287--1288
+[]|\T1/ptm/m/n/10 Simularea
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1387--1388
-\T1/ptm/m/n/10 distribu[]ia
+Underfull \hbox (badness 10000) in paragraph at lines 1287--1288
+\T1/ptm/m/n/10 sul \T1/ptm/m/it/10 can-ce-l-led
  []
 
 
-Underfull \hbox (badness 6893) in paragraph at lines 1387--1388
-\T1/ptm/m/n/10 aco-per  toate
+Underfull \hbox (badness 10000) in paragraph at lines 1287--1288
+\T1/ptm/m/n/10 în interfa[]a
  []
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 1389--1389
-\T1/ptm/m/n/10 vite sunt cre-ate co-rect
- []
-
-
-Underfull \hbox (badness 2564) in paragraph at lines 1389--1389
-[]|\T1/ptm/m/n/10 Porne[]te si-mu-la-rea cu un atac
- []
-
-
-Underfull \hbox (badness 4429) in paragraph at lines 1389--1389
-\T1/ptm/m/n/10 spe-ci-fic; in-spec-teaz  di-rec-to-rul
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1390
-[]|\T1/ptm/m/n/10 Directorul
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1390
-\T1/ptm/m/n/10 con[]ine sub-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1390
-\T1/ptm/m/n/10 di-rec-toare
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1390
-\T1/ptm/m/n/10 pe runde,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1390
-\T1/ptm/m/n/10 cu ima-gi-nile
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1390
-\T1/ptm/m/n/10 mo-di-fi-cate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1392
-[]|\T1/ptm/m/n/10 Fi[]ierele de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1392
-\T1/ptm/m/n/10 ana-liz  []i
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1392
-\T1/ptm/m/n/10 su-mar sunt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1392
-\T1/ptm/m/n/10 pre-zente []i
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 1391--1392
-\T1/ptm/m/n/10 con[]in me-trici
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1392
-\T1/ptm/m/n/10 pen-tru toate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1392
-\T1/ptm/m/n/10 cele pa-tru
- []
-
-
-Overfull \hbox (16.87967pt too wide) in paragraph at lines 1379--1394
+Overfull \hbox (16.87967pt too wide) in paragraph at lines 1277--1290
  [][] 
  []
 
@@ -2660,191 +3242,138 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [47]
-Underfull \hbox (badness 10000) in paragraph at lines 1405--1406
+Underfull \hbox (badness 10000) in paragraph at lines 1301--1302
 []|\T1/ptm/b/n/10 Rezultat
  []
 
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 1407.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1407--1407
-[]|\T1/ptm/m/n/10 Transmitere
+Underfull \hbox (badness 1558) in paragraph at lines 1303--1303
+\T1/ptm/m/n/10 to-ken ex-pi-rat sunt res-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1407--1407
-\T1/ptm/m/n/10 configura[]ie Fron-
+Underfull \hbox (badness 10000) in paragraph at lines 1303--1304
+[]|\T1/ptm/m/n/10 API-ul re-
  []
 
 
-Underfull \hbox (badness 3250) in paragraph at lines 1407--1407
-[]|\T1/ptm/m/n/10 Verific  c  ce-re-rea de
+Underfull \hbox (badness 10000) in paragraph at lines 1303--1304
+\T1/ptm/m/n/10 tur-neaz  cod
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1407--1408
-[]|\T1/ptm/m/n/10 Backend-ul
+Underfull \hbox (badness 10000) in paragraph at lines 1303--1304
+\T1/ptm/m/n/10 401; ce-re-rea
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1407--1408
-\T1/ptm/m/n/10 prime[]te
+Underfull \hbox (badness 2875) in paragraph at lines 1305--1305
+\T1/ptm/m/n/10 tic  de-tec-teaz  []i blo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1407--1408
-\T1/ptm/m/n/10 configura[]ia
+Underfull \hbox (badness 3668) in paragraph at lines 1305--1305
+[]|\T1/ptm/m/n/10 Încarc  un []ablon sau func[]ie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1407--1408
-\T1/ptm/m/n/10 sto-cheaz  în
- []
-
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 1409.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1409
-[]|\T1/ptm/m/n/10 Transmitere pa-
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1305
+\T1/ptm/m/n/10 per-so-na-li-zat  care con[]ine
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1409
-\T1/ptm/m/n/10 ra-me-tri Ba-c-
+Underfull \hbox (badness 1028) in paragraph at lines 1305--1305
+\T1/cmtt/m/n/10 os.system \T1/ptm/m/n/10 sau \T1/cmtt/m/n/10 eval\T1/ptm/m/n/10
+ ; în-cearc 
  []
 
 
-Underfull \hbox (badness 4713) in paragraph at lines 1409--1409
-[]|\T1/ptm/m/n/10 Verific  c  backend-ul
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1306
+[]|\T1/ptm/m/n/10 Analiza de
  []
 
 
-Underfull \hbox (badness 8056) in paragraph at lines 1409--1409
-\T1/ptm/m/n/10 trans-mite co-rect pa-ra-
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1306
+\T1/ptm/m/n/10 se-cu-ri-tate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1409
-\T1/ptm/m/n/10 me-trii si-mu-l -rii c -tre
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1307
+[]|\T1/ptm/m/n/10 Izolare date în-tre
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1410
-[]|\T1/ptm/m/n/10 Orchestratorul
+Underfull \hbox (badness 1147) in paragraph at lines 1307--1307
+[]|\T1/ptm/m/n/10 Autentificat ca uti-li-za-tor A, în-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1410
-\T1/ptm/m/n/10 prime[]te to[]i
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1308
+[]|\T1/ptm/m/n/10 API-ul re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1410
-\T1/ptm/m/n/10 pa-ra-me-trii
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1308
+\T1/ptm/m/n/10 tur-neaz  cod
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1410
-\T1/ptm/m/n/10 ne-ce-sari []i
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1308
+\T1/ptm/m/n/10 403; da-tele
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1410
-\T1/ptm/m/n/10 con-firm 
- []
-
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 1411.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1411--1411
-[]|\T1/ptm/m/n/10 Recep[]ie re-zul-
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1308
+\T1/ptm/m/n/10 uti-li-za-to-ru-lui
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1411--1411
-\T1/ptm/m/n/10 tate Orches-tra-
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1308
+\T1/ptm/m/n/10 B nu sunt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1411--1412
-[]|\T1/ptm/m/n/10 Metricile
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1310
+[]|\T1/ptm/m/n/10 Cererea este
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1411--1412
-\T1/ptm/m/n/10 din fi[]ierele
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1310
+\T1/ptm/m/n/10 res-pins  de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1411--1412
-\T1/ptm/m/n/10 JSON sunt
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1310
+\T1/ptm/m/n/10 ba-c-kend cu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1411--1412
-\T1/ptm/m/n/10 afi[]ate co-rect
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1312
+[]|\T1/ptm/m/n/10 Nicio pa-rol 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1411--1412
-\T1/ptm/m/n/10 în interfa[]a
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1312
+\T1/ptm/m/n/10 sau cheie
  []
 
 
-Underfull \hbox (badness 5681) in paragraph at lines 1413--1413
-[]|\T1/ptm/m/n/10 Autentificare inter-
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1312
+\T1/ptm/m/n/10 se-cret  nu
  []
 
 
-Underfull \hbox (badness 4713) in paragraph at lines 1413--1413
-[]|\T1/ptm/m/n/10 Verific  c  backend-ul
+Underfull \hbox (badness 3590) in paragraph at lines 1311--1312
+\T1/ptm/m/n/10 apare în text
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 1413--1413
-\T1/ptm/m/n/10 se au-ten-ti-fic  co-rect la
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1312
+\T1/ptm/m/n/10 sau va-ri-a-bile
  []
 
 
-Underfull \hbox (badness 3302) in paragraph at lines 1413--1413
-[]|\T1/ptm/m/n/10 Inspecteaz  header-ele ce-re-ri-lor
- []
-
-
-Underfull \hbox (badness 2837) in paragraph at lines 1413--1413
-\T1/ptm/m/n/10 cearc  o ce-rere cu creden[]iale
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1414
-\T1/ptm/m/n/10 sunt ac-cep-
- []
-
-
-Underfull \hbox (badness 2818) in paragraph at lines 1413--1414
-\T1/ptm/m/n/10 tate; cele cu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1414
-\T1/ptm/m/n/10 creden[]iale
- []
-
-
-Underfull \hbox (badness 1127) in paragraph at lines 1413--1414
-\T1/ptm/m/n/10 in-co-recte sunt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1414
-\T1/ptm/m/n/10 res-pinse cu
- []
-
-
-Overfull \hbox (16.87967pt too wide) in paragraph at lines 1403--1416
+Overfull \hbox (16.87967pt too wide) in paragraph at lines 1299--1314
  [][] 
  []
 
@@ -2856,577 +3385,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 1427--1428
-[]|\T1/ptm/b/n/10 Rezultat
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1429--1429
-[]|\T1/ptm/m/n/10 Verific  c  se-siu-nea
- []
-
-
-Underfull \hbox (badness 6691) in paragraph at lines 1429--1429
-\T1/ptm/m/n/10 Web-So-c-ket se ini[]iaz 
- []
-
-
-Underfull \hbox (badness 1533) in paragraph at lines 1429--1429
-[]|\T1/ptm/m/n/10 Porne[]te o si-mu-lare []i ob-serv 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1429--1430
-[]|\T1/ptm/m/n/10 Conexiunea
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1429--1430
-\T1/ptm/m/n/10 Web-So-c-ket
- []
-
-
-Underfull \hbox (badness 2894) in paragraph at lines 1429--1430
-\T1/ptm/m/n/10 apare ca sta-
- []
-
-
-Underfull \hbox (badness 6792) in paragraph at lines 1429--1430
-\T1/ptm/m/n/10 bi-lit  ime-diat
- []
-
-
-Underfull \hbox (badness 1789) in paragraph at lines 1429--1430
-\T1/ptm/m/n/10 dup  por-ni-rea
- []
-
-
-Underfull \hbox (badness 2799) in paragraph at lines 1431--1431
-\T1/ptm/m/n/10 interfa[]a afi[]eaz  etapa cu-rent 
- []
-
-
-Underfull \hbox (badness 2662) in paragraph at lines 1431--1432
-[]|\T1/ptm/m/n/10 Etapa cu-rent 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1431--1432
-[]\T1/ptm/m/n/10 i pro-cen-tul
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1431--1432
-\T1/ptm/m/n/10 ac-tu-a-li-zeaz 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1431--1432
-\T1/ptm/m/n/10 auto-mat la
- []
-
-
-Underfull \hbox (badness 3679) in paragraph at lines 1431--1432
-\T1/ptm/m/n/10 fi-e-care câ-teva
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1433--1433
-[]|\T1/ptm/m/n/10 Reconectare auto-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1433--1434
-[]|\T1/ptm/m/n/10 Interfa[]a se
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1433--1434
-\T1/ptm/m/n/10 re-co-nec-teaz 
- []
-
-
-Underfull \hbox (badness 3792) in paragraph at lines 1433--1434
-\T1/ptm/m/n/10 recep[]ia ac-tu-
- []
-
-
-Underfull \hbox (badness 3792) in paragraph at lines 1433--1434
-\T1/ptm/m/n/10 a-li-z -ri-lor f r 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1433--1434
-\T1/ptm/m/n/10 interven[]ie
- []
-
-
-Underfull \hbox (badness 5316) in paragraph at lines 1435--1435
-[]|\T1/ptm/m/n/10 Verific  c  uti-li-za-to-rul
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
-[]|\T1/ptm/m/n/10 Interfa[]a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
-\T1/ptm/m/n/10 afi[]eaz  no-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
-\T1/ptm/m/n/10 ti-fi-ca-rea de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
-\T1/ptm/m/n/10 fi-na-li-zare
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
-[]\T1/ptm/m/n/10 i ac-ti-veaz 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
-\T1/ptm/m/n/10 bu-to-nul de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
-\T1/ptm/m/n/10 vi-zu-a-li-zare
- []
-
-
-Overfull \hbox (16.87967pt too wide) in paragraph at lines 1425--1438
- [][] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 1449--1450
-[]|\T1/ptm/b/n/10 Rezultat
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1451--1451
-[]|\T1/ptm/m/n/10 Interogare sta-tus
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1451--1452
-\T1/ptm/m/n/10 dis-po-ni-bile
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1451--1452
-\T1/ptm/m/n/10 pre-lu-ate prin
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1451--1452
-\T1/ptm/m/n/10 in-te-ro-ga-rea
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1453--1453
-[]|\T1/ptm/m/n/10 Alocare ex-clu-siv 
- []
-
-
-Underfull \hbox (badness 1253) in paragraph at lines 1453--1453
-[]|\T1/ptm/m/n/10 Verific  c  dou  si-mu-
- []
-
-
-Underfull \hbox (badness 2653) in paragraph at lines 1453--1454
-[]|\T1/ptm/m/n/10 Fiecare si-mu-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1453--1454
-\T1/ptm/m/n/10 lare prime[]te
- []
-
-
-Underfull \hbox (badness 2865) in paragraph at lines 1453--1454
-\T1/ptm/m/n/10 un GPU dis-
- []
-
-
-Underfull \hbox (badness 1789) in paragraph at lines 1453--1454
-\T1/ptm/m/n/10 alo-care du-pli-
- []
-
-
-Underfull \hbox (badness 1895) in paragraph at lines 1455--1455
-\T1/ptm/m/n/10 ri-fic  sta-tu-sul GPU-ului în log
- []
-
-
-Underfull \hbox (badness 1789) in paragraph at lines 1455--1456
-[]|\T1/ptm/m/n/10 GPU-ul apare
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1456
-\T1/ptm/m/n/10 dis-po-ni-bil în
- []
-
-
-Underfull \hbox (badness 4072) in paragraph at lines 1455--1456
-\T1/ptm/m/n/10 coada de re-
- []
-
-
-Underfull \hbox (badness 6825) in paragraph at lines 1455--1456
-\T1/ptm/m/n/10 surse ime-diat
- []
-
-
-Underfull \hbox (badness 3769) in paragraph at lines 1455--1456
-\T1/ptm/m/n/10 dup  în-che-ie-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1457--1457
-[]|\T1/ptm/m/n/10 Eliberare GPU la
- []
-
-
-Underfull \hbox (badness 3623) in paragraph at lines 1457--1457
-\T1/ptm/m/n/10 eli-be-rat []i la anu-la-rea
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1457--1458
-[]|\T1/ptm/m/n/10 GPU-ul este
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1457--1458
-\T1/ptm/m/n/10 eli-be-rat in-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1457--1458
-\T1/ptm/m/n/10 di-fe-rent de
- []
-
-
-Underfull \hbox (badness 2393) in paragraph at lines 1457--1458
-\T1/ptm/m/n/10 etapa în care
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1457--1458
-\T1/ptm/m/n/10 s-a pro-dus
- []
-
-
-Overfull \hbox (16.87967pt too wide) in paragraph at lines 1447--1460
- [][] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 1471--1472
-[]|\T1/ptm/b/n/10 Rezultat
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1473
-[]|\T1/ptm/m/n/10 Anulare în etap 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1473
-[]|\T1/ptm/m/n/10 Verific  c  anu-la-rea
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1474
-[]|\T1/ptm/m/n/10 Simularea se
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1474
-\T1/ptm/m/n/10 opre[]te; nu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1474
-\T1/ptm/m/n/10 se con-sum 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1474
-\T1/ptm/m/n/10 re-surse GPU
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
-[]|\T1/ptm/m/n/10 Anulare în etap 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
-[]|\T1/ptm/m/n/10 Verific  c  anu-la-rea
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
-\T1/ptm/m/n/10 func[]ioneaz  []i în
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
-\T1/ptm/m/n/10 eta-pele avan-sate ale
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1475--1476
-[]|\T1/ptm/m/n/10 Simularea se
- []
-
-
-Underfull \hbox (badness 5133) in paragraph at lines 1475--1476
-\T1/ptm/m/n/10 opre[]te; pro-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1475--1476
-\T1/ptm/m/n/10 ce-sele co-pil
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1475--1476
-\T1/ptm/m/n/10 sunt ter-mi-
- []
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 1475--1476
-\T1/ptm/m/n/10 nate; GPU-ul
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1477--1477
-[]|\T1/ptm/m/n/10 Verific  c  di-rec-to-rul
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1477--1477
-\T1/ptm/m/n/10 tem-po-rar al si-mu-l -rii
- []
-
-
-Underfull \hbox (badness 6859) in paragraph at lines 1477--1478
-[]|\T1/ptm/m/n/10 Directorul de
- []
-
-
-Underfull \hbox (badness 1043) in paragraph at lines 1477--1478
-\T1/ptm/m/n/10 mai exist  pe
- []
-
-
-Underfull \hbox (badness 1242) in paragraph at lines 1479--1479
-[]|\T1/ptm/m/n/10 Status ac-tu-a-li-zat la
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1480
-[]|\T1/ptm/m/n/10 Simularea
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1480
-\T1/ptm/m/n/10 sul \T1/ptm/m/it/10 can-ce-l-led
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1479--1480
-\T1/ptm/m/n/10 în interfa[]a
- []
-
-
-Overfull \hbox (16.87967pt too wide) in paragraph at lines 1469--1482
- [][] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 1493--1494
-[]|\T1/ptm/b/n/10 Rezultat
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1495--1496
-[]|\T1/ptm/m/n/10 API-ul re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1495--1496
-\T1/ptm/m/n/10 tur-neaz  cod
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1495--1496
-\T1/ptm/m/n/10 401; ce-re-rea
- []
-
-
-Underfull \hbox (badness 1194) in paragraph at lines 1497--1497
-\T1/ptm/m/n/10 de-tec-teaz  []i blo-cheaz 
- []
-
-
-Underfull \hbox (badness 3668) in paragraph at lines 1497--1497
-[]|\T1/ptm/m/n/10 Încarc  un []ablon sau func[]ie
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1497--1497
-\T1/ptm/m/n/10 per-so-na-li-zat  care con[]ine
- []
-
-
-Underfull \hbox (badness 1028) in paragraph at lines 1497--1497
-\T1/cmtt/m/n/10 os.system \T1/ptm/m/n/10 sau \T1/cmtt/m/n/10 eval\T1/ptm/m/n/10
- ; în-cearc 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1497--1498
-[]|\T1/ptm/m/n/10 Analiza de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1497--1498
-\T1/ptm/m/n/10 se-cu-ri-tate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1499--1499
-[]|\T1/ptm/m/n/10 Izolare date în-tre
- []
-
-
-Underfull \hbox (badness 1147) in paragraph at lines 1499--1499
-[]|\T1/ptm/m/n/10 Autentificat ca uti-li-za-tor A, în-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1499--1500
-[]|\T1/ptm/m/n/10 API-ul re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1499--1500
-\T1/ptm/m/n/10 tur-neaz  cod
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1499--1500
-\T1/ptm/m/n/10 403; da-tele
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1499--1500
-\T1/ptm/m/n/10 uti-li-za-to-ru-lui
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1499--1500
-\T1/ptm/m/n/10 B nu sunt
- []
-
-
-Underfull \hbox (badness 1253) in paragraph at lines 1501--1501
-[]|\T1/ptm/m/n/10 Verific  c  API-ul res-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1501--1502
-[]|\T1/ptm/m/n/10 Cererea este
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1501--1502
-\T1/ptm/m/n/10 res-pins  de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1501--1502
-\T1/ptm/m/n/10 ba-c-kend cu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1503--1504
-[]|\T1/ptm/m/n/10 Nicio pa-rol 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1503--1504
-\T1/ptm/m/n/10 sau cheie
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1503--1504
-\T1/ptm/m/n/10 se-cret  nu
- []
-
-
-Underfull \hbox (badness 3590) in paragraph at lines 1503--1504
-\T1/ptm/m/n/10 apare în text
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1503--1504
-\T1/ptm/m/n/10 sau va-ri-a-bile
- []
-
-
-Overfull \hbox (16.87967pt too wide) in paragraph at lines 1491--1506
- [][] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[52]
-<components/chapters/../images/Diagrama_Context_Anexa_A.png, id=864, 785.93625p
+<components/chapters/../images/Diagrama_Context_Anexa_A.png, id=857, 785.93625p
 t x 485.56406pt>
 File: components/chapters/../images/Diagrama_Context_Anexa_A.png Graphic file (
 type png)
 <use components/chapters/../images/Diagrama_Context_Anexa_A.png>
 Package pdftex.def Info: components/chapters/../images/Diagrama_Context_Anexa_A
-.png  used on input line 1520.
+.png  used on input line 1328.
 (pdftex.def)             Requested size: 409.71692pt x 253.13194pt.
 
 
@@ -3436,22 +3401,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[53]
-<components/chapters/../images/Diagrama_Context_2_Anexa_A.png, id=870, 1078.780
+[49]
+<components/chapters/../images/Diagrama_Context_2_Anexa_A.png, id=863, 1078.780
 32pt x 429.10312pt>
 File: components/chapters/../images/Diagrama_Context_2_Anexa_A.png Graphic file
  (type png)
 <use components/chapters/../images/Diagrama_Context_2_Anexa_A.png>
 Package pdftex.def Info: components/chapters/../images/Diagrama_Context_2_Anexa
-_A.png  used on input line 1529.
+_A.png  used on input line 1337.
 (pdftex.def)             Requested size: 455.24101pt x 227.62pt.
-<components/chapters/../images/Diagrama_Componente.png, id=871, 889.07156pt x 5
+<components/chapters/../images/Diagrama_Componente.png, id=864, 889.07156pt x 5
 11.15968pt>
 File: components/chapters/../images/Diagrama_Componente.png Graphic file (type 
 png)
 <use components/chapters/../images/Diagrama_Componente.png>
 Package pdftex.def Info: components/chapters/../images/Diagrama_Componente.png 
- used on input line 1540.
+ used on input line 1348.
 (pdftex.def)             Requested size: 455.24411pt x 261.73312pt.
 
 
@@ -3461,15 +3426,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[54 <./components/chapters/../images/Diagrama_Context_Anexa_A.png> <./component
+[50 <./components/chapters/../images/Diagrama_Context_Anexa_A.png> <./component
 s/chapters/../images/Diagrama_Context_2_Anexa_A.png>]
-<components/chapters/../images/Diagrama_Flux_Utilizator.png, id=879, 1448.41125
+<components/chapters/../images/Diagrama_Flux_Utilizator.png, id=871, 1448.41125
 pt x 1513.90594pt>
 File: components/chapters/../images/Diagrama_Flux_Utilizator.png Graphic file (
 type png)
 <use components/chapters/../images/Diagrama_Flux_Utilizator.png>
 Package pdftex.def Info: components/chapters/../images/Diagrama_Flux_Utilizator
-.png  used on input line 1553.
+.png  used on input line 1361.
 (pdftex.def)             Requested size: 409.71692pt x 428.23364pt.
 
 
@@ -3479,14 +3444,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[55 <./components/chapters/../images/Diagrama_Componente.png>]
-<components/chapters/../images/Diagrama_Flux_Simulare.png, id=885, 1618.54688pt
+[51 <./components/chapters/../images/Diagrama_Componente.png>]
+<components/chapters/../images/Diagrama_Flux_Simulare.png, id=877, 1618.54688pt
  x 1131.47719pt>
 File: components/chapters/../images/Diagrama_Flux_Simulare.png Graphic file (ty
 pe png)
 <use components/chapters/../images/Diagrama_Flux_Simulare.png>
 Package pdftex.def Info: components/chapters/../images/Diagrama_Flux_Simulare.p
-ng  used on input line 1562.
+ng  used on input line 1370.
 (pdftex.def)             Requested size: 409.71692pt x 286.40791pt.
 
 
@@ -3496,13 +3461,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[56 <./components/chapters/../images/Diagrama_Flux_Utilizator.png>]
-<components/chapters/../images/Diagrama_ERD.png, id=891, 4675.4675pt x 7984.831
+[52 <./components/chapters/../images/Diagrama_Flux_Utilizator.png>]
+<components/chapters/../images/Diagrama_ERD.png, id=883, 4675.4675pt x 7984.831
 25pt>
 File: components/chapters/../images/Diagrama_ERD.png Graphic file (type png)
 <use components/chapters/../images/Diagrama_ERD.png>
 Package pdftex.def Info: components/chapters/../images/Diagrama_ERD.png  used o
-n input line 1573.
+n input line 1381.
 (pdftex.def)             Requested size: 308.62462pt x 527.07361pt.
 
 
@@ -3512,15 +3477,44 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[57 <./components/chapters/../images/Diagrama_Flux_Simulare.png>]
-<components/chapters/../images/Diagrama_Cazuri_Utilizare_V2.png, id=897, 1308.3
-8812pt x 1357.32094pt>
-File: components/chapters/../images/Diagrama_Cazuri_Utilizare_V2.png Graphic fi
-le (type png)
-<use components/chapters/../images/Diagrama_Cazuri_Utilizare_V2.png>
-Package pdftex.def Info: components/chapters/../images/Diagrama_Cazuri_Utilizar
-e_V2.png  used on input line 1584.
-(pdftex.def)             Requested size: 409.71692pt x 425.03162pt.
+[53 <./components/chapters/../images/Diagrama_Flux_Simulare.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[54 <./components/chapters/../images/Diagrama_ERD.png>]
+Overfull \hbox (5.4656pt too wide) in paragraph at lines 1402--1403
+[]\T1/ptm/b/n/12 NumPy\T1/ptm/m/n/12 : con-sti-tuie funda[]ia nu-me-ric  a în-t
+re-gu-lui eco-sis-tem Py-thon pen-tru cal-cul []tiin[]ific.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1417--1417
+[]|\T1/ptm/m/n/10 TensorFlow
+ []
+
+
+Underfull \hbox (badness 4608) in paragraph at lines 1417--1418
+[]|\T1/ptm/m/n/10 Antrenarea []i eva-lu-a-rea mo-de-le-lor din me-diul
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (7.56392pt too wide) in paragraph at lines 1446--1447
+[]\T1/ptm/m/n/12 Prin fi-xa-rea ex-pli-cit  a ver-siu-ni-lor s-a ur-m -rit re-d
+u-ce-rea diferen[]elor din-tre me-di-ile de execu[]ie
+ []
+
+
+Overfull \hbox (11.04648pt too wide) in paragraph at lines 1455--1456
+[]\T1/ptm/m/n/12 Extragerea []i se-ta-rea pon-de-ri-lor (\T1/ptm/m/it/12 wei-gh
+ts\T1/ptm/m/n/12 ) mo-de-lu-lui pen-tru pro-ce-sul de agre-gare, opera[]iune
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3529,7 +3523,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[58 <./components/chapters/../images/Diagrama_ERD.png>]
+[55]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3537,130 +3531,157 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[59 <./components/chapters/../images/Diagrama_Cazuri_Utilizare_V2.png>]
+[56]
+Overfull \hbox (3.76044pt too wide) in paragraph at lines 1501--1502
+[]\T1/ptm/m/n/12 Backend-ul ex-pune mul-ti-ple ca-te-go-rii de endpoint-uri, fi
+-e-care res-pon-sa-bil de o func[]ionalitate
+ []
+
+
+Overfull \hbox (5.89653pt too wide) in paragraph at lines 1507--1508
+\T1/ptm/m/n/12 mu-l -rii, backend-ul so-li-cit  fi[]ierele JSON cu me-trici, fi
+[]ierul text cu re-zu-ma-tul, []i informa-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[57]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[58]
 Capitolul 4.
 
-Overfull \hbox (4.47273pt too wide) in alignment at lines 1598--1604
+Overfull \hbox (4.47273pt too wide) in alignment at lines 1521--1527
  [] [] [] [] 
  []
 
 
-Overfull \hbox (4.47273pt too wide) in alignment at lines 1604--1611
+Overfull \hbox (4.47273pt too wide) in alignment at lines 1527--1534
  [] [] [] [] 
  []
 
 
-Overfull \hbox (4.47273pt too wide) in alignment at lines 1611--1613
+Overfull \hbox (4.47273pt too wide) in alignment at lines 1534--1536
  [] [] [] [] 
  []
 
 
-Overfull \hbox (4.47273pt too wide) in alignment at lines 1613--1616
+Overfull \hbox (4.47273pt too wide) in alignment at lines 1536--1539
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1625--1625
+Underfull \hbox (badness 10000) in paragraph at lines 1548--1548
 []|\T1/ptm/m/n/10 Func[]ii Per-so-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1627--1627
+Underfull \hbox (badness 10000) in paragraph at lines 1550--1550
 []|\T1/ptm/m/n/10 Func[]ii Per-so-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1629--1629
+Underfull \hbox (badness 10000) in paragraph at lines 1552--1552
 []|\T1/ptm/m/n/10 Func[]ii Per-so-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1631--1631
+Underfull \hbox (badness 10000) in paragraph at lines 1554--1554
 []|\T1/ptm/m/n/10 Func[]ii Per-so-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1633--1633
+Underfull \hbox (badness 10000) in paragraph at lines 1556--1556
 []|\T1/ptm/m/n/10 Func[]ii Per-so-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1635--1635
+Underfull \hbox (badness 10000) in paragraph at lines 1558--1558
 []|\T1/ptm/m/n/10 Func[]ii Per-so-
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 1637--1637
+Underfull \hbox (badness 2245) in paragraph at lines 1560--1560
 []|\T1/ptm/m/n/10 Scenarii Ne-ga-
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 1639--1639
+Underfull \hbox (badness 2245) in paragraph at lines 1562--1562
 []|\T1/ptm/m/n/10 Scenarii Ne-ga-
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 1641--1641
+Underfull \hbox (badness 2245) in paragraph at lines 1564--1564
 []|\T1/ptm/m/n/10 Scenarii Ne-ga-
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 1643--1643
+Underfull \hbox (badness 2245) in paragraph at lines 1566--1566
 []|\T1/ptm/m/n/10 Scenarii Ne-ga-
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 1645--1645
+Underfull \hbox (badness 2245) in paragraph at lines 1568--1568
 []|\T1/ptm/m/n/10 Scenarii Ne-ga-
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 1647--1647
+Underfull \hbox (badness 1895) in paragraph at lines 1570--1570
 []|\T1/ptm/m/n/10 Pipeline Si-mu-
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 1649--1649
+Underfull \hbox (badness 1895) in paragraph at lines 1572--1572
 []|\T1/ptm/m/n/10 Pipeline Si-mu-
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 1651--1651
+Underfull \hbox (badness 1895) in paragraph at lines 1574--1574
 []|\T1/ptm/m/n/10 Pipeline Si-mu-
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 1653--1653
+Underfull \hbox (badness 1895) in paragraph at lines 1576--1576
 []|\T1/ptm/m/n/10 Pipeline Si-mu-
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 1655--1655
+Underfull \hbox (badness 1895) in paragraph at lines 1578--1578
 []|\T1/ptm/m/n/10 Pipeline Si-mu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1673--1673
+Underfull \hbox (badness 10000) in paragraph at lines 1596--1596
 []|\T1/ptm/m/n/10 Management
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1675--1675
+Underfull \hbox (badness 10000) in paragraph at lines 1598--1598
 []|\T1/ptm/m/n/10 Management
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1677--1677
+Underfull \hbox (badness 10000) in paragraph at lines 1600--1600
 []|\T1/ptm/m/n/10 Management
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1679--1679
+Underfull \hbox (badness 10000) in paragraph at lines 1602--1602
 []|\T1/ptm/m/n/10 Management
  []
 
 
-Overfull \hbox (4.47273pt too wide) in alignment at lines 1616--1699
+Overfull \hbox (4.47273pt too wide) in alignment at lines 1539--1622
  [] [] [] [] 
  []
 
@@ -3672,7 +3693,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[60
+[59
 
 ]
 
@@ -3682,14 +3703,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
+[60]
+<components/chapters/../images/Rezultate_Experimentale_Case1.png, id=926, 860.0
+13pt x 426.393pt>
+File: components/chapters/../images/Rezultate_Experimentale_Case1.png Graphic f
+ile (type png)
+<use components/chapters/../images/Rezultate_Experimentale_Case1.png>
+Package pdftex.def Info: components/chapters/../images/Rezultate_Experimentale_
+Case1.png  used on input line 1660.
+(pdftex.def)             Requested size: 409.71692pt x 203.13734pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
 [61]
-<components/chapters/../images/Rezultate_Experimentale_Case1_2.png, id=919, 723
+<components/chapters/../images/Rezultate_Experimentale_Case1_2.png, id=933, 723
 .4227pt x 395.3169pt>
 File: components/chapters/../images/Rezultate_Experimentale_Case1_2.png Graphic
  file (type png)
 <use components/chapters/../images/Rezultate_Experimentale_Case1_2.png>
 Package pdftex.def Info: components/chapters/../images/Rezultate_Experimentale_
-Case1_2.png  used on input line 1734.
+Case1_2.png  used on input line 1673.
 (pdftex.def)             Requested size: 409.71692pt x 223.8913pt.
 
 
@@ -3699,14 +3737,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[62 <./components/chapters/../images/Rezultate_Experimentale_Case1_2.png>]
-<components/chapters/../images/Rezultate_Experimentale_Case1_1.png, id=927, 729
+[62 <./components/chapters/../images/Rezultate_Experimentale_Case1.png> <./comp
+onents/chapters/../images/Rezultate_Experimentale_Case1_2.png>]
+<components/chapters/../images/Rezultate_Experimentale_Case1_1.png, id=941, 729
 .927pt x 395.3169pt>
 File: components/chapters/../images/Rezultate_Experimentale_Case1_1.png Graphic
  file (type png)
 <use components/chapters/../images/Rezultate_Experimentale_Case1_1.png>
 Package pdftex.def Info: components/chapters/../images/Rezultate_Experimentale_
-Case1_1.png  used on input line 1749.
+Case1_1.png  used on input line 1688.
 (pdftex.def)             Requested size: 409.71692pt x 221.90073pt.
 
 
@@ -3717,18 +3756,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [63 <./components/chapters/../images/Rezultate_Experimentale_Case1_1.png>]
-Overfull \hbox (16.68561pt too wide) in paragraph at lines 1766--1767
+Overfull \hbox (16.68561pt too wide) in paragraph at lines 1705--1706
 []\T1/ptm/m/n/10 Acurate[]ea mo-de-lu-lui pre-antrenat ini[]ial (des-c r-cat în
 a-inte de pro-pa-gare) a fost cal-cu-lat  la 0.7928, iar performan[]a
  []
 
-<components/chapters/../images/Rezultate_Experimentale_Case2_1.png, id=933, 714
+<components/chapters/../images/Rezultate_Experimentale_Case2_1.png, id=947, 714
 .7503pt x 422.7795pt>
 File: components/chapters/../images/Rezultate_Experimentale_Case2_1.png Graphic
  file (type png)
 <use components/chapters/../images/Rezultate_Experimentale_Case2_1.png>
 Package pdftex.def Info: components/chapters/../images/Rezultate_Experimentale_
-Case2_1.png  used on input line 1778.
+Case2_1.png  used on input line 1717.
 (pdftex.def)             Requested size: 409.71692pt x 242.35445pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3746,12 +3785,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [65 <./components/chapters/../images/Rezultate_Experimentale_Case2_1.png>]
-Underfull \hbox (badness 2894) in paragraph at lines 1822--1822
+Underfull \hbox (badness 2894) in paragraph at lines 1761--1761
 []|\T1/ptm/m/n/10 Compara[]ie in-te-grat  a
  []
 
 
-Underfull \hbox (badness 1490) in paragraph at lines 1828--1828
+Underfull \hbox (badness 1490) in paragraph at lines 1767--1767
 []|\T1/ptm/m/n/10 Compara[]ie în-tre si-mu-
  []
 
@@ -3783,6 +3822,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [68]
 Capitolul 5.
+))
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3792,15 +3832,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [69
 
-]))
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[70] [71
+] [70
 
 ]
 Overfull \hbox (0.29517pt too wide) in paragraph at lines 21--21
@@ -3815,7 +3847,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[72
+[71
 
 
 ]
@@ -3826,7 +3858,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[73] 
+[72] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -3838,19 +3870,19 @@ L3 programming layer <2025-10-24>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5D59C8F7EC904DD379D5D34C401145FC;15765.
+(rerunfilecheck)             Checksum: FF9F02A70162A1EE32D0D4FF575FBB51;17011.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24123 strings out of 467538
- 433075 string characters out of 5412257
- 1344795 words of memory out of 5000000
- 52330 multiletter control sequences out of 15000+600000
+ 24121 strings out of 467538
+ 433009 string characters out of 5412257
+ 1344959 words of memory out of 5000000
+ 52332 multiletter control sequences out of 15000+600000
  730559 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,16n,93p,1416b,2401s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,16n,93p,1416b,3148s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmmi10.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fo
@@ -3865,10 +3897,10 @@ fb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/times/utmb
 utmbi8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (92 pages, 5114994 bytes).
+Output written on main.pdf (91 pages, 4909209 bytes).
 PDF statistics:
- 1142 PDF objects out of 1200 (max. 8388607)
- 980 compressed objects within 10 object streams
- 283 named destinations out of 1000 (max. 500000)
- 686 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1151 PDF objects out of 1200 (max. 8388607)
+ 987 compressed objects within 10 object streams
+ 279 named destinations out of 1000 (max. 500000)
+ 702 words of extra memory for PDF output out of 10000 (max. 10000000)
 
