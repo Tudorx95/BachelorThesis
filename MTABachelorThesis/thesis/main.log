@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  19 JUN 2026 23:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  23 JUN 2026 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1138,31 +1138,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[3]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[4]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[5]) (./components/frontmatter/declaration.tex)
+]) (./components/frontmatter/declaration.tex)
 (./components/frontmatter/specification.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1171,7 +1147,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6
+[3
 
 ]
 Overfull \hbox (5.99475pt too wide) in paragraph at lines 8--10
@@ -1186,7 +1162,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7
+[4
 
 ]
 
@@ -1196,7 +1172,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[8]
+[5]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1204,7 +1180,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[9]
+[6]) (./components/frontmatter/abstract.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1212,15 +1188,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10]) (./components/frontmatter/abstract.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[11
+[7
 
 ])
 
@@ -1230,7 +1198,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12
+[8
 
 ] (./main.toc
 
@@ -1240,7 +1208,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[13
+[9
 
 ])
 \tf@toc=\write5
@@ -1254,7 +1222,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[14] (./main.lof)
+[10] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -1266,7 +1234,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[15
+[11
 
 ] (./components/frontmatter/abbreviations.tex
 
@@ -1276,7 +1244,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[16
+[12
 
 ]
 
@@ -1286,7 +1254,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[17])
+[13])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1294,7 +1262,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[18]) (./components/chapters/all.tex (./components/chapters/components.tex
+[14]) (./components/chapters/all.tex (./components/chapters/components.tex
 Capitolul 1.
 
 Overfull \hbox (1.8511pt too wide) in paragraph at lines 36--40
@@ -1429,7 +1397,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7{/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm
 -super-ts1.enc}]
-<components/chapters/../images/Device_internal_State.png, id=567, 758.835pt x 5
+<components/chapters/../images/Device_internal_State.png, id=550, 758.835pt x 5
 82.175pt>
 File: components/chapters/../images/Device_internal_State.png Graphic file (typ
 e png)
@@ -1446,7 +1414,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8 <./components/chapters/../images/Device_Internal_State.png>]
-<components/chapters/../images/Federated_Learning_Operations.png, id=576, 741.9
+<components/chapters/../images/Federated_Learning_Operations.png, id=559, 741.9
 72pt x 390.258pt>
 File: components/chapters/../images/Federated_Learning_Operations.png Graphic f
 ile (type png)
@@ -1552,7 +1520,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17]
-<components/chapters/../images/Diagrama_Distribuire_Date.png, id=659, 3510.3646
+<components/chapters/../images/Diagrama_Distribuire_Date.png, id=643, 3510.3646
 9pt x 2178.63937pt>
 File: components/chapters/../images/Diagrama_Distribuire_Date.png Graphic file 
 (type png)
@@ -1560,7 +1528,7 @@ File: components/chapters/../images/Diagrama_Distribuire_Date.png Graphic file
 Package pdftex.def Info: components/chapters/../images/Diagrama_Distribuire_Dat
 e.png  used on input line 564.
 (pdftex.def)             Requested size: 455.24411pt x 282.53496pt.
-<components/chapters/../images/Diagrama_Otravire_Date.png, id=660, 1948.27875pt
+<components/chapters/../images/Diagrama_Otravire_Date.png, id=644, 1948.27875pt
  x 1385.92781pt>
 File: components/chapters/../images/Diagrama_Otravire_Date.png Graphic file (ty
 pe png)
@@ -1705,7 +1673,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [28]
-<components/chapters/../images/Arhitectura_Aplicatie.png, id=725, 2085.7925pt x
+<components/chapters/../images/Arhitectura_Aplicatie.png, id=709, 2085.7925pt x
  3209.9925pt>
 File: components/chapters/../images/Arhitectura_Aplicatie.png Graphic file (typ
 e png)
@@ -1727,7 +1695,7 @@ Overfull \hbox (10.18121pt too wide) in paragraph at lines 867--868
 -zul-ta-tele sunt sto-cate în Pos-tgreSQL, permi[]ând
  []
 
-<components/chapters/../images/Changing_environments.png, id=731, 1456.44125pt 
+<components/chapters/../images/Changing_environments.png, id=715, 1456.44125pt 
 x 1051.93pt>
 File: components/chapters/../images/Changing_environments.png Graphic file (typ
 e png)
@@ -3377,7 +3345,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [48]
-<components/chapters/../images/Diagrama_Context_Anexa_A.png, id=857, 785.93625p
+<components/chapters/../images/Diagrama_Context_Anexa_A.png, id=839, 785.93625p
 t x 368.1253pt>
 File: components/chapters/../images/Diagrama_Context_Anexa_A.png Graphic file (
 type png)
@@ -3394,7 +3362,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [49]
-<components/chapters/../images/Diagrama_Context_2_Anexa_A.png, id=863, 1078.780
+<components/chapters/../images/Diagrama_Context_2_Anexa_A.png, id=846, 1078.780
 32pt x 429.10312pt>
 File: components/chapters/../images/Diagrama_Context_2_Anexa_A.png Graphic file
  (type png)
@@ -3402,7 +3370,7 @@ File: components/chapters/../images/Diagrama_Context_2_Anexa_A.png Graphic file
 Package pdftex.def Info: components/chapters/../images/Diagrama_Context_2_Anexa
 _A.png  used on input line 1337.
 (pdftex.def)             Requested size: 455.24101pt x 227.62pt.
-<components/chapters/../images/Diagrama_Componente.png, id=864, 889.07156pt x 3
+<components/chapters/../images/Diagrama_Componente.png, id=847, 889.07156pt x 3
 83.93437pt>
 File: components/chapters/../images/Diagrama_Componente.png Graphic file (type 
 png)
@@ -3420,7 +3388,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [50 <./components/chapters/../images/Diagrama_Context_Anexa_A.png> <./component
 s/chapters/../images/Diagrama_Context_2_Anexa_A.png>]
-<components/chapters/../images/Diagrama_Flux_Utilizator.png, id=871, 1087.81406
+<components/chapters/../images/Diagrama_Flux_Utilizator.png, id=854, 1087.81406
 pt x 1510.89468pt>
 File: components/chapters/../images/Diagrama_Flux_Utilizator.png Graphic file (
 type png)
@@ -3437,7 +3405,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [51 <./components/chapters/../images/Diagrama_Componente.png>]
-<components/chapters/../images/Diagrama_Flux_Simulare.png, id=877, 1618.54688pt
+<components/chapters/../images/Diagrama_Flux_Simulare.png, id=860, 1618.54688pt
  x 1131.47719pt>
 File: components/chapters/../images/Diagrama_Flux_Simulare.png Graphic file (ty
 pe png)
@@ -3454,7 +3422,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [52 <./components/chapters/../images/Diagrama_Flux_Utilizator.png>]
-<components/chapters/../images/Diagrama_ERD.png, id=883, 4675.4675pt x 7984.831
+<components/chapters/../images/Diagrama_ERD.png, id=867, 4675.4675pt x 7984.831
 25pt>
 File: components/chapters/../images/Diagrama_ERD.png Graphic file (type png)
 <use components/chapters/../images/Diagrama_ERD.png>
@@ -3696,7 +3664,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [60]
-<components/chapters/../images/Rezultate_Experimentale_Case1.png, id=926, 860.0
+<components/chapters/../images/Rezultate_Experimentale_Case1.png, id=909, 860.0
 13pt x 426.393pt>
 File: components/chapters/../images/Rezultate_Experimentale_Case1.png Graphic f
 ile (type png)
@@ -3713,7 +3681,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [61]
-<components/chapters/../images/Rezultate_Experimentale_Case1_2.png, id=933, 723
+<components/chapters/../images/Rezultate_Experimentale_Case1_2.png, id=916, 723
 .4227pt x 395.3169pt>
 File: components/chapters/../images/Rezultate_Experimentale_Case1_2.png Graphic
  file (type png)
@@ -3731,7 +3699,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [62 <./components/chapters/../images/Rezultate_Experimentale_Case1.png> <./comp
 onents/chapters/../images/Rezultate_Experimentale_Case1_2.png>]
-<components/chapters/../images/Rezultate_Experimentale_Case1_1.png, id=941, 729
+<components/chapters/../images/Rezultate_Experimentale_Case1_1.png, id=924, 729
 .927pt x 395.3169pt>
 File: components/chapters/../images/Rezultate_Experimentale_Case1_1.png Graphic
  file (type png)
@@ -3753,7 +3721,7 @@ Overfull \hbox (16.68561pt too wide) in paragraph at lines 1705--1706
 a-inte de pro-pa-gare) a fost cal-cu-lat  la 0.7928, iar performan[]a
  []
 
-<components/chapters/../images/Rezultate_Experimentale_Case2_1.png, id=947, 714
+<components/chapters/../images/Rezultate_Experimentale_Case2_1.png, id=930, 714
 .7503pt x 422.7795pt>
 File: components/chapters/../images/Rezultate_Experimentale_Case2_1.png Graphic
  file (type png)
@@ -3868,8 +3836,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24120 strings out of 467538
- 432999 string characters out of 5412257
+ 24116 strings out of 467538
+ 432965 string characters out of 5412257
  1344959 words of memory out of 5000000
  52331 multiletter control sequences out of 15000+600000
  730559 words of font info for 173 fonts, out of 8000000 for 9000
@@ -3889,10 +3857,10 @@ fb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/times/utmb
 utmbi8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (91 pages, 4880828 bytes).
+Output written on main.pdf (87 pages, 4879945 bytes).
 PDF statistics:
- 1151 PDF objects out of 1200 (max. 8388607)
- 987 compressed objects within 10 object streams
- 279 named destinations out of 1000 (max. 500000)
+ 1133 PDF objects out of 1200 (max. 8388607)
+ 973 compressed objects within 10 object streams
+ 275 named destinations out of 1000 (max. 500000)
  702 words of extra memory for PDF output out of 10000 (max. 10000000)
 
