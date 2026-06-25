@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {1.2}Motivația lucrării}{2}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Obiectivele lucrării}{2}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Structura lucrării}{3}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Utilizarea instrumentelor de inteligență artificială în elaborarea lucrării}{4}{section.1.5}%
+\contentsline {section}{\numberline {1.5}Utilizarea instrumentelor de inteligență artificială în elaborarea lucrării}{3}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Noțiuni Teoretice}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Noțiuni introductive}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Diferența dintre Machine Learning și Deep Learning}{5}{subsection.2.1.1}%
@@ -60,7 +60,7 @@
 \contentsline {subsubsection}{\numberline {3.6.2.2}Funcții personalizate de otrăvire a datelor}{39}{subsubsection.3.6.2.2}%
 \contentsline {subsubsection}{\numberline {3.6.2.3}Avantaje și limitări ale extensibilității prin funcții custom}{39}{subsubsection.3.6.2.3}%
 \contentsline {subsection}{\numberline {3.6.3}Persistența datelor și structura rezultatelor generate}{39}{subsection.3.6.3}%
-\contentsline {section}{\numberline {3.7}Testare}{40}{section.3.7}%
+\contentsline {section}{\numberline {3.7}Testarea Aplicației}{40}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Validare Șablon (TV)}{41}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3.7.2}Funcții Personalizate (CF)}{42}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}Scenarii Negative (NS)}{43}{subsection.3.7.3}%
@@ -82,20 +82,21 @@
 \contentsline {subsection}{\numberline {3.9.4}Metrici de Evaluare în Machine Learning}{56}{subsection.3.9.4}%
 \contentsline {subsection}{\numberline {3.9.5}Comunicația REST API}{57}{subsection.3.9.5}%
 \contentsline {subsection}{\numberline {3.9.6}Arhitectura REST în platformă}{57}{subsection.3.9.6}%
-\contentsline {chapter}{\numberline {4}Rezultate și Metrici Simulări}{59}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Rezultate Experimentale și Analiza Performanțelor}{59}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Raport de Testare}{59}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Metodologia experimentală}{60}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Mediul de lucru și infrastructura hardware}{61}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}Studiu de Caz 1: Dinamica intensității și distribuției atacului}{61}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Detalii practice}{61}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Rezultate experimentale}{61}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Studiu de Caz 2: Cea mai bună protecție pentru un atac specific}{63}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Detalii practice}{63}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.3.2}Rezultate experimentale}{62}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Studiu de Caz 2: Cea mai bună protecție pentru un atac specific}{64}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detalii practice}{64}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Rezultate experimentale}{64}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Interpretarea rezultatelor}{65}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Discuție comparativă cu literatura de specialitate}{65}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Comparație cu framework-uri de învățare federată de uz general}{66}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Limitări și validitatea rezultatelor}{67}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Reproductibilitatea experimentelor}{67}{section.4.9}%
+\contentsline {section}{\numberline {4.5}Interpretarea rezultatelor}{66}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Discuție comparativă cu literatura de specialitate}{66}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Comparație cu framework-uri de învățare federată de uz general}{67}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Limitări și validitatea rezultatelor}{68}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Reproductibilitatea experimentelor}{68}{section.4.9}%
 \contentsline {chapter}{\numberline {5}Concluzii și dezvoltare ulterioară}{69}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Dezvoltare Ulterioară}{69}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Limitări actuale}{69}{subsection.5.1.1}%

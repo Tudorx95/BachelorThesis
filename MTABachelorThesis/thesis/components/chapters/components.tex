@@ -86,15 +86,13 @@ Contribuțiile proprii ale lucrării pot fi sintetizate astfel:
 
 \section{Structura lucrării}
 
-Lucrarea de față este structurată în cinci capitole, după cum urmează:
-
-\textbf{Capitolul 1}, \textit{Introducere}, prezintă contextul actual al evoluției modelelor de inteligență artificială, motivația dezvoltării unei platforme de simulare pentru atacuri în medii federate și definește obiectivele principale ale cercetării.
+Restul capitolelor lucrării sunt structurate după cum urmează:
 
 \textbf{Capitolul 2}, \textit{Noțiuni Teoretice}, introduce conceptele fundamentale de Machine Learning și Deep Learning, detaliază principiile învățării automate federate (Federated Learning) și analizează tipurile de atacuri adversariale, cu accent pe tehnicile de Data Poisoning și particularitățile acestora.
 
 \textbf{Capitolul 3}, \textit{Proiectare, Implementare și Testare}, descrie arhitectura modulară a platformei propuse, fluxul complet al unei simulări de la inițiere până la generarea rezultatelor, cerințele software și tehnologiile utilizate (Docker, Python, FastAPI, React), evidențiind mecanismele de alocare a resurselor GPU și izolare a mediilor de execuție.
 
-\textbf{Capitolul 4}, \textit{Rezultate și Metrici Simulări}, validează viabilitatea platformei prin prezentarea unor studii de caz experimentale. Se analizează comparativ impactul atacurilor asupra modelelor globale și comportamentul diferiților algoritmi de agregare robustă (ex. FoolsGold, Norm Clipping) folosind metrici de evaluare consacrate.
+\textbf{Capitolul 4}, \textit{Rezultate Experimentale și Analiza Performanțelor}, validează viabilitatea platformei prin prezentarea unor studii de caz experimentale. Se analizează comparativ impactul atacurilor asupra modelelor globale și comportamentul diferiților algoritmi de agregare robustă (ex. FoolsGold, Norm Clipping) folosind metrici de evaluare consacrate.
 
 \textbf{Capitolul 5}, \textit{Concluzii și dezvoltare ulterioară}, sintetizează contribuțiile majore ale lucrării și conturează posibile direcții de extindere viitoare, subliniind importanța securizării infrastructurilor distribuite de inteligență artificială.
 
@@ -853,7 +851,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
     \begin{figure}[H]
         \centering
         \includegraphics[width=1\textwidth, height=0.85\textheight, keepaspectratio]{../images/Arhitectura_Aplicatie.png}
-        \caption{Arhitectura platformei}
+        \caption{Arhitectura DPArena}
         \label{fig:nume-label}
     \end{figure}
 
@@ -1103,7 +1101,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
 
     Prin combinarea persistenței relaționale cu stocarea artefactelor pe disc, platforma oferă atât trasabilitate administrativă, cât și trasabilitate tehnică. Această abordare este importantă într-un context experimental, deoarece permite nu doar vizualizarea rapidă a rezultatelor, ci și reconstrucția completă a condițiilor în care acestea au fost obținute.
 
-    \section{Testare}
+    \section{Testarea Aplicației}
 
     Planul de testare acoperă nouă categorii funcționale ale platformei. Fiecare test este identificat printr-un cod unic, verifică un singur aspect și include pașii necesari executării sale de către un tester independent. Rezultatele efective ale execuției sunt consemnate în raportul de testare din Capitolul 4.
 
@@ -1509,7 +1507,7 @@ Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesa
 
     \end{itemize}
 
-\chapter{Rezultate și Metrici Simulări}
+\chapter{Rezultate Experimentale și Analiza Performanțelor}
 
     Acest capitol prezintă validarea experimentală a platformei. Sunt ilustrate două studii de caz principale care demonstrează modul în care sistemul poate fi utilizat pentru evaluarea mecanismelor de apărare împotriva atacurilor de tip Data Poisoning într-un mediu de învățare federată.
 
@@ -1630,6 +1628,27 @@ Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesa
         Configurațiile au fost alese astfel încât să fie suficient de complexe pentru a reproduce dificultăți reale, dar și suficient de stabile pentru a permite comparații repetabile. Alegerea setului de date CIFAR-100 și a arhitecturii ResNet18 oferă un echilibru util între relevanța practică și costul computațional. Numărul de clienți, rundele federate și distribuția Non-IID au fost păstrate în intervale care permit observarea efectelor agregării și ale comportamentului malițios fără a transforma experimentul într-un test exclusiv de scalabilitate hardware.
 
         În plus, metodologia utilizată valorifică structura nativă a platformei, care execută pentru aceeași configurație mai multe scenarii: \textit{Clean}, \textit{Clean + Defense}, \textit{Poisoned} și \textit{Poisoned + Defense}. Această organizare permite separarea mai clară a trei dimensiuni esențiale: performanța de referință a modelului, costul introdus de apărare în absența atacului și capacitatea apărării de a limita degradarea în cazul unui atac. Astfel, capitolul nu urmărește doar obținerea unor valori numerice, ci și justificărea lor într-un cadru experimental coerent.
+
+        \subsection{Mediul de lucru și infrastructura hardware}
+
+        Pentru a asigura reproductibilitatea și a oferi context măsurătorilor de timp înregistrate pe parcursul simulărilor, este esențială detalierea infrastructurii hardware și software pe care au fost rulate experimentele. Arhitectura distribuită a platformei utilizează două servere distincte, ambele găzduite în infrastructura Academiei Tehnice Militare „Ferdinand I”.
+
+        \textbf{Serverul Central (Frontend și Backend)} gestionează interfața utilizatorului, baza de date PostgreSQL și API-ul principal. Acesta rulează pe o mașină virtuală Linux, având următoarele specificații:
+        \begin{itemize}
+            \item \textbf{Procesor (CPU):} 4 nuclee (cores);
+            \item \textbf{Memorie RAM:} 8 GB;
+            \item \textbf{Stocare internă:} 200 GB.
+        \end{itemize}
+        Acest nod este responsabil cu funcționarea aplicației web și a mediului containerizat (Docker), dirijând traficul și stocând metadatele utilizatorilor independent de încărcarea computațională a experimentelor.
+
+        \textbf{Serverul de Simulări (Orchestratorul)} execută antrenamentele federate și calculele matematice complexe asociate cu rețelele neuronale. Specificațiile tehnice pentru acest nod dedicat sunt următoarele:
+        \begin{itemize}
+            \item \textbf{Procesor grafic (GPU):} NVIDIA A40 cu 46 GB memorie VRAM GDDR6;
+            \item \textbf{Versiune CUDA:} 12.2, utilizată ca platformă de calcul paralel și interfață de programare (API) esențială. Aceasta permite framework-urilor de inteligență artificială să delege și să accelereze masiv operațiile matematice tensoriale necesare antrenării rețelelor neuronale, executându-le direct pe nucleele plăcii grafice;
+            \item \textbf{Mediu de execuție ML:} Mediu izolat Anaconda, echipat cu framework-urile PyTorch și TensorFlow compilate nativ cu suport pentru CUDA.
+        \end{itemize}
+
+        Capacitatea imensă de memorie VRAM a acceleratorului NVIDIA A40 elimină limitările tipice de stocare video ce apar în învățarea federată concurentă, permițând antrenarea simultană a mai multor modele complexe (precum ResNet18 pe CIFAR-100). Astfel, timpii alocați comunicării parametrilor și antrenamentelor locale pe dispozitivele clienților sunt optimizați, reflectând un mediu real, performant, conceput special pentru deep learning intensiv.
 
     \section{Studiu de Caz 1: Dinamica intensității și distribuției atacului}
 
@@ -1806,7 +1825,7 @@ Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesa
 \chapter{Concluzii și dezvoltare ulterioară}
 
 	    Platforma prezentată în această lucrare reprezintă o contribuție în domeniul securității învățării automate prin crearea unui mediu izolat, specific pentru
-	    testarea atacului de otrăvire a datelor. Aceasta a fost construită pentru a ajuta atât inginerii de securitate cibernetică, cât și inginerii de date care
+	    testarea atacului de otrăvire a datelor. Aceasta a fost construită pentru a ajuta atât specialiștii de securitate cibernetică, cât și inginerii de date care
 	    lucrează cu rețele neuronale deja antrenate să realizeze o baterie de teste cuprinzătoare înainte de a introduce aceste modele în producție, într-un mediu federat,
 	    în vederea îmbunătățirii rezilienței rețelei la acest tip de atac.
 
@@ -1826,7 +1845,7 @@ Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesa
 
     O altă direcție relevantă este creșterea robusteții infrastructurii de execuție. Aceasta include îmbunătățirea toleranței la erori de rețea, consolidarea politicilor de reluare a task-urilor întrerupte și extinderea mecanismelor de audit pentru reproducerea precisă a fiecărei simulări. În paralel, platforma poate evolua prin suport pentru seturi de date suplimentare, modele mai mari și scenarii cu mai mulți clienți federati.
 
-    O privire de ansamblu asupra problemelor deschise, limitărilor cunoscute și riscurilor tehnice identificate pentru platforma de simulare, ne conduc la următoarele neajunsuri: dimensiunea maximă acceptată pentru fișierele de model, limita de 100 de clienți federați impusă de constrângerile de memorie GPU, suportul exclusiv pentru seturi de date de tip imagine, dependența de disponibilitatea serviciilor externe (HuggingFace Hub) și riscul pierderii conexiunii WebSocket în timpul simulărilor de lungă durată. Aceste aspecte vor fi adresate prioritar în iterațiile viitoare ale platformei.
+    O privire de ansamblu asupra problemelor deschise, limitărilor cunoscute și riscurilor tehnice identificate pentru platforma de simulare, ne conduc la următoarele neajunsuri: dimensiunea maximă acceptată pentru fișierele de model, suportul exclusiv pentru seturi de date de tip imagine, dependența de disponibilitatea serviciilor externe (HuggingFace Hub) și riscul pierderii conexiunii WebSocket în timpul simulărilor de lungă durată. Aceste aspecte vor fi adresate prioritar în iterațiile viitoare ale platformei.
 
 
 \end{document}
