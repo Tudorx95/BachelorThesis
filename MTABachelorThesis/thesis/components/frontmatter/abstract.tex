@@ -2,14 +2,8 @@
 
 \thispagestyle{front}
 
-{
-    \color{gray}
-    Federated learning is a machine learning approach that allows multiple participants to collaboratively train a model without sharing their local data. This approach is particularly useful in scenarios where data privacy and security are a major concern. But the cybersecurity landscape conducted researches and studies, highlighting data poisoning attacks as one of the main concern in federated learning environments. 
-    Securing the models performance is a concern in which the aggregator node became responsible for by implementing a robust methodogoly against data poisoning attacks. 
-    
-    In this paper, a web-based open-source simulation platform, called DPArena, has been developed to address the need of finding the most robust federated learning configuration preventing model degradation and generalization loss. 
-    Each simulation has its own configuration providing data scientist with a dedicated environment for testing its machine learning algorithm againts different data poisoning attacks. The paper ends with two case studies demonstrating the effectiveness of the platform.
-}
+Federated Learning (FL) enables collaborative model training without sharing raw data, but its distributed nature exposes it to data poisoning attacks from malicious clients. Evaluating such attacks and corresponding defenses requires complex setups that are often implemented through custom scripts, making experiments difficult to reproduce and compare. This paper introduces DPArena, an open-source platform for reproducible data poisoning experiments in FL. It provides an automated pipeline integrating dataset preparation, attack injection, federated simulation, defense evaluation, and metric reporting within a unified environment. Each run automatically executes clean, poisoned, clean+defense and poisoned+defense scenarios. Two case studies illustrate the platform's analytical capabilities.
+
 
 \thispagestyle{front}
 
@@ -19,16 +13,6 @@
 
 \thispagestyle{front}
 
-{
-    \color{gray}
-    
-    Învățarea federată este o abordare a învățării automate care permite mai multor participanți să antreneze în mod colaborativ un model fără a-și partaja datele locale. Această abordare este utilă în special în scenariile în care confidențialitatea și securitatea datelor reprezintă o preocupare majoră. Însă, în domeniul securității cibernetice s-au efectuat cercetări și studii, evidențiind atacurile de otrăvire a datelor ca fiind una dintre principalele preocupări în mediile de învățare federate.
-    Securizarea performanței modelelor este o preocupare pentru care nodul agregator a devenit responsabil prin implementarea unei metodologii robuste împotriva atacurilor de otrăvire a datelor.
-
-
-    În această lucrare, a fost dezvoltată o platformă web de simulare open-source, numită DPArena, pentru a răspunde nevoii de a găsi cea mai robustă configurație de învățare federată, prevenind degradarea modelului și pierderea generalizării.
-    Fiecare simulare are propria configurație, oferind specialiștilor în date un mediu dedicat pentru testarea algoritmului său de învățare automată împotriva diferitelor atacuri de otrăvire a datelor.
-    Lucrarea se încheie cu două studii de caz care demonstrează eficacitatea platformei.
-}
+Învățarea federată (Federated Learning - FL) permite antrenarea colaborativă a modelelor fără a partaja datele brute, însă natura sa distribuită o expune la atacuri de otrăvire a datelor din partea clienților malițioși. Evaluarea unor astfel de atacuri și a mecanismelor de apărare corespunzătoare necesită medii de configurare complexe, adesea implementate prin intermediul unor scripturi personalizate, ceea ce face ca experimentele să fie dificil de reprodus și comparat. Această lucrare introduce DPArena, o platformă open-source pentru experimente reproductibile de otrăvire a datelor în FL. Platforma oferă un flux de execuție automatizat care integrează pregătirea setului de date, injectarea atacurilor, simularea federată, evaluarea apărării și raportarea metricilor într-un mediu unificat. Fiecare execuție rulează automat scenariile: curat, otrăvit, curat+apărare și otrăvit+apărare. Două studii de caz ilustrează capacitățile analitice ale platformei.
 
 \thispagestyle{front}
