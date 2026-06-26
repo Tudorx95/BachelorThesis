@@ -7,27 +7,26 @@
 % Title
 \input{components/frontmatter/title}
 
-% Acknowledgment
-\input{components/frontmatter/acknowledgment}
-
-% Adviser's resume
+% Referatul coordonatorului științific (Regula 10, poz. 2)
 \ifdefined\componentadviserresume
     \input{components/frontmatter/adviser_resume}
 \fi
 
-% Declaration
+% Declarație de originalitate (Regula 10, poz. 3)
 \input{components/frontmatter/declaration}
 
-% Specification
+% Tema proiectului de diplomă (Regula 10, poz. 4)
 \ifdefined\componentspecification
     \input{components/frontmatter/specification}
 \fi
 
-% Abstract
+% Mulțumiri
+\input{components/frontmatter/acknowledgment}
+
+% Abstract / Rezumat
 \input{components/frontmatter/abstract}
 
-
-% Table of content
+% Table of content (Regula 10, poz. 5)
 \setcounter{secnumdepth}{3}
 \tableofcontents
 

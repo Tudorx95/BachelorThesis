@@ -2,22 +2,22 @@
 \babel@toc {romanian}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Arhitectura interna a unui dispozitiv \blx@tocontentsinit {0}\cite {bonawitz2019towards}}}{8}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Procedee în învățare automată federată \blx@tocontentsinit {0}\cite {bonawitz2019towards}}}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Mecanismul de validare încrucișată cu distribuirea Non-IID a datelor către clienți}}{18}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Procesul de infectare a datelor la nivelul unui client malițios}}{19}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Arhitectura interna a unui dispozitiv \blx@tocontentsinit {0}\cite {bonawitz2019towards}}}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Procedee în învățare automată federată \blx@tocontentsinit {0}\cite {bonawitz2019towards}}}{11}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Mecanismul de validare încrucișată cu distribuirea Non-IID a datelor către clienți}}{24}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Procesul de infectare a datelor la nivelul unui client malițios}}{24}{figure.caption.15}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Arhitectura DPArena}}{29}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Medii Python de pe ATM Server}}{31}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Contextul Sistemului --- Nivel 0: Marginile Platformei}}{50}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Contextul Sistemului --- Nivel 1: Fluxul de date}}{50}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Structura internă a platformei și interacțiunea componentelor}}{51}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Fluxul de interacțiune al utilizatorului în platformă}}{52}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Etapele fluxului de execuție al simulării}}{53}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Structura bazei de date și relațiile dintre entități (ERD)}}{54}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Arhitectura DPArena}}{37}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Medii Python de pe ATM Server}}{39}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Contextul Sistemului --- Nivel 0: Marginile Platformei}}{61}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Contextul Sistemului --- Nivel 1: Fluxul de date}}{61}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Structura internă a platformei și interacțiunea componentelor}}{62}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Fluxul de interacțiune al utilizatorului în platformă}}{63}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Etapele fluxului de execuție al simulării}}{64}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Structura bazei de date și relațiile dintre entități (ERD)}}{65}{figure.caption.32}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Rezultate Experimentale - Cazul 1 (Seria A.1: Fără Cross-Validation)}}{62}{figure.caption.34}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Rezultate Experimentale - Cazul 1 (Seria A.2: Cu Cross-Validation)}}{63}{figure.caption.35}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Rezultate Experimentale - Cazul 1 (Seria B: Variația dispersiei atacatorilor)}}{64}{figure.caption.36}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Rezultate Experimentale - Cazul 2}}{65}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Rezultate Experimentale - Cazul 1 (Seria A.1: Fără Cross-Validation)}}{76}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rezultate Experimentale - Cazul 1 (Seria A.2: Cu Cross-Validation)}}{77}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Rezultate Experimentale - Cazul 1 (Seria B: Variația dispersiei atacatorilor)}}{78}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Rezultate Experimentale - Cazul 2}}{80}{figure.caption.37}%
 \addvspace {10\p@ }

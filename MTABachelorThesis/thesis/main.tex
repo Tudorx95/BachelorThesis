@@ -1,4 +1,4 @@
-\documentclass[12pt, oneside]{report}
+\documentclass[14pt, oneside]{extreport}
 % setare margini doc
 \usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
 
@@ -11,11 +11,12 @@
 \subfile{components/frontmatter/all}{}
 \subfile{components/chapters/all} 
 
+\printbibliography
+
 % Blank page at the end
 \clearpage
 \thispagestyle{empty}
 \mbox{}
 \clearpage
 
-\printbibliography
 \end{document}

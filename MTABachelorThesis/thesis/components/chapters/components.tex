@@ -190,7 +190,7 @@ Nodurile își îmbunătățesc propriile variante ale rețelei și își comuni
     \label{tab:fl_models_comparison}
 \end{table}
 
-Imaginea de mai sus oferă o privire de ansamblu asupra celor două modele de arhitecturi și caracteristicile acestora, pe baza clasificării prezentate în literatura de specialitate \cite{kairouz2021federated}.
+Figura de mai sus oferă o privire de ansamblu asupra celor două modele de arhitecturi și caracteristicile acestora, pe baza clasificării prezentate în literatura de specialitate \cite{kairouz2021federated}.
 
 \begin{table}[h]
     \centering
@@ -266,8 +266,7 @@ Fiecare rețea se antrenează cu datele extrase local (on device) și își îmb
     \centering
     \includegraphics[width=0.7\textwidth]{../images/Device_internal_State.png}
     \caption{Arhitectura interna a unui dispozitiv \cite{bonawitz2019towards}}
-
-    \label{fig:nume-label}
+    \label{fig:device_internal_state}
 \end{figure}
 
 Figura de mai sus descrie operațiile specifice programului software care se ocupă de antrenarea rețelei/modelului, conform arhitecturii prezentate de Bonawitz et al. \cite{bonawitz2019towards}. Putem observa cum dispozitivele primesc un plan de antrenare de bază pe care il vor antrena local pe un set de date limitat.
@@ -281,10 +280,10 @@ Rutina FL\_Runtime extrage noua configurație locală și îi comunică serverul
     \centering
     \includegraphics[width=0.7\textwidth]{../images/Federated_Learning_Operations.png}
     \caption{Procedee în învățare automată federată \cite{bonawitz2019towards}}    
-    \label{fig:nume-label}
+    \label{fig:fl_operations}
 \end{figure}
 
-În figura de mai sus, se pot observa într-o manieră continuă, fluxul de comunicație dintre dispozitive și serverul agregator, precum și operațiile specifice fiecărei entități dintr-o rundă de mesaje, într-o formă inspirată din modelul descris în \cite{bonawitz2019towards}.
+În figura de mai sus, se pot observa într-o manieră continuă, fluxul de comunica\-ție dintre dispozitive și serverul agregator, precum și operațiile specifice fiecărei entități dintr-o rundă de mesaje, într-o formă inspirată din modelul descris în \cite{bonawitz2019towards}.
 
 Securitatea protocoalelor de agregare, utilizate în comunicații dintre clienți și orchestrator, este o componentă importantă în procesul federated learning.
 De menționat este faptul că, în aceasta topologie, comunicațiile au loc criptat, folosind metode specifice precum criptare homomorfică, sau chiar OTP, însă securitatea datelor de pe dispozitive rămâne la latitudinea acestuia.
@@ -298,7 +297,7 @@ Prin păstrarea informațiilor la nivelul fiecărui dispozitiv sau instituții, 
 
 \subsection*{Industrie și IoT}
 \begin{itemize}
-    \item \textbf{Mentenanță predictivă:} Vehiculele moderne, utilajele industriale și echipamentele IoT generează constant date despre starea componentelor. FL permite antrenarea unui model comun care poate prezice momentul oportun pentru realizarea mentenanței fără a colecta date brute de la fiecare dispozitiv.
+    \item \textbf{Mentenanță predictivă:} Vehiculele moderne, utilajele industriale și echipamentele IoT generează constant date despre starea componentelor. FL permite antrenarea unui model comun care poate prezice momentul opor\-tun pentru realizarea mentenanței fără a colecta date brute de la fiecare dispozitiv.
     \item \textbf{Dispozitive de monitorizare:} Senzori purtabili și dispozitive smart home pot furniza statistici privind activitatea sau consumul energetic, păstrând datele utilizatorilor la sursă.
 \end{itemize}
 
@@ -321,7 +320,7 @@ Prin păstrarea informațiilor la nivelul fiecărui dispozitiv sau instituții, 
 
 \subsection*{Securitate și privacy}
 \begin{itemize}
-    \item \textbf{Supraveghere fără expunerea datelor sensibile:} Modelele de recunoaștere facială pot fi antrenate fără a transmite imagini reale, doar parametrii aferenți.
+    \item \textbf{Supraveghere fără expunerea datelor sensibile:} Modelele de recunoaște\-re facială pot fi antrenate fără a transmite imagini reale, doar parametrii aferenți.
     \item \textbf{Analiză a sentimentelor:} FL poate analiza reacțiile utilizatorilor la evenimente sociale (like-uri, share-uri, comentarii) fără colectarea directă a acestor date de către platformă.
 \end{itemize}
 
@@ -339,7 +338,7 @@ vectorilor de atac și concentrarea pe una dintre categorii, data poisoning. În
     \begin{itemize}
 
         \item \textbf{Atacuri nedirectionate (untargeted attacks)}  
-        Scopul este reducerea acurateții generale a modelului sau chiar destabilizarea completă a acestuia.  
+        Scopul este reducerea acurate\-ții generale a modelului sau chiar destabilizarea completă a acestuia.  
         Un exemplu pentru clasificarea imaginilor este introducerea unui zgomot care degradează calitatea setului de date.  
         O altă metodă este modificarea etichetelor din setul de antrenare, de exemplu atribuirea etichetei \textit{leu} unor imagini care în mod normal ar trebui etichetate drept \textit{pîșică}.
     
@@ -467,7 +466,7 @@ potential risc în organizații.
 Mediul federated learning introduce un risc suplimentar: un adversar care controlează un număr mic de clienți poate influența disproporționat modelul global dacă este integrat într-un moment critic al antrenării.
 În absența unor mecanisme robuste de apărare, actualizările malițioase sunt tratate ca fiind legitime, iar agregatorul nu are nicio modalitate directă de a le verifica.
 
-Un alt efect important al acestui tip de atac este degradarea treptată a performanței modelului.
+Un alt efect important al acestui tip de atac este degradarea treptată a perfor\-manței modelului.
 În scenariile untargeted, scăderea acurateții globale poate trece neobservată în primele runde de antrenare, dar devine evidentă odată ce modelul converge către o reprezentare eronată a datelor.
 În scenariile targeted, atacul poate compromite decizii critice doar într-un subset de cazuri, ceea ce face detectarea mult mai dificilă și impactul mult mai nociv, mai ales în aplicații sensibile cum ar fi securitatea, domeniul medical sau sistemele autonome.
 
@@ -488,7 +487,7 @@ Un alt efect important al acestui tip de atac este degradarea treptată a perfor
 
         \item \textbf{Trimmed Mean} \cite{yin2019byzantine}: elimină un procent predefinit din valorile extreme (cele mai mari și cele mai mici) ale fiecărui parametru, apoi calculează media restului. Această metodă oferă un compromis între robustete și fidelitatea agregării, fiind eficientă împotriva actualizărilor cu magnitudini extreme.
 
-        \item \textbf{FoolsGold} \cite{fung2020mitigating}: calculează similaritatea cosinus între actualizările clienților de-a lungul rundelor de antrenare și penalizează contribuțiile cu similaritate ridicată. Această abordare este concepută special pentru a neutraliza atacurile coordonate de tip \textit{sybil}, detectând clienții care trimit actualizări suspect de similare între ei.
+        \item \textbf{FoolsGold} \cite{fung2020mitigating}: calculează similaritatea cosinus între actualizările clienți\-lor de-a lungul rundelor de antrenare și penalizează contribuțiile cu similaritate ridicată. Această abordare este concepută special pentru a neutraliza atacurile coordonate de tip \textit{sybil}, detectând clienții care trimit actualizări suspect de similare între ei.
 
         \item \textbf{Norm Clipping}: limitează magnitudinea vectorului de actualizare trimis de fiecare client la un prag maxim prestabilit. Această tehnică previne dominarea procesului de agregare de actualizări cu valori extreme, fiind totodată compatibilă cu mecanismele de confidențialitate diferențială \cite{kairouz2021federated}.
     \end{itemize}
@@ -545,7 +544,7 @@ Detectarea prezenței datelor otravite, fără identificarea obligatorie a clien
 
     Distribuțiile Non-IID nu reprezintă doar o problemă de optimizare, ci și una de securitate experimentală. Orice analiză riguroasă a atacurilor de otrăvire și a mecanismelor de apărare trebuie să țină cont de această caracteristică structurală a mediului federat.
 
-    \subsection{Validarea încrucișată (\textit{Cross-Validation}) în contextul Învățării Federate}
+    \subsection{Validarea încrucișată (\textit{Cross-Validation}) în contextul \\ Învățării Federate}
 
     O problemă frecvent întâlnită în evaluarea modelelor antrenate în medii federate este riscul supraevaluării performanței: dacă aceeași partitie de date este folosită atât la antrenare, cât și la validare pe parcursul mai multor runde, rezultatele observate pot fi optimiste în raport cu comportamentul real al modelului pe date nevăzute. În acea partiție pot exista instanțe neuniform distribuite, care vor afecta corectitudinea performanței modelului general. Validarea încrucișată (\textit{Cross-Validation} --- CV) oferă un mecanism sistematic de atenuare a acestui risc, prin rotația setului de validare la fiecare rundă.
 
@@ -645,7 +644,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
             \item \textbf{CF-21.} Sistemul va permite definirea de funcții personalizate de agregare printr-un editor de cod Python integrat (Monaco Editor).
             \item \textbf{CF-22.} Sistemul va permite definirea de funcții personalizate de otrăvire a datelor printr-un editor de cod Python dedicat.
             \item \textbf{CF-23.} Sistemul va valida automat sintaxa codului Python folosind modulul \texttt{ast.parse()}.
-            \item \textbf{CF-24.} Sistemul va verifica structural prezența funcțiilor obligatorii (\texttt{custom\_aggregate} sau \texttt{custom\_poison}).
+            \item \textbf{CF-24.} Sistemul va verifica structural prezența funcțiilor obligatorii (\texttt{custom\-\_aggregate} sau \texttt{custom\_poison}).
             \item \textbf{CF-25.} Sistemul va efectua o analiză statică de securitate a codului cu utilitarul Semgrep (OpenGrep) pentru detecția vulnerabilităților de tip RCE (Remote Code Execution).
             \item \textbf{CF-26.} Sistemul va respinge automat codul care conține vulnerabilități de severitate ridicată și va prezenta detaliat regulile încălcate.
             \item \textbf{CF-27.} Sistemul va persista funcțiile personalizate pe serverul orchestrator.
@@ -841,7 +840,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
     \begin{itemize}
         \item \textbf{Procesul orchestrator} - rulează scriptul \texttt{orchestrator\_gpu.py}, care creează un proces nou pentru fiecare conexiune inițiată. Pentru fiecare simulare se alocă un GPU, asigurând un flux de procesare ridicat fără a afecta timpul de execuție al simulărilor deja active. Orchestratorul gestionează coada de task-uri, starea proceselor și comunicarea bidirecțională cu serverul local.
         
-        \item \textbf{Managerul de GPU} - implementat în scriptul \texttt{gpu\_manager.py}, monitorizează în timp real starea GPU-urilor (nivel de utilizare, memorie liberă, temperatură) și distribuie simulările în mod echilibrat pentru a preveni supraîncărcarea unuia dintre dispozitive. Fiecare simulare solicită un GPU dedicat cu un timeout de 10 minute; dacă niciunul nu este disponibil în acest interval, simularea trece automat pe CPU. GPU-ul este \textbf{garantat eliberat} la finalizarea, anularea sau eșecul simulării.
+        \item \textbf{Managerul de GPU} - implementat în scriptul \texttt{gpu\_manager.py}, monitorizează în timp real starea GPU-urilor (nivel de utilizare, memorie liberă, temperatură) și distribuie simulările în mod echilibrat pentru a preveni supraîncărcarea unuia dintre dispozitive. Fiecare simulare solicită un GPU dedicat cu un timeout de 10 minute; dacă niciunul nu este disponibil în acest interval, simularea trece automat pe CPU. GPU-ul este garantat eliberat la finalizarea, anularea sau eșecul simulării.
 
         \item \textbf{Procesul de simulare a atacului} - identifică tipul bibliotecilor Python folosite în șablonul primit și comută automat în mediul Anaconda corespunzător (TensorFlow sau PyTorch). Mediile Python sunt complet izolate, având propriile dependințe pentru a asigura reproducibilitatea rezultatelor.
 
@@ -852,7 +851,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
         \centering
         \includegraphics[width=1\textwidth, height=0.85\textheight, keepaspectratio]{../images/Arhitectura_Aplicatie.png}
         \caption{Arhitectura DPArena}
-        \label{fig:nume-label}
+        \label{fig:arhitectura_dparena}
     \end{figure}
 
     Arhitectura propusă oferă următoarele beneficii:
@@ -868,12 +867,12 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
         
         \item \textbf{Comparabilitate}: Funcționalitatea de comparare a simulărilor permite evaluarea impactului diferitelor tipuri de atacuri asupra aceluiași model, datele fiind centralizate într-o structură unificată pentru analize statistice avansate.
         
-        \item \textbf{Securitate}: Prevenirea execuției de cod malițios se realizează printr-un proces strict de analiză statică a codului, încă din etapa pre-orchestrării. Atunci când utilizatorul încarcă șablonul Python, se rulează utilitarul avansat de analiză de securitate \texttt{semgrep} alături de scriptul personalizat \texttt{verify\_template.py}. Aceste elemente identifică vulnerabilitățile codului propriu-zis de manipulare și transfer, descoperă injecțiile (\textit{code injection}) și validează prezența obligatorie a structurilor critice, blocând execuțiile periculoase chiar de la nivelul backend-ului.
+        \item \textbf{Securitate}: Prevenirea execuției de cod malițios se realizează printr-un proces strict de analiză statică a codului, încă din etapa pre-orchestrării. Atunci când utilizatorul încarcă șablonul Python, se rulează utilitarul avansat de analiză de securitate \texttt{semgrep} alături de scriptul personalizat \texttt{verify\-\_template.py}. Aceste elemente identifică vulnerabilitățile codului propriu-zis de manipulare și transfer, descoperă injecțiile (\textit{code injection}) și validează prezența obligatorie a structurilor critice, blocând execuțiile periculoase chiar de la nivelul backend-ului.
     \end{itemize}
     
     
     
-	Imaginea 3.2 prezintă detaliile tehnice ale arhitecturii de mai sus.
+	Fig. \ref{fig:medii_python_atm} prezintă detaliile tehnice ale arhitecturii de mai sus.
 
     \section{Parametrii și Configurarea Simulării}
 
@@ -886,10 +885,10 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
         \centering
         \includegraphics[width=0.7\textwidth]{../images/Changing_environments.png}
             \caption{Medii Python de pe ATM Server}
-        \label{fig:nume-label}
+        \label{fig:medii_python_atm}
     \end{figure}
 
-    Imaginea de mai sus reprezintă mediile Python disponibile pentru rularea modelului creat/încăr\-cat de utilizator in șablon. Amintim că mediile Python includ și biblioteci de seturi de date specifice, precum TensorFlow Datasets, în care se regăsesc seturi de date predefinite, în cazul în care utilizatorul dorește să folosească un astfel de set de date la nivel de biblioteci.
+    Figura de mai sus reprezintă mediile Python disponibile pentru rularea modelului creat/încăr\-cat de utilizator in șablon. Amintim că mediile Python includ și biblioteci de seturi de date specifice, precum TensorFlow Datasets, în care se regăsesc seturi de date predefinite, în cazul în care utilizatorul dorește să folosească un astfel de set de date la nivel de biblioteci.
 
     Parametrii cu ajutorul cărora se configurează scriptul de otrăvire a setului de date sunt:
     \begin{itemize}
@@ -961,30 +960,30 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
 
     Din punct de vedere al logicii de orchestrare, atunci când un utilizator apasă butonul \textit{Run}, șablonul Python și configurația sa sunt transmise asincron de la backend-ul aplicației către Serverul ATM. Comunicarea asincronă permite utilizatorului să continue lucrul în platformă în timp ce simularea se execută pe server.
     
-    Pe serverul remote, cererea este preluată de procesul orchestrator care instanțiază un task nou și creează în directorul utilizatorului autentificat un spațiu de lucru dedicat. Aici vor fi stocate toate fișierele necesare simulării. Ulterior, orchestratorul de pe serverul GPU declanșează un pipeline secvențial compus din 15 etape distincte:
+    Pe serverul remote, cererea este preluată de procesul orchestrator care instanția\-ză un task nou și creează în directorul utilizatorului autentificat un spațiu de lucru dedicat. Aici vor fi stocate toate fișierele necesare simulării. Ulterior, orchestratorul de pe serverul GPU declanșează un pipeline secvențial compus din 15 etape distincte:
 
     \begin{enumerate}
         \item \textbf{Pornirea task-ului de simulare (Start Simulation Task)}: Orchestratorul creează o nouă intrare pentru task și începe execuția asincronă a pipeline-ului.
         \item \textbf{Verificarea structurii șablonului (Verify Template Structure)}: Înainte de a consuma resurse computaționale (cum ar fi GPU), se efectuează o analiză statică suplimentară a scriptului Python de antrenare furnizat de utilizator, folosind modulul intern \texttt{verify\_tem\-plate.py}.
         \item \textbf{Crearea directorului de lucru (Create User Workspace)}: Este creat un director izolat pe disc, specific task-ului curent, pe baza ID-ului utilizatorului și a identificatorului unic al simulării.
-        \item \textbf{Verificarea corectitudinii modelului (Verify Model Correctness)}: Utilizând codul șablon primit, orchestratorul instanțiază modelul definit de utilizator și rulează o scurtă încercare de antrenare pentru a valida funcționalitatea acestuia local, înainte de faza federativă. La acest pas, după prima antrenare, se salvează parametrii modelului inițial pentru a fi folosiți drept referință în detecția anomaliilor.
+        \item \textbf{Verificarea corectitudinii modelului (Verify Model Correctness)}: Utilizând codul șablon primit, orchestratorul instanțiază modelul definit de utilizator și rulează o scurtă încercare de antrenare pentru a valida funcționa\-litatea acestuia local, înainte de faza federativă. La acest pas, după prima antrenare, se salvează parametrii modelului inițial pentru a fi folosiți drept referință în detecția anomaliilor.
         \item \textbf{Descărcarea setului de date (Download Dataset)}: Orchestratorul apelează funcția de descărcare și pregătire a datelor brute propusă în codul utilizatorului. Datele sunt salvate local în directorul \texttt{clean\_data/data/}, urmând a fi procesate de mecanismul de validare încrucișată.
         \item \textbf{Descărcarea modelului din repozitoriu (Download Model)}: Se apelează logica de definire a modelului din șablon; dacă modelul este pre-antrenat și găzduit extern (ex. HuggingFace), acesta este descărcat și salvat de pe server în formatul specific framework-ului detectat.
         \item \textbf{Generarea distribuțiilor curate de date (Generate Clean Folds)}: Scriptul \texttt{generate\allowbreak\_folds.py} parcurge setul de date descărcat și îl împarte în 5 folduri stratificate, asigurând ca fiecare fold să păstreze proporția claselor din setul original. Pentru fiecare rundă de antrenare $r$, se alocă ciclic un fold ca set de validare ($fold_{validare} = r \bmod 5$), iar celelalte 4 folduri formează setul de antrenare. Datele sunt distribuite Non-IID pe cei $N$ clienți conform configurației (distribuție fixă cu clasă dominantă sau distribuție Dirichlet), cu un seed variabil per rundă pentru a asigura diversitatea între runde, menținând reproductibilitatea. Rezultatul este salvat în directorul \texttt{data\_distribution\_clean/}, conținând fișiere JSON per client (\texttt{client\_0.json}, \dots, \texttt{client\_N.json}) și un fișier \texttt{validation.json} cu configurația foldurilor de validare.
-        \item \textbf{Generarea datelor otrăvite per-client per-rundă (Generate Poisoned Data Per-Client Per-Round)}: Scriptul \texttt{generate\_poisoned\_per\_client.py} citește mapările curate generate anterior și, pentru fiecare client malițios $m$ și fiecare rundă $r$, selectează un procent \texttt{poison\_percentage} din fișierele alocate clientului la acea rundă. Asupra acestui subset se aplică atacul configurat (prin funcțiile din \texttt{poison\_data.py}), iar imaginile modificate sunt salvate în structura \texttt{clean\_data\_poisoned/R$r$/client\_$m$/}. Clienții onești nu au copii separate ale datelor --- fișierele lor JSON din \texttt{data\_distribution\_poisoned/} referă direct datele curate originale. Această separare garantează că doar clienții malițioși utilizează date alterate, fără a duplica inutil setul de date pentru clienții legitimi.
+        \item \textbf{Generarea datelor otrăvite per-client per-rundă (Generate Poisoned Data Per-Client Per-Round)}: Scriptul \texttt{generate\_poisoned\_per\_client\-.py} citește mapările curate generate anterior și, pentru fiecare client malițios $m$ și fiecare rundă $r$, selectează un procent \texttt{poison\_percentage} din fișierele alocate clientului la acea rundă. Asupra acestui subset se aplică atacul configurat (prin funcțiile din \texttt{poison\_data.py}), iar imaginile modificate sunt salvate în structura \texttt{clean\_data\_poisoned/R$r$/client\_$m$/}. Clienții onești nu au copii separate ale datelor --- fișierele lor JSON din \texttt{data\_distribution\_poisoned/} referă direct datele curate originale. \\ Această separare garantează că doar clienții malițioși utilizează date alterate, fără a duplica inutil setul de date pentru clienții legitimi.
         \item \textbf{Alocarea unității de procesare grafică (Allocate GPU)}: Managerul de GPU caută o placă video NVIDIA disponibilă în sistem, procesând elementele dintr-o coadă de așteptare. Dacă timpul alocat expiră, se utilizează unitatea CPU.
         \item \textbf{Activarea mediului Python (Activate Python Environment)}: Prin analiza importurilor din șablon, orchestratorul detectează tipul bibliotecilor utilizate la antrenare (TensorFlow sau PyTorch) și activează mediul \textit{Conda} preconfigurat corespunzător.
 
         \item \textbf{Simularea în mediul curat (Clean Simulation)}: Modelul global intră în faza de simulare federată (folosind \texttt{fd\_simulator.py}). Procesul asincron este inițiat exclusiv pe setul de date nealterate (curat), partajat pe $N$ clienți legitimi  conform mapărilor din \texttt{data\_distribution\_clean/}, folosind algoritmul standard de agregare \textit{FedAvg}. La fiecare rundă, modelul global este evaluat pe foldul de validare corespunzător. Această etapă înregistrează performanța normală (de referință).
         \item \textbf{Simularea curată cu mecanism de apărare (Clean + Defense)}: \textit{FedAvg} este înlocuit cu tehnica robustă de agregare aleasă de utilizator (ex. FoolsGold, Norm Clipping), antrenarea având loc pe același set curat de date și aceleași mapări de distribuție. Acest scenariu măsoară overhead-ul introdus de mecanismul de apărare în absența unui atac.
-        \item \textbf{Simularea cu atac fără apărare (Poisoned Simulation)}: $M$ dispozitive capătă rol de clienți malițioși, utilizând datele din \texttt{data\_distribution\_poisoned/}, unde fiecare client malițios referă directorul cu date otrăvite specific rundei curente. Agregarea se face prin \textit{FedAvg}, fără apărare. Acest scenariu cuantifică impactul atacului de otrăvire a datelor asupra modelului global.
+        \item \textbf{Simularea cu atac fără apărare (Poisoned Simulation)}: $M$ dispozitive capătă rol de clienți malițioși, utilizând datele din \texttt{data\_distribution\_\-poisoned/}, unde fiecare client malițios referă directorul cu date otrăvite specific rundei curente. Agregarea se face prin \textit{FedAvg}, fără apărare. Acest scenariu cuantifică impactul atacului de otrăvire a datelor asupra modelului global.
         \item \textbf{Simularea sub atac și cu protecție activă (Poisoned + Defense)}: Aceeași simulare cu $M$ clienți atacatori este reluată folosind, de data aceasta, metoda de agregare robustă selectată, care trebuie să filtreze ponderile malițioase. Comparând rezultatele cu scenariul anterior, se evaluează eficacitatea strategiei de apărare.
         \item \textbf{Generarea rezultatelor finale (Generate Final Results)}: Orchestratorul cumulează rezultatele din toate cele patru simulări și generează rapoarte structurate, oferite utilizatorului direct pe ecran.
     \end{enumerate}
 
-    \textbf{Sincronizarea asincronă a clienților federați:} Pe durata execuției etapelor de simulare federată (curate sau atacate) prin intermediul scriptului \texttt{fd\_simulator.py}, platforma utilizează un model de programare asincronă bazat pe cozi de mesaje. Această arhitectură decuplează logic serverul central (orchestratorul federat) de firele de execuție individuale ale clienților. Fiecare client dispune de propria sa coadă de mesaje pentru a primi modelul global, parametrii rundei și semnalele de control, în timp ce serverul central primește actualizările locale (ponderile rețelei) printr-o coadă de mesaje comună dedicată agregării. Această abordare previne blocajele de execuție (bottlenecks), permite alocarea concurentă eficientă a resurselor pe GPU prin semafoare și asigură o comunicare \textit{thread-safe} foarte scalabilă între componentele simulării.
+    \textbf{Sincronizarea asincronă a clienților federați:} Pe durata execuției etapelor de simulare federată (curate sau atacate) prin intermediul scriptului \texttt{fd\_simula\-tor.py}, platforma utilizează un model de programare asincronă bazat pe cozi de mesaje. Această arhitectură decuplează logic serverul central (orchestratorul federat) de firele de execuție individuale ale clienților. Fiecare client dispune de propria sa coadă de mesaje pentru a primi modelul global, parametrii rundei și semnalele de control, în timp ce serverul central primește actualizările locale (ponderile rețelei) printr-o coadă de mesaje comună dedicată agregării. Această abordare previne blocajele de execuție (bottlenecks), permite alocarea concurentă eficientă a resurselor pe GPU prin semafoare și asigură o comunicare \textit{thread-safe} foarte scalabilă între componentele simulării.
 
-    La fiecare din acești pași, în cazul unei erori, procesul ce gestionează operațiunile se oprește și transmite eroarea ca rezultat procesului orchestrator, care la rândul lui notifică imediat backend-ul aplicației.
+    La fiecare din acești pași, în cazul unei erori, procesul ce gestionează operațiuni\-le se oprește și transmite eroarea ca rezultat procesului orchestrator, care la rândul lui notifică imediat backend-ul aplicației.
     
     După completarea tuturor celor 15 pași, rezultatele detaliate sunt salvate în trei fișiere distincte din spațiul de lucru: \texttt{analysis.json} (metrici structurate obținute din simulări), \texttt{summary.txt} (rezumat text asupra simulărilor efectuate) și \texttt{attack\_info.json} (detalii tehnice despre atacul propagat). Utilizatorul va putea vizualiza progresul live pentru fiecare etapă enumerată și va primi rezultatul final, cu posibilitatea de a exporta raportul simulării în format PDF sau CSV pentru analiză ulterioară.
     
@@ -998,7 +997,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
 
     Odată lansată simularea, cererea este transmisă backend-ului, apoi orchestratorului de pe serverul de simulare. În acest punct, platforma alocă resursele disponibile, pregătește directorul de lucru, descarcă datele și modelul necesar, aplică atacul configurat și execută succesiv scenariile curate și atacate. Utilizatorul poate urmări progresul în interfață prin mesaje de stare și poate anula simularea dacă observă o configurație incorectă sau dacă dorește eliberarea resurselor.
 
-    La final, rezultatele sunt prezentate într-o formă comparativă, care evidențiază diferențele dintre scenariile \textit{Clean}, \textit{Clean + Defense}, \textit{Poisoned} și \textit{Poisoned + Defense}. Utilizatorul poate analiza metricile obținute, poate compara două simulări diferite și poate relua ulterior experimentul pornind de la aceeași configurație. În acest fel, platforma nu funcționează doar ca un executant de scripturi, ci ca un mediu complet de lucru pentru experimente reproductibile în domeniul securității învățării federate.
+    La final, rezultatele sunt prezentate într-o formă comparativă, care evidențiază diferențele dintre scenariile \textit{Clean}, \textit{Clean + Defense}, \textit{Poisoned} și \textit{Poisoned + Defense}. Utilizatorul poate analiza metricile obținute, poate compara două simulări diferite și poate relua ulterior experimentul pornind de la aceeași configura\-ție. În acest fel, platforma nu funcționează doar ca un executant de scripturi, ci ca un mediu complet de lucru pentru experimente reproductibile în domeniul securității învățării federate.
 
     \section{Structura directoarelor și a fișierelor importante}
 
@@ -1051,7 +1050,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
 
     \subsection{Funcții personalizate de agregare și otrăvire}
 
-    Pe lângă algoritmii de agregare robusti și metodele de atac predefinite, platforma oferă utilizatorilor posibilitatea de a defini funcții personalizate, atât pentru procesul de agregare a ponderilor, cât și pentru cel de otrăvire a datelor. Această funcționalitate extinde semnificativ capacitatea de experimentare, permițând cercetătorilor și studenților să testeze ipoteze proprii fără a modifica codul sursă al simulatorului.
+    Pe lângă algoritmii de agregare robusti și metodele de atac predefinite, platforma oferă utilizatorilor posibilitatea de a defini funcții personalizate, atât pentru procesul de agregare a ponderilor, cât și pentru cel de otrăvire a datelor. Această funcționalitate extinde semnificativ capacitatea de experimentare, permi\-țând cercetătorilor și studenților să testeze ipoteze proprii fără a modifica codul sursă al simulatorului.
 
     \subsubsection{Funcții personalizate de agregare}
 
@@ -1095,11 +1094,11 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
 
     Fiecare task de simulare primește un director de lucru propriu, în care se salvează șablonul Python executat, versiunea descărcată sau generată a modelului, datele curate și otrăvite, precum și fișierele intermediare produse în timpul antrenării. Această organizare permite reconstituirea ulterioară a unei rulări și simplifică procesul de audit și depanare.
 
-    Rezultatele finale sunt structurate în jurul unor fișiere standardizate. Fișierul \texttt{analysis.json} conține metricile numerice într-un format ușor de prelucrat automat, \texttt{summary.txt} oferă un rezumat textual al simulării, iar \texttt{attack\_info.json} reține informațiile despre configurația atacului folosit. Împreună, aceste fișiere descriu atât performanța modelului în cele patru scenarii de rulare, cât și contextul experimental care a produs rezultatele.
+    Rezultatele finale sunt structurate în jurul unor fișiere standardizate. Fișierul \texttt{analysis.json} conține metricile numerice într-un format ușor de prelucrat automat, \texttt{summary.txt} oferă un rezumat textual al simulării, iar \texttt{attack\_info.\-json} reține informațiile despre configurația atacului folosit. Împreună, aceste fișiere descriu atât performanța modelului în cele patru scenarii de rulare, cât și contextul experimental care a produs rezultatele.
 
     Pe lângă fișierele finale, sistemul poate genera și fișiere intermediare de verificare și loguri de progres. Deși ele nu sunt destinate neapărat analizei finale de către utilizator, aceste artefacte au valoare în depanare, în verificarea consistenței fluxului de simulare și în justificărea unor diferențe între două rulări aparent similare.
 
-    Prin combinarea persistenței relaționale cu stocarea artefactelor pe disc, platforma oferă atât trasabilitate administrativă, cât și trasabilitate tehnică. Această abordare este importantă într-un context experimental, deoarece permite nu doar vizualizarea rapidă a rezultatelor, ci și reconstrucția completă a condițiilor în care acestea au fost obținute.
+    Prin combinarea persistenței relaționale cu stocarea artefactelor pe disc, platforma oferă atât trasabilitate administrativă, cât și trasabilitate tehnică. Aceas\-tă abordare este importantă într-un context experimental, deoarece permite nu doar vizualizarea rapidă a rezultatelor, ci și reconstrucția completă a condițiilor în care acestea au fost obținute.
 
     \section{Testarea Aplicației}
 
@@ -1319,7 +1318,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
 
         \subsection{Contextul Sistemului}
 
-        Contextul sistemului prezintă marginile platformei și entitățile externe care interacționează cu acesta. La Nivelul 0, sunt identificați actorii principali: Cercetătorii (Data Scientists) și Instituțiile, fiecare cu roluri specifice în cadrul platformei.
+        Contextul sistemului prezintă marginile platformei și entitățile externe care interac\-ționează cu acesta. La Nivelul 0, sunt identificați actorii principali: Cercetătorii (Data Scientists) și Instituțiile, fiecare cu roluri specifice în cadrul platformei.
 
         \begin{figure}[H]
             \centering
@@ -1501,7 +1500,7 @@ Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesa
     \begin{itemize}
 	        \item Autentificare și Autorizare se realizează prin endpoint-uri dedicate pentru înregistrare utilizatori, autentificare cu username și parolă și generare JWT (JSON Web Token) pentru sesiuni. Token-ul JWT este inclus în header-ul Authorization pentru toate cererile ulterioare, sub forma Bearer token. Backend-ul validează token-ul pentru fiecare cerere protejată, verificând semnătura digitală, expirarea și existența utilizatorului în baza de date.
         \item Management Proiecte și Fișiere permite utilizatorilor să organizeze simulările în proiecte ierarhice. Fiecare proiect poate conține multiple fișiere reprezentând template-uri Python pentru modele diferite.
-	        \item Execuția Simulărilor este orchestrată prin endpoint-ul principal care primește codul template Python și configurația simulării. Backend-ul efectuează validări de securitate asupra codului încărcat pentru a preveni atacurile de tip code injection, verifică existența funcțiilor obligatorii în template și transmite cererea către orchestrator împreună cu token-ul de autentificare.
+	        \item Execuția Simulărilor este orchestrată prin endpoint-ul principal care primeș\-te codul template Python și configurația simulării. Backend-ul efectuează validări de securitate asupra codului încărcat pentru a preveni atacurile de tip code injection, verifică existența funcțiilor obligatorii în template și transmite cererea către orchestrator împreună cu token-ul de autentificare.
         \item Colectarea Rezultatelor se realizează prin endpoint-uri care interogează orchestratorul pentru obținerea rezultatelor finale. După ce orchestratorul semnalează completarea simulării, backend-ul solicită fișierele JSON cu metrici, fișierul text cu rezumatul, și informa\-ții despre atacul aplicat.
         \item WebSocket pentru Monitorizare Real-Time implementează un endpoint special care acceptă conexiuni WebSocket. După stabilirea conexiunii, backend-ul intră într-un loop asincron în care interoghează orchestratorul la fiecare 2 secunde pentru status-ul actualizat al simulării. Informațiile sunt trimise imediat către frontend prin WebSocket, oferind o experiență interactivă similară unui terminal live.
 
@@ -1618,6 +1617,7 @@ Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesa
             SE-05 & Securitate & Trecut & Nicio valoare secretă nu apare în text clar în log-uri sau variabile de mediu \\
             \hline
     \end{longtable}
+    \normalsize
 
     Toate cele 41 de teste definite în planul de testare au fost executate cu succes. Rezultatele confirmă că platforma se comportă conform specificațiilor funcționale și de securitate în toate scenariile acoperite.
 
@@ -1644,13 +1644,13 @@ Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesa
         \textbf{Serverul de Simulări (Orchestratorul)} execută antrenamentele federate și calculele matematice complexe asociate cu rețelele neuronale. Specificațiile tehnice pentru acest nod dedicat sunt următoarele:
         \begin{itemize}
             \item \textbf{Procesor grafic (GPU):} NVIDIA A40 cu 46 GB memorie VRAM GDDR6;
-            \item \textbf{Versiune CUDA:} 12.2, utilizată ca platformă de calcul paralel și interfață de programare (API) esențială. Aceasta permite framework-urilor de inteligență artificială să delege și să accelereze masiv operațiile matematice tensoriale necesare antrenării rețelelor neuronale, executându-le direct pe nucleele plăcii grafice;
+            \item \textbf{Versiune CUDA:} 12.2, utilizată ca platformă de calcul paralel și interfață de programare (API) esențială. Aceasta permite framework-urilor de inteli\-gență artificială să delege și să accelereze masiv operațiile matematice tensoriale necesare antrenării rețelelor neuronale, executându-le direct pe nucleele plăcii grafice;
             \item \textbf{Mediu de execuție ML:} Mediu izolat Anaconda, echipat cu framework-urile PyTorch și TensorFlow compilate nativ cu suport pentru CUDA.
         \end{itemize}
 
         Capacitatea imensă de memorie VRAM a acceleratorului NVIDIA A40 elimină limitările tipice de stocare video ce apar în învățarea federată concurentă, permițând antrenarea simultană a mai multor modele complexe (precum ResNet18 pe CIFAR-100). Astfel, timpii alocați comunicării parametrilor și antrenamentelor locale pe dispozitivele clienților sunt optimizați, reflectând un mediu real, performant, conceput special pentru deep learning intensiv.
 
-    \section{Studiu de Caz 1: Dinamica intensității și distribuției atacului}
+    \section{Studiu de Caz 1: Dinamica intensității și distribu\-ției atacului}
 
         Scopul primului experiment este de a evalua vulnerabilitatea modelului global și eficiența mecanismului de apărare atunci când variază fie volumul de date compromise, fie modul în care atacul este distribuit printre clienți.
 
@@ -1818,7 +1818,7 @@ Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesa
 
         Un avantaj important al platformei propuse constă în faptul că experimentele pot fi repetate într-o manieră controlată. Configurația fiecărei simulări este salvată împreună cu parametrii de antrenare, tipul atacului, mecanismul de agregare și artefactele generate în timpul execuției. Această persistență permite reluarea unor scenarii anterioare și compararea lor directă cu alte rulări realizate în condiții apropiate.
 
-        Reproductibilitatea este susținută și de separarea mediilor de execuție. Utilizarea unor medii Python dedicate, cu versiuni explicite de biblioteci, reduce variațiile introduse de dependențe incompatibile sau de actualizări necontrolate. În plus, fișierele standardizate generate la finalul simulării, precum \texttt{analysis.json}, \texttt{summary.txt} și \texttt{attack\_info.json}, oferă un format stabil pentru analiză ulterioară, export și validare comparativă.
+        Reproductibilitatea este susținută și de separarea mediilor de execuție. Utilizarea unor medii Python dedicate, cu versiuni explicite de biblioteci, reduce variațiile introduse de dependențe incompatibile sau de actualizări necontrolate. În plus, fișierele standardizate generate la finalul simulării, precum \texttt{analysis.\-json}, \texttt{summary.txt} și \texttt{attack\_info.json}, oferă un format stabil pentru analiză ulterioară, export și validare comparativă.
 
         Din acest motiv, valoarea experimentală a platformei nu rezidă doar în rezultatele obținute în cadrul acestei lucrări, ci și în capacitatea ei de a susține experimente viitoare în condiții reproductibile. Acest aspect este deosebit de important într-un domeniu în care multe evaluări depind puternic de detalii de implementare greu de urmărit în absența unui cadru software unificat.
 
