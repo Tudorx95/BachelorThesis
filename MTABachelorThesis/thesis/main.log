@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  27 JUN 2026 11:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.12)  27 JUN 2026 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1121,9 +1121,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 .map}{/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/base/8r.
 enc} <./components/frontmatter/../images/ATM.png>])
 (./components/frontmatter/adviser_resume.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1131,7 +1128,10 @@ been already used, duplicate ignored
 l.10 \newpage
               [1
 
-]) (./components/frontmatter/declaration.tex)
+]) (./components/frontmatter/declaration.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+)
 (./components/frontmatter/specification.tex [2
 
 ] [3
@@ -3362,9 +3362,7 @@ Capitolul 5.
 
 ])) [103] [104
 
-] [105] [106
-
-]
+] [105]
 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
@@ -3379,8 +3377,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24178 strings out of 467538
- 435824 string characters out of 5412257
+ 24177 strings out of 467538
+ 435816 string characters out of 5412257
  1346515 words of memory out of 5000000
  52371 multiletter control sequences out of 15000+600000
  729618 words of font info for 170 fonts, out of 8000000 for 9000
@@ -3400,10 +3398,10 @@ fb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/times/utmb
 utmbi8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></media/tudor/380827CD08278948/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (107 pages, 4896896 bytes).
+Output written on main.pdf (106 pages, 4896597 bytes).
 PDF statistics:
- 1234 PDF objects out of 1440 (max. 8388607)
- 1053 compressed objects within 11 object streams
- 296 named destinations out of 1000 (max. 500000)
+ 1230 PDF objects out of 1440 (max. 8388607)
+ 1050 compressed objects within 11 object streams
+ 295 named destinations out of 1000 (max. 500000)
  710 words of extra memory for PDF output out of 10000 (max. 10000000)
 
