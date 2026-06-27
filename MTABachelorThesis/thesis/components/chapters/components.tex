@@ -97,6 +97,7 @@ Restul capitolelor lucrării sunt structurate după cum urmează:
 \textbf{Capitolul 5}, \textit{Concluzii și dezvoltare ulterioară}, sintetizează contribuțiile majore ale lucrării și conturează posibile direcții de extindere viitoare, subliniind importanța securizării infrastructurilor distribuite de inteligență artificială.
 
 
+\newpage
 \section{Utilizarea instrumentelor de inteligență artificială în elaborarea lucrării}
 
 Pe parcursul elaborării prezentei lucrări, instrumentele de inteligență artificială au reprezentat un suport consistent atât în faza de cercetare și documentare, cât și în procesul de implementare. Această secțiune își propune să ofere transparență deplină cu privire la modul în care aceste tehnologii au fost integrate în fluxul de lucru.
@@ -324,7 +325,7 @@ Prin păstrarea informațiilor la nivelul fiecărui dispozitiv sau instituții, 
     \item \textbf{Analiză a sentimentelor:} FL poate analiza reacțiile utilizatorilor la evenimente sociale (like-uri, share-uri, comentarii) fără colectarea directă a acestor date de către platformă.
 \end{itemize}
 
-
+\newpage
 \section{Atacuri de tip Data Poisoning}
 
 În acest capitol se va discuta unul dintre avantajele pe care le oferă mediul federated learning atacatorilor și ce înseamnă acest lucru pentru fluxul configurației modelului. Vom începe cu definirea
@@ -530,6 +531,7 @@ Un alt efect important al acestui tip de atac este degradarea treptată a perfor
 
 Detectarea prezenței datelor otravite, fără identificarea obligatorie a clientului responsabil, rămâne o provocare în FL, amplificată în cazul atacurilor \textit{backdoor}, unde metrici precum acuratețea globală de antrenare pot să nu fie suficiente pentru a semnala prezența atacului.
 
+    \newpage
     \subsection{Provocările distribuțiilor Non-IID în Federated Learning}
 
     O caracteristică fundamentală a mediului de învățare federată este faptul că datele deținute de clienți nu respectă, în general, ipoteza clasică IID (\textit{independent and identically distributed}). În practică, fiecare client colectează date în funcție de propriul context de utilizare, ceea ce înseamnă că distribuția locală a claselor, volumul de mostre și chiar caracteristicile semantice ale datelor pot fi diferite de la un nod la altul.
@@ -556,6 +558,7 @@ Detectarea prezenței datelor otravite, fără identificarea obligatorie a clien
 
     Utilitatea practică a acestei tehnici în contextul platformei propuse este dublă. Pe de o parte, evaluarea modelului global la finalul fiecărei runde se realizează pe un fold care nu a participat la antrenarea din runda respectivă, oferind o estimare mai obiectivă a capacității de generalizare a modelului. Pe de altă parte, rotația foldurilor asigură că efectele unui eventual atac de otrăvire a datelor sunt evaluate în raport cu seturi de validare variate, reducând riscul că un atac specific să fie mascat de un set de validare inadecvat. Astfel, CV contribuie nu doar la corectitudinea evaluării performanței, ci și la robustețea experimentală a întregului proces de simulare.
 
+    \newpage
     \begin{figure}[h!]
         \centering
         \includegraphics[width=1\textwidth, keepaspectratio]{../images/Diagrama_Distribuire_Date.png}
@@ -563,14 +566,14 @@ Detectarea prezenței datelor otravite, fără identificarea obligatorie a clien
         \label{fig:diagrama_distribuire_date}
     \end{figure}
 
-    În figura de mai sus este ilustrat mecanismul de validare încrucișată implementat în platformă, corelat cu etapa de distribuire a datelor. În partea stângă se observă rotația ciclică a foldului de validare pe parcursul rundelor, iar în partea dreaptă este detaliată distribuirea etichetelor setului de date CIFAR-10 către clienți, conform strategiei Non-IID configurate (distribuție Dirichlet). La fiecare rundă, cele $K-1$ folduri de antrenare sunt redistribuite între cei $M$ clienți, fiecare primind un subset diferit de etichete.
-
     \begin{figure}[h!]
         \centering
         \includegraphics[width=0.85\textwidth, keepaspectratio]{../images/Diagrama_Otravire_Date.png}
         \caption{Procesul de infectare a datelor la nivelul unui client malițios}
         \label{fig:diagrama_otravire_date}
     \end{figure}
+
+    În figura de mai sus este ilustrat mecanismul de validare încrucișată implementat în platformă, corelat cu etapa de distribuire a datelor. În partea stângă se observă rotația ciclică a foldului de validare pe parcursul rundelor, iar în partea dreaptă este detaliată distribuirea etichetelor setului de date CIFAR-10 către clienți, conform strategiei Non-IID configurate (distribuție Dirichlet). La fiecare rundă, cele $K-1$ folduri de antrenare sunt redistribuite între cei $M$ clienți, fiecare primind un subset diferit de etichete.
 
     Următoarea figură ilustrează modul în care datele unui client malițios sunt alterate prin cele două tipuri de atacuri suportate. În cazul atacului \textit{Label Flip}, un procent configurabil din etichetele fiecărei clase este reatribuit către o singură clasă țintă, dezechilibrând distribuția datelor de antrenare. În cazul atacurilor \textit{Backdoor Injection}, același procent din imaginile fiecărei clase este modificat prin inserarea unui artefact vizual (trigger), păstrând etichetele originale. Ambele atacuri se aplică exclusiv asupra datelor alocate clienților malițioși, fără a afecta datele clienților legitimi.
 
@@ -1336,6 +1339,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
             \label{fig:context_diagram_nivel1}
         \end{figure}
 
+        \newpage
         \subsection{Componentele Platformei}
 
         Structura internă a platformei evidențiază cele două servere principale (Server Central și Server de Simulări Remote) împreună cu componentele software asociate: React Frontend, PostgreSQL, Fast API pe serverul central, respectiv GPU Manager și Python Orchestrator pe serverul de simulări. De asemenea, sunt ilustrate fluxurile de date de la configurarea simulării până la generarea rezultatelor finale.
@@ -1380,7 +1384,7 @@ Platforma sprijină analiștii de securitate și cercetătorii de analiză de da
             \label{fig:entity_relationship_diagram}
         \end{figure}
 
-
+\newpage
 \section{Tehnologii și Biblioteci Utilizate}
 
     Această secțiune prezintă principalele tehnologii și biblioteci utilizate în implementarea platformei, cu accent pe rolul fiecăreia în cadrul arhitecturii.
@@ -1738,6 +1742,7 @@ Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesa
             \label{fig:rezultate_experimentale_cazul_2}
         \end{figure}
 
+    \newpage
     \section{Interpretarea rezultatelor}
 
         Rezultatele celor două studii de caz indică faptul că eficiența unui mecanism de apărare nu poate fi evaluată izolat de structura atacului și de distribuția datelor între clienți. În primul studiu, pe măsură ce proporția datelor compromise crește, diferența dintre scenariul curat și cel atacat devine din ce în ce mai pronunțată, ceea ce confirmă faptul că intensitatea otrăvirii influențează direct capacitatea modelului global de a învăța reprezentări stabile. Totodată, apărarea bazată pe similaritatea actualizărilor, precum \textit{FoolsGold}, devine mai eficientă atunci când atacatorii produc tipare corelate suficient de puternice pentru a fi identificate.
@@ -1839,6 +1844,7 @@ Anaconda facilitează instalarea și actualizarea rapidă a bibliotecilor necesa
 
     Nu în ultimul rând, mecanismul de extensibilitate prin funcții personalizate oferă flexibilitate ridicată, dar nu poate garanta automat corectitudinea științifică a algoritmilor definiți de utilizator. Platforma validează sintaxa, structura și anumite constrângeri de securitate, însă calitatea metodologică a funcțiilor integrate rămâne în responsabilitatea cercetătorului.
 
+    \newpage
     \subsection{Direcții de dezvoltare}
 
     În procesul ulterior de dezvoltare, o direcție importantă este extinderea suportului pentru o varietate mai mare de scenarii experimentale și pentru o integrare mai flexibilă a mediilor de antrenare. De asemenea, se poate rafina implementarea anumitor atacuri, precum \textit{Gaussian Noise}, prin utilizarea unor mecanisme adaptive dependente de distribuția actualizărilor locale sau de caracteristicile reale ale datelor compromise.

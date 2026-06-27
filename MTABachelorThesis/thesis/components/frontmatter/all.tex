@@ -2,10 +2,12 @@
 
 \begin{document}
 
-\frontmatter 
-
-% Title
+% Title (not numbered per ATM rules)
 \input{components/frontmatter/title}
+
+% Start arabic numbering from page 1 (right after title page)
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
 % Referatul coordonatorului științific (Regula 10, poz. 2)
 \ifdefined\componentadviserresume
@@ -38,7 +40,5 @@
 \input{components/frontmatter/abbreviations}
 
 \cleardoublepage
-\pagenumbering{arabic}
-\setcounter{page}{1}
 
 \end{document}

@@ -45,7 +45,7 @@
 \titleformat
     {\chapter}
     [display]
-    {\bfseries \huge}
+    {\bfseries \Large}
     {Capitolul \thechapter:}
     {20pt}
     {}[]
@@ -65,16 +65,16 @@
 \fancypagestyle{front}{
   \fancyhf{}
   \fancyhead[C]{\small NECLASIFICAT}
-  \fancyfoot[C]{\small NECLASIFICAT\\\thepage\ din \pageref*{LastPage}}
+  \fancyfoot[C]{\small NECLASIFICAT\\\thepage\ din \pageref*{lastcontentpage}}
 }
 \pagestyle{front}
 \fancypagestyle{plain}{
   \fancyhf{}
   \fancyhead[C]{\small NECLASIFICAT}
-  \fancyfoot[C]{\small NECLASIFICAT\\\thepage\ din \pageref*{LastPage}}
+  \fancyfoot[C]{\small NECLASIFICAT\\\thepage\ din \pageref*{lastcontentpage}}
 }
 \newenvironment{frontmatter}{\pagenumbering{roman}}{\newpage \pagenumbering{arabic}}
-\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{front}}}
+\AtBeginDocument{\addtocontents{toc}{\protect\pagestyle{front}}}
 \addtocontents{lof}{\protect\thispagestyle{front}}
 
 % Custom command for bold and italic text

@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1782509134.99889 "main.bcf" "main.bbl" "main" 1782510477.24486 0
+["biber main"] 1782547730.74181 "main.bcf" "main.bbl" "main" 1782549084.1435 0
   "bibliography.bib" 1781469412.57602 6649 b42865b3d433888253c197b56e6e42af ""
-  "main.bcf" 1782510477.01205 111783 cf369d924837e54ac252cbd5f3192ec8 "pdflatex"
+  "main.bcf" 1782549083.94312 111783 cf369d924837e54ac252cbd5f3192ec8 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1782510471.00474 "main.tex" "main.pdf" "main" 1782510477.24552 0
+["pdflatex"] 1782549077.90988 "main.tex" "main.pdf" "main" 1782549084.14383 0
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/media/tudor/380827CD08278948/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -191,25 +191,25 @@
   "components/chapters/../images/Rezultate_Experimentale_Case1_2.png" 1781339202.51142 51091 8c6c71d876a1f4ac0b1cd064138c5f46 ""
   "components/chapters/../images/Rezultate_Experimentale_Case2_1.png" 1781782192.46183 45500 095da4677fcf25dcaa52d3cc4f5a95c9 ""
   "components/chapters/all.tex" 1781468899.77619 139 f3045007de2d50e95bc9c47b0cfe0cdd ""
-  "components/chapters/components.tex" 1782510466.01252 204849 752ee27b69f72a3f3e47a7217cfbdbbd ""
+  "components/chapters/components.tex" 1782548853.84707 204943 e6388fdc787ea81e958cc7980a04dbbc ""
   "components/frontmatter/../images/ATM.png" 1766385861.12132 768031 cd39ff6ac72ff42d8154bf2c34e8d2de ""
   "components/frontmatter/abbreviations.tex" 1782509023.04231 1628 72f27e271bd5b1fa8e717f19cc6f7f06 ""
   "components/frontmatter/abstract.tex" 1782508484.83285 1956 06fa22b3e9bfaeebb4e8b5b4e482cbb8 ""
   "components/frontmatter/acknowledgment.tex" 1782508989.51892 588 5990ee695119e1d830ff233d42865c80 ""
-  "components/frontmatter/adviser_resume.tex" 1782509002.82287 468 b9e6aea61abf38e7d2763e417edf8d55 ""
-  "components/frontmatter/all.tex" 1782508973.12288 910 029dbcc5f459f1a7e1baac124ce98d93 ""
+  "components/frontmatter/adviser_resume.tex" 1782549038.16037 104 230a28b01f85e666b23bf0b0a03255f1 ""
+  "components/frontmatter/all.tex" 1782547349.69115 987 656cee66f398c10701d49a5653d768c0 ""
   "components/frontmatter/declaration.tex" 1781339386.21185 1053 1894d21260e0424acc3237ed2a89ff27 ""
-  "components/frontmatter/specification.tex" 1782509015.25588 672 82f00dc47f959ad027a4a18879208d44 ""
+  "components/frontmatter/specification.tex" 1782549077.82454 115 fbb29563ba3450b801a1395e3b888c07 ""
   "components/frontmatter/title.tex" 1766385861.1186 1319 73715f66a9431d3637cfdcf974a4b7c6 ""
   "configuration.tex" 1782509040.1151 820 cce43dcbb65e604955424e2b4bf2a28c ""
-  "main.aux" 1782510477.00549 30745 941e8a8dd15a97c8697c7817b8d2988f "pdflatex"
-  "main.bbl" 1782509148.48312 37305 eced0c2bcaa3af92496627e91e0e67a8 "biber main"
-  "main.lof" 1782510477.01268 2422 aa96ffa6120282b2ab76a46d92354131 "pdflatex"
-  "main.out" 1782510477.00921 17478 68dfc73ba4b61a85e71c5077e37ce1fe "pdflatex"
-  "main.run.xml" 1782510477.01261 2308 a8db41172cc8064155fedbcb3b529184 "pdflatex"
-  "main.sty" 1782508956.94602 3877 754b99f329f469917697e9cca10cdd12 ""
-  "main.tex" 1782508946.39505 411 77e5bd7ca68eda0a1808d4721e835184 ""
-  "main.toc" 1782510477.01267 10710 9b79eaff72d872926ac85f0c056f6409 "pdflatex"
+  "main.aux" 1782549083.93704 30820 3fb904444e1119d0d75f5cacd3718970 "pdflatex"
+  "main.bbl" 1782547731.44856 37305 266ee9766fa53fa0602ed3e8e1fec2f1 "biber main"
+  "main.lof" 1782549083.94376 2422 381f8c33047bb36df14a680dcf43e7bd "pdflatex"
+  "main.out" 1782549083.94074 17478 68dfc73ba4b61a85e71c5077e37ce1fe "pdflatex"
+  "main.run.xml" 1782549083.94368 2308 a8db41172cc8064155fedbcb3b529184 "pdflatex"
+  "main.sty" 1782548941.01785 3888 384ff4d021a4a5dde5e351dfd4265ca4 ""
+  "main.tex" 1782547358.04932 436 31378e194f8888222a2bad967667d65f ""
+  "main.toc" 1782549083.94374 10726 5d97d903f8b013ce20aec206b5ce4462 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
